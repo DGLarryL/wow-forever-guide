@@ -228,6 +228,70 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg"
   },
   {
+    "path": "assets/icons/leatherworking/ammo-pouch.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_09_black.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/armor-kit.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_armorkit_17.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/gloves.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_05.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/headband.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_24.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/heavy-leather.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_07.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/hide.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_bear_02.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/leatherworking.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/light-leather.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_03.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/medium-leather.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_05.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/rugged-leather.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_02.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/shoulders.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_08.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/tent.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_10.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/thick-leather.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_08.jpg"
+  },
+  {
+    "path": "assets/icons/leatherworking/thread.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_silk_02.jpg"
+  },
+  {
+    "path": "assets/icons/nav-classes.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg"
+  },
+  {
+    "path": "assets/icons/nav-professions.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_05.jpg"
+  },
+  {
     "path": "assets/icons/priest/spell_holy_blindingheal.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_blindingheal.jpg"
   },
@@ -394,6 +458,54 @@
   {
     "path": "assets/icons/priest/talent_twin_disciplines.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_wordfortitude.jpg"
+  },
+  {
+    "path": "assets/icons/professions/alchemy.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_alchemy.jpg"
+  },
+  {
+    "path": "assets/icons/professions/blacksmithing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_blacksmithing.jpg"
+  },
+  {
+    "path": "assets/icons/professions/cooking.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_15.jpg"
+  },
+  {
+    "path": "assets/icons/professions/enchanting.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_duststrange.jpg"
+  },
+  {
+    "path": "assets/icons/professions/engineering.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_engineering.jpg"
+  },
+  {
+    "path": "assets/icons/professions/firstaid.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_sealofsacrifice.jpg"
+  },
+  {
+    "path": "assets/icons/professions/fishing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_fishing.jpg"
+  },
+  {
+    "path": "assets/icons/professions/herbalism.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_herbalism.jpg"
+  },
+  {
+    "path": "assets/icons/professions/leatherworking.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg"
+  },
+  {
+    "path": "assets/icons/professions/mining.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_mining.jpg"
+  },
+  {
+    "path": "assets/icons/professions/skinning.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_wolf_01.jpg"
+  },
+  {
+    "path": "assets/icons/professions/tailoring.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/trade_tailoring.jpg"
   },
   {
     "path": "assets/icons/spec-arms-warrior.jpg",

@@ -4,76 +4,130 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>WoW Forever Klassenguides by LarryL</title>
+<title>WoW Forever Guide by LarryL</title>
 <style>
-:root{--bg:#080d0a;--panel:#121d16;--panel2:#19281e;--text:#edf4ef;--muted:#aebcb1;--gold:#e1b65a;--green:#93d1a2;--line:#2d4435;--blue:#5eafff}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;min-height:100%}
-body{background:radial-gradient(circle at 20% -5%,#1b492c 0,transparent 31%),radial-gradient(circle at 90% 10%,#4b3514 0,transparent 23%),var(--bg)}
-.hero{padding:76px 22px 42px;text-align:center}
-.wrap{max-width:1050px;margin:auto}
-.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-h1{font-size:clamp(2.5rem,7vw,5.4rem);line-height:.98;margin:12px 0 18px}
-.lead{max-width:720px;margin:0 auto;color:#cbd8ce;font-size:1.08rem;line-height:1.65}
-.guides{padding:24px 22px 80px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-.guide-card{display:flex;align-items:center;gap:18px;padding:20px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,var(--panel2),var(--panel));color:var(--text);text-decoration:none;transition:.18s ease;box-shadow:0 10px 35px #0004}
-.guide-card:hover{transform:translateY(-3px);border-color:#56775f;background:#1e3024}
-.icon{width:78px;height:78px;border-radius:14px;border:3px solid #796536;object-fit:cover;box-shadow:0 6px 18px #0008;flex:none}
-.card-main{min-width:0}
-.class{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
-.name{font-size:1.45rem;font-weight:850;margin:3px 0 6px}
-.desc{color:#c6d1c9;line-height:1.45;font-size:.94rem}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}
-.tag{font-size:.75rem;padding:4px 8px;border-radius:999px;border:1px solid #3b5944;background:#17251b;color:#c7e9cf}
-.arrow{margin-left:auto;font-size:1.6rem;color:var(--gold)}
-.footer{padding:0 22px 38px;text-align:center;color:var(--muted);font-size:.85rem}
-@media(max-width:620px){.hero{padding-top:46px}.guide-card{align-items:flex-start}.icon{width:64px;height:64px}.arrow{display:none}}
+:root{
+ --bg:#0b0d0c;--bar:#111413;--panel:#181b1a;--panel2:#202422;--text:#f1f2f1;
+ --muted:#aeb5b0;--line:#3a3e3b;--gold:#ffd100;--cyan:#00b7ff;--green:#63ca85;
+}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at 50% -15%,#243b2d 0,transparent 34%),#0b0d0c}
+.top{border-bottom:1px solid #2a2e2b;background:#0d100e}
+.brand{max-width:1240px;margin:auto;padding:20px 18px 12px}
+.brand small{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.13em}
+.brand h1{margin:7px 0 0;font-size:clamp(2rem,5vw,3.7rem);line-height:1}
+.navstrip{border-top:1px solid #2b2f2c;border-bottom:1px solid #333;background:#151817;position:relative;z-index:30}
+.navinner{max-width:1240px;margin:auto;display:flex;gap:10px;padding:7px 12px}
+.navcat{position:relative;flex:0 0 260px}
+.catbtn{width:100%;height:72px;border:2px solid #4a4e4b;border-radius:5px;background:#191c1b;color:white;display:flex;align-items:center;justify-content:center;gap:15px;cursor:pointer;position:relative;overflow:hidden}
+.catbtn:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#191c1b,#222725);opacity:.8}
+.catbtn img{position:relative;width:66px;height:66px;object-fit:cover;border-radius:8px;filter:saturate(.9)}
+.catbtn span{position:relative;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+.catbtn:hover,.navcat.open .catbtn{border-color:#737a75}.navcat.open .catbtn span{color:var(--gold)}
+.megamenu{display:none;position:absolute;left:0;top:78px;width:min(760px,92vw);background:#1b1e1d;border:1px solid #444;border-radius:8px;box-shadow:0 18px 60px #000c;padding:16px;z-index:100}
+.navcat.open .megamenu{display:grid}.megagrid{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:22px}
+.megacol h3{font-size:1rem;margin:0 0 9px;color:#fff}.menuitem{display:flex;align-items:center;gap:8px;padding:5px 3px;color:var(--gold);text-decoration:none;border-radius:5px}
+.menuitem img{width:22px;height:22px;border-radius:4px;object-fit:cover}.menuitem:hover{background:#272b29;color:#fff}
+.menuitem.disabled{color:#777;cursor:default}.menuitem.disabled img{filter:grayscale(1);opacity:.55}.soon{font-size:.68rem;color:#777;margin-left:auto}
+main{max-width:1240px;margin:auto;padding:44px 18px 80px}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+.hero-main,.hero-side{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#1c211e,#141715);padding:26px}
+.hero-main h2{margin:0;font-size:clamp(2rem,4vw,3.3rem)}.hero-main p{color:#c5cbc7;line-height:1.65;max-width:760px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{padding:6px 9px;border-radius:999px;background:#222a25;border:1px solid #3f4c44;color:#cfe6d5;font-size:.8rem}
+.hero-side h3{margin-top:0;color:var(--gold)}.hero-side p{color:var(--muted);line-height:1.55}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:34px 0 13px}.section-title h2{margin:0;font-size:1.45rem}.section-title span{color:var(--muted);font-size:.85rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px}
+.card{display:flex;align-items:center;gap:13px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#171a19;color:white;text-decoration:none;transition:.15s}
+.card:hover{transform:translateY(-2px);border-color:#636c66;background:#1e2220}.card img{width:52px;height:52px;border-radius:8px;border:2px solid #766129;object-fit:cover}
+.card-title{font-size:1.04rem;font-weight:800}.card-sub{font-size:.82rem;color:var(--muted);margin-top:3px}.activepill{margin-left:auto;font-size:.7rem;background:#173c27;color:#a8e9bb;border:1px solid #38684a;padding:4px 7px;border-radius:999px}
+@media(min-width:801px){.navcat:hover .megamenu{display:grid}.navcat:hover .catbtn span{color:var(--gold)}}
+@media(max-width:800px){.navinner{overflow:auto}.navcat{flex:0 0 210px}.megamenu{position:fixed;left:12px;right:12px;top:145px;width:auto}.megagrid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}}
+@media(max-width:520px){.megagrid{grid-template-columns:1fr}.catbtn{height:62px}.catbtn img{width:52px;height:52px}}
 </style>
 </head>
 <body>
-<section class="hero"><div class="wrap">
-  <div class="eyebrow">World of Warcraft: Forever</div>
-  <h1>Klassenguides<br>by LarryL</h1>
-  <p class="lead">Deutsche Leveling- und Klassenguides mit Talentwegen, Original-Icons, Rotationen, Gear-Empfehlungen und praktischen Hilfen für WoW Forever.</p>
-</div></section>
-<section class="guides"><div class="wrap">
-  <div class="grid">
-    <a class="guide-card" href="survival-hunter.html">
-      <img class="icon" src="assets/icons/spec-survival-hunter.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_camouflage.jpg" alt="Survival Hunter">
-      <div class="card-main">
-        <div class="class">Jäger</div>
-        <div class="name">Survival Hunter</div>
-        <div class="desc">Human-Leveling 10–60 mit Pets, echten Spawnkarten, Talentroute, Skills, Rotation und klickbarem Gear.</div>
-        <div class="tags"><span class="tag">DPS</span><span class="tag">Pets</span><span class="tag">Leveling</span></div>
-      </div><div class="arrow">›</div>
-    </a>
-    <a class="guide-card" href="holy-priest.html">
-      <img class="icon" src="assets/icons/spec-holy-priest.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg" alt="Holy Priest">
-      <div class="card-main">
-        <div class="class">Priester</div>
-        <div class="name">Holy Priest</div>
-        <div class="desc">Heiler-Guide 10–60 mit reiner Holy-Talentroute, wichtigen Skills, Dungeon-Heilpriorität und ausgewähltem Caster-Gear.</div>
-        <div class="tags"><span class="tag">Heiler</span><span class="tag">Dungeons</span><span class="tag">Leveling</span></div>
-      </div><div class="arrow">›</div>
-    </a>
+<header class="top">
+ <div class="brand"><small>World of Warcraft: Forever</small><h1>WoW Forever Guide by LarryL</h1></div>
+</header>
 
-    <a class="guide-card" href="arms-warrior.html">
-      <img class="icon" src="assets/icons/spec-arms-warrior.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg" alt="Arms Warrior">
-      <div class="card-main">
-        <div class="class">Krieger</div>
-        <div class="name">Arms Warrior</div>
-        <div class="desc">Zweihand-Leveling 10–60 mit exakter Talentroute, Wut-Prioritäten, Original-Icons und klickbarem Waffen-/Gear-Fortschritt.</div>
-        <div class="tags"><span class="tag">DPS</span><span class="tag">2H</span><span class="tag">Leveling</span></div>
-      </div><div class="arrow">›</div>
-    </a>
-  </div>
-</div></section>
-<div class="footer">WoW Forever Klassenguides by LarryL · Stand 01.11.2026</div>
+<div class="navstrip">
+ <div class="navinner">
+   <div class="navcat" data-menu>
+     <button class="catbtn"><img src="assets/icons/nav-classes.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg" alt=""><span>Klassen</span></button>
+     <div class="megamenu"><div class="megagrid">
+       <div class="megacol"><h3>Jäger</h3><a class="menuitem" href="survival-hunter.html"><img src="assets/icons/spec-survival-hunter.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_camouflage.jpg">Survival Hunter</a></div>
+       <div class="megacol"><h3>Priester</h3><a class="menuitem" href="holy-priest.html"><img src="assets/icons/spec-holy-priest.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg">Holy Priest</a></div>
+       <div class="megacol"><h3>Krieger</h3><a class="menuitem" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg">Arms Warrior</a></div>
+       <div class="megacol"><h3>Weitere Klassen</h3>
+         <div class="menuitem disabled">Druide <span class="soon">folgt</span></div>
+         <div class="menuitem disabled">Magier <span class="soon">folgt</span></div>
+         <div class="menuitem disabled">Paladin <span class="soon">folgt</span></div>
+       </div>
+       <div class="megacol"><h3>&nbsp;</h3>
+         <div class="menuitem disabled">Schamane <span class="soon">folgt</span></div>
+         <div class="menuitem disabled">Schurke <span class="soon">folgt</span></div>
+         <div class="menuitem disabled">Hexenmeister <span class="soon">folgt</span></div>
+       </div>
+     </div></div>
+   </div>
+
+   <div class="navcat" data-menu>
+     <button class="catbtn"><img src="assets/icons/nav-professions.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_05.jpg" alt=""><span>Berufe</span></button>
+     <div class="megamenu"><div class="megagrid">
+       <div class="megacol"><h3>Herstellungsberufe</h3>
+         <div class="menuitem disabled"><img src="assets/icons/professions/alchemy.jpg">Alchemie <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/blacksmithing.jpg">Schmiedekunst <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/engineering.jpg">Ingenieurskunst <span class="soon">folgt</span></div>
+         <a class="menuitem" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg">Lederverarbeitung</a>
+         <div class="menuitem disabled"><img src="assets/icons/professions/enchanting.jpg">Verzauberkunst <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/tailoring.jpg">Schneiderei <span class="soon">folgt</span></div>
+       </div>
+       <div class="megacol"><h3>Sammelberufe</h3>
+         <div class="menuitem disabled"><img src="assets/icons/professions/herbalism.jpg">Kräuterkunde <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/mining.jpg">Bergbau <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/skinning.jpg">Kürschnerei <span class="soon">folgt</span></div>
+       </div>
+       <div class="megacol"><h3>Nebenberufe</h3>
+         <div class="menuitem disabled"><img src="assets/icons/professions/cooking.jpg">Kochkunst <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/fishing.jpg">Angeln <span class="soon">folgt</span></div>
+         <div class="menuitem disabled"><img src="assets/icons/professions/firstaid.jpg">Erste Hilfe <span class="soon">folgt</span></div>
+       </div>
+     </div></div>
+   </div>
+ </div>
+</div>
+
+<main>
+ <div class="hero">
+   <div class="hero-main">
+     <h2>Dein deutscher WoW-Forever-Guide</h2>
+     <p>Klassen, Berufe, Leveling-Routen, Gear, Skills und praktische Fundorte an einem Ort. Die Seite wächst Schritt für Schritt mit neuen Guides und wird auf den aktuellen Forever-Stand angepasst.</p>
+     <div class="badges"><span class="badge">Original-WoW-Icons</span><span class="badge">deutsche Begriffe</span><span class="badge">Forever-spezifisch</span><span class="badge">interaktive Guides</span></div>
+   </div>
+   <div class="hero-side"><h3>Neu: Lederverarbeitung</h3><p>Effiziente 1–300-Route, Materialliste, Allianz-/Horde-Lehrer, Merchant’s Favor und Spezialisierungen.</p><a href="leatherworking.html" style="color:#ffd100;text-decoration:none;font-weight:800">Guide öffnen →</a></div>
+ </div>
+
+ <div class="section-title"><h2>Verfügbare Klassenguides</h2><span>3 Guides</span></div>
+ <div class="cards">
+  <a class="card" href="survival-hunter.html"><img src="assets/icons/spec-survival-hunter.jpg"><div><div class="card-title">Survival Hunter</div><div class="card-sub">Pets · Talente · Gear · Rotation</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="holy-priest.html"><img src="assets/icons/spec-holy-priest.jpg"><div><div class="card-title">Holy Priest</div><div class="card-sub">Heilung · Talente · Gear</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg"><div><div class="card-title">Arms Warrior</div><div class="card-sub">2H · Wut · Waffenfortschritt</div></div><span class="activepill">aktiv</span></a>
+ </div>
+
+ <div class="section-title"><h2>Verfügbare Berufsguides</h2><span>1 Guide</span></div>
+ <div class="cards">
+  <a class="card" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg"><div><div class="card-title">Lederverarbeitung</div><div class="card-sub">1–300 · Materialien · Lehrer · Muster</div></div><span class="activepill">aktiv</span></a>
+ </div>
+</main>
+
 <script>
-document.addEventListener('error',function(e){
- const el=e.target;
- if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1){el.src=el.dataset.fallback}
-},true);
+document.querySelectorAll('[data-menu] .catbtn').forEach(btn=>btn.addEventListener('click',e=>{
+ const parent=btn.closest('[data-menu]');
+ document.querySelectorAll('[data-menu]').forEach(x=>{if(x!==parent)x.classList.remove('open')});
+ parent.classList.toggle('open'); e.stopPropagation();
+}));
+document.addEventListener('click',()=>document.querySelectorAll('[data-menu]').forEach(x=>x.classList.remove('open')));
+document.querySelectorAll('.megamenu').forEach(x=>x.addEventListener('click',e=>e.stopPropagation()));
+document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1)el.src=el.dataset.fallback},true);
 </script>
 </body></html>
