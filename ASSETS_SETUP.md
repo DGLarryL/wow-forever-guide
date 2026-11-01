@@ -26,3 +26,7 @@ Die Startseite ist `index.html`. Die einzelnen Guides liegen derzeit als `surviv
 
 ## v0.7 – Allgemeiner Guide-Hub
 `index.html` ist jetzt der allgemeine WoW-Forever-Hub mit Mega-Menüs für Klassen und Berufe. `leatherworking.html` ist der erste Berufsguide.
+
+
+## v0.8
+Die Mega-Menüs öffnen auf Desktop ausschließlich per Hover. Neue Guides: Schneiderei, Verzauberkunst, Kürschnerei, Schmiedekunst und Bergbau.

@@ -19,12 +19,12 @@ body{min-height:100vh;background:radial-gradient(circle at 50% -15%,#243b2d 0,tr
 .navstrip{border-top:1px solid #2b2f2c;border-bottom:1px solid #333;background:#151817;position:relative;z-index:30}
 .navinner{max-width:1240px;margin:auto;display:flex;gap:10px;padding:7px 12px}
 .navcat{position:relative;flex:0 0 260px}
-.catbtn{width:100%;height:72px;border:2px solid #4a4e4b;border-radius:5px;background:#191c1b;color:white;display:flex;align-items:center;justify-content:center;gap:15px;cursor:pointer;position:relative;overflow:hidden}
+.catbtn{width:100%;height:72px;border:2px solid #4a4e4b;border-radius:5px;background:#191c1b;color:white;display:flex;align-items:center;justify-content:center;gap:15px;cursor:default;position:relative;overflow:hidden}
 .catbtn:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#191c1b,#222725);opacity:.8}
 .catbtn img{position:relative;width:66px;height:66px;object-fit:cover;border-radius:8px;filter:saturate(.9)}
 .catbtn span{position:relative;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
 .catbtn:hover,.navcat.open .catbtn{border-color:#737a75}.navcat.open .catbtn span{color:var(--gold)}
-.megamenu{display:none;position:absolute;left:0;top:78px;width:min(760px,92vw);background:#1b1e1d;border:1px solid #444;border-radius:8px;box-shadow:0 18px 60px #000c;padding:16px;z-index:100}
+.megamenu{display:none;position:absolute;left:0;top:100%;width:min(760px,92vw);background:#1b1e1d;border:1px solid #444;border-radius:8px;box-shadow:0 18px 60px #000c;padding:16px;z-index:100}
 .navcat.open .megamenu{display:grid}.megagrid{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:22px}
 .megacol h3{font-size:1rem;margin:0 0 9px;color:#fff}.menuitem{display:flex;align-items:center;gap:8px;padding:5px 3px;color:var(--gold);text-decoration:none;border-radius:5px}
 .menuitem img{width:22px;height:22px;border-radius:4px;object-fit:cover}.menuitem:hover{background:#272b29;color:#fff}
@@ -76,16 +76,16 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
      <div class="megamenu"><div class="megagrid">
        <div class="megacol"><h3>Herstellungsberufe</h3>
          <div class="menuitem disabled"><img src="assets/icons/professions/alchemy.jpg">Alchemie <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/blacksmithing.jpg">Schmiedekunst <span class="soon">folgt</span></div>
+         <a class="menuitem" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg">Schmiedekunst</a>
          <div class="menuitem disabled"><img src="assets/icons/professions/engineering.jpg">Ingenieurskunst <span class="soon">folgt</span></div>
          <a class="menuitem" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg">Lederverarbeitung</a>
-         <div class="menuitem disabled"><img src="assets/icons/professions/enchanting.jpg">Verzauberkunst <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/tailoring.jpg">Schneiderei <span class="soon">folgt</span></div>
+         <a class="menuitem" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg">Verzauberkunst</a>
+         <a class="menuitem" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg">Schneiderei</a>
        </div>
        <div class="megacol"><h3>Sammelberufe</h3>
          <div class="menuitem disabled"><img src="assets/icons/professions/herbalism.jpg">Kräuterkunde <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/mining.jpg">Bergbau <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/skinning.jpg">Kürschnerei <span class="soon">folgt</span></div>
+         <a class="menuitem" href="mining.html"><img src="assets/icons/professions/mining.jpg">Bergbau</a>
+         <a class="menuitem" href="skinning.html"><img src="assets/icons/professions/skinning.jpg">Kürschnerei</a>
        </div>
        <div class="megacol"><h3>Nebenberufe</h3>
          <div class="menuitem disabled"><img src="assets/icons/professions/cooking.jpg">Kochkunst <span class="soon">folgt</span></div>
@@ -114,20 +114,19 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
   <a class="card" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg"><div><div class="card-title">Arms Warrior</div><div class="card-sub">2H · Wut · Waffenfortschritt</div></div><span class="activepill">aktiv</span></a>
  </div>
 
- <div class="section-title"><h2>Verfügbare Berufsguides</h2><span>1 Guide</span></div>
+ <div class="section-title"><h2>Verfügbare Berufsguides</h2><span>6 Guides</span></div>
  <div class="cards">
   <a class="card" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg"><div><div class="card-title">Lederverarbeitung</div><div class="card-sub">1–300 · Materialien · Lehrer · Muster</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg"><div><div class="card-title">Schneiderei</div><div class="card-sub">1–225 getestet · Stoff · Lehrer</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg"><div><div class="card-title">Verzauberkunst</div><div class="card-sub">1–300 · Entzaubern · Ruten</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg"><div><div class="card-title">Schmiedekunst</div><div class="card-sub">1–225 getestet · Barren · Gear</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="mining.html"><img src="assets/icons/professions/mining.jpg"><div><div class="card-title">Bergbau</div><div class="card-sub">1–300 · Farmrouten · Verhütten</div></div><span class="activepill">aktiv</span></a>
+  <a class="card" href="skinning.html"><img src="assets/icons/professions/skinning.jpg"><div><div class="card-title">Kürschnerei</div><div class="card-sub">1–300 · Farmspots · Leder</div></div><span class="activepill">aktiv</span></a>
+
  </div>
 </main>
 
 <script>
-document.querySelectorAll('[data-menu] .catbtn').forEach(btn=>btn.addEventListener('click',e=>{
- const parent=btn.closest('[data-menu]');
- document.querySelectorAll('[data-menu]').forEach(x=>{if(x!==parent)x.classList.remove('open')});
- parent.classList.toggle('open'); e.stopPropagation();
-}));
-document.addEventListener('click',()=>document.querySelectorAll('[data-menu]').forEach(x=>x.classList.remove('open')));
-document.querySelectorAll('.megamenu').forEach(x=>x.addEventListener('click',e=>e.stopPropagation()));
 document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1)el.src=el.dataset.fallback},true);
 </script>
 </body></html>
