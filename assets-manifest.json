@@ -400,6 +400,206 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_20.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_axe_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_axe_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_04.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_axe_12.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_12.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_belt_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_04.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_belt_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_06.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_boots_chain_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_chain_05.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_bracer_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_11.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_chest_chain.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_chest_cloth_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_09.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_chest_leather_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_08.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_gauntlets_15.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_15.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_gauntlets_25.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_25.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_hammer_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_09.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_jewelry_ring_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_09.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_mace_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_mace_11.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_cape_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_10.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_cape_18.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_18.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_head_dragon_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_dragon_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_necklacea8.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_necklacea8.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_questionmark.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_pants_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_02.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_pants_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_shirt_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shirt_08.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_spear_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_staff_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_10.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_staff_13.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_sword_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_04.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_sword_12.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_sword_24.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_24.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_throwingaxe_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_throwingaxe_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_shortblade_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_shortblade_05.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_shortblade_14.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_shortblade_14.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-abom.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_creature_disease_03.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-arcane.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcane01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-crocolisk.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_crocolisk.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-demon.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_demonform.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-dwarf.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/achievement_character_dwarf_male.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-fire.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_fire_fire.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-golem.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_rockbiter.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-human.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_disguise.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-machine.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_enggizmos_03.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-murloc.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterhead_03.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-ogre.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_ogre_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-pirate.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_66.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-raptor.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_raptor.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-spider.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_spider.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-tauren.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/achievement_character_tauren_male.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/boss-undead.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_raisedead.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/dungeon.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_key_03.jpg"
+  },
+  {
+    "path": "assets/icons/dungeons/map.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg"
+  },
+  {
     "path": "assets/icons/gear/inv_axe_09.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg"
   },
@@ -678,6 +878,10 @@
   {
     "path": "assets/icons/nav-classes.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg"
+  },
+  {
+    "path": "assets/icons/nav-dungeons.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_key_03.jpg"
   },
   {
     "path": "assets/icons/nav-guides.jpg",

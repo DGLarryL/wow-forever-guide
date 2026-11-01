@@ -1,2 +1,2 @@
-v0.13.0
-Neues Hauptmenü „Guides“; neuer interaktiver Allianz-Levelguide 1–60 mit Auswahl des Startgebiets (Elwynn, Dun Morogh, Teldrassil oder Zephras Isle), optimierter Zonenroute und Dungeon-Abstechern.
+v0.14.0
+Neuer Hauptbereich „Dungeons“ mit 35 Dungeon-Einträgen, Level-/Typ-Filtern, Detailansichten für verifizierte Forever-Dungeons, Bossübersichten, klickbarem Loot mit Stats/Dropchance sowie Gebietskarten mit markiertem Eingang.

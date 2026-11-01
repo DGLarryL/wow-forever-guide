@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>Dungeon-Browser – WoW Forever Guide by LarryL</title><style>
+:root{--bg:#0b0d0c;--panel:#171a18;--panel2:#202422;--text:#f1f2f1;--muted:#adb5af;--line:#393e3a;--gold:#ffd100;--green:#79d89b;--blue:#7fc6ff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at 20% -5%,#253121 0,transparent 30%),var(--bg)}
+header{padding:30px 18px 20px;border-bottom:1px solid var(--line)}.wrap,main{max-width:1280px;margin:auto}.back{display:inline-block;margin-bottom:12px;color:#cfe7ff;text-decoration:none;font-weight:800}
+.titleline{display:flex;gap:14px;align-items:center}.titleline img{width:66px;height:66px;border-radius:12px;border:3px solid #7a6634}
+h1{margin:0;font-size:clamp(2rem,5vw,3.5rem)}.sub{color:var(--gold);font-weight:800;margin-top:5px}
+.notice{margin-top:16px;padding:12px 14px;border:1px solid #55654f;border-radius:10px;background:#142019;color:#d8e8dc;line-height:1.5}
+.version-banner{max-width:1280px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:13px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.version-label{font-weight:900;color:#ffd100}.change-label{color:#9fd7ae;font-weight:800}
+main{padding:24px 18px 70px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.filter{border:1px solid var(--line);background:#181b19;color:#fff;padding:8px 11px;border-radius:8px;cursor:pointer}.filter.active,.filter:hover{background:#40502d;border-color:#71834d}
+.searchbox{width:100%;max-width:420px;margin-bottom:14px;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:#121513;color:white}
+.dungeon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.dungeon-card{padding:14px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,#1d211e,#151816);cursor:pointer}
+.dungeon-card:hover{border-color:#836a36;transform:translateY(-1px)}.dungeon-head{display:flex;gap:11px;align-items:center}.dungeon-head img{width:44px;height:44px;border-radius:8px;border:1px solid #766338}.dungeon-name{font-weight:850;color:#f3f3ef}.meta{color:var(--muted);font-size:.84rem;margin-top:3px}.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}.badge{font-size:.7rem;padding:3px 7px;border-radius:999px;border:1px solid #4e6555;background:#16271c;color:#c5e6cf}.badge.classic{border-color:#5a5f68;background:#202329;color:#d5d8df}.badge.partial{border-color:#756139;background:#2d2516;color:#f1dba6}
+.location-btn{margin-top:10px;width:100%;border:1px solid #4a5d4f;background:#141b16;color:#dff0e3;padding:7px 9px;border-radius:8px;cursor:pointer;text-align:left}
+.drawer[hidden]{display:none}.drawer{position:fixed;inset:0;z-index:1000;display:grid;place-items:center}.drawer-bg{position:absolute;inset:0;background:#000b;backdrop-filter:blur(4px)}.drawer-card{position:relative;z-index:2;width:min(1180px,calc(100vw - 20px));max-height:calc(100vh - 20px);overflow:auto;border:1px solid #5b5134;border-radius:16px;background:#111411;box-shadow:0 25px 80px #000c}.drawer-close{position:sticky;top:10px;float:right;margin:10px 10px 0 0;width:38px;height:38px;border-radius:50%;border:1px solid #725f34;background:#2c2518;color:#fff;cursor:pointer;font-size:1.2rem}.drawer-body{padding:22px}.detail-top{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:16px}.detail-top h2{margin:0;color:#fff}.detail-meta{color:#c3cec6;margin-top:5px}.status{padding:5px 9px;border-radius:999px;background:#173526;border:1px solid #39694a;color:#bdebc8;font-size:.78rem}.status.partial{background:#3b2e17;border-color:#735b2c;color:#f1d396}
+.boss-grid{display:grid;gap:13px}.boss-card{border:1px solid var(--line);border-radius:13px;background:#171a18;overflow:hidden}.boss-title{display:flex;gap:11px;align-items:center;padding:12px 14px;background:#20241f;border-bottom:1px solid var(--line)}.boss-title img{width:48px;height:48px;border-radius:9px;border:1px solid #7c6533}.boss-title h3{margin:0;color:#ffd100}
+.loot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:9px;padding:12px}.loot-item{display:flex;gap:10px;text-align:left;padding:10px;border:1px solid #3c423e;border-radius:9px;background:#121512;color:#fff;cursor:pointer}.loot-item:hover{border-color:#2e74a8}.loot-item img{width:40px;height:40px;border-radius:6px;border:2px solid #2e74a8;object-fit:cover}.loot-name{color:#4aa8ff;font-weight:800}.loot-meta{font-size:.76rem;color:#aeb8b0;margin-top:2px}.chance{font-size:.75rem;color:#ffd88a;margin-top:3px}
+.item-panel{margin-top:16px;padding:15px;border:1px solid #4a586c;border-radius:12px;background:#0e1216}.item-panel h3{color:#4aa8ff;margin:0 0 8px}.tooltip{background:#050505;border:1px solid #777;border-radius:9px;padding:14px;line-height:1.38}.tooltip .blue{color:#0070dd;font-size:1.18rem;font-weight:800}.tooltip .gold{color:#ffd100}.tooltip .green{color:#1eff00}.item-source{margin-top:10px;color:#aeb8b0}
+.map-panel{margin-top:14px}.zone-map{width:100%;height:auto;border:1px solid #465148;border-radius:12px;background:#0c1510}
+.empty{padding:26px;border:1px dashed #586058;border-radius:12px;color:#bac5bd;line-height:1.55}
+.sources{margin-top:22px}.sources a{display:block;color:#b9dcff;text-decoration:none;padding:7px 0}
+@media(max-width:700px){header,main,.version-banner{padding-left:12px;padding-right:12px}.detail-top{flex-direction:column}}
+</style></head><body>
+<header><div class="wrap">
+<a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a>
+<div class="titleline"><img src="assets/icons/dungeons/dungeon.jpg" alt=""><div><h1>Dungeon-Browser 13–60</h1><div class="sub">WoW Forever Dungeons by LarryL</div></div></div>
+<div class="notice"><b>v0.14.0:</b> Alle 35 Dungeon-Einträge im Browser. Volle Boss-/Lootdaten sind für die aktuell verifizierten frühen Forever-Dungeons und Deadmines eingebaut; höhere noch unentdeckte Daten werden nicht erfunden.</div>
+</div></header>
+<div class="version-banner" data-site-version="v0.14.0"><div class="version-banner-inner"><span class="version-label">v0.14.0</span><span> · </span><span class="change-label">Geändert:</span><span> Neuer Hauptbereich „Dungeons“ mit 35 Dungeon-Einträgen, Level-/Typ-Filtern, Detailansichten für verifizierte Forever-Dungeons, Bossübersichten, klickbarem Loot mit Stats/Dropchance sowie Gebietskarten mit markiertem Eingang.</span></div></div>
+<main>
+<input class="searchbox" id="search" placeholder="Dungeon suchen …">
+<div class="filters">
+<button class="filter active" data-filter="all">Alle</button>
+<button class="filter" data-filter="forever">Forever neu</button>
+<button class="filter" data-filter="classic">Classic</button>
+<button class="filter" data-filter="10-29">Level 10–29</button>
+<button class="filter" data-filter="30-44">Level 30–44</button>
+<button class="filter" data-filter="45-60">Level 45–60</button>
+<button class="filter" data-filter="verified">Boss/Loot verifiziert</button>
+</div>
+<div class="dungeon-grid" id="grid">
+    <div class="dungeon-card" data-id="ragefire-chasm" data-type="classic" data-min="13" data-max="18" data-name="ragefire chasm">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Ragefire Chasm</div><div class="meta">Level 13–18 · Orgrimmar</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="ragefire-chasm">📍 Orgrimmar · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="hall-of-thanes" data-type="forever" data-min="13" data-max="18" data-name="hall of thanes">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Hall of Thanes</div><div class="meta">Level 13–18 · Ironforge / Dun Morogh</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge ">Boss & Loot verifiziert</span></div>
+      <button class="location-btn" type="button" data-map="hall-of-thanes">📍 Ironforge / Dun Morogh · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="ruins-lordaeron" data-type="forever" data-min="15" data-max="20" data-name="ruins of lordaeron">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Ruins of Lordaeron</div><div class="meta">Level 15–20 · Tirisfal Glades</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge ">Boss & Loot verifiziert</span></div>
+      <button class="location-btn" type="button" data-map="ruins-lordaeron">📍 Tirisfal Glades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="wailing-caverns" data-type="classic" data-min="15" data-max="25" data-name="wailing caverns">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Wailing Caverns</div><div class="meta">Level 15–25 · The Barrens</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="wailing-caverns">📍 The Barrens · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="deadmines" data-type="classic" data-min="18" data-max="23" data-name="the deadmines">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">The Deadmines</div><div class="meta">Level 18–23 · Westfall</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge ">Boss & Loot verifiziert</span></div>
+      <button class="location-btn" type="button" data-map="deadmines">📍 Westfall · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="shadowfang-keep" data-type="classic" data-min="22" data-max="30" data-name="shadowfang keep">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Shadowfang Keep</div><div class="meta">Level 22–30 · Silverpine Forest</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="shadowfang-keep">📍 Silverpine Forest · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="blackfathom-deeps" data-type="classic" data-min="24" data-max="32" data-name="blackfathom deeps">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Blackfathom Deeps</div><div class="meta">Level 24–32 · Ashenvale</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="blackfathom-deeps">📍 Ashenvale · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="stockade" data-type="classic" data-min="22" data-max="30" data-name="the stockade">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">The Stockade</div><div class="meta">Level 22–30 · Stormwind</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="stockade">📍 Stormwind · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="excavation-site" data-type="forever" data-min="24" data-max="29" data-name="excavation site: wetlands">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Excavation Site: Wetlands</div><div class="meta">Level 24–29 · Wetlands</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge ">Boss & Loot verifiziert</span></div>
+      <button class="location-btn" type="button" data-map="excavation-site">📍 Wetlands · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="city-dalaran" data-type="forever" data-min="28" data-max="33" data-name="city of dalaran">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">City of Dalaran</div><div class="meta">Level 28–33 · Alterac Mountains</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge ">Boss & Loot verifiziert</span></div>
+      <button class="location-btn" type="button" data-map="city-dalaran">📍 Alterac Mountains · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="gnomeregan" data-type="classic" data-min="29" data-max="38" data-name="gnomeregan">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Gnomeregan</div><div class="meta">Level 29–38 · Dun Morogh</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="gnomeregan">📍 Dun Morogh · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="razorfen-kraul" data-type="classic" data-min="30" data-max="40" data-name="razorfen kraul">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Razorfen Kraul</div><div class="meta">Level 30–40 · The Barrens</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="razorfen-kraul">📍 The Barrens · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="sm-graveyard" data-type="classic" data-min="28" data-max="38" data-name="scarlet monastery: graveyard">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Scarlet Monastery: Graveyard</div><div class="meta">Level 28–38 · Tirisfal Glades</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="sm-graveyard">📍 Tirisfal Glades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="sm-library" data-type="classic" data-min="29" data-max="39" data-name="scarlet monastery: library">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Scarlet Monastery: Library</div><div class="meta">Level 29–39 · Tirisfal Glades</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="sm-library">📍 Tirisfal Glades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="sm-armory" data-type="classic" data-min="32" data-max="42" data-name="scarlet monastery: armory">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Scarlet Monastery: Armory</div><div class="meta">Level 32–42 · Tirisfal Glades</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="sm-armory">📍 Tirisfal Glades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="drowned-city" data-type="forever" data-min="35" data-max="40" data-name="the drowned city">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">The Drowned City</div><div class="meta">Level 35–40 · Stranglethorn Vale</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="drowned-city">📍 Stranglethorn Vale · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="sm-cathedral" data-type="classic" data-min="35" data-max="45" data-name="scarlet monastery: cathedral">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Scarlet Monastery: Cathedral</div><div class="meta">Level 35–45 · Tirisfal Glades</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="sm-cathedral">📍 Tirisfal Glades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="razorfen-downs" data-type="classic" data-min="40" data-max="50" data-name="razorfen downs">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Razorfen Downs</div><div class="meta">Level 40–50 · The Barrens</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="razorfen-downs">📍 The Barrens · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="kroldok" data-type="forever" data-min="40" data-max="45" data-name="krol&#x27;dok stronghold">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Krol&#x27;dok Stronghold</div><div class="meta">Level 40–45 · Riverglades</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="kroldok">📍 Riverglades · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="uldaman" data-type="classic" data-min="42" data-max="52" data-name="uldaman">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Uldaman</div><div class="meta">Level 42–52 · Badlands</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="uldaman">📍 Badlands · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="zul-farrak" data-type="classic" data-min="44" data-max="54" data-name="zul&#x27;farrak">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Zul&#x27;Farrak</div><div class="meta">Level 44–54 · Tanaris</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="zul-farrak">📍 Tanaris · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="maraudon" data-type="classic" data-min="45" data-max="57" data-name="maraudon">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Maraudon</div><div class="meta">Level 45–57 · Desolace</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="maraudon">📍 Desolace · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="alcaz-prison" data-type="forever" data-min="48" data-max="53" data-name="alcaz prison">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Alcaz Prison</div><div class="meta">Level 48–53 · Dustwallow Marsh</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="alcaz-prison">📍 Dustwallow Marsh · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="sunken-temple" data-type="classic" data-min="50" data-max="60" data-name="the temple of atal&#x27;hakkar">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">The Temple of Atal&#x27;Hakkar</div><div class="meta">Level 50–60 · Swamp of Sorrows</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="sunken-temple">📍 Swamp of Sorrows · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="blackrock-depths" data-type="classic" data-min="52" data-max="60" data-name="blackrock depths">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Blackrock Depths</div><div class="meta">Level 52–60 · Blackrock Mountain</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="blackrock-depths">📍 Blackrock Mountain · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="dire-maul-east" data-type="classic" data-min="54" data-max="60" data-name="dire maul east">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Dire Maul East</div><div class="meta">Level 54–60 · Feralas</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="dire-maul-east">📍 Feralas · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="lbrs" data-type="classic" data-min="55" data-max="60" data-name="lower blackrock spire">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Lower Blackrock Spire</div><div class="meta">Level 55–60 · Blackrock Mountain</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="lbrs">📍 Blackrock Mountain · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="blackmaw-hold" data-type="forever" data-min="55" data-max="60" data-name="blackmaw hold">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Blackmaw Hold</div><div class="meta">Level 55–60 · Azshara</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="blackmaw-hold">📍 Azshara · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="dire-maul-north" data-type="classic" data-min="56" data-max="60" data-name="dire maul north">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Dire Maul North</div><div class="meta">Level 56–60 · Feralas</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="dire-maul-north">📍 Feralas · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="dire-maul-west" data-type="classic" data-min="56" data-max="60" data-name="dire maul west">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Dire Maul West</div><div class="meta">Level 56–60 · Feralas</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="dire-maul-west">📍 Feralas · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="shapers-terrace" data-type="forever" data-min="58" data-max="60" data-name="shaper&#x27;s terrace">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Shaper&#x27;s Terrace</div><div class="meta">Level 58–60 · Un&#x27;Goro Crater</div></div>
+      </div>
+      <div class="badges"><span class="badge ">Forever</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="shapers-terrace">📍 Un&#x27;Goro Crater · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="scholomance" data-type="classic" data-min="58" data-max="60" data-name="scholomance">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Scholomance</div><div class="meta">Level 58–60 · Western Plaguelands</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="scholomance">📍 Western Plaguelands · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="strath-main" data-type="classic" data-min="58" data-max="60" data-name="stratholme: main gate">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Stratholme: Main Gate</div><div class="meta">Level 58–60 · Eastern Plaguelands</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="strath-main">📍 Eastern Plaguelands · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="strath-service" data-type="classic" data-min="58" data-max="60" data-name="stratholme: service gate">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Stratholme: Service Gate</div><div class="meta">Level 58–60 · Eastern Plaguelands</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="strath-service">📍 Eastern Plaguelands · Karte öffnen</button>
+    </div>
+    
+    <div class="dungeon-card" data-id="ubrs" data-type="classic" data-min="59" data-max="60" data-name="upper blackrock spire">
+      <div class="dungeon-head">
+        <img src="assets/icons/dungeons/dungeon.jpg" alt="">
+        <div><div class="dungeon-name">Upper Blackrock Spire</div><div class="meta">Level 59–60 · Blackrock Mountain</div></div>
+      </div>
+      <div class="badges"><span class="badge classic">Classic</span><span class="badge partial">Grunddaten · Details folgen</span></div>
+      <button class="location-btn" type="button" data-map="ubrs">📍 Blackrock Mountain · Karte öffnen</button>
+    </div>
+    </div>
+
+<div class="sources">
+<h3>Quellenstandard</h3>
+<a target="_blank" href="https://www.wowhead.com/forever/guide/dungeons-overview-locations-details">Wowhead Forever · Dungeon Overview ↗</a>
+<a target="_blank" href="https://www.icy-veins.com/wow-forever/dungeons-overview/">Icy Veins · alle Dungeons & Levelbereiche ↗</a>
+<a target="_blank" href="https://mobalytics.gg/wow-forever/guides/dungeon-raid-map">Mobalytics · Dungeon/Raid Map ↗</a>
+</div>
+</main>
+
+<div class="drawer" id="drawer" hidden><div class="drawer-bg" data-close></div><div class="drawer-card"><button class="drawer-close" data-close>×</button><div class="drawer-body" id="drawer-body"></div></div></div>
+
+<script>
+const data={"hall-of-thanes": {"name": "Hall of Thanes", "levels": "13–18", "zone": "Ironforge / Dun Morogh", "entrance": "Beneath the High Seat, Old Ironforge", "status": "full", "bosses": [{"name": "Faldrim Anvilmar", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Spiritwraith Drape", "meta": "Back · Item Level 18 · Req. 13", "stats": ["17 Armor", "+3 Agility", "+4 Spirit"], "chance": "33.76%", "icon": "assets/icons/dungeon-items/inv_misc_cape_18.jpg"}, {"name": "Ephemeral Choker", "meta": "Neck · Item Level 18 · Req. 13", "stats": ["+5 Spirit"], "chance": "32.85%", "icon": "assets/icons/dungeon-items/inv_misc_necklacea8.jpg"}, {"name": "Aetherwisp Bracers", "meta": "Wrist Cloth · Item Level 18 · Req. 13", "stats": ["15 Armor", "+30 Armor", "+3 Spell Damage/Healing"], "chance": "32.85%", "icon": "assets/icons/dungeon-items/inv_bracer_11.jpg"}]}, {"name": "Magmatus", "icon": "assets/icons/dungeons/boss-fire.jpg", "loot": [{"name": "Kindlegem Girdle", "meta": "Waist Mail · Item Level 18 · Req. 13", "stats": ["100 Armor", "+7 Stamina"], "chance": "36.18%", "icon": "assets/icons/dungeon-items/inv_belt_06.jpg"}, {"name": "Fang of Magmatus", "meta": "Main Hand Dagger · Item Level 18 · Req. 13", "stats": ["9–18 Damage · 1.70", "+4 Intellect", "+18 Spell Damage/Healing"], "chance": "34.81%", "icon": "assets/icons/dungeon-items/inv_weapon_shortblade_05.jpg"}, {"name": "Flamefist Grips", "meta": "Hands Leather · Item Level 18 · Req. 13", "stats": ["51 Armor", "+5 Agility", "+5 Spirit"], "chance": "30.10%", "icon": "assets/icons/dungeon-items/inv_gauntlets_25.jpg"}]}, {"name": "Plunder", "icon": "assets/icons/dungeons/boss-golem.jpg", "loot": [{"name": "Treads of the Protector Golem", "meta": "Feet Mail · Item Level 18 · Req. 13", "stats": ["122 Armor", "+5 Strength", "+50 Armor"], "chance": "34.39%", "icon": "assets/icons/dungeon-items/inv_boots_chain_05.jpg"}, {"name": "Golemheart Stave", "meta": "2H Staff · Item Level 18 · Req. 13", "stats": ["30–46 Damage · 3.20", "+9 Fire Resistance", "+18 Spell Damage/Healing"], "chance": "33.97%", "icon": "assets/icons/dungeon-items/inv_staff_10.jpg"}, {"name": "Golemguard Chest", "meta": "Chest Mail · Item Level 18 · Req. 13", "stats": ["178 Armor", "+6 Stamina", "+60 Armor"], "chance": "31.43%", "icon": "assets/icons/dungeon-items/inv_chest_chain.jpg"}]}, {"name": "Durgen Dirgehammer", "icon": "assets/icons/dungeons/boss-dwarf.jpg", "loot": [{"name": "Durgen's Crescent Axe", "meta": "Main Hand Axe · Item Level 18 · Req. 13", "stats": ["20–39 Damage · 2.40", "+4 Strength"], "chance": "28.17%", "icon": "assets/icons/dungeon-items/inv_axe_01.jpg"}, {"name": "Direhammer Leggings", "meta": "Legs Leather · Item Level 18 · Req. 13", "stats": ["72 Armor", "+4 Agility", "+7 Stamina"], "chance": "23.23%", "icon": "assets/icons/dungeon-items/inv_pants_11.jpg"}, {"name": "Robes of the Disgraced Thane", "meta": "Chest Cloth · Item Level 18 · Req. 13", "stats": ["35 Armor", "+4 Spirit", "+8 Spell Damage/Healing"], "chance": "23.23%", "icon": "assets/icons/dungeon-items/inv_chest_cloth_09.jpg"}]}]}, "ruins-lordaeron": {"name": "Ruins of Lordaeron", "levels": "15–20", "zone": "Tirisfal Glades", "entrance": "Ruins above the Undercity", "status": "full", "bosses": [{"name": "Witherfang", "icon": "assets/icons/dungeons/boss-spider.jpg", "loot": [{"name": "Segmented Spider Leg", "meta": "2H Staff · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Witherbite Bracers", "meta": "Leather Wrist · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Atrophic Girdle", "meta": "Mail Waist · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "The Baron", "icon": "assets/icons/dungeons/boss-abom.jpg", "loot": [{"name": "Leftover Abomination Skin", "meta": "Cloth Chest · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Meathook Slicer", "meta": "1H Dagger · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Abomination Bones", "meta": "Mail Chest · Req. 15", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Viktor The Vile", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Vilewalkers", "meta": "Mail Feet · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Bloodied Chestwraps", "meta": "Leather Chest · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Vileblood Scimitar", "meta": "1H Sword · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "The Abandoned", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Rotmender's Leggings", "meta": "Cloth Legs · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Scepter of the Abandoned", "meta": "1H Mace · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Grip of Fear", "meta": "Mail Hands · Req. 17", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Bjork", "icon": "assets/icons/dungeons/boss-abom.jpg", "loot": [{"name": "Tuskwrap Belt", "meta": "Cloth Waist · Req. 16", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Corpse Chopper", "meta": "2H Axe · Req. 16", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Bonerust Leggings", "meta": "Mail Legs · Req. 16", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Rath'Mael", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Mirror of Rath'mael", "meta": "Shield · Req. 19", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Coldspire Staff", "meta": "2H Staff · Req. 19", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Rotmender's Treads", "meta": "Cloth Feet · Req. 19", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}]}, "deadmines": {"name": "The Deadmines", "levels": "18–23", "zone": "Westfall", "entrance": "Moonbrook mine → instance portal", "status": "full", "bosses": [{"name": "Rhahk'Zor", "icon": "assets/icons/dungeons/boss-ogre.jpg", "loot": [{"name": "Rhahk'Zor's Hammer", "meta": "2H Mace · Item Level 21 · Req. 16", "stats": ["47–71 Damage · 3.20", "+8 Stamina", "+8 Spell Damage/Healing"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_hammer_09.jpg"}, {"name": "Rockslicer", "meta": "2H Axe · Item Level 23 · Req. 18", "stats": ["52–78 Damage · 3.30", "+7 Strength", "+7 Nature Resistance", "30× Erzadern ohne Bergbau abbauen"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_throwingaxe_01.jpg"}]}, {"name": "Sneed's Shredder", "icon": "assets/icons/dungeons/boss-machine.jpg", "loot": [{"name": "Taskmaster Axe", "meta": "2H Axe · Item Level 23 · Req. 18", "stats": ["31–48 Damage · 2.70", "+8 Stamina", "+8 Spirit", "+15 Spell Damage / +45 Healing"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_axe_12.jpg"}, {"name": "Gold-flecked Gloves", "meta": "Cloth Hands · Req. 17", "stats": [], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_gauntlets_15.jpg"}, {"name": "Buzzer Blade", "meta": "Main Hand Dagger · Item Level 21 · Req. 16", "stats": ["9–18 Damage · 1.50", "+22 Spell Damage/Healing", "+9 Elemental Spell Damage"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_weapon_shortblade_14.jpg"}, {"name": "Buzz Saw", "meta": "1H Sword · Item Level 23 · Req. 18", "stats": ["24–46 Damage · 2.30", "+3 Agility", "+3 Stamina"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_sword_24.jpg"}]}, {"name": "Gilnid", "icon": "assets/icons/dungeons/boss-human.jpg", "loot": [{"name": "Smelting Pants", "meta": "Leather Legs · Item Level 21 · Req. 16", "stats": ["76 Armor", "+7 Stamina", "+5 Spirit", "−25% Smelt-Zeit: Copper/Tin/Bronze/Silver"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_pants_02.jpg"}, {"name": "Lavishly Jeweled Ring", "meta": "Finger · Item Level 22 · Req. 17", "stats": ["+2 Agility", "+6 Intellect"], "chance": "38%", "icon": "assets/icons/dungeon-items/inv_jewelry_ring_09.jpg"}]}, {"name": "Mr. Smite", "icon": "assets/icons/dungeons/boss-tauren.jpg", "loot": [{"name": "Smite's Mighty Hammer", "meta": "2H Mace · Item Level 23 · Req. 18", "stats": ["55–83 Damage · 3.50", "+11 Strength", "+4 Agility"], "chance": "≈16% (historische Stichprobe)", "icon": "assets/icons/dungeon-items/inv_hammer_09.jpg"}, {"name": "Smite's Reaver", "meta": "1H Axe · Req. 17", "stats": [], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_axe_04.jpg"}, {"name": "Thief's Blade", "meta": "1H Sword · Item Level 22 · Req. 17", "stats": ["17–32 Damage · 1.70", "+4 Agility", "+1% Erfolg für Pick Pocket/Distract"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_sword_12.jpg"}]}, {"name": "Captain Greenskin", "icon": "assets/icons/dungeons/boss-pirate.jpg", "loot": [{"name": "Emberstone Staff", "meta": "2H Staff · Item Level 22 · Req. 17", "stats": ["34–51 Damage · 3.00", "+8 Stamina", "+8 Fire Resistance", "+24 Spell Damage/Healing"], "chance": "38%", "icon": "assets/icons/dungeon-items/inv_staff_13.jpg"}, {"name": "Impaling Harpoon", "meta": "2H Polearm · Item Level 22 · Req. 17", "stats": ["36–55 Damage · 2.40", "+9 Agility", "+5 Intellect"], "chance": "28%", "icon": "assets/icons/dungeon-items/inv_spear_07.jpg"}, {"name": "Blackened Defias Belt", "meta": "Leather Waist · Item Level 22 · Req. 17", "stats": ["50 Armor", "+18 Attack Power", "Teil des Defias Leather Sets"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_belt_04.jpg"}]}, {"name": "Edwin VanCleef", "icon": "assets/icons/dungeons/boss-human.jpg", "loot": [{"name": "Cape of the Brotherhood", "meta": "Back · Req. 17", "stats": [], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_misc_cape_10.jpg"}, {"name": "Corsair's Overshirt", "meta": "Cloth Chest · Req. 17", "stats": [], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_shirt_08.jpg"}, {"name": "Cruel Barb", "meta": "1H Sword · Req. 17", "stats": [], "chance": "≈14–15% historische Stichprobe", "icon": "assets/icons/dungeon-items/inv_sword_04.jpg"}, {"name": "Blackened Defias Armor", "meta": "Leather Chest · Item Level 22 · Req. 17", "stats": ["89 Armor", "+4 Strength", "+3 Agility", "+10 Stamina", "Teil des Defias Leather Sets"], "chance": "≈14% historische Stichprobe", "icon": "assets/icons/dungeon-items/inv_chest_leather_08.jpg"}]}, {"name": "Cookie", "icon": "assets/icons/dungeons/boss-murloc.jpg", "loot": [{"name": "Cookie's Stirring Rod", "meta": "Wand · Item Level 22 · Req. 17", "stats": ["20–38 Arcane Damage · 1.30", "+25% Cooking Speed"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_misc_head_dragon_01.jpg"}, {"name": "Cookie's Tenderizer", "meta": "1H Mace · Item Level 21 · Req. 16", "stats": ["27–51 Damage · 2.80", "+4 Spirit", "Chance on hit: +1 Physical Damage Taken"], "chance": "nicht sicher erfasst", "icon": "assets/icons/dungeon-items/inv_mace_11.jpg"}]}]}, "excavation-site": {"name": "Excavation Site: Wetlands", "levels": "24–29", "zone": "Wetlands", "entrance": "Path just south of Thelgen Rock", "status": "full", "bosses": [{"name": "Saltspine", "icon": "assets/icons/dungeons/boss-crocolisk.jpg", "loot": [{"name": "Glinteye Slippers", "meta": "Cloth Feet", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Supple Bellyskin Leggings", "meta": "Leather Legs", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Saltscale Girdle", "meta": "Mail Waist", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Shadetooth", "icon": "assets/icons/dungeons/boss-raptor.jpg", "loot": [{"name": "Garb of Florid Feathers", "meta": "Leather Chest", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Raptorclaw Greaves", "meta": "Mail Feet", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Raptor's Gaze", "meta": "Off-Hand · Spellpower", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Relic Guardian", "icon": "assets/icons/dungeons/boss-golem.jpg", "loot": [{"name": "Reliquary Mantle", "meta": "Mail Shoulders", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Ring of Power Regulation", "meta": "Finger · Spellpower", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Golemsight Long Gun", "meta": "Gun · Agility", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}]}, "city-dalaran": {"name": "City of Dalaran", "levels": "28–33", "zone": "Alterac Mountains", "entrance": "Dalaran sewers; Horde needs Sewer Key", "status": "full", "bosses": [{"name": "Atrexis the Grave Knight", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Graveweave Bindings", "meta": "Cloth Wrist", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Bonebinder's Signet", "meta": "Finger · Strength/Armor", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Gravespike Repeater", "meta": "Crossbow · Attack Power", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Lyn the Ignored", "icon": "assets/icons/dungeons/boss-undead.jpg", "loot": [{"name": "Cartilage Shapers", "meta": "Leather Hands", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Tendonscraper Dagger", "meta": "Dagger · Spellpower", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Bonepile Gaze", "meta": "Shield · Strength", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Arcane Anomaly", "icon": "assets/icons/dungeons/boss-arcane.jpg", "loot": [{"name": "Ephemeral Grips", "meta": "Cloth Hands", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Mana-Warped Chain Shirt", "meta": "Mail Chest", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Runemender's Seal", "meta": "Finger · Healing", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Fel Ancient", "icon": "assets/icons/dungeons/boss-demon.jpg", "loot": [{"name": "Blightleaf Rope", "meta": "Cloth Waist", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Garb of Fallen Felbark", "meta": "Leather Chest", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Felbough Arm", "meta": "Polearm · Agility", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Unstable Sentinel", "icon": "assets/icons/dungeons/boss-golem.jpg", "loot": [{"name": "Unstable Crystalline Shoulderpads", "meta": "Leather Shoulders", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Refractory Scaleguards", "meta": "Mail Legs", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Mana Devourer", "icon": "assets/icons/dungeons/boss-arcane.jpg", "loot": [{"name": "Slitherwrap Girdle", "meta": "Leather Waist", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Manascale Treads", "meta": "Mail Feet", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Spine of the Devourer", "meta": "2H Staff · Spellpower", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Arcanic Enigma", "icon": "assets/icons/dungeons/boss-arcane.jpg", "loot": [{"name": "Violet Sorcerer's Robes", "meta": "Cloth Chest", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Drape of Shifting Energy", "meta": "Back · Attack Power", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Wand of Mana Concentration", "meta": "Wand · MP5", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}, {"name": "Shade of the Archmage", "icon": "assets/icons/dungeons/boss-arcane.jpg", "loot": [{"name": "Violet Sorcerer's Mantle", "meta": "Cloth Shoulders", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Archmagister's Faceted Pendant", "meta": "Neck · Int/AP", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}, {"name": "Ponderous Orb", "meta": "Off-Hand · Healing", "stats": [], "chance": "noch nicht verlässlich erfasst", "icon": "assets/icons/dungeon-items/inv_misc_questionmark.jpg"}]}]}, "ragefire-chasm": {"name": "Ragefire Chasm", "levels": "13–18", "zone": "Orgrimmar", "entrance": "Orgrimmar – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "wailing-caverns": {"name": "Wailing Caverns", "levels": "15–25", "zone": "The Barrens", "entrance": "The Barrens – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "shadowfang-keep": {"name": "Shadowfang Keep", "levels": "22–30", "zone": "Silverpine Forest", "entrance": "Silverpine Forest – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "blackfathom-deeps": {"name": "Blackfathom Deeps", "levels": "24–32", "zone": "Ashenvale", "entrance": "Ashenvale – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "stockade": {"name": "The Stockade", "levels": "22–30", "zone": "Stormwind", "entrance": "Stormwind – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "gnomeregan": {"name": "Gnomeregan", "levels": "29–38", "zone": "Dun Morogh", "entrance": "Dun Morogh – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "razorfen-kraul": {"name": "Razorfen Kraul", "levels": "30–40", "zone": "The Barrens", "entrance": "The Barrens – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "sm-graveyard": {"name": "Scarlet Monastery: Graveyard", "levels": "28–38", "zone": "Tirisfal Glades", "entrance": "Tirisfal Glades – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "sm-library": {"name": "Scarlet Monastery: Library", "levels": "29–39", "zone": "Tirisfal Glades", "entrance": "Tirisfal Glades – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "sm-armory": {"name": "Scarlet Monastery: Armory", "levels": "32–42", "zone": "Tirisfal Glades", "entrance": "Tirisfal Glades – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "drowned-city": {"name": "The Drowned City", "levels": "35–40", "zone": "Stranglethorn Vale", "entrance": "Stranglethorn Vale – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "sm-cathedral": {"name": "Scarlet Monastery: Cathedral", "levels": "35–45", "zone": "Tirisfal Glades", "entrance": "Tirisfal Glades – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "razorfen-downs": {"name": "Razorfen Downs", "levels": "40–50", "zone": "The Barrens", "entrance": "The Barrens – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "kroldok": {"name": "Krol'dok Stronghold", "levels": "40–45", "zone": "Riverglades", "entrance": "Riverglades – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "uldaman": {"name": "Uldaman", "levels": "42–52", "zone": "Badlands", "entrance": "Badlands – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "zul-farrak": {"name": "Zul'Farrak", "levels": "44–54", "zone": "Tanaris", "entrance": "Tanaris – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "maraudon": {"name": "Maraudon", "levels": "45–57", "zone": "Desolace", "entrance": "Desolace – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "alcaz-prison": {"name": "Alcaz Prison", "levels": "48–53", "zone": "Dustwallow Marsh", "entrance": "Dustwallow Marsh – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "sunken-temple": {"name": "The Temple of Atal'Hakkar", "levels": "50–60", "zone": "Swamp of Sorrows", "entrance": "Swamp of Sorrows – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "blackrock-depths": {"name": "Blackrock Depths", "levels": "52–60", "zone": "Blackrock Mountain", "entrance": "Blackrock Mountain – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "dire-maul-east": {"name": "Dire Maul East", "levels": "54–60", "zone": "Feralas", "entrance": "Feralas – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "lbrs": {"name": "Lower Blackrock Spire", "levels": "55–60", "zone": "Blackrock Mountain", "entrance": "Blackrock Mountain – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "blackmaw-hold": {"name": "Blackmaw Hold", "levels": "55–60", "zone": "Azshara", "entrance": "Azshara – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "dire-maul-north": {"name": "Dire Maul North", "levels": "56–60", "zone": "Feralas", "entrance": "Feralas – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "dire-maul-west": {"name": "Dire Maul West", "levels": "56–60", "zone": "Feralas", "entrance": "Feralas – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "shapers-terrace": {"name": "Shaper's Terrace", "levels": "58–60", "zone": "Un'Goro Crater", "entrance": "Un'Goro Crater – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "scholomance": {"name": "Scholomance", "levels": "58–60", "zone": "Western Plaguelands", "entrance": "Western Plaguelands – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "strath-main": {"name": "Stratholme: Main Gate", "levels": "58–60", "zone": "Eastern Plaguelands", "entrance": "Eastern Plaguelands – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "strath-service": {"name": "Stratholme: Service Gate", "levels": "58–60", "zone": "Eastern Plaguelands", "entrance": "Eastern Plaguelands – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}, "ubrs": {"name": "Upper Blackrock Spire", "levels": "59–60", "zone": "Blackrock Mountain", "entrance": "Blackrock Mountain – Eingang laut aktuellem Dungeon-Guide", "status": "partial", "bosses": []}};
+const cards=[...document.querySelectorAll('.dungeon-card')];
+const filters=[...document.querySelectorAll('.filter')];
+const search=document.getElementById('search');
+const drawer=document.getElementById('drawer'), body=document.getElementById('drawer-body');
+
+function matches(card,filter){
+ if(filter==='all') return true;
+ if(filter==='forever'||filter==='classic') return card.dataset.type===filter;
+ if(filter==='verified') return data[card.dataset.id].status==='full';
+ const [a,b]=filter.split('-').map(Number);
+ const min=Number(card.dataset.min),max=Number(card.dataset.max);
+ return max>=a&&min<=b;
+}
+let active='all';
+function apply(){
+ const q=search.value.trim().toLowerCase();
+ cards.forEach(c=>c.style.display=(matches(c,active)&&c.dataset.name.includes(q))?'':'none');
+}
+filters.forEach(f=>f.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));f.classList.add('active');active=f.dataset.filter;apply();}));
+search.addEventListener('input',apply);
+
+function mapHtml(d){
+ return `
+    <svg class="zone-map" viewBox="0 0 520 300" aria-label="${ZONE}">
+      <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0%" stop-color="#173326"/><stop offset="100%" stop-color="#263b2d"/></linearGradient></defs>
+      <rect width="520" height="300" rx="16" fill="url(#g)"/>
+      <path d="M40 80 C140 20,230 80,340 44 S470 74,486 132" fill="none" stroke="#365845" stroke-width="18" opacity=".45"/>
+      <path d="M60 225 C150 190,210 248,320 210 S430 150,480 186" fill="none" stroke="#2b4a39" stroke-width="22" opacity=".48"/>
+      <path d="M68 54 L116 95 L173 70 L222 118 L286 78 L354 115 L415 86 L458 145 L394 220 L302 244 L206 230 L125 250 L66 188 Z" fill="rgba(255,255,255,.035)" stroke="#637567" stroke-width="2"/>
+      <circle cx="355" cy="168" r="15" fill="#ffd100" stroke="#352f17" stroke-width="3"/>
+      <path d="M355 183 L344 206 L366 206 Z" fill="#ffd100" stroke="#352f17" stroke-width="2"/>
+      <text x="378" y="162" fill="#fff3bc" font-size="15" font-weight="700">Dungeon-Eingang</text>
+      <text x="378" y="184" fill="#c7d6ca" font-size="12">${ENTRANCE}</text>
+      <text x="20" y="282" fill="#9fb4a4" font-size="12">Vereinfachte Gebietsübersicht · Marker zeigt den empfohlenen Eingang</text>
+    </svg>
+    `.replace('${ZONE}',d.zone).replace('${ENTRANCE}',d.entrance);
+}
+
+function lootHtml(item,boss,dungeon){
+ const stats=item.stats&&item.stats.length?item.stats.map(s=>'<div>'+s+'</div>').join(''):'<div class="green">Detaillierte Statwerte sind im lokalen Datensatz noch nicht verifiziert.</div>';
+ return `<button class="loot-item" type="button" data-item="${encodeURIComponent(JSON.stringify({...item,boss,dungeon}))}">
+   <img src="${item.icon}" alt=""><span><span class="loot-name">${item.name}</span><span class="loot-meta">${item.meta}</span><span class="chance">Dropchance: ${item.chance}</span></span>
+ </button>`;
+}
+
+function openDungeon(id,mapOnly=false){
+ const d=data[id];
+ let content=`<div class="detail-top"><div><h2>${d.name}</h2><div class="detail-meta">Level ${d.levels} · ${d.zone}</div></div><span class="status ${d.status==='partial'?'partial':''}">${d.status==='full'?'verifizierter Detaildatensatz':'Grunddaten / noch unvollständig'}</span></div>`;
+ content+=`<div class="map-panel">${mapHtml(d)}</div>`;
+ if(!mapOnly){
+   if(d.bosses.length){
+     content+='<h3>Bosse & Loot</h3><div class="boss-grid">';
+     d.bosses.forEach(b=>{
+       content+=`<div class="boss-card"><div class="boss-title"><img src="${b.icon}" alt=""><div><h3>${b.name}</h3><div class="meta">${b.loot.length} Loot-Einträge</div></div></div><div class="loot-grid">`;
+       b.loot.forEach(i=>content+=lootHtml(i,b.name,d.name));
+       content+='</div></div>';
+     });
+     content+='</div><div id="item-panel"></div>';
+   } else {
+     content+=`<div class="empty"><b>Boss-/Lootdetails noch nicht zuverlässig im lokalen Browser erfasst.</b><br>Der Dungeon ist bereits in der Level-/Gebietsübersicht vorhanden. Für neue bzw. höhere Forever-Inhalte bleiben Dropdaten verborgen, bis Spieler sie in Wowhead/Icy Veins entdeckt haben. Wir zeigen deshalb keine erfundenen Prozente.</div>`;
+   }
+ }
+ body.innerHTML=content;drawer.hidden=false;document.body.style.overflow='hidden';
+}
+cards.forEach(c=>c.addEventListener('click',e=>{if(e.target.closest('[data-map]'))return;openDungeon(c.dataset.id,false);}));
+document.querySelectorAll('[data-map]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();openDungeon(b.dataset.map,true);}));
+document.addEventListener('click',e=>{
+ const item=e.target.closest('[data-item]');
+ if(item){
+  const o=JSON.parse(decodeURIComponent(item.dataset.item));
+  const stats=o.stats&&o.stats.length?o.stats.map(s=>'<div class="green">'+s+'</div>').join(''):'<div>Detaillierte Stats noch nicht verifiziert.</div>';
+  const panel=document.getElementById('item-panel');
+  panel.innerHTML=`<div class="item-panel"><h3>${o.name}</h3><div class="tooltip"><div class="blue">${o.name}</div><div class="gold">${o.meta}</div>${stats}<div style="margin-top:7px">Dropchance: <b>${o.chance}</b></div><div>Boss: ${o.boss}</div><div>Dungeon: ${o.dungeon}</div></div><div class="item-source">Forever-Daten werden aus Wowhead/Icy Veins übernommen. Bei historischen Prozentwerten ist dies ausdrücklich markiert.</div></div>`;
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }
+ if(e.target.closest('[data-close]')){drawer.hidden=true;body.innerHTML='';document.body.style.overflow='';}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!drawer.hidden){drawer.hidden=true;body.innerHTML='';document.body.style.overflow='';}});
+const hash=location.hash.slice(1);if(hash==='forever'){document.querySelector('[data-filter="forever"]').click();}if(hash==='verified'){document.querySelector('[data-filter="verified"]').click();}
+</script>
+</body></html>
