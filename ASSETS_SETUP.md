@@ -112,3 +112,14 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Klickbarer Loot mit Itemtooltip, Stats und Dropchance soweit verlässlich erfasst.
 - Klickbarer Gebietsbutton mit vereinfachter Karte und Eingangspfeil.
 - Höhere/unentdeckte Forever-Dungeons zeigen bewusst keinen erfundenen Loot.
+
+
+## v0.14.1
+- JavaScript-Fehler in `dungeons.html` behoben; alle Karten sind anklickbar.
+- Event-Delegation statt einzelner Card-Listener, damit Karten/Buttons zuverlässig funktionieren.
+- Gruppierung: Allianzgebiet / Hordegebiet / Umkämpft-Neutral.
+- Filter für alle drei Gebietskategorien ergänzt.
+- Aktuelle Mobalytics-Levelbereiche für Classic-Dungeons korrigiert.
+- Bosslisten für fast alle Classic-Dungeons ergänzt.
+- Verifizierte Loot-/Dropchance-Daten aus v0.14.0 bleiben erhalten.
+- Bei unverifizierten Lootdaten wird weiterhin nichts erfunden.

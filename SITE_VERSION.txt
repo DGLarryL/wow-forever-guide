@@ -1,2 +1,2 @@
-v0.14.0
-Neuer Hauptbereich „Dungeons“ mit 35 Dungeon-Einträgen, Level-/Typ-Filtern, Detailansichten für verifizierte Forever-Dungeons, Bossübersichten, klickbarem Loot mit Stats/Dropchance sowie Gebietskarten mit markiertem Eingang.
+v0.14.1
+Dungeon-Klickfehler behoben; alle Dungeon-Karten öffnen jetzt zuverlässig. Dungeons nach Allianzgebiet, Hordegebiet und umkämpft/neutral kategorisiert; Classic-Bosslisten ergänzt und bestehende Boss-/Loot-/Item-/Kartenansichten beibehalten.
