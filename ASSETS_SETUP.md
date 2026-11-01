@@ -70,3 +70,10 @@ Der Stufenregler in allen drei Klassenguides ist jetzt ein echter Drehregler:
 - Marker und Ringfüllung nutzen dieselbe Winkelberechnung.
 - Stufe 1–9: 0/51 Talentpunkte; erster Punkt auf Stufe 10.
 - Schnellbutton für Stufe 1 ergänzt.
+
+## v0.11.2 – Talentregler auf SVG umgestellt
+- Ring, Fortschrittsbogen und Punkt liegen jetzt auf exakt derselben SVG-Kreisbahn.
+- Winkelbasis korrigiert: 0° oben, im Uhrzeigersinn.
+- Stufe 1 startet unten links; Stufe 60 endet unten rechts.
+- 90°-Lücke unten wie bei einem WoW-artigen Drehregler.
+- Der Punkt kann geometrisch nicht mehr vom Ende des Fortschrittsbogens abweichen.

@@ -218,6 +218,42 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
   pointer-events:none;
   z-index:2;
 }
+
+/* v0.11.2 – SVG-Drehregler: Ring, Fortschritt und Marker liegen exakt auf derselben Bahn */
+.level-dial{
+  position:relative;
+  width:104px;height:104px;border-radius:50%;
+  display:grid;place-items:center;
+  cursor:grab;touch-action:none;user-select:none;
+  background:#1a1a19;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.04),0 5px 20px #0008;
+}
+.level-dial:active,.level-dial.dragging{cursor:grabbing}
+.level-dial::before,.level-dial::after{display:none!important}
+.level-dial-svg{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;z-index:1;
+}
+.dial-track,.dial-progress{
+  fill:none;stroke-width:7;stroke-linecap:round;
+}
+.dial-track{stroke:#3a3f3c}
+.dial-progress{stroke:#d6a96e}
+.dial-knob{
+  fill:#fff;stroke:#d6a96e;stroke-width:2;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.8));
+}
+.level-dial-center{
+  position:relative;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;pointer-events:none;
+}
+.level-dial-center small{font-size:.58rem;letter-spacing:.13em;font-weight:900;color:#aaa;text-transform:uppercase}
+.level-dial-center strong{font-size:1.95rem;line-height:1;margin-top:3px}
+.level-dial:focus-visible{outline:2px solid #d6a96e;outline-offset:4px}
+@media(max-width:650px){
+  .level-dial{width:92px;height:92px}
+  .level-dial-center strong{font-size:1.7rem}
+}
 </style>
 </head>
 <body>
@@ -273,11 +309,15 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <div class="level-controls">
 <button aria-label="Level verringern" class="level-step" data-level-minus="" type="button">−</button>
 <div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="1" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
+<svg aria-hidden="true" class="level-dial-svg" viewbox="0 0 100 100">
+<path class="dial-track" d="M 20.302 79.698 A 42 42 0 1 1 79.698 79.698" pathlength="100"></path>
+<path class="dial-progress" d="M 20.302 79.698 A 42 42 0 1 1 79.698 79.698" pathlength="100" stroke-dasharray="100 100"></path>
+<circle class="dial-knob" cx="79.698" cy="79.698" data-level-knob="" r="5"></circle>
+</svg>
 <div class="level-dial-center">
 <small>Stufe</small>
 <strong data-current-level="">60</strong>
 </div>
-<span class="level-knob" data-level-knob=""></span>
 </div>
 <button aria-label="Level erhöhen" class="level-step" data-level-plus="" type="button">+</button>
 </div>
@@ -973,49 +1013,53 @@ document.addEventListener('error', function (event) {
   const dial = planner.querySelector('[data-level-dial]');
   const knob = planner.querySelector('[data-level-knob]');
 
-  function updateDialVisual(level){
-    // Stufe 1 = exakt am Anfang des 300°-Bogens, Stufe 60 = exakt am Ende.
+  function dialPointForLevel(level){
     const progress=(level-1)/59;
-    dial.style.setProperty('--progress',String(progress));
+    const startDeg=225;
+    const sweepDeg=270;
+    const deg=startDeg + progress*sweepDeg;
+    const rad=deg*Math.PI/180;
 
-    // CSS conic-gradient: 0° ist oben, positive Winkel laufen im Uhrzeigersinn.
-    // Der Bogen beginnt bei 210° und umfasst 300°.
-    const startCssDeg=210;
-    const sweepDeg=300;
-    const cssDeg=startCssDeg + progress*sweepDeg;
+    // CSS-/WoW-Winkelkonvention: 0° oben, im Uhrzeigersinn.
+    const x=50 + 42*Math.sin(rad);
+    const y=50 - 42*Math.cos(rad);
+    return {x,y,progress};
+  }
 
-    // In Bildschirmkoordinaten umrechnen: Math-0° liegt rechts.
-    const mathDeg=cssDeg-90;
-    const angle=mathDeg*Math.PI/180;
-    const radius=(dial.clientWidth/2)-7;
-    const x=Math.cos(angle)*radius;
-    const y=Math.sin(angle)*radius;
+  function updateDialVisual(level){
+    const p=dialPointForLevel(level);
 
-    // Marker direkt relativ zum Mittelpunkt positionieren.
-    knob.style.left='calc(50% + '+x+'px)';
-    knob.style.top='calc(50% + '+y+'px)';
-    knob.style.transform='translate(-50%,-50%)';
+    // Der Fortschrittsbogen und der Marker enden mathematisch am selben Punkt.
+    const progressPath=dial.querySelector('.dial-progress');
+    progressPath.style.strokeDasharray=(p.progress*100)+' 100';
+
+    knob.setAttribute('cx',p.x.toFixed(3));
+    knob.setAttribute('cy',p.y.toFixed(3));
     dial.setAttribute('aria-valuenow',String(level));
   }
 
   function levelFromPointer(ev){
     const r=dial.getBoundingClientRect();
-    const cx=r.left+r.width/2, cy=r.top+r.height/2;
-    const dx=ev.clientX-cx, dy=ev.clientY-cy;
+    const cx=r.left+r.width/2;
+    const cy=r.top+r.height/2;
+    const dx=ev.clientX-cx;
+    const dy=ev.clientY-cy;
 
-    // Pointerwinkel: Math-0° rechts -> CSS-0° oben.
-    let mathDeg=Math.atan2(dy,dx)*180/Math.PI;
-    if(mathDeg<0) mathDeg+=360;
-    const cssDeg=(mathDeg+90)%360;
+    // Pointer in dieselbe Winkelkonvention umrechnen:
+    // 0° oben, im Uhrzeigersinn.
+    let deg=Math.atan2(dx,-dy)*180/Math.PI;
+    if(deg<0) deg+=360;
 
-    const startCssDeg=210;
-    const sweepDeg=300;
-    let rel=(cssDeg-startCssDeg+360)%360;
+    const startDeg=225;
+    const sweepDeg=270;
+    let rel=(deg-startDeg+360)%360;
 
-    // Die unteren 60° bilden die Lücke des Kreises.
-    // In dieser Dead-Zone auf das nähere Ende schnappen.
+    // Die untere 90°-Lücke ist eine Dead-Zone.
+    // Dort auf das nähere Ende des Reglers springen.
     if(rel>sweepDeg){
-      rel = rel>330 ? 0 : sweepDeg;
+      const toStart=360-rel;
+      const toEnd=rel-sweepDeg;
+      rel=(toStart<toEnd)?0:sweepDeg;
     }
 
     const level=Math.round(1+(rel/sweepDeg)*59);
