@@ -146,13 +146,69 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
   .talent-planner-top{align-items:flex-start}.planner-main{min-width:100%}
   .level-orb{width:78px;height:78px}.level-orb strong{font-size:1.7rem}
 }
+
+/* v0.10.3 – radialer Level-Drehregler */
+.level-controls{display:flex;align-items:center;gap:10px}
+.level-dial{
+  --progress:1;
+  position:relative;
+  width:104px;height:104px;border-radius:50%;
+  display:grid;place-items:center;
+  cursor:grab;touch-action:none;user-select:none;
+  background:
+    radial-gradient(circle at center,#1b1b1a 0 60%,transparent 61%),
+    conic-gradient(
+      from 210deg,
+      #d6a96e 0deg calc(var(--progress) * 300deg),
+      #3a3f3c calc(var(--progress) * 300deg) 300deg,
+      transparent 300deg 360deg
+    );
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.04),0 5px 20px #0008;
+}
+.level-dial:active,.level-dial.dragging{cursor:grabbing}
+.level-dial::before{
+  content:"";position:absolute;inset:8px;border-radius:50%;
+  background:#1a1a19;border:1px solid rgba(255,255,255,.07);z-index:1;
+}
+.level-dial-center{
+  position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none
+}
+.level-dial-center small{font-size:.58rem;letter-spacing:.13em;font-weight:900;color:#aaa;text-transform:uppercase}
+.level-dial-center strong{font-size:1.95rem;line-height:1;margin-top:3px}
+.level-knob{
+  position:absolute;z-index:4;left:50%;top:50%;
+  width:13px;height:13px;border-radius:50%;
+  background:#fff;border:2px solid #d6a96e;box-shadow:0 0 0 3px rgba(214,169,110,.15),0 2px 8px #000a;
+  transform-origin:0 0;pointer-events:none
+}
+.level-dial:focus-visible{outline:2px solid #d6a96e;outline-offset:4px}
+.level-step{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(0,0,0,.18);color:var(--text);font-size:1.35rem;cursor:pointer
+}
+.level-step:hover{background:rgba(255,255,255,.08)}
+/* hide the old horizontal slider but keep it as the state source for backwards compatibility */
+.level-range{display:none}
+@media(max-width:650px){
+  .level-dial{width:92px;height:92px}
+  .level-dial-center strong{font-size:1.7rem}
+}
+
+.source-standard{margin:0 0 18px;padding:13px 14px;border:1px solid #4e614f;border-radius:11px;background:#142019;line-height:1.5}
+.source-standard b{color:var(--gold)}.source-standard .verified{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:999px;background:#173526;color:#bdebc8;border:1px solid #39694a;font-size:.72rem}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:18px}
+.meta-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}
+.meta-card b{display:block;color:var(--gold);margin-bottom:4px}.meta-card .big{font-size:1.05rem;font-weight:800;color:var(--text)}
+.route-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0 18px}
+.route-step{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.13)}
+.route-step b{color:var(--gold)}.source-rank{font-size:.8rem;color:var(--muted);margin-top:6px}
 </style>
 </head>
 <body>
 <header><div class="wrap">
 <a href="https://dglarryl.github.io/wow-forever-guide/" style="display:inline-block;margin-bottom:13px;color:#c9e4ff;text-decoration:none;font-weight:700">← WoW Forever Guide</a><h1>Human Survival Hunter 10–60</h1>
 <div class="subtitle">WoW Forever · Survival Hunter Guide by LarryL</div>
-<div class="notice"><b>Version 0.4:</b> echte Pet-Karten, Original-Icons für Skills/Talente und klickbare Gear-Empfehlungen mit WoW-artigen Item-Tooltips.</div>
+<div class="notice"><b>v0.11 Meta-Update:</b> Inhalt gegen Wowhead (30.10.2026), Icy Veins und Mobalytics abgeglichen. Wo Quellen sich unterscheiden, ist die effizienteste Leveling-Empfehlung klar markiert.</div>
 </div></header>
 <nav><div class="tabbar">
 <button class="tabbtn active" data-tab="overview">Übersicht</button>
@@ -167,19 +223,26 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <main>
 <section class="tabpage active" id="overview">
 <h2>Übersicht</h2>
+<div class="source-standard"><b>Quellenstandard:</b> Klassenentscheidungen primär nach <b>Wowhead Forever</b>, mit Icy Veins/Mobalytics als Gegencheck. <span class="verified">Patch 1.60.1</span></div>
+<div class="meta-grid">
+<div class="meta-card"><b>Beste Leveling-Route</b><span class="big">10–31 Beast Mastery → ab 32 Survival</span><br/>Das ist die aktuelle Wowhead-Empfehlung, weil Strider Kick und Expose Prey Survival erst ab etwa 30/32 wirklich tragen.</div>
+<div class="meta-card"><b>Wenn du sofort Survival spielen willst</b><span class="big">Machbar, aber langsamer</span><br/>Der Talentplaner zeigt weiterhin eine reine Survival-Route, damit du den Spec von Anfang an spielen kannst.</div>
+<div class="meta-card"><b>Beste Pet-Familien</b><span class="big">Katze / Raptor für Schaden</span><br/>Beide haben 1,1× Schadensmodifikator. Aasvogel ist die defensive Alternative wegen Demoralisierendem Kreischen.</div>
+<div class="meta-card"><b>Beste Berufe beim Leveln</b><span class="big">Kürschnerei + Lederverarbeitung</span><br/>Du bekommst Leder direkt beim Questen und Forever-Lederverarbeitung liefert regelmäßig starke Levelitems.</div>
+</div>
+<div class="route-strip">
+<div class="route-step"><b>10–19</b><br/>Pet tanken lassen, Hunter's Mark/Schlangenbiss, Distanzschaden; BM ist effizienter.</div>
+<div class="route-step"><b>20–31</b><br/>Mehrfachschuss, Gepard, Fallen, Totstellen. Weiter BM für maximale Geschwindigkeit.</div>
+<div class="route-step"><b>32–39</b><br/>Auf Survival wechseln und Range↔Melee-Weaving lernen.</div>
+<div class="route-step"><b>40–60</b><br/>Survival-Weaving + Salve/AoE; Pet-Fähigkeitsränge etwa alle 10 Level aktualisieren.</div>
+</div>
+<h3>Stat-Priorität</h3>
 <div class="cards">
-<div class="card"><strong>Stufe 10</strong><br/>Geisterfang holen. Seine echten Forever-Spawns sind jetzt in der Pet-Karte markiert.</div>
-<div class="card"><strong>Stufe 30</strong><br/>Streichertritt: ab hier beginnt dein echtes Range↔Melee-Weaving.</div>
-<div class="card"><strong>Stufe 37</strong><br/>Zerbrochener Zahn campen, wenn du den schnellen Rare möchtest.</div>
-<div class="card"><strong>Stufe 51</strong><br/>In dieser Talentroute Falke beschwören freischalten.</div>
+<div class="card"><strong>Beim Leveln</strong><br/>Waffen-DPS / Beweglichkeit / Krit sind praktisch am wichtigsten. Ein klarer Waffenupgrade schlägt kleine Statunterschiede.</div>
+<div class="card"><strong>Level 60 PvE</strong><br/><b>Trefferchance → Beweglichkeit → Krit → Stärke → Angriffskraft → Intelligenz → Willenskraft → Ausdauer</b>.</div>
+<div class="card"><strong>Warum Treffer?</strong><br/>Ein verfehlter Angriff oder Skill kostet deutlich mehr Schaden als kleine Zugewinne anderer Stats.</div>
+<div class="card"><strong>Pet-Pflege</strong><br/>Glücklichkeit/Futter beachten und Klaue/Biss/Sprint-Ränge regelmäßig von temporär gezähmten Pets lernen.</div>
 </div>
-<div class="hero-actions">
-<button onclick="openTab('pets')">Pet-Karten öffnen</button>
-<button onclick="openTab('talents')">Talentroute öffnen</button>
-<button onclick="openTab('skills')">Skill-Icons ansehen</button>
-</div>
-<h3 style="margin-top:28px">Stat-Priorität</h3>
-<div class="table-wrap"><table style="min-width:650px"><thead><tr><th>Priorität</th><th>Wert</th><th>Hinweis</th></tr></thead><tbody><tr><td>1</td><td>Waffenschaden</td><td>Nah- und Fernkampfwaffe aktuell halten.</td></tr><tr><td>2</td><td>Beweglichkeit</td><td>Hauptwert für Schaden/Crit und Pet-Skalierung.</td></tr><tr><td>3</td><td>Kritische Trefferchance</td><td>Sehr stark für deine Hybrid-Spielweise.</td></tr><tr><td>4</td><td>Intelligenz</td><td>Mehr Mana; später zusätzlich relevant für Sorgfältiges Zielen.</td></tr><tr><td>5</td><td>Stärke</td><td>Hilft Nahkampfangriffskraft, meist hinter Beweglichkeit.</td></tr><tr><td>6</td><td>Ausdauer</td><td>Solider Solo-Puffer.</td></tr></tbody></table></div>
 </section>
 <section class="tabpage" id="pets">
 <h2>Pets &amp; echte Fundortkarten</h2>
@@ -193,7 +256,13 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <div class="talent-planner-top">
 <div class="level-controls">
 <button aria-label="Level verringern" class="level-step" data-level-minus="" type="button">−</button>
-<div class="level-orb"><small>Stufe</small><strong data-current-level="">60</strong></div>
+<div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="10" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
+<div class="level-dial-center">
+<small>Stufe</small>
+<strong data-current-level="">60</strong>
+</div>
+<span class="level-knob" data-level-knob=""></span>
+</div>
 <button aria-label="Level erhöhen" class="level-step" data-level-plus="" type="button">+</button>
 </div>
 <div class="planner-main">
@@ -226,8 +295,14 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 </section>
 <section class="tabpage" id="rotation">
 <h2>Rotationen nach Levelbereich</h2>
+<div class="source-standard"><b>Wowhead-Priorität:</b> Survival spielt eher eine Prioritätenliste als eine starre Rotation. Fürs Leveln ist Range↔Melee-Weaving ab den Kern-Talenten der stärkste Survival-Spielstil.</div>
 <div class="cards">
-<div class="card"><h3>10–17</h3><p>Mal des Jägers auf stärkere Ziele → Begleiter angreifen lassen → Automatischer Schuss → Schlangenbiss → Arkaner Schuss. Kommt das Ziel an dich heran: Raptorstoß, Zurechtstutzen und wieder Abstand.</p></div><div class="card"><h3>18–24</h3><p>Mal des Jägers → Begleiter → Schlangenbiss → Mehrfachschuss bei mehreren Zielen → Arkaner Schuss → automatische Schüsse. Nahkampf nur ergänzend.</p></div><div class="card"><h3>25–29</h3><p>Gleicher Fernkampf-Start, aber schon Weaving üben: schießen → kurz rein für Raptorstoß/Mungobiss → wieder auf Abstand.</p></div><div class="card"><h3>30–33</h3><p>Mal → Schlangenbiss → Mehrfach-/Arkanschuss → rein mit Raptorstoß → Mungobiss → Falle → Streichertritt → Bewegungsschub nutzen und wieder auf Range.</p></div><div class="card"><h3>34–39</h3><p>Beute aufspüren macht Mal des Jägers noch wichtiger. Sprengfalle bei Gruppen. Nicht in der Dead Zone stehen bleiben.</p></div><div class="card"><h3>40–50</h3><p>Einzelziel weiterweaven. Mehrere Ziele: Mehrfachschuss + Sprengfalle + Salve, sobald die Gruppe stabil steht.</p></div><div class="card"><h3>51–60</h3><p>Falke beschwören bei längeren Kämpfen einsetzen. Danach normale Weave-Priorität; auf kurzen Mobs teure DoTs/Fallen eher sparen.</p></div>
+<div class="card"><h3>Vor Survival-Kern (10–31)</h3><p>Hunter's Mark → Pet angreifen lassen → Schlangenbiss → Arkanschuss → Gezielter Schuss/Mehrfachschuss nach Verfügbarkeit. Pet soll Aggro halten; du bleibst auf Distanz.</p></div>
+<div class="card"><h3>Weaving Einzelziel 32+</h3><p>Hunter's Mark halten → Schlangenbiss halten → Beschworener Falke, falls talentiert → Mehrfachschuss → in Nahkampf laufen → Raptorstoß queued → Mungobiss → Feuerbrandfalle → Streichertritt → wieder raus.</p></div>
+<div class="card"><h3>Full Melee</h3><p>Hunter's Mark halten → Raptorstoß dauerhaft queued → Mungobiss → Streichertritt → Feuerbrandfalle → Beschworener Falke, wenn talentiert.</p></div>
+<div class="card"><h3>AoE vor 40</h3><p>Mehrfachschuss auf Distanz → wenn sicher hineinlaufen und Sprengfalle legen → ansonsten normale Einzelziel-Priorität.</p></div>
+<div class="card"><h3>AoE ab 40</h3><p>Prioritätsziel markieren → Mehrfachschuss bei bis zu 4 Zielen → Sprengfalle, wenn Mana/Sicherheit passen → Salve voll kanalisieren.</p></div>
+<div class="card"><h3>Cooldown</h3><p>Schnellfeuer möglichst auf Cooldown nutzen und mit Trinket/Racial bündeln. Fallen nicht spammen, wenn Mana die eigentliche Limitierung ist.</p></div>
 </div>
 </section>
 <section class="tabpage" id="gear"><h2>Empfohlenes Gear</h2>
@@ -331,8 +406,14 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 </section>
 <section class="tabpage" id="sources">
 <h2>Quellen &amp; Datenstand</h2>
-<div class="note-card">Forever ist noch vor dem vollständigen Launch. Pet-Daten bis Stufe 30 sind deutlich besser abgesichert; bei 31–60 kennzeichne ich Kartenpunkte entsprechend als Launch-/Classic-Basis.</div>
-<div class="source-grid"><a class="source-card" href="https://wowforeverpets.com/pets/ghostfang" rel="noopener" target="_blank">Ghostfang – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/black-ravager-mastiff" rel="noopener" target="_blank">Black Ravager Mastiff – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/feral-mountain-lion" rel="noopener" target="_blank">Feral Mountain Lion – Forever Pets<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=2070/moonstalker-runt" rel="noopener" target="_blank">Moonstalker Runt – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=5286/longtooth-runner" rel="noopener" target="_blank">Longtooth Runner – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=9696/bloodaxe-worg" rel="noopener" target="_blank">Bloodaxe Worg – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://raiddex.com/de/wow-forever/talente/jaeger" rel="noopener" target="_blank">Jäger-Talentbaum (deutsch) – RaidDex<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/dps-abilities" rel="noopener" target="_blank">Jäger-Fähigkeiten – Wowhead Forever<span>↗</span></a></div>
+<div class="source-grid">
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/dps-leveling-tips" target="_blank">Wowhead · Survival Leveling <span>Primärquelle ↗</span></a>
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/talent-builds-pve-dps" target="_blank">Wowhead · Talente <span>↗</span></a>
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/rotation-cooldowns-pve" target="_blank">Wowhead · Rotation <span>↗</span></a>
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/stat-priority-pve-dps" target="_blank">Wowhead · Stats <span>↗</span></a>
+<a class="source-card" href="https://www.icy-veins.com/wow-forever/survival-hunter-leveling" target="_blank">Icy Veins · Gegencheck <span>↗</span></a>
+<a class="source-card" href="https://mobalytics.gg/wow-forever/classes/survival-hunter-guide" target="_blank">Mobalytics · Gegencheck <span>↗</span></a>
+</div>
 </section>
 </main>
 <div aria-hidden="true" class="modal" id="modal-ghostfang">
@@ -873,6 +954,63 @@ document.addEventListener('error', function (event) {
   const pointEl = planner.querySelector('[data-point-status]');
   const presetBtns = [...planner.querySelectorAll('[data-level-preset]')];
 
+  const dial = planner.querySelector('[data-level-dial]');
+  const knob = planner.querySelector('[data-level-knob]');
+
+  function updateDialVisual(level){
+    const progress=(level-10)/50;
+    dial.style.setProperty('--progress',String(progress));
+    const startDeg=210;
+    const sweepDeg=300;
+    const angle=(startDeg + progress*sweepDeg) * Math.PI/180;
+    const radius=(dial.clientWidth/2)-7;
+    const x=Math.cos(angle)*radius;
+    const y=Math.sin(angle)*radius;
+    knob.style.transform='translate('+x+'px,'+y+'px) translate(-50%,-50%)';
+    dial.setAttribute('aria-valuenow',String(level));
+  }
+
+  function levelFromPointer(ev){
+    const r=dial.getBoundingClientRect();
+    const cx=r.left+r.width/2, cy=r.top+r.height/2;
+    const dx=ev.clientX-cx, dy=ev.clientY-cy;
+    let deg=Math.atan2(dy,dx)*180/Math.PI;
+    if(deg<0) deg+=360;
+
+    // Dial sweep goes clockwise from 210° to 150° through 360°.
+    let rel;
+    if(deg>=210) rel=deg-210;
+    else rel=deg+150;
+
+    // Bottom 60° is the dead zone; clamp to nearest edge.
+    if(rel<0) rel=0;
+    if(rel>300){
+      const distToStart=Math.abs(deg-210);
+      const distToEnd=Math.abs(deg-150);
+      rel=distToStart<distToEnd?0:300;
+    }
+    const level=Math.round(10+(rel/300)*50);
+    update(level);
+  }
+
+  let dragging=false;
+  dial.addEventListener('pointerdown',ev=>{
+    dragging=true;dial.classList.add('dragging');dial.setPointerCapture(ev.pointerId);levelFromPointer(ev);
+  });
+  dial.addEventListener('pointermove',ev=>{if(dragging) levelFromPointer(ev)});
+  dial.addEventListener('pointerup',ev=>{
+    dragging=false;dial.classList.remove('dragging');
+    try{dial.releasePointerCapture(ev.pointerId)}catch(e){}
+  });
+  dial.addEventListener('pointercancel',()=>{dragging=false;dial.classList.remove('dragging')});
+  dial.addEventListener('keydown',ev=>{
+    if(ev.key==='ArrowRight'||ev.key==='ArrowUp'){ev.preventDefault();update(Number(range.value)+1)}
+    if(ev.key==='ArrowLeft'||ev.key==='ArrowDown'){ev.preventDefault();update(Number(range.value)-1)}
+    if(ev.key==='Home'){ev.preventDefault();update(10)}
+    if(ev.key==='End'){ev.preventDefault();update(60)}
+  });
+
+
   const key = (tree,name) => tree + '||' + name;
 
   function buildState(level){
@@ -890,6 +1028,7 @@ document.addEventListener('error', function (event) {
     range.value=String(level);
     levelEl.textContent=String(level);
     planner.querySelectorAll('[data-title-level]').forEach(x=>x.textContent=String(level));
+    updateDialVisual(level);
 
     presetBtns.forEach(b=>b.classList.toggle('active',Number(b.dataset.levelPreset)===level));
 

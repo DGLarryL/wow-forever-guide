@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="dark">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
 <title>WoW Forever Guide by LarryL</title>
 <style>
 :root{
@@ -43,89 +44,84 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
 @media(min-width:801px){.navcat:hover .megamenu{display:grid}.navcat:hover .catbtn span{color:var(--gold)}}
 @media(max-width:800px){.navinner{overflow:auto}.navcat{flex:0 0 210px}.megamenu{position:fixed;left:12px;right:12px;top:145px;width:auto}.megagrid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}}
 @media(max-width:520px){.megagrid{grid-template-columns:1fr}.catbtn{height:62px}.catbtn img{width:52px;height:52px}}
+
+.quality-note{max-width:1240px;margin:18px auto 0;padding:0 18px}.quality-box{padding:13px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.quality-box b{color:#ffd100}
 </style>
 </head>
 <body>
 <header class="top">
- <div class="brand"><small>World of Warcraft: Forever</small><h1>WoW Forever Guide by LarryL</h1></div>
-</header>
-
+<div class="brand"><small>World of Warcraft: Forever</small><h1>WoW Forever Guide by LarryL</h1></div>
+</header><div class="quality-note"><div class="quality-box"><b>v0.11 · Quellengeprüft:</b> Klassen primär nach Wowhead Forever; Berufe primär nach WoW-Professions. Icy Veins und Mobalytics dienen als Gegencheck für Trainer, Forever-Systeme und alternative Empfehlungen.</div></div>
 <div class="navstrip">
- <div class="navinner">
-   <div class="navcat" data-menu>
-     <button class="catbtn"><img src="assets/icons/nav-classes.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg" alt=""><span>Klassen</span></button>
-     <div class="megamenu"><div class="megagrid">
-       <div class="megacol"><h3>Jäger</h3><a class="menuitem" href="survival-hunter.html"><img src="assets/icons/spec-survival-hunter.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_camouflage.jpg">Survival Hunter</a></div>
-       <div class="megacol"><h3>Priester</h3><a class="menuitem" href="holy-priest.html"><img src="assets/icons/spec-holy-priest.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg">Holy Priest</a></div>
-       <div class="megacol"><h3>Krieger</h3><a class="menuitem" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg">Arms Warrior</a></div>
-       <div class="megacol"><h3>Weitere Klassen</h3>
-         <div class="menuitem disabled">Druide <span class="soon">folgt</span></div>
-         <div class="menuitem disabled">Magier <span class="soon">folgt</span></div>
-         <div class="menuitem disabled">Paladin <span class="soon">folgt</span></div>
-       </div>
-       <div class="megacol"><h3>&nbsp;</h3>
-         <div class="menuitem disabled">Schamane <span class="soon">folgt</span></div>
-         <div class="menuitem disabled">Schurke <span class="soon">folgt</span></div>
-         <div class="menuitem disabled">Hexenmeister <span class="soon">folgt</span></div>
-       </div>
-     </div></div>
-   </div>
-
-   <div class="navcat" data-menu>
-     <button class="catbtn"><img src="assets/icons/nav-professions.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_05.jpg" alt=""><span>Berufe</span></button>
-     <div class="megamenu"><div class="megagrid">
-       <div class="megacol"><h3>Herstellungsberufe</h3>
-         <div class="menuitem disabled"><img src="assets/icons/professions/alchemy.jpg">Alchemie <span class="soon">folgt</span></div>
-         <a class="menuitem" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg">Schmiedekunst</a>
-         <div class="menuitem disabled"><img src="assets/icons/professions/engineering.jpg">Ingenieurskunst <span class="soon">folgt</span></div>
-         <a class="menuitem" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg">Lederverarbeitung</a>
-         <a class="menuitem" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg">Verzauberkunst</a>
-         <a class="menuitem" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg">Schneiderei</a>
-       </div>
-       <div class="megacol"><h3>Sammelberufe</h3>
-         <div class="menuitem disabled"><img src="assets/icons/professions/herbalism.jpg">Kräuterkunde <span class="soon">folgt</span></div>
-         <a class="menuitem" href="mining.html"><img src="assets/icons/professions/mining.jpg">Bergbau</a>
-         <a class="menuitem" href="skinning.html"><img src="assets/icons/professions/skinning.jpg">Kürschnerei</a>
-       </div>
-       <div class="megacol"><h3>Nebenberufe</h3>
-         <div class="menuitem disabled"><img src="assets/icons/professions/cooking.jpg">Kochkunst <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/fishing.jpg">Angeln <span class="soon">folgt</span></div>
-         <div class="menuitem disabled"><img src="assets/icons/professions/firstaid.jpg">Erste Hilfe <span class="soon">folgt</span></div>
-       </div>
-     </div></div>
-   </div>
- </div>
+<div class="navinner">
+<div class="navcat" data-menu="">
+<button class="catbtn"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg" src="assets/icons/nav-classes.jpg"/><span>Klassen</span></button>
+<div class="megamenu"><div class="megagrid">
+<div class="megacol"><h3>Jäger</h3><a class="menuitem" href="survival-hunter.html"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_camouflage.jpg" src="assets/icons/spec-survival-hunter.jpg"/>Survival Hunter</a></div>
+<div class="megacol"><h3>Priester</h3><a class="menuitem" href="holy-priest.html"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg" src="assets/icons/spec-holy-priest.jpg"/>Holy Priest</a></div>
+<div class="megacol"><h3>Krieger</h3><a class="menuitem" href="arms-warrior.html"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg" src="assets/icons/spec-arms-warrior.jpg"/>Arms Warrior</a></div>
+<div class="megacol"><h3>Weitere Klassen</h3>
+<div class="menuitem disabled">Druide <span class="soon">folgt</span></div>
+<div class="menuitem disabled">Magier <span class="soon">folgt</span></div>
+<div class="menuitem disabled">Paladin <span class="soon">folgt</span></div>
 </div>
-
+<div class="megacol"><h3> </h3>
+<div class="menuitem disabled">Schamane <span class="soon">folgt</span></div>
+<div class="menuitem disabled">Schurke <span class="soon">folgt</span></div>
+<div class="menuitem disabled">Hexenmeister <span class="soon">folgt</span></div>
+</div>
+</div></div>
+</div>
+<div class="navcat" data-menu="">
+<button class="catbtn"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_05.jpg" src="assets/icons/nav-professions.jpg"/><span>Berufe</span></button>
+<div class="megamenu"><div class="megagrid">
+<div class="megacol"><h3>Herstellungsberufe</h3>
+<div class="menuitem disabled"><img src="assets/icons/professions/alchemy.jpg"/>Alchemie <span class="soon">folgt</span></div>
+<a class="menuitem" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg"/>Schmiedekunst</a>
+<div class="menuitem disabled"><img src="assets/icons/professions/engineering.jpg"/>Ingenieurskunst <span class="soon">folgt</span></div>
+<a class="menuitem" href="leatherworking.html"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg" src="assets/icons/professions/leatherworking.jpg"/>Lederverarbeitung</a>
+<a class="menuitem" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg"/>Verzauberkunst</a>
+<a class="menuitem" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg"/>Schneiderei</a>
+</div>
+<div class="megacol"><h3>Sammelberufe</h3>
+<div class="menuitem disabled"><img src="assets/icons/professions/herbalism.jpg"/>Kräuterkunde <span class="soon">folgt</span></div>
+<a class="menuitem" href="mining.html"><img src="assets/icons/professions/mining.jpg"/>Bergbau</a>
+<a class="menuitem" href="skinning.html"><img src="assets/icons/professions/skinning.jpg"/>Kürschnerei</a>
+</div>
+<div class="megacol"><h3>Nebenberufe</h3>
+<div class="menuitem disabled"><img src="assets/icons/professions/cooking.jpg"/>Kochkunst <span class="soon">folgt</span></div>
+<div class="menuitem disabled"><img src="assets/icons/professions/fishing.jpg"/>Angeln <span class="soon">folgt</span></div>
+<div class="menuitem disabled"><img src="assets/icons/professions/firstaid.jpg"/>Erste Hilfe <span class="soon">folgt</span></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
 <main>
- <div class="hero">
-   <div class="hero-main">
-     <h2>Dein deutscher WoW-Forever-Guide</h2>
-     <p>Klassen, Berufe, Leveling-Routen, Gear, Skills und praktische Fundorte an einem Ort. Die Seite wächst Schritt für Schritt mit neuen Guides und wird auf den aktuellen Forever-Stand angepasst.</p>
-     <div class="badges"><span class="badge">Original-WoW-Icons</span><span class="badge">deutsche Begriffe</span><span class="badge">Forever-spezifisch</span><span class="badge">interaktive Guides</span></div>
-   </div>
-   <div class="hero-side"><h3>Neu: Lederverarbeitung</h3><p>Effiziente 1–300-Route, Materialliste, Allianz-/Horde-Lehrer, Merchant’s Favor und Spezialisierungen.</p><a href="leatherworking.html" style="color:#ffd100;text-decoration:none;font-weight:800">Guide öffnen →</a></div>
- </div>
-
- <div class="section-title"><h2>Verfügbare Klassenguides</h2><span>3 Guides</span></div>
- <div class="cards">
-  <a class="card" href="survival-hunter.html"><img src="assets/icons/spec-survival-hunter.jpg"><div><div class="card-title">Survival Hunter</div><div class="card-sub">Pets · Talente · Gear · Rotation</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="holy-priest.html"><img src="assets/icons/spec-holy-priest.jpg"><div><div class="card-title">Holy Priest</div><div class="card-sub">Heilung · Talente · Gear</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg"><div><div class="card-title">Arms Warrior</div><div class="card-sub">2H · Wut · Waffenfortschritt</div></div><span class="activepill">aktiv</span></a>
- </div>
-
- <div class="section-title"><h2>Verfügbare Berufsguides</h2><span>6 Guides</span></div>
- <div class="cards">
-  <a class="card" href="leatherworking.html"><img src="assets/icons/professions/leatherworking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg"><div><div class="card-title">Lederverarbeitung</div><div class="card-sub">1–300 · Materialien · Lehrer · Muster</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg"><div><div class="card-title">Schneiderei</div><div class="card-sub">1–225 getestet · Stoff · Lehrer</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg"><div><div class="card-title">Verzauberkunst</div><div class="card-sub">1–300 · Entzaubern · Ruten</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg"><div><div class="card-title">Schmiedekunst</div><div class="card-sub">1–225 getestet · Barren · Gear</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="mining.html"><img src="assets/icons/professions/mining.jpg"><div><div class="card-title">Bergbau</div><div class="card-sub">1–300 · Farmrouten · Verhütten</div></div><span class="activepill">aktiv</span></a>
-  <a class="card" href="skinning.html"><img src="assets/icons/professions/skinning.jpg"><div><div class="card-title">Kürschnerei</div><div class="card-sub">1–300 · Farmspots · Leder</div></div><span class="activepill">aktiv</span></a>
-
- </div>
+<div class="hero">
+<div class="hero-main">
+<h2>Dein deutscher WoW-Forever-Guide</h2>
+<p>Klassen, Berufe, Leveling-Routen, Gear, Skills und praktische Fundorte an einem Ort. Die Seite wächst Schritt für Schritt mit neuen Guides und wird auf den aktuellen Forever-Stand angepasst.</p>
+<div class="badges"><span class="badge">Original-WoW-Icons</span><span class="badge">deutsche Begriffe</span><span class="badge">Forever-spezifisch</span><span class="badge">interaktive Guides</span></div>
+</div>
+<div class="hero-side"><h3>Neu: Lederverarbeitung</h3><p>Effiziente 1–300-Route, Materialliste, Allianz-/Horde-Lehrer, Merchant’s Favor und Spezialisierungen.</p><a href="leatherworking.html" style="color:#ffd100;text-decoration:none;font-weight:800">Guide öffnen →</a></div>
+</div>
+<div class="section-title"><h2>Verfügbare Klassenguides</h2><span>3 Guides</span></div>
+<div class="cards">
+<a class="card" href="survival-hunter.html"><img src="assets/icons/spec-survival-hunter.jpg"/><div><div class="card-title">Survival Hunter</div><div class="card-sub">Pets · Talente · Gear · Rotation</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="holy-priest.html"><img src="assets/icons/spec-holy-priest.jpg"/><div><div class="card-title">Holy Priest</div><div class="card-sub">Heilung · Talente · Gear</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="arms-warrior.html"><img src="assets/icons/spec-arms-warrior.jpg"/><div><div class="card-title">Arms Warrior</div><div class="card-sub">2H · Wut · Waffenfortschritt</div></div><span class="activepill">aktiv</span></a>
+</div>
+<div class="section-title"><h2>Verfügbare Berufsguides</h2><span>6 Guides</span></div>
+<div class="cards">
+<a class="card" href="leatherworking.html"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg" src="assets/icons/professions/leatherworking.jpg"/><div><div class="card-title">Lederverarbeitung</div><div class="card-sub">1–300 · Materialien · Lehrer · Muster</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="tailoring.html"><img src="assets/icons/professions/tailoring.jpg"/><div><div class="card-title">Schneiderei</div><div class="card-sub">1–225 getestet · Stoff · Lehrer</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="enchanting.html"><img src="assets/icons/professions/enchanting.jpg"/><div><div class="card-title">Verzauberkunst</div><div class="card-sub">1–300 · Entzaubern · Ruten</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="blacksmithing.html"><img src="assets/icons/professions/blacksmithing.jpg"/><div><div class="card-title">Schmiedekunst</div><div class="card-sub">1–225 getestet · Barren · Gear</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="mining.html"><img src="assets/icons/professions/mining.jpg"/><div><div class="card-title">Bergbau</div><div class="card-sub">1–300 · Farmrouten · Verhütten</div></div><span class="activepill">aktiv</span></a>
+<a class="card" href="skinning.html"><img src="assets/icons/professions/skinning.jpg"/><div><div class="card-title">Kürschnerei</div><div class="card-sub">1–300 · Farmspots · Leder</div></div><span class="activepill">aktiv</span></a>
+</div>
 </main>
-
 <script>
 document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1)el.src=el.dataset.fallback},true);
 </script>

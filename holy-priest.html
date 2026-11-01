@@ -85,28 +85,90 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
   .talent-planner-top{align-items:flex-start}.planner-main{min-width:100%}
   .level-orb{width:78px;height:78px}.level-orb strong{font-size:1.7rem}
 }
+
+/* v0.10.3 – radialer Level-Drehregler */
+.level-controls{display:flex;align-items:center;gap:10px}
+.level-dial{
+  --progress:1;
+  position:relative;
+  width:104px;height:104px;border-radius:50%;
+  display:grid;place-items:center;
+  cursor:grab;touch-action:none;user-select:none;
+  background:
+    radial-gradient(circle at center,#1b1b1a 0 60%,transparent 61%),
+    conic-gradient(
+      from 210deg,
+      #d6a96e 0deg calc(var(--progress) * 300deg),
+      #3a3f3c calc(var(--progress) * 300deg) 300deg,
+      transparent 300deg 360deg
+    );
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.04),0 5px 20px #0008;
+}
+.level-dial:active,.level-dial.dragging{cursor:grabbing}
+.level-dial::before{
+  content:"";position:absolute;inset:8px;border-radius:50%;
+  background:#1a1a19;border:1px solid rgba(255,255,255,.07);z-index:1;
+}
+.level-dial-center{
+  position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none
+}
+.level-dial-center small{font-size:.58rem;letter-spacing:.13em;font-weight:900;color:#aaa;text-transform:uppercase}
+.level-dial-center strong{font-size:1.95rem;line-height:1;margin-top:3px}
+.level-knob{
+  position:absolute;z-index:4;left:50%;top:50%;
+  width:13px;height:13px;border-radius:50%;
+  background:#fff;border:2px solid #d6a96e;box-shadow:0 0 0 3px rgba(214,169,110,.15),0 2px 8px #000a;
+  transform-origin:0 0;pointer-events:none
+}
+.level-dial:focus-visible{outline:2px solid #d6a96e;outline-offset:4px}
+.level-step{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(0,0,0,.18);color:var(--text);font-size:1.35rem;cursor:pointer
+}
+.level-step:hover{background:rgba(255,255,255,.08)}
+/* hide the old horizontal slider but keep it as the state source for backwards compatibility */
+.level-range{display:none}
+@media(max-width:650px){
+  .level-dial{width:92px;height:92px}
+  .level-dial-center strong{font-size:1.7rem}
+}
+
+.source-standard{margin:0 0 18px;padding:13px 14px;border:1px solid #4e614f;border-radius:11px;background:#142019;line-height:1.5}
+.source-standard b{color:var(--gold)}.source-standard .verified{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:999px;background:#173526;color:#bdebc8;border:1px solid #39694a;font-size:.72rem}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:18px}
+.meta-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}
+.meta-card b{display:block;color:var(--gold);margin-bottom:4px}.meta-card .big{font-size:1.05rem;font-weight:800;color:var(--text)}
+.route-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0 18px}
+.route-step{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.13)}
+.route-step b{color:var(--gold)}.source-rank{font-size:.8rem;color:var(--muted);margin-top:6px}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a><h1>Holy Priest 10–60</h1><div class="subtitle">WoW Forever · Heiler-Guide by LarryL</div>
-<div class="notice"><b>Datenstand 01.11.2026:</b> Bis Level 30 ist Forever praktisch getestet. Level 31–60 basiert auf den aktuellen Forever-Daten und wird zum Launch weiter verfeinert.</div></div></header>
+<div class="notice"><b>v0.11 Meta-Update:</b> Holy-Guide mit Wowhead Forever (31.10.2026) als Hauptquelle überarbeitet; Solo-Leveling und Dungeon-/Raid-Healing werden jetzt klar getrennt.</div></div></header>
 <nav><div class="tabbar">
 <button class="tabbtn active" data-tab="overview">Übersicht</button><button class="tabbtn" data-tab="talents">Talente</button><button class="tabbtn" data-tab="skills">Skills</button><button class="tabbtn" data-tab="rotation">Rotation</button><button class="tabbtn" data-tab="gear">Gear</button><button class="tabbtn" data-tab="sources">Quellen</button>
 </div></nav>
 <main>
-<section class="tabpage active" id="overview"><h2>Übersicht</h2>
-<div class="cards"><div class="card"><strong>Spielstil</strong><br/>Reaktiver Heiler mit starken Single-Target-Heals, Erneuerung, Gruppenheilung und sehr viel Utility.</div>
-<div class="card"><strong>Solo-Leveling</strong><br/>Langsamer als Shadow/Discipline. Schild → Heiliges Feuer/Gedankenschlag → Schattenwort: Schmerz → Zauberstab.</div>
-<div class="card"><strong>Dungeon-Healing</strong><br/>Erneuerung auf dem Tank, Heilen als Standard, Blitzheilung nur wenn es wirklich brennt.</div>
-<div class="card"><strong>Großer Meilenstein</strong><br/>Gebet der Besserung auf Level 40 in der reinen Holy-Route.</div></div>
-<h3 style="margin-top:26px">Stat-Priorität</h3>
-<div class="priority">
-<div class="prio"><div class="prio-num">1</div><div><b>Heilungsmacht</b><br/><span class="small">Direkt mehr Heilung pro Zauber.</span></div></div>
-<div class="prio"><div class="prio-num">2</div><div><b>Intelligenz</b><br/><span class="small">Mehr Mana und etwas Zauberkrit.</span></div></div>
-<div class="prio"><div class="prio-num">3</div><div><b>Mana pro 5 Sek.</b><br/><span class="small">Regeneriert auch während du zauberst.</span></div></div>
-<div class="prio"><div class="prio-num">4</div><div><b>Willenskraft</b><br/><span class="small">Regeneration; später zusätzlich Heilung über Spirituelle Führung.</span></div></div>
-<div class="prio"><div class="prio-num">5</div><div><b>Zauberkrit</b><br/><span class="small">Nützlich für Inspiration, aber hinter Heilung/Mana.</span></div></div></div>
-<div class="note-card" style="margin-top:18px"><b>Solo-Alternative:</b> Wenn du überwiegend allein questest, sind 2 frühe Punkte in <b>Zauberstab-Spezialisierung</b> sehr effizient. Dadurch verschieben sich die Holy-Meilensteine ungefähr zwei Level nach hinten.</div>
+<section class="tabpage active" id="overview">
+<h2>Übersicht</h2>
+<div class="source-standard"><b>Quellenstandard:</b> Wowhead Forever als Primärquelle, Icy Veins als Gegencheck. <span class="verified">Patch 1.60.1</span></div>
+<div class="meta-grid">
+<div class="meta-card"><b>Beste Solo-Leveling-Wahl</b><span class="big">Shadow &gt; Discipline &gt; Holy</span><br/>Wenn du überwiegend allein questest, ist reines Holy nicht die schnellste Variante.</div>
+<div class="meta-card"><b>Wann Holy ideal ist</b><span class="big">Dungeon-/Gruppen-Leveling</span><br/>Holy lohnt sich, wenn du viel heilst oder mit Freunden levelst.</div>
+<div class="meta-card"><b>Solo-Kompromiss</b><span class="big">2/2 Zauberstab-Spezialisierung</span><br/>Die zwei frühen Discipline-Punkte sind ein großer Questing-DPS-Gewinn; danach in Holy wechseln.</div>
+<div class="meta-card"><b>Beste Berufe</b><span class="big">Schneiderei + Verzauberkunst</span><br/>Stoffgear + eigene Zauberstäbe/Entzaubermaterialien ergänzen sich perfekt.</div>
+</div>
+<h3>Stat-Priorität</h3>
+<div class="cards">
+<div class="card"><strong>1. Heilungsmacht</strong><br/>Direkt beste Throughput-Steigerung.</div>
+<div class="card"><strong>2. Intelligenz</strong><br/>Mehr Mana und Zauberkrit.</div>
+<div class="card"><strong>3. MP5</strong><br/>Regeneriert auch während du zauberst.</div>
+<div class="card"><strong>4. Willenskraft</strong><br/>Regeneration; später zusätzliche Heilung über Spirituelle Führung.</div>
+<div class="card"><strong>5. Zauberkrit</strong><br/>Gut für Inspiration, aber hinter Heilung/Mana.</div>
+<div class="card"><strong>6. Ausdauer</strong><br/>Defensiver Bonus.</div>
+</div>
+<div class="note-card" style="margin-top:18px"><b>Level-60-PvE:</b> Wowheads Standard-Raidbuild liegt aktuell bei <b>18 Disziplin / 33 Heilig / 0 Schatten</b>. Der interaktive Talentplaner darunter zeigt weiterhin die reine Holy-Levelingroute ohne Respec.</div>
 </section>
 <section class="tabpage" id="talents"><h2>Talentroute 10–60</h2>
 <div class="note-card">Diese Route ist absichtlich <b>reines Holy-Leveling</b>: Gebet der Besserung kommt so auf Level 40. Danach gehen die Punkte für Mana und Effizienz in Disziplin.</div>
@@ -114,7 +176,13 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
 <div class="talent-planner-top">
 <div class="level-controls">
 <button aria-label="Level verringern" class="level-step" data-level-minus="" type="button">−</button>
-<div class="level-orb"><small>Stufe</small><strong data-current-level="">60</strong></div>
+<div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="10" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
+<div class="level-dial-center">
+<small>Stufe</small>
+<strong data-current-level="">60</strong>
+</div>
+<span class="level-knob" data-level-knob=""></span>
+</div>
 <button aria-label="Level erhöhen" class="level-step" data-level-plus="" type="button">+</button>
 </div>
 <div class="planner-main">
@@ -139,14 +207,16 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
 <section class="tabpage" id="skills"><h2>Wichtige Skills</h2>
 <div class="table-wrap"><table><thead><tr><th>Level</th><th>Skill</th><th>Warum wichtig?</th></tr></thead><tbody><tr><td>1</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_holysmite.jpg" loading="lazy" src="assets/icons/priest/spell_holy_holysmite.jpg"/><div><strong>Göttliche Pein</strong></div></div></td><td>Dein früher offensiver Opener.</td></tr><tr><td>4</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg" loading="lazy" src="assets/icons/priest/spell_shadow_shadowwordpain.jpg"/><div><strong>Schattenwort: Schmerz</strong></div></div></td><td>DoT fürs Solo-Leveln.</td></tr><tr><td>6</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg" loading="lazy" src="assets/icons/priest/spell_holy_powerwordshield.jpg"/><div><strong>Machtwort: Schild</strong></div></div></td><td>Schutz vor Schaden und Pushback beim Questen.</td></tr><tr><td>8</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_renew.jpg" loading="lazy" src="assets/icons/priest/spell_holy_renew.jpg"/><div><strong>Erneuerung</strong></div></div></td><td>Kern-HoT auf Tank und für Bewegung.</td></tr><tr><td>8</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_magic_lesserinvisibilty.jpg" loading="lazy" src="assets/icons/priest/spell_magic_lesserinvisibilty.jpg"/><div><strong>Verblassen</strong></div></div></td><td>Temporärer Bedrohungs-Reset.</td></tr><tr><td>10</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unholyfrenzy.jpg" loading="lazy" src="assets/icons/priest/spell_shadow_unholyfrenzy.jpg"/><div><strong>Gedankenschlag</strong></div></div></td><td>Starker Solo-Schadenszauber.</td></tr><tr><td>12</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_innerfire.jpg" loading="lazy" src="assets/icons/priest/spell_holy_innerfire.jpg"/><div><strong>Inneres Feuer</strong></div></div></td><td>Defensiver Eigenbuff.</td></tr><tr><td>14</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_nullifydisease.jpg" loading="lazy" src="assets/icons/priest/spell_holy_nullifydisease.jpg"/><div><strong>Krankheit heilen</strong></div></div></td><td>Wichtige Dungeon-Utility.</td></tr><tr><td>16</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_heal.jpg" loading="lazy" src="assets/icons/priest/spell_holy_heal.jpg"/><div><strong>Heilen</strong></div></div></td><td>Dein effizienter Standard-Heal.</td></tr><tr><td>18</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_dispelmagic.jpg" loading="lazy" src="assets/icons/priest/spell_holy_dispelmagic.jpg"/><div><strong>Magiebannung</strong></div></div></td><td>Entfernt gefährliche Magieeffekte.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_flashheal.jpg" loading="lazy" src="assets/icons/priest/spell_holy_flashheal.jpg"/><div><strong>Blitzheilung</strong></div></div></td><td>Schneller Notfall-Heal.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_searinglight.jpg" loading="lazy" src="assets/icons/priest/spell_holy_searinglight.jpg"/><div><strong>Heiliges Feuer</strong></div></div></td><td>Bester Solo-Opener ab 20.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_excorcism.jpg" loading="lazy" src="assets/icons/priest/spell_holy_excorcism.jpg"/><div><strong>Furchtzauberschutz</strong></div></div></td><td>In Forever für jeden Priester trainierbar.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_holynova.jpg" loading="lazy" src="assets/icons/priest/spell_holy_holynova.jpg"/><div><strong>Heilige Nova</strong></div></div></td><td>Talent: threatfreier Gruppenheal + AoE.</td></tr><tr><td>25</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_blindingheal.jpg" loading="lazy" src="assets/icons/priest/spell_holy_blindingheal.jpg"/><div><strong>Verbindende Heilung</strong></div></div></td><td>Talent: heilt Ziel und dich gleichzeitig.</td></tr><tr><td>30</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofhealing02.jpg" loading="lazy" src="assets/icons/priest/spell_holy_prayerofhealing02.jpg"/><div><strong>Gebet der Heilung</strong></div></div></td><td>Teurer Gruppenheal für echte AoE-Schadensphasen.</td></tr><tr><td>30</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_divinespirit.jpg" loading="lazy" src="assets/icons/priest/spell_holy_divinespirit.jpg"/><div><strong>Göttlicher Willen</strong></div></div></td><td>Willenskraft-Buff für Gruppe/Raid.</td></tr><tr><td>32</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg" loading="lazy" src="assets/icons/priest/spell_nature_nullifydisease.jpg"/><div><strong>Krankheit aufheben</strong></div></div></td><td>Verbesserte Krankheitsentfernung.</td></tr><tr><td>40</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_greaterheal.jpg" loading="lazy" src="assets/icons/priest/spell_holy_greaterheal.jpg"/><div><strong>Große Heilung</strong></div></div></td><td>Langsamer, großer Single-Target-Heal.</td></tr><tr><td>40</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofmendingtga.jpg" loading="lazy" src="assets/icons/priest/spell_holy_prayerofmendingtga.jpg"/><div><strong>Gebet der Besserung</strong></div></div></td><td>Talent: springender Heal, ideal auf dem Tank.</td></tr><tr><td>40</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_summonlightwell.jpg" loading="lazy" src="assets/icons/priest/spell_holy_summonlightwell.jpg"/><div><strong>Brunnen des Lichts</strong></div></div></td><td>Vor längeren/planbaren Schadensphasen aufstellen.</td></tr></tbody></table></div>
 </section>
-<section class="tabpage" id="rotation"><h2>Rotation &amp; Heilpriorität</h2>
+<section class="tabpage" id="rotation">
+<h2>Rotation &amp; Heilpriorität</h2>
+<div class="source-standard"><b>Holy ist eine Prioritätenliste:</b> Erneuerung auf dem Tank, Heilen für Effizienz, Blitzheilung nur wenn Geschwindigkeit wichtiger ist als Mana.</div>
 <div class="cards">
-<div class="card"><h3>Solo 1–19</h3><p>Seelenstärke + Inneres Feuer aktiv → Machtwort: Schild vor dem Pull → Göttliche Pein → Gedankenschlag → Schattenwort: Schmerz → Zauberstab bis das Ziel stirbt.</p></div>
-<div class="card"><h3>Solo 20+</h3><p>Machtwort: Schild → Heiliges Feuer → Gedankenschlag → Schattenwort: Schmerz → optional Göttliche Pein bei viel Restleben → Zauberstab. Erneuerung auf dich, falls nötig.</p></div>
-<div class="card"><h3>Dungeon 16–24</h3><p>Erneuerung auf dem Tank → Heilen als effizienter Standard → Blitzheilung nur bei Gefahr → Magiebannung/Krankheit heilen sofort nutzen → Zauberstab, wenn alles stabil ist.</p></div>
-<div class="card"><h3>Dungeon 25–39</h3><p>Verbindende Heilung, wenn du und der Tank verletzt seid. Heilige Nova für gestapelte Gruppe. Gebet der Heilung nur, wenn wirklich mehrere Spieler deutlich Leben verloren haben.</p></div>
-<div class="card"><h3>Dungeon 40+</h3><p>Gebet der Besserung auf Tank → Erneuerung halten → Heilen für normale Treffer → Große Heilung für planbaren großen Schaden → Blitzheilung als Notfall → Gruppenheilung nur bei AoE.</p></div>
-<div class="card"><h3>Mana-Regel</h3><p>Ab Litanei des Lichts lohnt es sich, verschiedene Heilzauber abzuwechseln. Später sorgt Meditation dafür, dass ein Teil deiner Willenskraft-Regeneration während des Zauberns weiterläuft.</p></div>
+<div class="card"><h3>Single Target</h3><p>Erneuerung auf Tank halten → Heilen als Standard → Blitzheilung bei Gefahr → Verbindende Heilung, wenn du + Tank verletzt seid → Gebet der Besserung auf Tank → Große Heilung für planbaren großen Schaden.</p></div>
+<div class="card"><h3>Gruppenschaden</h3><p>Erneuerung auf Tank → Gebet der Besserung springen lassen → Gebet der Heilung nur wenn der Großteil der Gruppe niedrig ist → Heilige Nova bei gestapelter Gruppe und threatfreiem Heal.</p></div>
+<div class="card"><h3>Litanei des Lichts</h3><p>Heilzauber bewusst abwechseln. Das Talent belohnt Heal → Flash Heal/Binding Heal statt denselben Zauber stumpf zu spammen.</p></div>
+<div class="card"><h3>Downranking</h3><p>Heal und Greater Heal niedrigere Ränge für vorhersehbaren Schaden binden. Forever bestraft frühe Ränge weniger stark als Classic; Flash Heal bleibt eher der Notfallknopf.</p></div>
+<div class="card"><h3>Machtwort: Schild</h3><p>Kann in Forever auch auf Rage-Tanks sinnvoll sein, weil sie durch den Absorb weiterhin Wut erzeugen.</p></div>
+<div class="card"><h3>Solo</h3><p>Schild → Heiliges Feuer oder Gedankenschlag → Schattenwort: Schmerz → ggf. Smite → Zauberstab. Das spart Mana und Downtime.</p></div>
 </div>
 </section>
 <section class="tabpage" id="gear"><h2>Empfohlenes Gear</h2>
@@ -171,13 +241,16 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
 <h3 style="margin-top:28px">Gear ab 30–60</h3>
 <div class="card"><p><b>Priorität:</b> Heilungsmacht → Intelligenz → MP5 → Willenskraft → Zauberkrit. Nimm Dungeon- und Questitems mit diesen Werten; Stoff ist normal, aber die Werte sind wichtiger als „perfekte“ Optik.</p><p class="small">Da die Beta bis Level 30 begrenzt war, behandle konkrete Level-60-BiS-Listen vor dem Launch noch als vorläufig.</p></div>
 </section>
-<section class="tabpage" id="sources"><h2>Quellen &amp; Datenstand</h2><div class="source-grid">
-<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/healer-leveling-tips" target="_blank">Wowhead · Holy Leveling <span>↗</span></a>
+<section class="tabpage" id="sources">
+<h2>Quellen &amp; Datenstand</h2>
+<div class="source-grid">
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/healer-leveling-tips" target="_blank">Wowhead · Holy Leveling <span>Primärquelle ↗</span></a>
+<a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/talent-builds-pve-healer" target="_blank">Wowhead · Talente <span>↗</span></a>
 <a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/rotation-cooldowns-pve-healer" target="_blank">Wowhead · Rotation <span>↗</span></a>
 <a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/stat-priority-pve-healer" target="_blank">Wowhead · Stats <span>↗</span></a>
-<a class="source-card" href="https://raiddex.com/de/wow-forever/talente/priester" target="_blank">RaidDex · deutscher Talentbaum <span>↗</span></a>
-<a class="source-card" href="https://raiddex.com/de/wow-forever/klassen/priester" target="_blank">RaidDex · deutsche Fähigkeiten <span>↗</span></a>
-</div></section>
+<a class="source-card" href="https://www.icy-veins.com/wow-forever/holy-priest-leveling" target="_blank">Icy Veins · Gegencheck <span>↗</span></a>
+</div>
+</section>
 </main>
 <div aria-hidden="true" class="modal item-modal" id="item-modal-greater-magic-wand"><div class="modal-card">
 <button aria-label="Schließen" class="close item-close" data-item-close="greater-magic-wand">×</button>
@@ -278,6 +351,63 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
   const pointEl = planner.querySelector('[data-point-status]');
   const presetBtns = [...planner.querySelectorAll('[data-level-preset]')];
 
+  const dial = planner.querySelector('[data-level-dial]');
+  const knob = planner.querySelector('[data-level-knob]');
+
+  function updateDialVisual(level){
+    const progress=(level-10)/50;
+    dial.style.setProperty('--progress',String(progress));
+    const startDeg=210;
+    const sweepDeg=300;
+    const angle=(startDeg + progress*sweepDeg) * Math.PI/180;
+    const radius=(dial.clientWidth/2)-7;
+    const x=Math.cos(angle)*radius;
+    const y=Math.sin(angle)*radius;
+    knob.style.transform='translate('+x+'px,'+y+'px) translate(-50%,-50%)';
+    dial.setAttribute('aria-valuenow',String(level));
+  }
+
+  function levelFromPointer(ev){
+    const r=dial.getBoundingClientRect();
+    const cx=r.left+r.width/2, cy=r.top+r.height/2;
+    const dx=ev.clientX-cx, dy=ev.clientY-cy;
+    let deg=Math.atan2(dy,dx)*180/Math.PI;
+    if(deg<0) deg+=360;
+
+    // Dial sweep goes clockwise from 210° to 150° through 360°.
+    let rel;
+    if(deg>=210) rel=deg-210;
+    else rel=deg+150;
+
+    // Bottom 60° is the dead zone; clamp to nearest edge.
+    if(rel<0) rel=0;
+    if(rel>300){
+      const distToStart=Math.abs(deg-210);
+      const distToEnd=Math.abs(deg-150);
+      rel=distToStart<distToEnd?0:300;
+    }
+    const level=Math.round(10+(rel/300)*50);
+    update(level);
+  }
+
+  let dragging=false;
+  dial.addEventListener('pointerdown',ev=>{
+    dragging=true;dial.classList.add('dragging');dial.setPointerCapture(ev.pointerId);levelFromPointer(ev);
+  });
+  dial.addEventListener('pointermove',ev=>{if(dragging) levelFromPointer(ev)});
+  dial.addEventListener('pointerup',ev=>{
+    dragging=false;dial.classList.remove('dragging');
+    try{dial.releasePointerCapture(ev.pointerId)}catch(e){}
+  });
+  dial.addEventListener('pointercancel',()=>{dragging=false;dial.classList.remove('dragging')});
+  dial.addEventListener('keydown',ev=>{
+    if(ev.key==='ArrowRight'||ev.key==='ArrowUp'){ev.preventDefault();update(Number(range.value)+1)}
+    if(ev.key==='ArrowLeft'||ev.key==='ArrowDown'){ev.preventDefault();update(Number(range.value)-1)}
+    if(ev.key==='Home'){ev.preventDefault();update(10)}
+    if(ev.key==='End'){ev.preventDefault();update(60)}
+  });
+
+
   const key = (tree,name) => tree + '||' + name;
 
   function buildState(level){
@@ -295,6 +425,7 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
     range.value=String(level);
     levelEl.textContent=String(level);
     planner.querySelectorAll('[data-title-level]').forEach(x=>x.textContent=String(level));
+    updateDialVisual(level);
 
     presetBtns.forEach(b=>b.classList.toggle('active',Number(b.dataset.levelPreset)===level));
 

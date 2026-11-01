@@ -47,3 +47,18 @@ Damit kann ein alter Browser-/DNS-Zustand der entfernten Custom Domain den Rück
 - Schnellwahl 10 / 25 / 30 / 40 / 60.
 - Vollständige Bäume bleiben sichtbar; Ränge werden live auf den gewählten Levelstand gesetzt.
 - Der auf dem gewählten Level neu gesetzte Punkt wird hervorgehoben.
+
+## v0.10.3 – Radialer Talent-Levelregler
+Der Stufenregler in allen drei Klassenguides ist jetzt ein echter Drehregler:
+- per Maus/Touch direkt am Kreis ziehen
+- Plus/Minus weiterhin verfügbar
+- Tastatur: Pfeiltasten, Home=10, End=60
+- Talentbaum aktualisiert während des Ziehens live
+
+## v0.11 – Quellengeprüfte Best-Practice-Guides
+- Klassen: Wowhead Forever als Primärquelle; Icy Veins/Mobalytics als Gegencheck.
+- Berufe: WoW-Professions als Primärquelle für schnelle/günstige Skillrouten; Mobalytics/Icy Veins als Gegencheck.
+- Survival: Bestes Leveltempo = Beast Mastery bis ca. 31, Survival ab ca. 32.
+- Holy: Solo Shadow/Discipline schneller; Holy primär für Gruppen/Dungeons.
+- Arms: Waffen-DPS, Rage-Pooling und Dungeonquests stärker priorisiert.
+- Leatherworking/Tailoring/Enchanting/Blacksmithing Routen und Einkaufslisten aktualisiert.
