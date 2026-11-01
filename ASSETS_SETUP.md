@@ -31,6 +31,8 @@ Die Startseite ist `index.html`. Die einzelnen Guides liegen derzeit als `surviv
 ## v0.8
 Die Mega-Menüs öffnen auf Desktop ausschließlich per Hover. Neue Guides: Schneiderei, Verzauberkunst, Kürschnerei, Schmiedekunst und Bergbau.
 
-
-## v0.9
-Crafting-/Materialicons wurden in allen Berufsguides ergänzt. Die drei Klassenguides haben nun oberhalb der Talent-Level-Liste eine grafische Übersicht der geskillten Talentbäume und Ränge.
+## v0.10
+- Rezept- und Materialicons werden pro Eintrag nur einmal angezeigt.
+- Alle Klassen-Seiten verlinken mit `./` robust zurück zum Hub.
+- Vollständige Talentbäume zeigen auch ungeskillte Talente mit `0/x`.
+- Im Projekt wird bewusst keine `CNAME`-Datei mitgeliefert. Eine Custom Domain wird ausschließlich in GitHub unter Settings -> Pages verwaltet.

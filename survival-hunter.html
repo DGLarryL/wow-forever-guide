@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="dark">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
 <title>WoW Forever – Human Survival Hunter Guide</title>
 <style>
 :root {
@@ -89,30 +90,30 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 @media(max-width:680px){.item-modal-layout{grid-template-columns:1fr}.item-big-icon{width:104px;height:104px}.item-visual{padding:14px}}
 
 
-.talent-summary{margin:0 0 20px}
-.talent-summary-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:11px}
-.talent-summary-head h3{margin:0}.talent-summary-head span{font-size:.85rem;color:var(--muted)}
-.talent-tree-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.talent-tree-card{border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,var(--panel2),var(--panel));overflow:hidden}
-.talent-tree-title{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;background:rgba(255,255,255,.035);border-bottom:1px solid var(--line);font-weight:800}
-.talent-points{padding:3px 8px;border-radius:999px;background:#2a4432;color:#d5efdb;font-size:.78rem}
-.talent-picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px}
-.talent-pick{position:relative;display:flex;align-items:center;gap:8px;min-width:0;padding:7px;border:1px solid rgba(255,255,255,.07);border-radius:8px;background:rgba(0,0,0,.15)}
-.talent-pick img{width:35px;height:35px;border-radius:6px;border:1px solid #796337;object-fit:cover;flex:none}
-.talent-pick-name{font-size:.78rem;line-height:1.18;overflow:hidden}.talent-rank{position:absolute;right:4px;bottom:3px;background:#050705;color:#ffd100;border:1px solid #806c31;border-radius:5px;padding:1px 4px;font-size:.68rem;font-weight:800}
-.talent-empty{padding:22px;color:var(--muted);text-align:center;font-size:.86rem}
-@media(max-width:850px){.talent-tree-grid{grid-template-columns:1fr}.talent-picks{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:520px){.talent-picks{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
+.full-tree-wrap{margin:0 0 24px}.full-tree-header{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:12px}
+.full-tree-header h3{margin:0}.full-tree-header .build-total{color:var(--muted);font-size:.86rem}
+.full-tree-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.full-tree{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel2),var(--panel));overflow:hidden}
+.full-tree-title{display:flex;justify-content:space-between;align-items:center;padding:12px 13px;border-bottom:1px solid var(--line);font-weight:850}
+.full-tree-title .pts{font-size:.75rem;padding:4px 8px;border-radius:999px;background:#294333;color:#d5efdb}
+.tier-row{display:grid;grid-template-columns:48px 1fr;border-bottom:1px solid rgba(255,255,255,.05);min-height:62px}
+.tier-row:last-child{border-bottom:0}.tier-label{display:grid;place-items:center;color:#89948d;font-size:.7rem;border-right:1px solid rgba(255,255,255,.05);background:rgba(0,0,0,.12);text-align:center}
+.tier-talents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:7px}
+.tree-talent{position:relative;display:flex;gap:7px;align-items:center;padding:6px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(0,0,0,.16);min-width:0}
+.tree-talent.unspent{opacity:.42;filter:grayscale(.82)}.tree-talent.spent{border-color:#6f6130;background:rgba(74,62,22,.22)}
+.tree-talent img{width:34px;height:34px;border-radius:6px;border:1px solid #6f633d;object-fit:cover;flex:none}
+.tree-talent-name{font-size:.74rem;line-height:1.15;overflow:hidden}.tree-rank{position:absolute;right:3px;bottom:2px;background:#060706;color:#ffd100;border:1px solid #766227;border-radius:5px;padding:1px 4px;font-size:.65rem;font-weight:850}
+.tree-source{margin-top:8px;color:var(--muted);font-size:.8rem}
+@media(max-width:900px){.full-tree-columns{grid-template-columns:1fr}.tier-talents{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.tier-talents{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <a href="index.html" style="display:inline-block;margin-bottom:13px;color:#c9e4ff;text-decoration:none;font-weight:700">← WoW Forever Guide</a><h1>Human Survival Hunter 10–60</h1>
-  <div class="subtitle">WoW Forever · Survival Hunter Guide by LarryL</div>
-  <div class="notice"><b>Version 0.4:</b> echte Pet-Karten, Original-Icons für Skills/Talente und klickbare Gear-Empfehlungen mit WoW-artigen Item-Tooltips.</div>
+<a href="./" style="display:inline-block;margin-bottom:13px;color:#c9e4ff;text-decoration:none;font-weight:700">← WoW Forever Guide</a><h1>Human Survival Hunter 10–60</h1>
+<div class="subtitle">WoW Forever · Survival Hunter Guide by LarryL</div>
+<div class="notice"><b>Version 0.4:</b> echte Pet-Karten, Original-Icons für Skills/Talente und klickbare Gear-Empfehlungen mit WoW-artigen Item-Tooltips.</div>
 </div></header>
-
 <nav><div class="tabbar">
 <button class="tabbtn active" data-tab="overview">Übersicht</button>
 <button class="tabbtn" data-tab="pets">Pets</button>
@@ -123,15 +124,14 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <button class="tabbtn" data-tab="levelplan">Levelplan</button>
 <button class="tabbtn" data-tab="sources">Quellen</button>
 </div></nav>
-
 <main>
-<section id="overview" class="tabpage active">
+<section class="tabpage active" id="overview">
 <h2>Übersicht</h2>
 <div class="cards">
-<div class="card"><strong>Stufe 10</strong><br>Geisterfang holen. Seine echten Forever-Spawns sind jetzt in der Pet-Karte markiert.</div>
-<div class="card"><strong>Stufe 30</strong><br>Streichertritt: ab hier beginnt dein echtes Range↔Melee-Weaving.</div>
-<div class="card"><strong>Stufe 37</strong><br>Zerbrochener Zahn campen, wenn du den schnellen Rare möchtest.</div>
-<div class="card"><strong>Stufe 51</strong><br>In dieser Talentroute Falke beschwören freischalten.</div>
+<div class="card"><strong>Stufe 10</strong><br/>Geisterfang holen. Seine echten Forever-Spawns sind jetzt in der Pet-Karte markiert.</div>
+<div class="card"><strong>Stufe 30</strong><br/>Streichertritt: ab hier beginnt dein echtes Range↔Melee-Weaving.</div>
+<div class="card"><strong>Stufe 37</strong><br/>Zerbrochener Zahn campen, wenn du den schnellen Rare möchtest.</div>
+<div class="card"><strong>Stufe 51</strong><br/>In dieser Talentroute Falke beschwören freischalten.</div>
 </div>
 <div class="hero-actions">
 <button onclick="openTab('pets')">Pet-Karten öffnen</button>
@@ -141,172 +141,163 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <h3 style="margin-top:28px">Stat-Priorität</h3>
 <div class="table-wrap"><table style="min-width:650px"><thead><tr><th>Priorität</th><th>Wert</th><th>Hinweis</th></tr></thead><tbody><tr><td>1</td><td>Waffenschaden</td><td>Nah- und Fernkampfwaffe aktuell halten.</td></tr><tr><td>2</td><td>Beweglichkeit</td><td>Hauptwert für Schaden/Crit und Pet-Skalierung.</td></tr><tr><td>3</td><td>Kritische Trefferchance</td><td>Sehr stark für deine Hybrid-Spielweise.</td></tr><tr><td>4</td><td>Intelligenz</td><td>Mehr Mana; später zusätzlich relevant für Sorgfältiges Zielen.</td></tr><tr><td>5</td><td>Stärke</td><td>Hilft Nahkampfangriffskraft, meist hinter Beweglichkeit.</td></tr><tr><td>6</td><td>Ausdauer</td><td>Solider Solo-Puffer.</td></tr></tbody></table></div>
 </section>
-
-<section id="pets" class="tabpage">
-<h2>Pets & echte Fundortkarten</h2>
+<section class="tabpage" id="pets">
+<h2>Pets &amp; echte Fundortkarten</h2>
 <div class="note-card"><b>Klick auf einen Pet-Namen.</b> Im Popup bekommst du die echte WoW-Zonenkarte mit Koordinatenmarkern. Bei Zerbrochener Zahn ist zusätzlich der ungefähre Patrouillenbereich markiert.</div>
 <div class="table-wrap"><table style="min-width:1050px"><thead><tr><th>Level</th><th>Pet</th><th>Familie</th><th>Zone</th><th>Datenstand</th><th>Empfehlung</th></tr></thead><tbody><tr><td>10</td><td><button class="pet-link" data-pet="ghostfang"><strong>Geisterfang</strong><span>Ghostfang</span></button></td><td>Katze</td><td>Dun Morogh</td><td><span class="status confirmed">Forever-Beta bestätigt</span></td><td>Mein Favorit für deinen Human Hunter direkt auf Stufe 10. Selten, optisch auffällig und als Katze sehr angenehm zum Leveln.</td></tr><tr><td>10–17</td><td><button class="pet-link" data-pet="moonstalker-runt"><strong>Mondpirscherjunges</strong><span>Moonstalker Runt</span></button></td><td>Katze</td><td>Dunkelküste</td><td><span class="status known">Viele bekannte Spawns</span></td><td>Früher Min-Max-Pick für Alliance: schnelle Katze und leicht in einem großen Gebiet zu finden.</td></tr><tr><td>25–26</td><td><button class="pet-link" data-pet="black-ravager-mastiff"><strong>Schwarzer Verheerer-Mastiff</strong><span>Black Ravager Mastiff</span></button></td><td>Wolf</td><td>Dämmerwald</td><td><span class="status confirmed">Forever-Datenbank</span></td><td>Sehr guter Utility-Wolf: lernt Biss Rang 4 und Wutgeheul Rang 2.</td></tr><tr><td>27–28</td><td><button class="pet-link" data-pet="feral-mountain-lion"><strong>Wilder Berglöwe</strong><span>Feral Mountain Lion</span></button></td><td>Katze</td><td>Vorgebirge des Hügellands</td><td><span class="status confirmed">Forever-Datenbank</span></td><td>Starker Midgame-Damage-Pet mit 1,2 Sek. Angriffstempo.</td></tr><tr><td>37</td><td><button class="pet-link" data-pet="broken-tooth"><strong>Zerbrochener Zahn</strong><span>Broken Tooth</span></button></td><td>Katze</td><td>Ödland</td><td><span class="status provisional">Über Stufe 30: Launch-/Classic-Basis</span></td><td>Der große Damage-/Prestige-Pick: 1,0 Sek. Angriffstempo und eine der bekanntesten Hunter-Katzen.</td></tr><tr><td>40–41</td><td><button class="pet-link" data-pet="longtooth-runner"><strong>Langzahnrenner</strong><span>Longtooth Runner</span></button></td><td>Wolf</td><td>Feralas</td><td><span class="status provisional">Über Stufe 30: Classic-Spawnbasis</span></td><td>Sehr guter Utility-Wolf mit Biss 6, Sprint 2 und Wutgeheul 3.</td></tr><tr><td>56–57</td><td><button class="pet-link" data-pet="bloodaxe-worg"><strong>Blutaxtworg</strong><span>Bloodaxe Worg</span></button></td><td>Wolf</td><td>Untere Blackrockspitze</td><td><span class="status provisional">Dungeon-Fundort</span></td><td>Top Lehrer-/Utility-Pet für Biss Rang 8 und Wutgeheul Rang 4.</td></tr></tbody></table></div>
 </section>
-
-<section id="talents" class="tabpage">
+<section class="tabpage" id="talents">
 <h2>Talentroute 10–60</h2>
 <p class="small">Die Symbole sind die originalen WoW-/Forever-Talenticons. Die deutschen Namen wurden an die aktuellen Forever-Datenbanken angepasst.</p>
-<div class="talent-summary"><div class="talent-summary-head"><h3>Talentbaum-Übersicht auf Level 60</h3><span>16 Tierherrschaft · 9 Treffsicherheit · 26 Überleben</span></div><div class="talent-tree-grid"><div class="talent-tree-card"><div class="talent-tree-title"><span>Tierherrschaft</span><span class="talent-points">16 Punkte</span></div><div class="talent-picks"><div class="talent-pick"><img src="assets/icons/spell_nature_ravenform.jpg" loading="lazy" alt=""><div class="talent-pick-name">Tödliche Aspekte</div><span class="talent-rank">5/5</span></div><div class="talent-pick"><img src="assets/icons/ability_hunter_sickem.jpg" loading="lazy" alt=""><div class="talent-pick-name">Konzentriertes Feuer</div><span class="talent-rank">2/2</span></div><div class="talent-pick"><img src="assets/icons/136080.webp" loading="lazy" alt=""><div class="talent-pick-name">Belastbarkeit-Ausbildung</div><span class="talent-rank">3/5</span></div><div class="talent-pick"><img src="assets/icons/132120.webp" loading="lazy" alt=""><div class="talent-pick-name">Erhöhte Tiergeschwindigkeit</div><span class="talent-rank">1/1</span></div><div class="talent-pick"><img src="assets/icons/ability_bullrush.jpg" loading="lazy" alt=""><div class="talent-pick-name">Entfesselter Zorn</div><span class="talent-rank">4/5</span></div><div class="talent-pick"><img src="assets/icons/132158.webp" loading="lazy" alt=""><div class="talent-pick-name">Falke beschwören</div><span class="talent-rank">1/1</span></div></div></div><div class="talent-tree-card"><div class="talent-tree-title"><span>Treffsicherheit</span><span class="talent-points">9 Punkte</span></div><div class="talent-picks"><div class="talent-pick"><img src="assets/icons/ability_searingarrow.jpg" loading="lazy" alt=""><div class="talent-pick-name">Tödliche Angriffe</div><span class="talent-rank">5/5</span></div><div class="talent-pick"><img src="assets/icons/ability_hunter_zenarchery.jpg" loading="lazy" alt=""><div class="talent-pick-name">Sorgfältiges Zielen</div><span class="talent-rank">4/5</span></div></div></div><div class="talent-tree-card"><div class="talent-tree-title"><span>Überleben</span><span class="talent-points">26 Punkte</span></div><div class="talent-picks"><div class="talent-pick"><img src="assets/icons/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div class="talent-pick-name">Verbessertes Fährtenlesen</div><span class="talent-rank">5/5</span></div><div class="talent-pick"><img src="assets/icons/132277.webp" loading="lazy" alt=""><div class="talent-pick-name">Wilde Schläge</div><span class="talent-rank">2/2</span></div><div class="talent-pick"><img src="assets/icons/136223.webp" loading="lazy" alt=""><div class="talent-pick-name">Überlebenskünstler</div><span class="talent-rank">3/5</span></div><div class="talent-pick"><img src="assets/icons/ability_whirlwind.jpg" loading="lazy" alt=""><div class="talent-pick-name">Abschreckung</div><span class="talent-rank">1/1</span></div><div class="talent-pick"><img src="assets/icons/ability_kick.jpg" loading="lazy" alt=""><div class="talent-pick-name">Trittsicher</div><span class="talent-rank">3/3</span></div><div class="talent-pick"><img src="assets/icons/spell_nature_timestop.jpg" loading="lazy" alt=""><div class="talent-pick-name">Falleneffizienz</div><span class="talent-rank">1/2</span></div><div class="talent-pick"><img src="assets/icons/ability_warrior_challange.jpg" loading="lazy" alt=""><div class="talent-pick-name">Gegenangriff</div><span class="talent-rank">1/1</span></div><div class="talent-pick"><img src="assets/icons/ability_dualwield.jpg" loading="lazy" alt=""><div class="talent-pick-name">Vorteil des Raubtiers</div><span class="talent-rank">5/5</span></div><div class="talent-pick"><img src="assets/icons/ability_hunter_pet_tallstrider.jpg" loading="lazy" alt=""><div class="talent-pick-name">Streichertritt</div><span class="talent-rank">1/1</span></div><div class="talent-pick"><img src="assets/icons/ability_hunter_resourcefulness.jpg" loading="lazy" alt=""><div class="talent-pick-name">Improvisation</div><span class="talent-rank">2/2</span></div><div class="talent-pick"><img src="assets/icons/ability_hunter_swiftstrike.jpg" loading="lazy" alt=""><div class="talent-pick-name">Beute aufspüren</div><span class="talent-rank">2/2</span></div></div></div></div></div><div class="filterbar">
+<div class="full-tree-wrap"><div class="full-tree-header"><h3>Vollständige Talentbäume – Level-60-Build</h3><div class="build-total">16 Tierherrschaft · 9 Treffsicherheit · 23 Überleben</div></div><div class="full-tree-columns"><div class="full-tree"><div class="full-tree-title"><span>Tierherrschaft</span><span class="pts">16 Punkte</span></div><div class="tier-row"><div class="tier-label">Start</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div class="tree-talent-name">Tödliche Aspekte</div><span class="tree-rank">5/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" src="assets/icons/136080.webp"/><div class="tree-talent-name">Belastbarkeit-Ausbildung</div><span class="tree-rank">3/5</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_sickem.jpg" loading="lazy" src="assets/icons/ability_hunter_sickem.jpg"/><div class="tree-talent-name">Konzentriertes Feuer</div><span class="tree-rank">2/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Verbesserter Aspekt des Affen</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Orientierung</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Verbessertes Tier wiederbeleben</div><span class="tree-rank">0/2</span></div></div></div><div class="tier-row"><div class="tier-label">10 P.</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://raiddex.com/assets/img/wf/icons/132120.webp" loading="lazy" src="assets/icons/132120.webp"/><div class="tree-talent-name">Erhöhte Tiergeschwindigkeit</div><span class="tree-rank">1/1</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" src="assets/icons/ability_bullrush.jpg"/><div class="tree-talent-name">Entfesselter Zorn</div><span class="tree-rank">4/5</span></div></div></div><div class="tier-row"><div class="tier-label">15 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Verbessertes Tier heilen</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Wildheit</div><span class="tree-rank">0/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://raiddex.com/assets/img/wf/icons/132158.webp" loading="lazy" src="assets/icons/132158.webp"/><div class="tree-talent-name">Falke beschwören</div><span class="tree-rank">1/1</span></div></div></div><div class="tier-row"><div class="tier-label">20 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Geistbande</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Einschüchterung</div><span class="tree-rank">0/1</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Wildtierdisziplin</div><span class="tree-rank">0/2</span></div></div></div><div class="tier-row"><div class="tier-label">25 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Raserei</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">30 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_beastcall.jpg"/><div class="tree-talent-name">Zorn des Wildtiers</div><span class="tree-rank">0/1</span></div></div></div></div><div class="full-tree"><div class="full-tree-title"><span>Treffsicherheit</span><span class="pts">9 Punkte</span></div><div class="tier-row"><div class="tier-label">Start</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Falkenauge</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Verbesserter erschütternder Schuss</div><span class="tree-rank">0/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div class="tree-talent-name">Tödliche Angriffe</div><span class="tree-rank">5/5</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Verbesserte Stiche und Bisse</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Effizienz</div><span class="tree-rank">0/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" src="assets/icons/ability_hunter_zenarchery.jpg"/><div class="tree-talent-name">Sorgfältiges Zielen</div><span class="tree-rank">4/5</span></div></div></div><div class="tier-row"><div class="tier-label">10 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Schneller Tod</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Verbesserter arkaner Schuss</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Einsamer Wolf</div><span class="tree-rank">0/1</span></div></div></div><div class="tier-row"><div class="tier-label">15 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Aura des Volltreffers</div><span class="tree-rank">0/1</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Todbringende Schüsse</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Verbesserter Schlangenbiss</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">20 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Rasche Erholung</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Sperrfeuer</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Streuschuss</div><span class="tree-rank">0/1</span></div></div></div><div class="tier-row"><div class="tier-label">25 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Distanzwaffen-Spezialisierung</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">30 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/talent-trees/ability_marksmanship.jpg"/><div class="tree-talent-name">Heckenschützenschuss</div><span class="tree-rank">0/1</span></div></div></div></div><div class="full-tree"><div class="full-tree-title"><span>Überleben</span><span class="pts">23 Punkte</span></div><div class="tier-row"><div class="tier-label">Start</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div class="tree-talent-name">Verbessertes Fährtenlesen</div><span class="tree-rank">5/5</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Abwehr</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Einfangen</div><span class="tree-rank">0/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://raiddex.com/assets/img/wf/icons/132277.webp" loading="lazy" src="assets/icons/132277.webp"/><div class="tree-talent-name">Wilde Schläge</div><span class="tree-rank">2/2</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" src="assets/icons/136223.webp"/><div class="tree-talent-name">Überlebenskünstler</div><span class="tree-rank">3/5</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Verbessertes Zurechtstutzen</div><span class="tree-rank">0/3</span></div></div></div><div class="tier-row"><div class="tier-label">10 P.</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_timestop.jpg" loading="lazy" src="assets/icons/spell_nature_timestop.jpg"/><div class="tree-talent-name">Falleneffizienz</div><span class="tree-rank">1/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Sicherer Stand</div><span class="tree-rank">0/3</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg" loading="lazy" src="assets/icons/ability_whirlwind.jpg"/><div class="tree-talent-name">Abschreckung</div><span class="tree-rank">1/1</span></div></div></div><div class="tier-row"><div class="tier-label">15 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Überlebenstaktik</div><span class="tree-rank">0/2</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div class="tree-talent-name">Vorteil des Raubtiers</div><span class="tree-rank">5/5</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_challange.jpg" loading="lazy" src="assets/icons/ability_warrior_challange.jpg"/><div class="tree-talent-name">Gegenangriff</div><span class="tree-rank">1/1</span></div></div></div><div class="tier-row"><div class="tier-label">20 P.</div><div class="tier-talents"><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resourcefulness.jpg" loading="lazy" src="assets/icons/ability_hunter_resourcefulness.jpg"/><div class="tree-talent-name">Improvisation</div><span class="tree-rank">2/2</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Beute aufspüren</div><span class="tree-rank">2/2</span></div><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Disziplin des Überlebenskünstlers</div><span class="tree-rank">0/2</span></div><div class="tree-talent spent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_tallstrider.jpg" loading="lazy" src="assets/icons/ability_hunter_pet_tallstrider.jpg"/><div class="tree-talent-name">Streichertritt</div><span class="tree-rank">1/1</span></div></div></div><div class="tier-row"><div class="tier-label">25 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Blitzartige Reflexe</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">30 P.</div><div class="tier-talents"><div class="tree-talent unspent"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/talent-trees/ability_hunter_swiftstrike.jpg"/><div class="tree-talent-name">Aufschlitzende Schläge</div><span class="tree-rank">0/1</span></div></div></div></div></div><div class="tree-source">Helle Talente sind in diesem Build geskillt; ausgegraute Talente gehören zum vollständigen Forever-Talentbaum, sind aber nicht gewählt.</div></div><div class="filterbar">
 <button class="active" data-range="10-60">Alle</button><button data-range="10-19">10–19</button>
 <button data-range="20-29">20–29</button><button data-range="30-39">30–39</button>
 <button data-range="40-49">40–49</button><button data-range="50-60">50–60</button>
 </div>
-<div class="table-wrap"><table style="min-width:680px"><thead><tr><th>Level</th><th>Talent</th><th>Baum</th></tr></thead><tbody id="talentBody"><tr data-level="10"><td>10</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_improvedtracking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div><strong>Verbessertes Fährtenlesen 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="11"><td>11</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_improvedtracking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div><strong>Verbessertes Fährtenlesen 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="12"><td>12</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_improvedtracking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div><strong>Verbessertes Fährtenlesen 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="13"><td>13</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_improvedtracking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div><strong>Verbessertes Fährtenlesen 4/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="14"><td>14</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_improvedtracking.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" alt=""><div><strong>Verbessertes Fährtenlesen 5/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="15"><td>15</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/132277.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/132277.webp" loading="lazy" alt=""><div><strong>Wilde Schläge 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="16"><td>16</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/132277.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/132277.webp" loading="lazy" alt=""><div><strong>Wilde Schläge 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="17"><td>17</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136223.webp" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" alt=""><div><strong>Überlebenskünstler 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="18"><td>18</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136223.webp" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" alt=""><div><strong>Überlebenskünstler 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="19"><td>19</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136223.webp" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" alt=""><div><strong>Überlebenskünstler 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="20"><td>20</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_whirlwind.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg" loading="lazy" alt=""><div><strong>Abschreckung 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="21"><td>21</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_kick.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" alt=""><div><strong>Trittsicher 1/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="22"><td>22</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_kick.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" alt=""><div><strong>Trittsicher 2/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="23"><td>23</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_kick.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" alt=""><div><strong>Trittsicher 3/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="24"><td>24</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_timestop.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_timestop.jpg" loading="lazy" alt=""><div><strong>Falleneffizienz 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="25"><td>25</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_warrior_challange.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_challange.jpg" loading="lazy" alt=""><div><strong>Gegenangriff 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="26"><td>26</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_dualwield.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" alt=""><div><strong>Vorteil des Raubtiers 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="27"><td>27</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_dualwield.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" alt=""><div><strong>Vorteil des Raubtiers 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="28"><td>28</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_dualwield.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" alt=""><div><strong>Vorteil des Raubtiers 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="29"><td>29</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_dualwield.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" alt=""><div><strong>Vorteil des Raubtiers 4/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="30"><td>30</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_pet_tallstrider.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_tallstrider.jpg" loading="lazy" alt=""><div><strong>Streichertritt 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="31"><td>31</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_resourcefulness.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resourcefulness.jpg" loading="lazy" alt=""><div><strong>Improvisation 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="32"><td>32</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_resourcefulness.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resourcefulness.jpg" loading="lazy" alt=""><div><strong>Improvisation 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="33"><td>33</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_dualwield.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" alt=""><div><strong>Vorteil des Raubtiers 5/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="34"><td>34</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_swiftstrike.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" alt=""><div><strong>Beute aufspüren 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="35"><td>35</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_swiftstrike.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" alt=""><div><strong>Beute aufspüren 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="36"><td>36</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Tödliche Aspekte 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="37"><td>37</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Tödliche Aspekte 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="38"><td>38</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Tödliche Aspekte 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="39"><td>39</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Tödliche Aspekte 4/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="40"><td>40</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Tödliche Aspekte 5/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="41"><td>41</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_sickem.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_sickem.jpg" loading="lazy" alt=""><div><strong>Konzentriertes Feuer 1/2</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="42"><td>42</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_sickem.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_sickem.jpg" loading="lazy" alt=""><div><strong>Konzentriertes Feuer 2/2</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="43"><td>43</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136080.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" alt=""><div><strong>Belastbarkeit-Ausbildung 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="44"><td>44</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136080.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" alt=""><div><strong>Belastbarkeit-Ausbildung 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="45"><td>45</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/136080.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" alt=""><div><strong>Belastbarkeit-Ausbildung 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="46"><td>46</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/132120.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/132120.webp" loading="lazy" alt=""><div><strong>Erhöhte Tiergeschwindigkeit 1/1</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="47"><td>47</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_bullrush.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" alt=""><div><strong>Entfesselter Zorn 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="48"><td>48</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_bullrush.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" alt=""><div><strong>Entfesselter Zorn 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="49"><td>49</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_bullrush.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" alt=""><div><strong>Entfesselter Zorn 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="50"><td>50</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_bullrush.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" alt=""><div><strong>Entfesselter Zorn 4/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="51"><td>51</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/132158.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/132158.webp" loading="lazy" alt=""><div><strong>Falke beschwören 1/1</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="52"><td>52</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_searingarrow.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" alt=""><div><strong>Tödliche Angriffe 1/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="53"><td>53</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_searingarrow.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" alt=""><div><strong>Tödliche Angriffe 2/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="54"><td>54</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_searingarrow.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" alt=""><div><strong>Tödliche Angriffe 3/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="55"><td>55</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_searingarrow.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" alt=""><div><strong>Tödliche Angriffe 4/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="56"><td>56</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_searingarrow.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" alt=""><div><strong>Tödliche Angriffe 5/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="57"><td>57</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_zenarchery.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" alt=""><div><strong>Sorgfältiges Zielen 1/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="58"><td>58</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_zenarchery.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" alt=""><div><strong>Sorgfältiges Zielen 2/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="59"><td>59</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_zenarchery.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" alt=""><div><strong>Sorgfältiges Zielen 3/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="60"><td>60</td><td><div class="ability"><img class="wowicon talenticon" src="assets/icons/ability_hunter_zenarchery.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" alt=""><div><strong>Sorgfältiges Zielen 4/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr></tbody></table></div>
+<div class="table-wrap"><table style="min-width:680px"><thead><tr><th>Level</th><th>Talent</th><th>Baum</th></tr></thead><tbody id="talentBody"><tr data-level="10"><td>10</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div><strong>Verbessertes Fährtenlesen 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="11"><td>11</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div><strong>Verbessertes Fährtenlesen 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="12"><td>12</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div><strong>Verbessertes Fährtenlesen 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="13"><td>13</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div><strong>Verbessertes Fährtenlesen 4/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="14"><td>14</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_improvedtracking.jpg" loading="lazy" src="assets/icons/ability_hunter_improvedtracking.jpg"/><div><strong>Verbessertes Fährtenlesen 5/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="15"><td>15</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/132277.webp" loading="lazy" src="assets/icons/132277.webp"/><div><strong>Wilde Schläge 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="16"><td>16</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/132277.webp" loading="lazy" src="assets/icons/132277.webp"/><div><strong>Wilde Schläge 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="17"><td>17</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" src="assets/icons/136223.webp"/><div><strong>Überlebenskünstler 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="18"><td>18</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" src="assets/icons/136223.webp"/><div><strong>Überlebenskünstler 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="19"><td>19</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://bindonforever.com/icons/136223.webp" loading="lazy" src="assets/icons/136223.webp"/><div><strong>Überlebenskünstler 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="20"><td>20</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg" loading="lazy" src="assets/icons/ability_whirlwind.jpg"/><div><strong>Abschreckung 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="21"><td>21</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" src="assets/icons/ability_kick.jpg"/><div><strong>Trittsicher 1/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="22"><td>22</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" src="assets/icons/ability_kick.jpg"/><div><strong>Trittsicher 2/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="23"><td>23</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_kick.jpg" loading="lazy" src="assets/icons/ability_kick.jpg"/><div><strong>Trittsicher 3/3</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="24"><td>24</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_timestop.jpg" loading="lazy" src="assets/icons/spell_nature_timestop.jpg"/><div><strong>Falleneffizienz 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="25"><td>25</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_challange.jpg" loading="lazy" src="assets/icons/ability_warrior_challange.jpg"/><div><strong>Gegenangriff 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="26"><td>26</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div><strong>Vorteil des Raubtiers 1/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="27"><td>27</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div><strong>Vorteil des Raubtiers 2/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="28"><td>28</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div><strong>Vorteil des Raubtiers 3/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="29"><td>29</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div><strong>Vorteil des Raubtiers 4/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="30"><td>30</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_tallstrider.jpg" loading="lazy" src="assets/icons/ability_hunter_pet_tallstrider.jpg"/><div><strong>Streichertritt 1/1</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="31"><td>31</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resourcefulness.jpg" loading="lazy" src="assets/icons/ability_hunter_resourcefulness.jpg"/><div><strong>Improvisation 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="32"><td>32</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_resourcefulness.jpg" loading="lazy" src="assets/icons/ability_hunter_resourcefulness.jpg"/><div><strong>Improvisation 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="33"><td>33</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_dualwield.jpg" loading="lazy" src="assets/icons/ability_dualwield.jpg"/><div><strong>Vorteil des Raubtiers 5/5</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="34"><td>34</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/ability_hunter_swiftstrike.jpg"/><div><strong>Beute aufspüren 1/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="35"><td>35</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/ability_hunter_swiftstrike.jpg"/><div><strong>Beute aufspüren 2/2</strong></div></div></td><td><span class="tree tree-ueberleben">Überleben</span></td></tr><tr data-level="36"><td>36</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Tödliche Aspekte 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="37"><td>37</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Tödliche Aspekte 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="38"><td>38</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Tödliche Aspekte 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="39"><td>39</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Tödliche Aspekte 4/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="40"><td>40</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Tödliche Aspekte 5/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="41"><td>41</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_sickem.jpg" loading="lazy" src="assets/icons/ability_hunter_sickem.jpg"/><div><strong>Konzentriertes Feuer 1/2</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="42"><td>42</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_sickem.jpg" loading="lazy" src="assets/icons/ability_hunter_sickem.jpg"/><div><strong>Konzentriertes Feuer 2/2</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="43"><td>43</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" src="assets/icons/136080.webp"/><div><strong>Belastbarkeit-Ausbildung 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="44"><td>44</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" src="assets/icons/136080.webp"/><div><strong>Belastbarkeit-Ausbildung 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="45"><td>45</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/136080.webp" loading="lazy" src="assets/icons/136080.webp"/><div><strong>Belastbarkeit-Ausbildung 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="46"><td>46</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/132120.webp" loading="lazy" src="assets/icons/132120.webp"/><div><strong>Erhöhte Tiergeschwindigkeit 1/1</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="47"><td>47</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" src="assets/icons/ability_bullrush.jpg"/><div><strong>Entfesselter Zorn 1/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="48"><td>48</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" src="assets/icons/ability_bullrush.jpg"/><div><strong>Entfesselter Zorn 2/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="49"><td>49</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" src="assets/icons/ability_bullrush.jpg"/><div><strong>Entfesselter Zorn 3/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="50"><td>50</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_bullrush.jpg" loading="lazy" src="assets/icons/ability_bullrush.jpg"/><div><strong>Entfesselter Zorn 4/5</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="51"><td>51</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://raiddex.com/assets/img/wf/icons/132158.webp" loading="lazy" src="assets/icons/132158.webp"/><div><strong>Falke beschwören 1/1</strong></div></div></td><td><span class="tree tree-tierherrschaft">Tierherrschaft</span></td></tr><tr data-level="52"><td>52</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div><strong>Tödliche Angriffe 1/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="53"><td>53</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div><strong>Tödliche Angriffe 2/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="54"><td>54</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div><strong>Tödliche Angriffe 3/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="55"><td>55</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div><strong>Tödliche Angriffe 4/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="56"><td>56</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg" loading="lazy" src="assets/icons/ability_searingarrow.jpg"/><div><strong>Tödliche Angriffe 5/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="57"><td>57</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" src="assets/icons/ability_hunter_zenarchery.jpg"/><div><strong>Sorgfältiges Zielen 1/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="58"><td>58</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" src="assets/icons/ability_hunter_zenarchery.jpg"/><div><strong>Sorgfältiges Zielen 2/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="59"><td>59</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" src="assets/icons/ability_hunter_zenarchery.jpg"/><div><strong>Sorgfältiges Zielen 3/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr><tr data-level="60"><td>60</td><td><div class="ability"><img alt="" class="wowicon talenticon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_zenarchery.jpg" loading="lazy" src="assets/icons/ability_hunter_zenarchery.jpg"/><div><strong>Sorgfältiges Zielen 4/5</strong></div></div></td><td><span class="tree tree-treffsicherheit">Treffsicherheit</span></td></tr></tbody></table></div>
 </section>
-
-<section id="skills" class="tabpage">
+<section class="tabpage" id="skills">
 <h2>Wichtige Skills</h2>
 <p class="small">Originale WoW-Fähigkeitssymbole statt Platzhalter-Icons.</p>
-<div class="table-wrap"><table style="min-width:720px"><thead><tr><th>Level</th><th>Skill</th><th>Warum wichtig?</th></tr></thead><tbody><tr><td>10</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_hunter_beasttaming.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beasttaming.jpg" loading="lazy" alt=""><div><strong>Wildtier zähmen / Begleiter freischalten</strong></div></div></td><td>Grundlage für dein Pet-System.</td></tr><tr><td>10</td><td><div class="ability"><img class="wowicon" src="assets/icons/spell_nature_ravenform.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" alt=""><div><strong>Aspekt des Falken</strong></div></div></td><td>Standard-Aspekt für mehr Distanzangriffskraft.</td></tr><tr><td>12</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_hunter_mendpet.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_mendpet.jpg" loading="lazy" alt=""><div><strong>Tier heilen</strong></div></div></td><td>Pflicht für entspanntes Solo-Leveln.</td></tr><tr><td>12</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_rogue_trip.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_trip.jpg" loading="lazy" alt=""><div><strong>Zurechtstutzen</strong></div></div></td><td>Verlangsamt Gegner und hilft beim Kiten.</td></tr><tr><td>16</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_hunter_swiftstrike.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" alt=""><div><strong>Mungobiss</strong></div></div></td><td>Wichtige Nahkampffähigkeit für Survival.</td></tr><tr><td>16</td><td><div class="ability"><img class="wowicon" src="assets/icons/spell_fire_flameshock.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_flameshock.jpg" loading="lazy" alt=""><div><strong>Feuerbrandfalle</strong></div></div></td><td>Solider Schaden auf längeren Pulls.</td></tr><tr><td>18</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_upgrademoonglaive.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_upgrademoonglaive.jpg" loading="lazy" alt=""><div><strong>Mehrfachschuss</strong></div></div></td><td>Sehr stark bei mehreren Zielen.</td></tr><tr><td>20</td><td><div class="ability"><img class="wowicon" src="assets/icons/inv_spear_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" alt=""><div><strong>Gezielter Schuss</strong></div></div></td><td>Starker Fernkampf-Hit; teilt in Forever den Cooldown mit Mehrfachschuss.</td></tr><tr><td>20</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_mount_jungletiger.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_mount_jungletiger.jpg" loading="lazy" alt=""><div><strong>Aspekt des Geparden</strong></div></div></td><td>Dein Reise-Aspekt.</td></tr><tr><td>20</td><td><div class="ability"><img class="wowicon" src="assets/icons/spell_frost_chainsofice.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_frost_chainsofice.jpg" loading="lazy" alt=""><div><strong>Eiskältefalle</strong></div></div></td><td>Starke Einzelziel-Kontrolle.</td></tr><tr><td>26</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_hunter_runningshot.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_runningshot.jpg" loading="lazy" alt=""><div><strong>Schnellfeuer</strong></div></div></td><td>Offensiver Cooldown.</td></tr><tr><td>28</td><td><div class="ability"><img class="wowicon" src="assets/icons/spell_frost_frostnova.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostnova.jpg" loading="lazy" alt=""><div><strong>Frostfalle</strong></div></div></td><td>Flächen-Slow für Kiting und Kontrolle.</td></tr><tr><td>30</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_rogue_feigndeath.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_feigndeath.jpg" loading="lazy" alt=""><div><strong>Totstellen</strong></div></div></td><td>Aggro-Reset und Notfallwerkzeug.</td></tr><tr><td>30</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_hunter_pet_tallstrider.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_tallstrider.jpg" loading="lazy" alt=""><div><strong>Streichertritt</strong></div></div></td><td>Dein Survival-Meilenstein aus dem Talentbaum.</td></tr><tr><td>34</td><td><div class="ability"><img class="wowicon" src="assets/icons/spell_fire_selfdestruct.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_selfdestruct.jpg" loading="lazy" alt=""><div><strong>Sprengfalle</strong></div></div></td><td>Starker AoE-Schaden.</td></tr><tr><td>40</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_marksmanship.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" alt=""><div><strong>Salve</strong></div></div></td><td>AoE für stabile Gruppen.</td></tr><tr><td>40</td><td><div class="ability"><img class="wowicon" src="assets/icons/ability_mount_whitetiger.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_mount_whitetiger.jpg" loading="lazy" alt=""><div><strong>Aspekt des Rudels</strong></div></div></td><td>Gruppen-/Reiseutility.</td></tr><tr><td>51</td><td><div class="ability"><img class="wowicon" src="assets/icons/132158.webp" data-fallback="https://raiddex.com/assets/img/wf/icons/132158.webp" loading="lazy" alt=""><div><strong>Falke beschwören</strong></div></div></td><td>In dieser Levelroute erst später erreichbar; in längeren Kämpfen verwenden.</td></tr></tbody></table></div>
+<div class="table-wrap"><table style="min-width:720px"><thead><tr><th>Level</th><th>Skill</th><th>Warum wichtig?</th></tr></thead><tbody><tr><td>10</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beasttaming.jpg" loading="lazy" src="assets/icons/ability_hunter_beasttaming.jpg"/><div><strong>Wildtier zähmen / Begleiter freischalten</strong></div></div></td><td>Grundlage für dein Pet-System.</td></tr><tr><td>10</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_ravenform.jpg" loading="lazy" src="assets/icons/spell_nature_ravenform.jpg"/><div><strong>Aspekt des Falken</strong></div></div></td><td>Standard-Aspekt für mehr Distanzangriffskraft.</td></tr><tr><td>12</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_mendpet.jpg" loading="lazy" src="assets/icons/ability_hunter_mendpet.jpg"/><div><strong>Tier heilen</strong></div></div></td><td>Pflicht für entspanntes Solo-Leveln.</td></tr><tr><td>12</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_trip.jpg" loading="lazy" src="assets/icons/ability_rogue_trip.jpg"/><div><strong>Zurechtstutzen</strong></div></div></td><td>Verlangsamt Gegner und hilft beim Kiten.</td></tr><tr><td>16</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="assets/icons/ability_hunter_swiftstrike.jpg"/><div><strong>Mungobiss</strong></div></div></td><td>Wichtige Nahkampffähigkeit für Survival.</td></tr><tr><td>16</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_flameshock.jpg" loading="lazy" src="assets/icons/spell_fire_flameshock.jpg"/><div><strong>Feuerbrandfalle</strong></div></div></td><td>Solider Schaden auf längeren Pulls.</td></tr><tr><td>18</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_upgrademoonglaive.jpg" loading="lazy" src="assets/icons/ability_upgrademoonglaive.jpg"/><div><strong>Mehrfachschuss</strong></div></div></td><td>Sehr stark bei mehreren Zielen.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" src="assets/icons/inv_spear_07.jpg"/><div><strong>Gezielter Schuss</strong></div></div></td><td>Starker Fernkampf-Hit; teilt in Forever den Cooldown mit Mehrfachschuss.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_mount_jungletiger.jpg" loading="lazy" src="assets/icons/ability_mount_jungletiger.jpg"/><div><strong>Aspekt des Geparden</strong></div></div></td><td>Dein Reise-Aspekt.</td></tr><tr><td>20</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_frost_chainsofice.jpg" loading="lazy" src="assets/icons/spell_frost_chainsofice.jpg"/><div><strong>Eiskältefalle</strong></div></div></td><td>Starke Einzelziel-Kontrolle.</td></tr><tr><td>26</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_runningshot.jpg" loading="lazy" src="assets/icons/ability_hunter_runningshot.jpg"/><div><strong>Schnellfeuer</strong></div></div></td><td>Offensiver Cooldown.</td></tr><tr><td>28</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostnova.jpg" loading="lazy" src="assets/icons/spell_frost_frostnova.jpg"/><div><strong>Frostfalle</strong></div></div></td><td>Flächen-Slow für Kiting und Kontrolle.</td></tr><tr><td>30</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_feigndeath.jpg" loading="lazy" src="assets/icons/ability_rogue_feigndeath.jpg"/><div><strong>Totstellen</strong></div></div></td><td>Aggro-Reset und Notfallwerkzeug.</td></tr><tr><td>30</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_tallstrider.jpg" loading="lazy" src="assets/icons/ability_hunter_pet_tallstrider.jpg"/><div><strong>Streichertritt</strong></div></div></td><td>Dein Survival-Meilenstein aus dem Talentbaum.</td></tr><tr><td>34</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_selfdestruct.jpg" loading="lazy" src="assets/icons/spell_fire_selfdestruct.jpg"/><div><strong>Sprengfalle</strong></div></div></td><td>Starker AoE-Schaden.</td></tr><tr><td>40</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg" loading="lazy" src="assets/icons/ability_marksmanship.jpg"/><div><strong>Salve</strong></div></div></td><td>AoE für stabile Gruppen.</td></tr><tr><td>40</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_mount_whitetiger.jpg" loading="lazy" src="assets/icons/ability_mount_whitetiger.jpg"/><div><strong>Aspekt des Rudels</strong></div></div></td><td>Gruppen-/Reiseutility.</td></tr><tr><td>51</td><td><div class="ability"><img alt="" class="wowicon" data-fallback="https://raiddex.com/assets/img/wf/icons/132158.webp" loading="lazy" src="assets/icons/132158.webp"/><div><strong>Falke beschwören</strong></div></div></td><td>In dieser Levelroute erst später erreichbar; in längeren Kämpfen verwenden.</td></tr></tbody></table></div>
 </section>
-
-<section id="rotation" class="tabpage">
+<section class="tabpage" id="rotation">
 <h2>Rotationen nach Levelbereich</h2>
 <div class="cards">
 <div class="card"><h3>10–17</h3><p>Mal des Jägers auf stärkere Ziele → Begleiter angreifen lassen → Automatischer Schuss → Schlangenbiss → Arkaner Schuss. Kommt das Ziel an dich heran: Raptorstoß, Zurechtstutzen und wieder Abstand.</p></div><div class="card"><h3>18–24</h3><p>Mal des Jägers → Begleiter → Schlangenbiss → Mehrfachschuss bei mehreren Zielen → Arkaner Schuss → automatische Schüsse. Nahkampf nur ergänzend.</p></div><div class="card"><h3>25–29</h3><p>Gleicher Fernkampf-Start, aber schon Weaving üben: schießen → kurz rein für Raptorstoß/Mungobiss → wieder auf Abstand.</p></div><div class="card"><h3>30–33</h3><p>Mal → Schlangenbiss → Mehrfach-/Arkanschuss → rein mit Raptorstoß → Mungobiss → Falle → Streichertritt → Bewegungsschub nutzen und wieder auf Range.</p></div><div class="card"><h3>34–39</h3><p>Beute aufspüren macht Mal des Jägers noch wichtiger. Sprengfalle bei Gruppen. Nicht in der Dead Zone stehen bleiben.</p></div><div class="card"><h3>40–50</h3><p>Einzelziel weiterweaven. Mehrere Ziele: Mehrfachschuss + Sprengfalle + Salve, sobald die Gruppe stabil steht.</p></div><div class="card"><h3>51–60</h3><p>Falke beschwören bei längeren Kämpfen einsetzen. Danach normale Weave-Priorität; auf kurzen Mobs teure DoTs/Fallen eher sparen.</p></div>
 </div>
 </section>
-
-<section id="gear" class="tabpage"><h2>Empfohlenes Gear</h2>
+<section class="tabpage" id="gear"><h2>Empfohlenes Gear</h2>
 <div class="note-card"><b>Klick auf ein Item.</b> Dann öffnet sich ein Detailfenster mit Original-Icon, WoW-artigem Tooltip, Stats, benötigter Stufe, Quelle und Survival-Einordnung.</div>
 <div class="gear-groups">
 <div><div class="gear-group-title"><h3>Level 16–24</h3><span>frühe große Upgrades</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="tunika-westfall">
-<img class="item-icon" src="assets/icons/items/inv_chest_leather_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" src="assets/icons/items/inv_chest_leather_07.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Tunika von Westfall</div>
 <div class="item-card-meta">Brust · Leder · iLvl 24</div>
 <div class="item-card-source">Quest: Die Bruderschaft der Defias · Todesminen / Westfall</div></div></button>
 <button class="item-card gear-link" data-item="giftschlag">
-<img class="item-icon" src="assets/icons/items/inv_weapon_bow_10.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" src="assets/icons/items/inv_weapon_bow_10.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Giftschlag</div>
 <div class="item-card-meta">Distanz · Bogen · iLvl 24</div>
 <div class="item-card-source">Lord Serpentis · Höhlen des Wehklagens</div></div></button>
 <button class="item-card gear-link" data-item="impaling-harpoon">
-<img class="item-icon" src="assets/icons/items/inv_spear_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" src="assets/icons/items/inv_spear_07.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Impaling Harpoon</div>
 <div class="item-card-meta">Zweihändig · Stangenwaffe · iLvl 22</div>
 <div class="item-card-source">Kapitän Greenskin · Todesminen</div></div></button>
 <button class="item-card gear-link" data-item="seal-wrynn">
-<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_05.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Siegel von Wrynn</div>
 <div class="item-card-meta">Finger · iLvl 31</div>
 <div class="item-card-source">Quest: Eine Audienz beim König · Sturmwind · Defias-Questreihe</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 25–35</h3><span>Übergang in echten Survival</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="triprunner">
-<img class="item-icon" src="assets/icons/items/inv_pants_08.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" src="assets/icons/items/inv_pants_08.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Triprunner Dungarees</div>
 <div class="item-card-meta">Beine · Leder · iLvl 37</div>
 <div class="item-card-source">Quest: Der große Verrat / Rig Wars · Gnomeregan</div></div></button>
 <button class="item-card gear-link" data-item="master-hunter-rifle">
-<img class="item-icon" src="assets/icons/items/inv_weapon_rifle_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" src="assets/icons/items/inv_weapon_rifle_05.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Meisterjäger-Gewehr</div>
 <div class="item-card-meta">Distanz · Schusswaffe · iLvl 45</div>
 <div class="item-card-source">Quest: Großwildjagd · Schlingendorntal</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 30–40</h3><span>Stufe-30-Dungeonziele</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="morbid-dawn">
-<img class="item-icon" src="assets/icons/items/inv_sword_12.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" src="assets/icons/items/inv_sword_12.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Morbide Dämmerung</div>
 <div class="item-card-meta">Zweihändig · Schwert · iLvl 35</div>
 <div class="item-card-source">Gestürzter Held (seltener Boss) · Scharlachrotes Kloster · Friedhof</div></div></button>
 <button class="item-card gear-link" data-item="ghostshard">
-<img class="item-icon" src="assets/icons/items/inv_jewelry_necklace_06.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_necklace_06.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Ghostshard Talisman</div>
 <div class="item-card-meta">Hals · iLvl 35</div>
 <div class="item-card-source">Azshir der Schlaflose (seltener Boss) · Scharlachrotes Kloster · Friedhof</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 37–45</h3><span>Melee-Waffen-Meilenstein</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="ravager">
-<img class="item-icon" src="assets/icons/items/inv_weapon_halberd_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" src="assets/icons/items/inv_weapon_halberd_05.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Ravager</div>
 <div class="item-card-meta">Zweihändig · Axt · iLvl 42</div>
 <div class="item-card-source">Herod · Scharlachrotes Kloster · Waffenkammer</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 40–50</h3><span>starke Quest-/Dungeonwerte</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="masons-ring">
-<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_03.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_03.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Masons Fraternity Ring</div>
 <div class="item-card-meta">Finger · iLvl 49</div>
-<div class="item-card-source">Quest: Wünschel-mato-Rute · Zul&#x27;Farrak</div></div></button>
+<div class="item-card-source">Quest: Wünschel-mato-Rute · Zul'Farrak</div></div></button>
 </div></div>
-<div><div class="gear-group-title"><h3>Level 48–55</h3><span>Maraudon & Blackrocktiefen</span></div><div class="gear-grid">
+<div><div class="gear-group-title"><h3>Level 48–55</h3><span>Maraudon &amp; Blackrocktiefen</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="albino-boots">
-<img class="item-icon" src="assets/icons/items/inv_boots_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" src="assets/icons/items/inv_boots_05.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Albino Crocscale Boots</div>
 <div class="item-card-meta">Füße · Leder · iLvl 53</div>
 <div class="item-card-source">Rotgrip · Maraudon</div></div></button>
 <button class="item-card gear-link" data-item="blackstone">
-<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_17.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_17.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Blackstone Ring</div>
 <div class="item-card-meta">Finger · iLvl 54</div>
 <div class="item-card-source">Prinzessin Theradras · Maraudon</div></div></button>
 <button class="item-card gear-link" data-item="fleetfoot">
-<img class="item-icon" src="assets/icons/items/inv_boots_01.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" src="assets/icons/items/inv_boots_01.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Fleetfoot Greaves</div>
 <div class="item-card-meta">Füße · Kette · iLvl 53</div>
 <div class="item-card-source">Hundemeister Grebmar · Blackrocktiefen</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 54–60</h3><span>Richtung Endgame</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="blackcrow">
-<img class="item-icon" src="assets/icons/items/inv_weapon_crossbow_04.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" src="assets/icons/items/inv_weapon_crossbow_04.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Blackcrow</div>
 <div class="item-card-meta">Distanz · Armbrust · iLvl 59</div>
-<div class="item-card-source">Schattenjägerin Vosh&#x27;gajin · Blackrockspitze</div></div></button>
+<div class="item-card-source">Schattenjägerin Vosh'gajin · Blackrockspitze</div></div></button>
 </div></div>
 <div><div class="gear-group-title"><h3>Level 58–60</h3><span>starkes Level-60-Ziel</span></div><div class="gear-grid">
 <button class="item-card gear-link" data-item="black-baron-cape">
-<img class="item-icon" src="assets/icons/items/inv_misc_cape_20.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" alt="">
+<img alt="" class="item-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" src="assets/icons/items/inv_misc_cape_20.jpg"/>
 <div class="item-card-main"><div class="item-card-name">Cape of the Black Baron</div>
 <div class="item-card-meta">Rücken · iLvl 63</div>
 <div class="item-card-source">Baron Rivendare · Stratholme</div></div></button>
 </div></div>
 </div></section>
-
-<section id="levelplan" class="tabpage">
+<section class="tabpage" id="levelplan">
 <h2>Levelplan</h2>
 <div class="table-wrap"><table style="min-width:720px"><thead><tr><th>Levelbereich</th><th>Dein Plan</th></tr></thead><tbody><tr><td>10–14</td><td>Pet-Quest → Geisterfang → Biss/Klaue nachlernen → Verbessertes Fährtenlesen 5/5.</td></tr><tr><td>15–20</td><td>Wilde Schläge + Überlebenskünstler. Frühe Dungeons mit Quests. Mehrfachschuss 18; Gepard + Gezielter Schuss 20.</td></tr><tr><td>20–30</td><td>Pet-Upgrades in Dämmerwald/Hügelland. Auf 30 Totstellen + Streichertritt.</td></tr><tr><td>30–40</td><td>Aktiv Range/Melee weaven. Beute aufspüren 34–35. Zerbrochener Zahn ab 37 versuchen.</td></tr><tr><td>40–50</td><td>Salve, Schwere Rüstung und stärkere Pet-Ränge. Maraudon wird interessant.</td></tr><tr><td>50–60</td><td>Falke beschwören in dieser Route auf 51. BRD/BRS; Blutaxtworg als Utility-/Lehrer-Pet.</td></tr></tbody></table></div>
 </section>
-
-<section id="sources" class="tabpage">
-<h2>Quellen & Datenstand</h2>
+<section class="tabpage" id="sources">
+<h2>Quellen &amp; Datenstand</h2>
 <div class="note-card">Forever ist noch vor dem vollständigen Launch. Pet-Daten bis Stufe 30 sind deutlich besser abgesichert; bei 31–60 kennzeichne ich Kartenpunkte entsprechend als Launch-/Classic-Basis.</div>
-<div class="source-grid"><a class="source-card" href="https://wowforeverpets.com/pets/ghostfang" target="_blank" rel="noopener">Ghostfang – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/black-ravager-mastiff" target="_blank" rel="noopener">Black Ravager Mastiff – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/feral-mountain-lion" target="_blank" rel="noopener">Feral Mountain Lion – Forever Pets<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=2070/moonstalker-runt" target="_blank" rel="noopener">Moonstalker Runt – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=5286/longtooth-runner" target="_blank" rel="noopener">Longtooth Runner – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=9696/bloodaxe-worg" target="_blank" rel="noopener">Bloodaxe Worg – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://raiddex.com/de/wow-forever/talente/jaeger" target="_blank" rel="noopener">Jäger-Talentbaum (deutsch) – RaidDex<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/dps-abilities" target="_blank" rel="noopener">Jäger-Fähigkeiten – Wowhead Forever<span>↗</span></a></div>
+<div class="source-grid"><a class="source-card" href="https://wowforeverpets.com/pets/ghostfang" rel="noopener" target="_blank">Ghostfang – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/black-ravager-mastiff" rel="noopener" target="_blank">Black Ravager Mastiff – Forever Pets<span>↗</span></a><a class="source-card" href="https://wowforeverpets.com/pets/feral-mountain-lion" rel="noopener" target="_blank">Feral Mountain Lion – Forever Pets<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=2070/moonstalker-runt" rel="noopener" target="_blank">Moonstalker Runt – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=5286/longtooth-runner" rel="noopener" target="_blank">Longtooth Runner – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/npc=9696/bloodaxe-worg" rel="noopener" target="_blank">Bloodaxe Worg – Wowhead Forever<span>↗</span></a><a class="source-card" href="https://raiddex.com/de/wow-forever/talente/jaeger" rel="noopener" target="_blank">Jäger-Talentbaum (deutsch) – RaidDex<span>↗</span></a><a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/dps-abilities" rel="noopener" target="_blank">Jäger-Fähigkeiten – Wowhead Forever<span>↗</span></a></div>
 </section>
 </main>
-
-
-    <div class="modal" id="modal-ghostfang" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="ghostfang" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Geisterfang</h3>
-            <p>Ghostfang · Katze · Stufe 10</p>
-          </div>
-          <span class="status confirmed">Forever-Beta bestätigt</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/dun-morogh.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp" loading="lazy" alt="Karte: Dun Morogh">
-              <button class="map-marker" style="left:74.2%;top:63.2%" title="74.2, 63.2" aria-label="Spawn 74.2, 63.2"><span>1</span></button><button class="map-marker" style="left:74.8%;top:63.4%" title="74.8, 63.4" aria-label="Spawn 74.8, 63.4"><span>2</span></button><button class="map-marker" style="left:79.4%;top:42.8%" title="79.4, 42.8" aria-label="Spawn 79.4, 42.8"><span>3</span></button><button class="map-marker" style="left:79.8%;top:43.0%" title="79.8, 43.0" aria-label="Spawn 79.8, 43.0"><span>4</span></button><button class="map-marker" style="left:80.4%;top:46.6%" title="80.4, 46.6" aria-label="Spawn 80.4, 46.6"><span>5</span></button><button class="map-marker" style="left:80.8%;top:46.8%" title="80.8, 46.8" aria-label="Spawn 80.8, 46.8"><span>6</span></button><button class="map-marker" style="left:81.6%;top:55.4%" title="81.6, 55.4" aria-label="Spawn 81.6, 55.4"><span>7</span></button><button class="map-marker" style="left:82.0%;top:55.8%" title="82.0, 55.8" aria-label="Spawn 82.0, 55.8"><span>8</span></button>
+<div aria-hidden="true" class="modal" id="modal-ghostfang">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="ghostfang">×</button>
+<div class="modal-title">
+<div>
+<h3>Geisterfang</h3>
+<p>Ghostfang · Katze · Stufe 10</p>
+</div>
+<span class="status confirmed">Forever-Beta bestätigt</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Dun Morogh" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp" loading="lazy" src="assets/maps/dun-morogh.webp"/>
+<button aria-label="Spawn 74.2, 63.2" class="map-marker" style="left:74.2%;top:63.2%" title="74.2, 63.2"><span>1</span></button><button aria-label="Spawn 74.8, 63.4" class="map-marker" style="left:74.8%;top:63.4%" title="74.8, 63.4"><span>2</span></button><button aria-label="Spawn 79.4, 42.8" class="map-marker" style="left:79.4%;top:42.8%" title="79.4, 42.8"><span>3</span></button><button aria-label="Spawn 79.8, 43.0" class="map-marker" style="left:79.8%;top:43.0%" title="79.8, 43.0"><span>4</span></button><button aria-label="Spawn 80.4, 46.6" class="map-marker" style="left:80.4%;top:46.6%" title="80.4, 46.6"><span>5</span></button><button aria-label="Spawn 80.8, 46.8" class="map-marker" style="left:80.8%;top:46.8%" title="80.8, 46.8"><span>6</span></button><button aria-label="Spawn 81.6, 55.4" class="map-marker" style="left:81.6%;top:55.4%" title="81.6, 55.4"><span>7</span></button><button aria-label="Spawn 82.0, 55.8" class="map-marker" style="left:82.0%;top:55.8%" title="82.0, 55.8"><span>8</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Dun Morogh</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Mein Favorit für deinen Human Hunter direkt auf Stufe 10. Selten, optisch auffällig und als Katze sehr angenehm zum Leveln.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Neuer seltener Forever-Pet. Mehrere bestätigte Spawnpunkte im Osten von Dun Morogh; ca. 30 Minuten Respawn wurden in der Beta gemeldet.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 74.2 63.2
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Dun Morogh</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Mein Favorit für deinen Human Hunter direkt auf Stufe 10. Selten, optisch auffällig und als Katze sehr angenehm zum Leveln.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Neuer seltener Forever-Pet. Mehrere bestätigte Spawnpunkte im Osten von Dun Morogh; ca. 30 Minuten Respawn wurden in der Beta gemeldet.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 74.2 63.2
 /way 74.8 63.4
 /way 79.4 42.8
 /way 79.8 43.0
@@ -314,8 +305,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 80.8 46.8
 /way 81.6 55.4
 /way 82.0 55.8">Kopieren</button>
-              </div>
-              <pre>/way 74.2 63.2
+</div>
+<pre>/way 74.2 63.2
 /way 74.8 63.4
 /way 79.4 42.8
 /way 79.8 43.0
@@ -323,39 +314,38 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 80.8 46.8
 /way 81.6 55.4
 /way 82.0 55.8</pre>
+</div>
+<a class="source-link" href="https://wowforeverpets.com/pets/ghostfang" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-moonstalker-runt">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="moonstalker-runt">×</button>
+<div class="modal-title">
+<div>
+<h3>Mondpirscherjunges</h3>
+<p>Moonstalker Runt · Katze · Stufe 10–17</p>
+</div>
+<span class="status known">Viele bekannte Spawns</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Dunkelküste" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1439.webp" loading="lazy" src="assets/maps/dunkelkueste.webp"/>
+<button aria-label="Spawn 38.0, 50.1" class="map-marker" style="left:38.04%;top:50.07%" title="38.0, 50.1"><span>1</span></button><button aria-label="Spawn 38.8, 50.7" class="map-marker" style="left:38.77%;top:50.73%" title="38.8, 50.7"><span>2</span></button><button aria-label="Spawn 39.2, 34.3" class="map-marker" style="left:39.19%;top:34.29%" title="39.2, 34.3"><span>3</span></button><button aria-label="Spawn 39.4, 39.1" class="map-marker" style="left:39.41%;top:39.08%" title="39.4, 39.1"><span>4</span></button><button aria-label="Spawn 41.0, 43.1" class="map-marker" style="left:41.0%;top:43.06%" title="41.0, 43.1"><span>5</span></button><button aria-label="Spawn 42.0, 48.2" class="map-marker" style="left:42.01%;top:48.19%" title="42.0, 48.2"><span>6</span></button><button aria-label="Spawn 42.0, 54.5" class="map-marker" style="left:42.04%;top:54.51%" title="42.0, 54.5"><span>7</span></button><button aria-label="Spawn 43.5, 24.3" class="map-marker" style="left:43.55%;top:24.26%" title="43.5, 24.3"><span>8</span></button><button aria-label="Spawn 44.1, 43.8" class="map-marker" style="left:44.13%;top:43.84%" title="44.1, 43.8"><span>9</span></button><button aria-label="Spawn 44.8, 42.7" class="map-marker" style="left:44.83%;top:42.67%" title="44.8, 42.7"><span>10</span></button><button aria-label="Spawn 47.2, 40.9" class="map-marker" style="left:47.2%;top:40.86%" title="47.2, 40.9"><span>11</span></button><button aria-label="Spawn 35.2, 89.7" class="map-marker" style="left:35.17%;top:89.69%" title="35.2, 89.7"><span>12</span></button><button aria-label="Spawn 36.6, 90.8" class="map-marker" style="left:36.59%;top:90.81%" title="36.6, 90.8"><span>13</span></button><button aria-label="Spawn 37.5, 93.0" class="map-marker" style="left:37.48%;top:93.01%" title="37.5, 93.0"><span>14</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <a class="source-link" href="https://wowforeverpets.com/pets/ghostfang" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-moonstalker-runt" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="moonstalker-runt" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Mondpirscherjunges</h3>
-            <p>Moonstalker Runt · Katze · Stufe 10–17</p>
-          </div>
-          <span class="status known">Viele bekannte Spawns</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/dunkelkueste.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1439.webp" loading="lazy" alt="Karte: Dunkelküste">
-              <button class="map-marker" style="left:38.04%;top:50.07%" title="38.0, 50.1" aria-label="Spawn 38.0, 50.1"><span>1</span></button><button class="map-marker" style="left:38.77%;top:50.73%" title="38.8, 50.7" aria-label="Spawn 38.8, 50.7"><span>2</span></button><button class="map-marker" style="left:39.19%;top:34.29%" title="39.2, 34.3" aria-label="Spawn 39.2, 34.3"><span>3</span></button><button class="map-marker" style="left:39.41%;top:39.08%" title="39.4, 39.1" aria-label="Spawn 39.4, 39.1"><span>4</span></button><button class="map-marker" style="left:41.0%;top:43.06%" title="41.0, 43.1" aria-label="Spawn 41.0, 43.1"><span>5</span></button><button class="map-marker" style="left:42.01%;top:48.19%" title="42.0, 48.2" aria-label="Spawn 42.0, 48.2"><span>6</span></button><button class="map-marker" style="left:42.04%;top:54.51%" title="42.0, 54.5" aria-label="Spawn 42.0, 54.5"><span>7</span></button><button class="map-marker" style="left:43.55%;top:24.26%" title="43.5, 24.3" aria-label="Spawn 43.5, 24.3"><span>8</span></button><button class="map-marker" style="left:44.13%;top:43.84%" title="44.1, 43.8" aria-label="Spawn 44.1, 43.8"><span>9</span></button><button class="map-marker" style="left:44.83%;top:42.67%" title="44.8, 42.7" aria-label="Spawn 44.8, 42.7"><span>10</span></button><button class="map-marker" style="left:47.2%;top:40.86%" title="47.2, 40.9" aria-label="Spawn 47.2, 40.9"><span>11</span></button><button class="map-marker" style="left:35.17%;top:89.69%" title="35.2, 89.7" aria-label="Spawn 35.2, 89.7"><span>12</span></button><button class="map-marker" style="left:36.59%;top:90.81%" title="36.6, 90.8" aria-label="Spawn 36.6, 90.8"><span>13</span></button><button class="map-marker" style="left:37.48%;top:93.01%" title="37.5, 93.0" aria-label="Spawn 37.5, 93.0"><span>14</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Dunkelküste</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Früher Min-Max-Pick für Alliance: schnelle Katze und leicht in einem großen Gebiet zu finden.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Sehr viele Spawnpunkte in Dunkelküste. Für einen frühen Tame sind besonders die Wälder oberhalb von Ameth&#x27;Aran praktisch.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 38.0 50.1
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Dunkelküste</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Früher Min-Max-Pick für Alliance: schnelle Katze und leicht in einem großen Gebiet zu finden.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Sehr viele Spawnpunkte in Dunkelküste. Für einen frühen Tame sind besonders die Wälder oberhalb von Ameth'Aran praktisch.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 38.0 50.1
 /way 38.8 50.7
 /way 39.2 34.3
 /way 39.4 39.1
@@ -369,8 +359,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 35.2 89.7
 /way 36.6 90.8
 /way 37.5 93.0">Kopieren</button>
-              </div>
-              <pre>/way 38.0 50.1
+</div>
+<pre>/way 38.0 50.1
 /way 38.8 50.7
 /way 39.2 34.3
 /way 39.4 39.1
@@ -384,39 +374,38 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 35.2 89.7
 /way 36.6 90.8
 /way 37.5 93.0</pre>
+</div>
+<a class="source-link" href="https://www.wowhead.com/forever/npc=2070/moonstalker-runt" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-black-ravager-mastiff">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="black-ravager-mastiff">×</button>
+<div class="modal-title">
+<div>
+<h3>Schwarzer Verheerer-Mastiff</h3>
+<p>Black Ravager Mastiff · Wolf · Stufe 25–26</p>
+</div>
+<span class="status confirmed">Forever-Datenbank</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Dämmerwald" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1431.webp" loading="lazy" src="assets/maps/daemmerwald.webp"/>
+<button aria-label="Spawn 50.6, 59.4" class="map-marker" style="left:50.6%;top:59.4%" title="50.6, 59.4"><span>1</span></button><button aria-label="Spawn 53.6, 59.8" class="map-marker" style="left:53.6%;top:59.8%" title="53.6, 59.8"><span>2</span></button><button aria-label="Spawn 54.8, 59.8" class="map-marker" style="left:54.8%;top:59.8%" title="54.8, 59.8"><span>3</span></button><button aria-label="Spawn 59.4, 30.2" class="map-marker" style="left:59.4%;top:30.2%" title="59.4, 30.2"><span>4</span></button><button aria-label="Spawn 64.6, 29.2" class="map-marker" style="left:64.6%;top:29.2%" title="64.6, 29.2"><span>5</span></button><button aria-label="Spawn 66.4, 35.4" class="map-marker" style="left:66.4%;top:35.4%" title="66.4, 35.4"><span>6</span></button><button aria-label="Spawn 67.6, 34.8" class="map-marker" style="left:67.6%;top:34.8%" title="67.6, 34.8"><span>7</span></button><button aria-label="Spawn 69.4, 36.0" class="map-marker" style="left:69.4%;top:36.0%" title="69.4, 36.0"><span>8</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <a class="source-link" href="https://www.wowhead.com/forever/npc=2070/moonstalker-runt" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-black-ravager-mastiff" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="black-ravager-mastiff" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Schwarzer Verheerer-Mastiff</h3>
-            <p>Black Ravager Mastiff · Wolf · Stufe 25–26</p>
-          </div>
-          <span class="status confirmed">Forever-Datenbank</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/daemmerwald.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1431.webp" loading="lazy" alt="Karte: Dämmerwald">
-              <button class="map-marker" style="left:50.6%;top:59.4%" title="50.6, 59.4" aria-label="Spawn 50.6, 59.4"><span>1</span></button><button class="map-marker" style="left:53.6%;top:59.8%" title="53.6, 59.8" aria-label="Spawn 53.6, 59.8"><span>2</span></button><button class="map-marker" style="left:54.8%;top:59.8%" title="54.8, 59.8" aria-label="Spawn 54.8, 59.8"><span>3</span></button><button class="map-marker" style="left:59.4%;top:30.2%" title="59.4, 30.2" aria-label="Spawn 59.4, 30.2"><span>4</span></button><button class="map-marker" style="left:64.6%;top:29.2%" title="64.6, 29.2" aria-label="Spawn 64.6, 29.2"><span>5</span></button><button class="map-marker" style="left:66.4%;top:35.4%" title="66.4, 35.4" aria-label="Spawn 66.4, 35.4"><span>6</span></button><button class="map-marker" style="left:67.6%;top:34.8%" title="67.6, 34.8" aria-label="Spawn 67.6, 34.8"><span>7</span></button><button class="map-marker" style="left:69.4%;top:36.0%" title="69.4, 36.0" aria-label="Spawn 69.4, 36.0"><span>8</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Dämmerwald</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Sehr guter Utility-Wolf: lernt Biss Rang 4 und Wutgeheul Rang 2.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Die Datenbank führt zahlreiche Spawns. Die Karte zeigt mehrere konkrete Datenbankpunkte als gute Suchroute.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 50.6 59.4
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Dämmerwald</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Sehr guter Utility-Wolf: lernt Biss Rang 4 und Wutgeheul Rang 2.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Die Datenbank führt zahlreiche Spawns. Die Karte zeigt mehrere konkrete Datenbankpunkte als gute Suchroute.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 50.6 59.4
 /way 53.6 59.8
 /way 54.8 59.8
 /way 59.4 30.2
@@ -424,8 +413,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 66.4 35.4
 /way 67.6 34.8
 /way 69.4 36.0">Kopieren</button>
-              </div>
-              <pre>/way 50.6 59.4
+</div>
+<pre>/way 50.6 59.4
 /way 53.6 59.8
 /way 54.8 59.8
 /way 59.4 30.2
@@ -433,39 +422,38 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 66.4 35.4
 /way 67.6 34.8
 /way 69.4 36.0</pre>
+</div>
+<a class="source-link" href="https://wowforeverpets.com/pets/black-ravager-mastiff" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-feral-mountain-lion">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="feral-mountain-lion">×</button>
+<div class="modal-title">
+<div>
+<h3>Wilder Berglöwe</h3>
+<p>Feral Mountain Lion · Katze · Stufe 27–28</p>
+</div>
+<span class="status confirmed">Forever-Datenbank</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Vorgebirge des Hügellands" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1424.webp" loading="lazy" src="assets/maps/huegelland.webp"/>
+<button aria-label="Spawn 57.6, 50.4" class="map-marker" style="left:57.6%;top:50.4%" title="57.6, 50.4"><span>1</span></button><button aria-label="Spawn 58.4, 56.2" class="map-marker" style="left:58.4%;top:56.2%" title="58.4, 56.2"><span>2</span></button><button aria-label="Spawn 59.2, 57.6" class="map-marker" style="left:59.2%;top:57.6%" title="59.2, 57.6"><span>3</span></button><button aria-label="Spawn 61.8, 67.4" class="map-marker" style="left:61.8%;top:67.4%" title="61.8, 67.4"><span>4</span></button><button aria-label="Spawn 62.4, 71.4" class="map-marker" style="left:62.4%;top:71.4%" title="62.4, 71.4"><span>5</span></button><button aria-label="Spawn 67.4, 70.4" class="map-marker" style="left:67.4%;top:70.4%" title="67.4, 70.4"><span>6</span></button><button aria-label="Spawn 68.2, 65.4" class="map-marker" style="left:68.2%;top:65.4%" title="68.2, 65.4"><span>7</span></button><button aria-label="Spawn 71.0, 66.6" class="map-marker" style="left:71.0%;top:66.6%" title="71.0, 66.6"><span>8</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <a class="source-link" href="https://wowforeverpets.com/pets/black-ravager-mastiff" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-feral-mountain-lion" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="feral-mountain-lion" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Wilder Berglöwe</h3>
-            <p>Feral Mountain Lion · Katze · Stufe 27–28</p>
-          </div>
-          <span class="status confirmed">Forever-Datenbank</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/huegelland.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1424.webp" loading="lazy" alt="Karte: Vorgebirge des Hügellands">
-              <button class="map-marker" style="left:57.6%;top:50.4%" title="57.6, 50.4" aria-label="Spawn 57.6, 50.4"><span>1</span></button><button class="map-marker" style="left:58.4%;top:56.2%" title="58.4, 56.2" aria-label="Spawn 58.4, 56.2"><span>2</span></button><button class="map-marker" style="left:59.2%;top:57.6%" title="59.2, 57.6" aria-label="Spawn 59.2, 57.6"><span>3</span></button><button class="map-marker" style="left:61.8%;top:67.4%" title="61.8, 67.4" aria-label="Spawn 61.8, 67.4"><span>4</span></button><button class="map-marker" style="left:62.4%;top:71.4%" title="62.4, 71.4" aria-label="Spawn 62.4, 71.4"><span>5</span></button><button class="map-marker" style="left:67.4%;top:70.4%" title="67.4, 70.4" aria-label="Spawn 67.4, 70.4"><span>6</span></button><button class="map-marker" style="left:68.2%;top:65.4%" title="68.2, 65.4" aria-label="Spawn 68.2, 65.4"><span>7</span></button><button class="map-marker" style="left:71.0%;top:66.6%" title="71.0, 66.6" aria-label="Spawn 71.0, 66.6"><span>8</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Vorgebirge des Hügellands</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Starker Midgame-Damage-Pet mit 1,2 Sek. Angriffstempo.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Mehrere konkrete Spawnpunkte im östlichen/südöstlichen Teil des Hügellands. Sehr schnelle Katze.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 57.6 50.4
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Vorgebirge des Hügellands</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Starker Midgame-Damage-Pet mit 1,2 Sek. Angriffstempo.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Mehrere konkrete Spawnpunkte im östlichen/südöstlichen Teil des Hügellands. Sehr schnelle Katze.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 57.6 50.4
 /way 58.4 56.2
 /way 59.2 57.6
 /way 61.8 67.4
@@ -473,8 +461,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 67.4 70.4
 /way 68.2 65.4
 /way 71.0 66.6">Kopieren</button>
-              </div>
-              <pre>/way 57.6 50.4
+</div>
+<pre>/way 57.6 50.4
 /way 58.4 56.2
 /way 59.2 57.6
 /way 61.8 67.4
@@ -482,74 +470,72 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 67.4 70.4
 /way 68.2 65.4
 /way 71.0 66.6</pre>
+</div>
+<a class="source-link" href="https://wowforeverpets.com/pets/feral-mountain-lion" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-broken-tooth">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="broken-tooth">×</button>
+<div class="modal-title">
+<div>
+<h3>Zerbrochener Zahn</h3>
+<p>Broken Tooth · Katze · Stufe 37</p>
+</div>
+<span class="status provisional">Über Stufe 30: Launch-/Classic-Basis</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Ödland" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1418.webp" loading="lazy" src="assets/maps/oedland.webp"/>
+<div class="search-area" style="left:53.0%;top:31.0%;width:18%;height:14%"></div><button aria-label="Spawn 53.0, 31.0" class="map-marker" style="left:53.0%;top:31.0%" title="53.0, 31.0"><span>1</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
+            <span class="area-key"></span> ungefährer Patrouillenbereich</div>
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Ödland</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Der große Damage-/Prestige-Pick: 1,0 Sek. Angriffstempo und eine der bekanntesten Hunter-Katzen.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Seltener Level-37-Kater mit weitem Patrouillenbereich. Der Mittelpunkt um ca. 53/31 ist ein guter Camping-Anhaltspunkt; suche das umliegende Gebiet ab.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 53.0 31.0">Kopieren</button>
+</div>
+<pre>/way 53.0 31.0</pre>
+</div>
+<a class="source-link" href="https://wowfdb.com/classes/hunter/rare-pets/" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-longtooth-runner">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="longtooth-runner">×</button>
+<div class="modal-title">
+<div>
+<h3>Langzahnrenner</h3>
+<p>Longtooth Runner · Wolf · Stufe 40–41</p>
+</div>
+<span class="status provisional">Über Stufe 30: Classic-Spawnbasis</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Feralas" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1444.webp" loading="lazy" src="assets/maps/feralas.webp"/>
+<button aria-label="Spawn 25.8, 47.2" class="map-marker" style="left:25.84%;top:47.23%" title="25.8, 47.2"><span>1</span></button><button aria-label="Spawn 64.5, 48.6" class="map-marker" style="left:64.54%;top:48.59%" title="64.5, 48.6"><span>2</span></button><button aria-label="Spawn 68.7, 42.3" class="map-marker" style="left:68.66%;top:42.28%" title="68.7, 42.3"><span>3</span></button><button aria-label="Spawn 69.4, 44.0" class="map-marker" style="left:69.43%;top:43.99%" title="69.4, 44.0"><span>4</span></button><button aria-label="Spawn 70.8, 36.2" class="map-marker" style="left:70.8%;top:36.24%" title="70.8, 36.2"><span>5</span></button><button aria-label="Spawn 79.3, 37.7" class="map-marker" style="left:79.31%;top:37.74%" title="79.3, 37.7"><span>6</span></button><button aria-label="Spawn 79.7, 46.6" class="map-marker" style="left:79.65%;top:46.62%" title="79.7, 46.6"><span>7</span></button><button aria-label="Spawn 80.3, 46.6" class="map-marker" style="left:80.31%;top:46.6%" title="80.3, 46.6"><span>8</span></button><button aria-label="Spawn 81.2, 39.0" class="map-marker" style="left:81.23%;top:39.04%" title="81.2, 39.0"><span>9</span></button><button aria-label="Spawn 83.5, 45.9" class="map-marker" style="left:83.45%;top:45.89%" title="83.5, 45.9"><span>10</span></button><button aria-label="Spawn 87.7, 42.7" class="map-marker" style="left:87.72%;top:42.68%" title="87.7, 42.7"><span>11</span></button><button aria-label="Spawn 89.0, 39.2" class="map-marker" style="left:88.95%;top:39.24%" title="89.0, 39.2"><span>12</span></button><button aria-label="Spawn 89.2, 40.2" class="map-marker" style="left:89.21%;top:40.18%" title="89.2, 40.2"><span>13</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <a class="source-link" href="https://wowforeverpets.com/pets/feral-mountain-lion" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-broken-tooth" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="broken-tooth" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Zerbrochener Zahn</h3>
-            <p>Broken Tooth · Katze · Stufe 37</p>
-          </div>
-          <span class="status provisional">Über Stufe 30: Launch-/Classic-Basis</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/oedland.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1418.webp" loading="lazy" alt="Karte: Ödland">
-              <div class="search-area" style="left:53.0%;top:31.0%;width:18%;height:14%"></div><button class="map-marker" style="left:53.0%;top:31.0%" title="53.0, 31.0" aria-label="Spawn 53.0, 31.0"><span>1</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            <span class='area-key'></span> ungefährer Patrouillenbereich</div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Ödland</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Der große Damage-/Prestige-Pick: 1,0 Sek. Angriffstempo und eine der bekanntesten Hunter-Katzen.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Seltener Level-37-Kater mit weitem Patrouillenbereich. Der Mittelpunkt um ca. 53/31 ist ein guter Camping-Anhaltspunkt; suche das umliegende Gebiet ab.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 53.0 31.0">Kopieren</button>
-              </div>
-              <pre>/way 53.0 31.0</pre>
-            </div>
-            <a class="source-link" href="https://wowfdb.com/classes/hunter/rare-pets/" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-longtooth-runner" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="longtooth-runner" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Langzahnrenner</h3>
-            <p>Longtooth Runner · Wolf · Stufe 40–41</p>
-          </div>
-          <span class="status provisional">Über Stufe 30: Classic-Spawnbasis</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/feralas.webp" data-fallback="https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1444.webp" loading="lazy" alt="Karte: Feralas">
-              <button class="map-marker" style="left:25.84%;top:47.23%" title="25.8, 47.2" aria-label="Spawn 25.8, 47.2"><span>1</span></button><button class="map-marker" style="left:64.54%;top:48.59%" title="64.5, 48.6" aria-label="Spawn 64.5, 48.6"><span>2</span></button><button class="map-marker" style="left:68.66%;top:42.28%" title="68.7, 42.3" aria-label="Spawn 68.7, 42.3"><span>3</span></button><button class="map-marker" style="left:69.43%;top:43.99%" title="69.4, 44.0" aria-label="Spawn 69.4, 44.0"><span>4</span></button><button class="map-marker" style="left:70.8%;top:36.24%" title="70.8, 36.2" aria-label="Spawn 70.8, 36.2"><span>5</span></button><button class="map-marker" style="left:79.31%;top:37.74%" title="79.3, 37.7" aria-label="Spawn 79.3, 37.7"><span>6</span></button><button class="map-marker" style="left:79.65%;top:46.62%" title="79.7, 46.6" aria-label="Spawn 79.7, 46.6"><span>7</span></button><button class="map-marker" style="left:80.31%;top:46.6%" title="80.3, 46.6" aria-label="Spawn 80.3, 46.6"><span>8</span></button><button class="map-marker" style="left:81.23%;top:39.04%" title="81.2, 39.0" aria-label="Spawn 81.2, 39.0"><span>9</span></button><button class="map-marker" style="left:83.45%;top:45.89%" title="83.5, 45.9" aria-label="Spawn 83.5, 45.9"><span>10</span></button><button class="map-marker" style="left:87.72%;top:42.68%" title="87.7, 42.7" aria-label="Spawn 87.7, 42.7"><span>11</span></button><button class="map-marker" style="left:88.95%;top:39.24%" title="89.0, 39.2" aria-label="Spawn 89.0, 39.2"><span>12</span></button><button class="map-marker" style="left:89.21%;top:40.18%" title="89.2, 40.2" aria-label="Spawn 89.2, 40.2"><span>13</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Feralas</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Sehr guter Utility-Wolf mit Biss 6, Sprint 2 und Wutgeheul 3.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>Viele Spawns in Feralas. Die Marker zeigen echte bekannte Spawnpunkte als Suchroute; Forever-Daten oberhalb des bisherigen Beta-Caps können sich noch ändern.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="/way 25.8 47.2
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Feralas</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Sehr guter Utility-Wolf mit Biss 6, Sprint 2 und Wutgeheul 3.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>Viele Spawns in Feralas. Die Marker zeigen echte bekannte Spawnpunkte als Suchroute; Forever-Daten oberhalb des bisherigen Beta-Caps können sich noch ändern.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="/way 25.8 47.2
 /way 64.5 48.6
 /way 68.7 42.3
 /way 69.4 44.0
@@ -562,8 +548,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 87.7 42.7
 /way 89.0 39.2
 /way 89.2 40.2">Kopieren</button>
-              </div>
-              <pre>/way 25.8 47.2
+</div>
+<pre>/way 25.8 47.2
 /way 64.5 48.6
 /way 68.7 42.3
 /way 69.4 44.0
@@ -576,170 +562,166 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 /way 87.7 42.7
 /way 89.0 39.2
 /way 89.2 40.2</pre>
+</div>
+<a class="source-link" href="https://www.wowhead.com/forever/npc=5286/longtooth-runner" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal" id="modal-bloodaxe-worg">
+<div class="modal-card">
+<button aria-label="Schließen" class="close" data-close="bloodaxe-worg">×</button>
+<div class="modal-title">
+<div>
+<h3>Blutaxtworg</h3>
+<p>Bloodaxe Worg · Wolf · Stufe 56–57</p>
+</div>
+<span class="status provisional">Dungeon-Fundort</span>
+</div>
+<div class="map-layout">
+<div>
+<div class="real-map">
+<img alt="Karte: Untere Blackrockspitze" data-fallback="https://wowquesting.weebly.com/uploads/8/0/8/2/80828608/5-halycon-s-lair_2_orig.jpg" loading="lazy" src="assets/maps/lbrs-halycons-bau.jpg"/>
+<button aria-label="Halycons Bau" class="map-marker dungeon-marker" style="left:38.5%;top:83.5%" title="Halycons Bau"><span>★</span></button>
+</div>
+<div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
             </div>
-            <a class="source-link" href="https://www.wowhead.com/forever/npc=5286/longtooth-runner" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="modal-bloodaxe-worg" aria-hidden="true">
-      <div class="modal-card">
-        <button class="close" data-close="bloodaxe-worg" aria-label="Schließen">×</button>
-        <div class="modal-title">
-          <div>
-            <h3>Blutaxtworg</h3>
-            <p>Bloodaxe Worg · Wolf · Stufe 56–57</p>
-          </div>
-          <span class="status provisional">Dungeon-Fundort</span>
-        </div>
-        <div class="map-layout">
-          <div>
-            <div class="real-map">
-              <img src="assets/maps/lbrs-halycons-bau.jpg" data-fallback="https://wowquesting.weebly.com/uploads/8/0/8/2/80828608/5-halycon-s-lair_2_orig.jpg" loading="lazy" alt="Karte: Untere Blackrockspitze">
-              <button class="map-marker dungeon-marker" style="left:38.5%;top:83.5%" title="Halycons Bau" aria-label="Halycons Bau"><span>★</span></button>
-            </div>
-            <div class="map-legend"><span class="dot"></span> Spawnpunkt / Suchpunkt
-            </div>
-          </div>
-          <div class="pet-details">
-            <div class="detail"><b>Zone</b><span>Untere Blackrockspitze</span></div>
-            <div class="detail"><b>Warum dieses Pet?</b><span>Top Lehrer-/Utility-Pet für Biss Rang 8 und Wutgeheul Rang 4.</span></div>
-            <div class="detail"><b>Fundort-Hinweis</b><span>In Halycons Bau (Halycon&#x27;s Lair) in der Unteren Blackrockspitze. Die Dungeonkarte markiert Halycon unten links bereits direkt.</span></div>
-            <div class="coordbox">
-              <div class="coord-head"><b>Koordinaten / TomTom</b>
-                <button class="copy-btn" data-copy="Halycons Bau / Halycon&#x27;s Lair">Kopieren</button>
-              </div>
-              <pre>Halycons Bau / Halycon&#x27;s Lair</pre>
-            </div>
-            <a class="source-link" href="https://www.wowhead.com/forever/npc=9696/bloodaxe-worg" target="_blank" rel="noopener">Fundortquelle öffnen ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
-<div class="modal item-modal" id="item-modal-tunika-westfall" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="tunika-westfall" aria-label="Schließen">×</button>
+</div>
+<div class="pet-details">
+<div class="detail"><b>Zone</b><span>Untere Blackrockspitze</span></div>
+<div class="detail"><b>Warum dieses Pet?</b><span>Top Lehrer-/Utility-Pet für Biss Rang 8 und Wutgeheul Rang 4.</span></div>
+<div class="detail"><b>Fundort-Hinweis</b><span>In Halycons Bau (Halycon's Lair) in der Unteren Blackrockspitze. Die Dungeonkarte markiert Halycon unten links bereits direkt.</span></div>
+<div class="coordbox">
+<div class="coord-head"><b>Koordinaten / TomTom</b>
+<button class="copy-btn" data-copy="Halycons Bau / Halycon's Lair">Kopieren</button>
+</div>
+<pre>Halycons Bau / Halycon's Lair</pre>
+</div>
+<a class="source-link" href="https://www.wowhead.com/forever/npc=9696/bloodaxe-worg" rel="noopener" target="_blank">Fundortquelle öffnen ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-tunika-westfall">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="tunika-westfall">×</button>
 <div class="modal-title"><div><h3>Tunika von Westfall</h3><p>Tunic of Westfall · Brust · Leder</p></div><span class="status provisional">Forever/Classic-Basis</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_chest_leather_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" alt="Tunika von Westfall"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Tunika von Westfall" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" src="assets/icons/items/inv_chest_leather_07.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Tunika von Westfall</div><div class="tooltip-ilvl">Gegenstandsstufe 24</div><div class="tooltip-row"><span>Brust · Leder</span><span>Selten</span></div><div class="tooltip-stat">92 Rüstung</div><div class="tooltip-stat">+11 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Die Bruderschaft der Defias<br><span class="small">Todesminen / Westfall</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Sehr starke, garantierte Alliance-Questbelohnung mit viel Beweglichkeit.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2041/tunic-of-westfall" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-giftschlag" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="giftschlag" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Die Bruderschaft der Defias<br/><span class="small">Todesminen / Westfall</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Sehr starke, garantierte Alliance-Questbelohnung mit viel Beweglichkeit.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2041/tunic-of-westfall" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-giftschlag">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="giftschlag">×</button>
 <div class="modal-title"><div><h3>Giftschlag</h3><p>Venomstrike · Distanz · Bogen</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_bow_10.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" alt="Giftschlag"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Giftschlag" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" src="assets/icons/items/inv_weapon_bow_10.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Giftschlag</div><div class="tooltip-ilvl">Gegenstandsstufe 24</div><div class="tooltip-row"><span>Distanz · Bogen</span><span>Selten</span></div><div class="tooltip-stat">20–38 Schaden</div><div class="tooltip-stat">Tempo 2.40 · 12.08 DPS</div><div class="tooltip-green">Trefferchance: 23–33 Naturschaden</div><div class="tooltip-req">Benötigt Stufe 19</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Lord Serpentis<br><span class="small">Höhlen des Wehklagens</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Eine der besten frühen Fernkampfwaffen für Jäger; kann dich viele Level begleiten.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=6469/venomstrike" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-impaling-harpoon" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="impaling-harpoon" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Lord Serpentis<br/><span class="small">Höhlen des Wehklagens</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Eine der besten frühen Fernkampfwaffen für Jäger; kann dich viele Level begleiten.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=6469/venomstrike" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-impaling-harpoon">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="impaling-harpoon">×</button>
 <div class="modal-title"><div><h3>Impaling Harpoon</h3><p>Impaling Harpoon · Zweihändig · Stangenwaffe</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_spear_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" alt="Impaling Harpoon"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Impaling Harpoon" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" src="assets/icons/items/inv_spear_07.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Impaling Harpoon</div><div class="tooltip-ilvl">Gegenstandsstufe 22</div><div class="tooltip-row"><span>Zweihändig · Stangenwaffe</span><span>Selten</span></div><div class="tooltip-stat">36–55 Schaden</div><div class="tooltip-stat">Tempo 2.40 · 18.96 DPS</div><div class="tooltip-stat">+9 Beweglichkeit</div><div class="tooltip-stat">+5 Intelligenz</div><div class="tooltip-req">Benötigt Stufe 17</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Kapitän Greenskin<br><span class="small">Todesminen</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Für frühen Survival besonders schön: Beweglichkeit + Intelligenz und brauchbarer Nahkampfschaden.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=5200/impaling-harpoon" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-seal-wrynn" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="seal-wrynn" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Kapitän Greenskin<br/><span class="small">Todesminen</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Für frühen Survival besonders schön: Beweglichkeit + Intelligenz und brauchbarer Nahkampfschaden.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=5200/impaling-harpoon" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-seal-wrynn">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="seal-wrynn">×</button>
 <div class="modal-title"><div><h3>Siegel von Wrynn</h3><p>Seal of Wrynn · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" alt="Siegel von Wrynn"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Siegel von Wrynn" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_05.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Siegel von Wrynn</div><div class="tooltip-ilvl">Gegenstandsstufe 31</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+3 Stärke</div><div class="tooltip-stat">+3 Beweglichkeit</div><div class="tooltip-stat">+4 Ausdauer</div><div class="tooltip-stat">+4 Intelligenz</div><div class="tooltip-stat">+3 Willenskraft</div><div class="tooltip-req">Benötigt Stufe 16</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Eine Audienz beim König<br><span class="small">Sturmwind · Defias-Questreihe</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Extrem langlebiger Alliance-Ring; nahezu alle Werte sind beim Leveln nützlich.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2933/seal-of-wrynn" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-triprunner" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="triprunner" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Eine Audienz beim König<br/><span class="small">Sturmwind · Defias-Questreihe</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Extrem langlebiger Alliance-Ring; nahezu alle Werte sind beim Leveln nützlich.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2933/seal-of-wrynn" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-triprunner">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="triprunner">×</button>
 <div class="modal-title"><div><h3>Triprunner Dungarees</h3><p>Triprunner Dungarees · Beine · Leder</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_pants_08.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" alt="Triprunner Dungarees"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Triprunner Dungarees" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" src="assets/icons/items/inv_pants_08.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Triprunner Dungarees</div><div class="tooltip-ilvl">Gegenstandsstufe 37</div><div class="tooltip-row"><span>Beine · Leder</span><span>Selten</span></div><div class="tooltip-stat">101 Rüstung</div><div class="tooltip-stat">+3 Stärke</div><div class="tooltip-stat">+18 Beweglichkeit</div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-req">Benötigt Stufe 25 (Quest)</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Der große Verrat / Rig Wars<br><span class="small">Gnomeregan</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Eines der klarsten Level-30-Hunter-Highlights wegen der enormen Beweglichkeit.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9624/triprunner-dungarees" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-master-hunter-rifle" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="master-hunter-rifle" aria-label="Schließen">×</button>
-<div class="modal-title"><div><h3>Meisterjäger-Gewehr</h3><p>Master Hunter&#x27;s Rifle · Distanz · Schusswaffe</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_rifle_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" alt="Meisterjäger-Gewehr"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Der große Verrat / Rig Wars<br/><span class="small">Gnomeregan</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Eines der klarsten Level-30-Hunter-Highlights wegen der enormen Beweglichkeit.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9624/triprunner-dungarees" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-master-hunter-rifle">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="master-hunter-rifle">×</button>
+<div class="modal-title"><div><h3>Meisterjäger-Gewehr</h3><p>Master Hunter's Rifle · Distanz · Schusswaffe</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Meisterjäger-Gewehr" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" src="assets/icons/items/inv_weapon_rifle_05.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Meisterjäger-Gewehr</div><div class="tooltip-ilvl">Gegenstandsstufe 45</div><div class="tooltip-row"><span>Distanz · Schusswaffe</span><span>Selten</span></div><div class="tooltip-stat">37–70 Schaden</div><div class="tooltip-stat">Tempo 2.60 · 20.58 DPS</div><div class="tooltip-req">Benötigt Stufe ab Questreihe ~28</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Großwildjagd<br><span class="small">Schlingendorntal</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Garantierte, sehr starke Fernkampfwaffe um Level 30; ideal wenn Giftschlag langsam alt wird.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=4111/master-hunters-rifle" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-morbid-dawn" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="morbid-dawn" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Großwildjagd<br/><span class="small">Schlingendorntal</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Garantierte, sehr starke Fernkampfwaffe um Level 30; ideal wenn Giftschlag langsam alt wird.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=4111/master-hunters-rifle" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-morbid-dawn">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="morbid-dawn">×</button>
 <div class="modal-title"><div><h3>Morbide Dämmerung</h3><p>Morbid Dawn · Zweihändig · Schwert</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_sword_12.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" alt="Morbide Dämmerung"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Morbide Dämmerung" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" src="assets/icons/items/inv_sword_12.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Morbide Dämmerung</div><div class="tooltip-ilvl">Gegenstandsstufe 35</div><div class="tooltip-row"><span>Zweihändig · Schwert</span><span>Selten</span></div><div class="tooltip-stat">70–105 Schaden</div><div class="tooltip-stat">Tempo 2.90 · 30.17 DPS</div><div class="tooltip-stat">+10 Stärke</div><div class="tooltip-stat">+15 Ausdauer</div><div class="tooltip-req">Benötigt Stufe 30</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Gestürzter Held (seltener Boss)<br><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Sehr harter 2H-Hit um Level 30; laut aktuellem Survival-Guide ein herausragender Dungeon-Drop.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7689/morbid-dawn" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-ghostshard" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="ghostshard" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Gestürzter Held (seltener Boss)<br/><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Sehr harter 2H-Hit um Level 30; laut aktuellem Survival-Guide ein herausragender Dungeon-Drop.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7689/morbid-dawn" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-ghostshard">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="ghostshard">×</button>
 <div class="modal-title"><div><h3>Ghostshard Talisman</h3><p>Ghostshard Talisman · Hals</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_necklace_06.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" alt="Ghostshard Talisman"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Ghostshard Talisman" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_necklace_06.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Ghostshard Talisman</div><div class="tooltip-ilvl">Gegenstandsstufe 35</div><div class="tooltip-row"><span>Hals</span><span>Selten</span></div><div class="tooltip-stat">+9 Ausdauer</div><div class="tooltip-green">+14 Angriffskraft</div><div class="tooltip-green">+12 Angriffskraft gegen Untote</div><div class="tooltip-req">Benötigt Stufe 30</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Azshir der Schlaflose (seltener Boss)<br><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Starker Hals für Hybrid-/Melee-Survival; besonders nett im untotenlastigen Content.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7731/ghostshard-talisman" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-ravager" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="ravager" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Azshir der Schlaflose (seltener Boss)<br/><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Starker Hals für Hybrid-/Melee-Survival; besonders nett im untotenlastigen Content.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7731/ghostshard-talisman" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-ravager">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="ravager">×</button>
 <div class="modal-title"><div><h3>Ravager</h3><p>Ravager · Zweihändig · Axt</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_halberd_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" alt="Ravager"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Ravager" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" src="assets/icons/items/inv_weapon_halberd_05.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Ravager</div><div class="tooltip-ilvl">Gegenstandsstufe 42</div><div class="tooltip-row"><span>Zweihändig · Axt</span><span>Selten</span></div><div class="tooltip-stat">104–157 Schaden</div><div class="tooltip-stat">Tempo 3.50 · 37.29 DPS</div><div class="tooltip-green">Proc: 9 Sek. Wirbel-AoE</div><div class="tooltip-req">Benötigt Stufe 37</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Herod<br><span class="small">Scharlachrotes Kloster · Waffenkammer</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Langsame, hart treffende 2H-Axt und ikonischer AoE-Proc. Für Survival-Weaving sehr interessant.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7717/ravager" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-masons-ring" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="masons-ring" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Herod<br/><span class="small">Scharlachrotes Kloster · Waffenkammer</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Langsame, hart treffende 2H-Axt und ikonischer AoE-Proc. Für Survival-Weaving sehr interessant.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7717/ravager" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-masons-ring">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="masons-ring">×</button>
 <div class="modal-title"><div><h3>Masons Fraternity Ring</h3><p>Masons Fraternity Ring · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_03.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" alt="Masons Fraternity Ring"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Masons Fraternity Ring" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_03.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Masons Fraternity Ring</div><div class="tooltip-ilvl">Gegenstandsstufe 49</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+14 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div><div class="tooltip-req">Benötigt Stufe Quest ab ~40</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Wünschel-mato-Rute<br><span class="small">Zul&#x27;Farrak</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Sehr viel Beweglichkeit auf einem Ring; für Hunter ausgesprochen effizient.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9533/masons-fraternity-ring" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-albino-boots" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="albino-boots" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Wünschel-mato-Rute<br/><span class="small">Zul'Farrak</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Sehr viel Beweglichkeit auf einem Ring; für Hunter ausgesprochen effizient.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9533/masons-fraternity-ring" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-albino-boots">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="albino-boots">×</button>
 <div class="modal-title"><div><h3>Albino Crocscale Boots</h3><p>Albino Crocscale Boots · Füße · Leder</p></div><span class="status provisional">Forever-Daten, vor Launch teils vorläufig</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_boots_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" alt="Albino Crocscale Boots"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Albino Crocscale Boots" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" src="assets/icons/items/inv_boots_05.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Albino Crocscale Boots</div><div class="tooltip-ilvl">Gegenstandsstufe 53</div><div class="tooltip-row"><span>Füße · Leder</span><span>Selten</span></div><div class="tooltip-stat">105 Rüstung</div><div class="tooltip-stat">+20 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div><div class="tooltip-stat">+6 Naturwiderstand</div><div class="tooltip-req">Benötigt Stufe 48</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Rotgrip<br><span class="small">Maraudon</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>+20 Beweglichkeit ist für diese Stufe enorm. Rüstungstyp ist weniger wichtig als die starken Werte.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17728/albino-crocscale-boots" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-blackstone" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="blackstone" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Rotgrip<br/><span class="small">Maraudon</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>+20 Beweglichkeit ist für diese Stufe enorm. Rüstungstyp ist weniger wichtig als die starken Werte.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17728/albino-crocscale-boots" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-blackstone">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="blackstone">×</button>
 <div class="modal-title"><div><h3>Blackstone Ring</h3><p>Blackstone Ring · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_17.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" alt="Blackstone Ring"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Blackstone Ring" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" src="assets/icons/items/inv_jewelry_ring_17.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Blackstone Ring</div><div class="tooltip-ilvl">Gegenstandsstufe 54</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-green">+20 Angriffskraft</div><div class="tooltip-green">+10 Trefferwertung / etwa 1% Trefferchance</div><div class="tooltip-req">Benötigt Stufe 49</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Prinzessin Theradras<br><span class="small">Maraudon</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Angriffskraft plus Trefferchance ist für Survival ausgesprochen wertvoll.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17713/blackstone-ring" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-fleetfoot" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="fleetfoot" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Prinzessin Theradras<br/><span class="small">Maraudon</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Angriffskraft plus Trefferchance ist für Survival ausgesprochen wertvoll.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17713/blackstone-ring" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-fleetfoot">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="fleetfoot">×</button>
 <div class="modal-title"><div><h3>Fleetfoot Greaves</h3><p>Fleetfoot Greaves · Füße · Kette</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_boots_01.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" alt="Fleetfoot Greaves"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Fleetfoot Greaves" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" src="assets/icons/items/inv_boots_01.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Fleetfoot Greaves</div><div class="tooltip-ilvl">Gegenstandsstufe 53</div><div class="tooltip-row"><span>Füße · Kette</span><span>Selten</span></div><div class="tooltip-stat">218 Rüstung</div><div class="tooltip-stat">+19 Beweglichkeit</div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-stat">+6 Intelligenz</div><div class="tooltip-req">Benötigt Stufe 48</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Hundemeister Grebmar<br><span class="small">Blackrocktiefen</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Sehr hunterfreundliche Mischung aus Beweglichkeit, Ausdauer und Intelligenz; starke Alternative zu den Maraudon-Boots.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=11627/fleetfoot-greaves" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-blackcrow" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="blackcrow" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Hundemeister Grebmar<br/><span class="small">Blackrocktiefen</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Sehr hunterfreundliche Mischung aus Beweglichkeit, Ausdauer und Intelligenz; starke Alternative zu den Maraudon-Boots.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=11627/fleetfoot-greaves" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-blackcrow">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="blackcrow">×</button>
 <div class="modal-title"><div><h3>Blackcrow</h3><p>Blackcrow · Distanz · Armbrust</p></div><span class="status confirmed">Forever bestätigt</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_crossbow_04.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" alt="Blackcrow"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Blackcrow" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" src="assets/icons/items/inv_weapon_crossbow_04.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Blackcrow</div><div class="tooltip-ilvl">Gegenstandsstufe 59</div><div class="tooltip-row"><span>Distanz · Armbrust</span><span>Selten</span></div><div class="tooltip-stat">77–117 Schaden</div><div class="tooltip-stat">Tempo 3.20 · 30.31 DPS</div><div class="tooltip-stat">+3 Beweglichkeit</div><div class="tooltip-green">+0.9% Trefferchance</div><div class="tooltip-req">Benötigt Stufe 54</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Schattenjägerin Vosh&#x27;gajin<br><span class="small">Blackrockspitze</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Langsame Armbrust mit Trefferchance; sehr attraktiv für starke Einzelhits und den Weg Richtung 60.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=12651/blackcrow" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-<div class="modal item-modal" id="item-modal-black-baron-cape" aria-hidden="true">
-<div class="modal-card"><button class="close item-close" data-item-close="black-baron-cape" aria-label="Schließen">×</button>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Schattenjägerin Vosh'gajin<br/><span class="small">Blackrockspitze</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Langsame Armbrust mit Trefferchance; sehr attraktiv für starke Einzelhits und den Weg Richtung 60.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=12651/blackcrow" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div aria-hidden="true" class="modal item-modal" id="item-modal-black-baron-cape">
+<div class="modal-card"><button aria-label="Schließen" class="close item-close" data-item-close="black-baron-cape">×</button>
 <div class="modal-title"><div><h3>Cape of the Black Baron</h3><p>Cape of the Black Baron · Rücken</p></div><span class="status provisional">Forever/Launch-Daten teils vorläufig</span></div>
-<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_misc_cape_20.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" alt="Cape of the Black Baron"><div class="item-id">Original-WoW-Icon</div></div>
+<div class="item-modal-layout"><div class="item-visual"><img alt="Cape of the Black Baron" class="item-big-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" src="assets/icons/items/inv_misc_cape_20.jpg"/><div class="item-id">Original-WoW-Icon</div></div>
 <div><div class="wow-tooltip"><div class="tooltip-name">Cape of the Black Baron</div><div class="tooltip-ilvl">Gegenstandsstufe 63</div><div class="tooltip-row"><span>Rücken</span><span>Selten</span></div><div class="tooltip-stat">45 Rüstung</div><div class="tooltip-stat">+15 Beweglichkeit</div><div class="tooltip-green">+20 Angriffskraft</div><div class="tooltip-req">Benötigt Stufe 58</div></div>
-<div class="item-source-box"><b>Woher bekommst du es?</b>Baron Rivendare<br><span class="small">Stratholme</span></div>
-<div class="item-why"><b>Warum für Survival?</b><br>Sehr starkes Level-60-Ziel mit genau den offensiven Werten, die Survival mag.</div>
-<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=13340/cape-of-the-black-baron" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
-
+<div class="item-source-box"><b>Woher bekommst du es?</b>Baron Rivendare<br/><span class="small">Stratholme</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br/>Sehr starkes Level-60-Ziel mit genau den offensiven Werten, die Survival mag.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=13340/cape-of-the-black-baron" rel="noopener" target="_blank">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
 <script>
 (function(){
  const pages=[...document.querySelectorAll('.tabpage')];
@@ -791,7 +773,6 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
  if(initial && document.getElementById(initial)) openTab(initial);
 })();
 </script>
-
 <script>
 // Fallback while local assets are being fetched by GitHub Actions.
 document.addEventListener('error', function (event) {

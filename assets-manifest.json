@@ -176,10 +176,6 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_dustvision.jpg"
   },
   {
-    "path": "assets/icons/crafting/inv_enchant_essencemagiclarge.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_essencemagiclarge.jpg"
-  },
-  {
     "path": "assets/icons/crafting/inv_fabric_linen_02.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_linen_02.jpg"
   },
@@ -240,6 +236,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_armorkit_17.jpg"
   },
   {
+    "path": "assets/icons/crafting/inv_misc_bag_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_07.jpg"
+  },
+  {
     "path": "assets/icons/crafting/inv_misc_bag_09_black.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_09_black.jpg"
   },
@@ -254,14 +254,6 @@
   {
     "path": "assets/icons/crafting/inv_misc_cape_11.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_11.jpg"
-  },
-  {
-    "path": "assets/icons/crafting/inv_misc_dust_02.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_dust_02.jpg"
-  },
-  {
-    "path": "assets/icons/crafting/inv_misc_leatherscrap_01.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_01.jpg"
   },
   {
     "path": "assets/icons/crafting/inv_misc_leatherscrap_02.jpg",
@@ -304,10 +296,6 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_thorium_02.jpg"
   },
   {
-    "path": "assets/icons/crafting/inv_ore_tin_01.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_tin_01.jpg"
-  },
-  {
     "path": "assets/icons/crafting/inv_pants_03.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg"
   },
@@ -324,20 +312,12 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
   },
   {
-    "path": "assets/icons/crafting/inv_potion_06.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_06.jpg"
-  },
-  {
     "path": "assets/icons/crafting/inv_potion_100.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_100.jpg"
   },
   {
     "path": "assets/icons/crafting/inv_potion_101.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_101.jpg"
-  },
-  {
-    "path": "assets/icons/crafting/inv_potion_12.jpg",
-    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_12.jpg"
   },
   {
     "path": "assets/icons/crafting/inv_shield_06.jpg",
@@ -850,6 +830,42 @@
   {
     "path": "assets/icons/spell_nature_timestop.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_timestop.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/ability_hunter_beastcall.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_beastcall.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/ability_hunter_swiftstrike.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/ability_marksmanship.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_marksmanship.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/ability_warrior_innerrage.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_innerrage.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/ability_warrior_savageblow.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/inv_shield_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shield_06.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/spell_holy_guardianspirit.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/spell_holy_powerwordshield.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg"
+  },
+  {
+    "path": "assets/icons/talent-trees/spell_shadow_shadowform.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowform.jpg"
   },
   {
     "path": "assets/icons/warrior/ability_criticalstrike.jpg",
