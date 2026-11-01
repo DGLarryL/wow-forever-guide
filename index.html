@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WoW Forever – Human Survival Hunter Guide (DE)</title>
+<style>
+:root {
+  --bg:#0b110d; --panel:#142019; --panel2:#1a2a20; --text:#edf4ef;
+  --muted:#aebfb3; --green:#9bd1a7; --gold:#d7b15c; --line:#2e4435;
+}
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:Segoe UI, Arial, sans-serif; }
+body { min-height:100vh; }
+header { padding:34px 20px 22px; background:linear-gradient(180deg,#163120,#0b110d); border-bottom:1px solid var(--line); }
+.wrap { max-width:1180px; margin:0 auto; }
+h1 { margin:0; font-size:clamp(2rem,5vw,3.6rem); }
+.subtitle { color:var(--gold); margin-top:8px; }
+.notice { margin-top:18px; padding:12px 14px; border:1px solid #6e5a2a; background:#2b2414; border-radius:10px; color:#f3dfaa; }
+nav { position:sticky; top:0; z-index:50; background:#0d1510; border-bottom:1px solid var(--line); }
+.tabbar { max-width:1180px; margin:auto; padding:10px 20px; display:flex; gap:8px; overflow:auto; }
+.tabbtn { border:1px solid var(--line); background:#17231b; color:var(--text); padding:10px 14px; border-radius:10px; cursor:pointer; white-space:nowrap; font-size:15px; }
+.tabbtn:hover,.tabbtn.active { background:#31543b; border-color:#527a5d; }
+main { max-width:1180px; margin:auto; padding:26px 20px 60px; }
+.tabpage { display:none; }
+.tabpage.active { display:block; }
+h2 { font-size:1.9rem; color:var(--green); margin-top:0; }
+h3 { color:var(--gold); margin-top:0; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+.card { background:linear-gradient(180deg,var(--panel2),var(--panel)); border:1px solid var(--line); border-radius:14px; padding:16px; }
+.card strong { color:var(--gold); }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
+table { width:100%; border-collapse:collapse; min-width:760px; }
+th,td { padding:10px 12px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+th { background:#203326; }
+tbody tr:nth-child(even) { background:#17231b; }
+.filterbar { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 15px; }
+.filterbar button { border:1px solid var(--line); background:#17231b; color:white; padding:8px 11px; border-radius:8px; cursor:pointer; }
+.filterbar button.active { background:#31543b; }
+.small { color:var(--muted); font-size:.92rem; }
+.hero-links { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+.hero-links button { padding:10px 13px; border-radius:10px; border:1px solid #527a5d; background:#294633; color:#fff; cursor:pointer; }
+.linklike {
+  background:none; border:none; color:#b7dbff; cursor:pointer; padding:0; font:inherit;
+  text-decoration:underline; text-underline-offset:2px;
+}
+.linklike:hover { color:#e5f2ff; }
+.skill-inline { display:inline-flex; align-items:center; gap:10px; }
+.skill-icon { width:28px; height:28px; border-radius:6px; vertical-align:middle; box-shadow:0 0 0 1px rgba(255,255,255,0.08); margin-right:8px; }
+.pet-modal {
+  position:fixed; inset:0; background:rgba(5,8,6,0.76); display:none; align-items:center; justify-content:center;
+  padding:20px; z-index:120;
+}
+.pet-modal.show { display:flex; }
+.pet-modal-card {
+  width:min(980px, 100%); max-height:92vh; overflow:auto; background:linear-gradient(180deg,#18261d,#111912);
+  border:1px solid var(--line); border-radius:16px; padding:18px; position:relative; box-shadow:0 18px 60px rgba(0,0,0,0.45);
+}
+.modal-close {
+  position:absolute; top:12px; right:12px; width:36px; height:36px; border-radius:10px; border:1px solid var(--line);
+  background:#213124; color:#fff; font-size:24px; cursor:pointer; line-height:1;
+}
+.pet-sub { color:var(--muted); margin-top:4px; }
+.pet-modal-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:16px; margin-top:14px; }
+.pet-map-box, .pet-info-box {
+  background:#152019; border:1px solid var(--line); border-radius:12px; padding:12px;
+}
+.mapimg { display:block; width:100%; height:auto; border-radius:10px; }
+.infobox { margin-bottom:10px; line-height:1.45; }
+.smallnote { color:var(--muted); font-size:.9rem; margin-top:12px; }
+.badge {
+  display:inline-block; padding:4px 8px; border-radius:999px; background:#233628; border:1px solid #3f5d45; color:#d8f0de; font-size:.85rem;
+}
+@media(max-width:860px) {
+  .pet-modal-grid { grid-template-columns:1fr; }
+}
+@media(max-width:700px) {
+  main,.tabbar { padding-left:12px; padding-right:12px; }
+  header { padding-left:12px; padding-right:12px; }
+  table { min-width:620px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Human Survival Hunter 10–60</h1>
+    <div class="subtitle">WoW Forever Leveling Guide – Deutsch</div>
+    <div class="notice"><strong>Neu:</strong> Anklickbare Pet-Namen mit Fundort-Detailansicht, Kartenmarkierung und deutsche Skill-Namen mit Icons.</div>
+  </div>
+</header>
+
+<nav>
+  <div class="tabbar">
+    <button class="tabbtn active" data-tab="overview">Übersicht</button>
+    <button class="tabbtn" data-tab="pets">Pets</button>
+    <button class="tabbtn" data-tab="talents">Talente</button>
+    <button class="tabbtn" data-tab="skills">Skills</button>
+    <button class="tabbtn" data-tab="rotation">Rotation</button>
+    <button class="tabbtn" data-tab="gear">Gear</button>
+    <button class="tabbtn" data-tab="levelplan">Levelplan</button>
+    <button class="tabbtn" data-tab="sources">Hinweise</button>
+  </div>
+</nav>
+
+<main>
+<section id="overview" class="tabpage active">
+  <h2>Übersicht</h2>
+  <div class="cards">
+    <div class="card"><strong>Level 10</strong><br>Geisterfang holen und Tier-Skills nachlernen.</div>
+    <div class="card"><strong>Level 30</strong><br>Strider Kick – ab hier beginnt das echte Survival-Weaving.</div>
+    <div class="card"><strong>Level 37</strong><br>Zerbrochener Zahn versuchen und als Damage-Main behalten.</div>
+    <div class="card"><strong>Level 51</strong><br>Habicht beschwören in längeren Kämpfen aktiv nutzen.</div>
+  </div>
+  <div class="hero-links">
+    <button onclick="openTab('pets')">Pets öffnen</button>
+    <button onclick="openTab('talents')">Talentroute öffnen</button>
+    <button onclick="openTab('skills')">Skills öffnen</button>
+    <button onclick="openTab('rotation')">Rotationen öffnen</button>
+  </div>
+  <h3 style="margin-top:28px">Grundpriorität</h3>
+  <div class="table-wrap "><table><thead><tr><th>Priorität</th><th>Stat</th></tr></thead><tbody><tr><td>1</td><td>Waffenschaden</td></tr><tr><td>2</td><td>Beweglichkeit</td></tr><tr><td>3</td><td>Kritische Trefferchance</td></tr><tr><td>4</td><td>Intelligenz</td></tr><tr><td>5</td><td>Stärke</td></tr><tr><td>6</td><td>Ausdauer</td></tr></tbody></table></div>
+  <p class="small" style="margin-top:14px">Tipp: In der Pet-Tabelle kannst du jetzt direkt auf den Namen klicken und bekommst einen Detail-Popup mit Fundort und Karte.</p>
+</section>
+
+<section id="pets" class="tabpage">
+  <h2>Beste Pets</h2>
+  <div class="card" style="margin-bottom:16px">
+    <strong>So benutzt du die Tabelle:</strong> Klicke einfach auf den <span class="badge">Pet-Namen</span>, um Fundort, ungefähre Koordinaten und eine Kartenansicht mit Markierung zu öffnen.
+  </div>
+  <div class="table-wrap "><table><thead><tr><th>Level</th><th>Pet</th><th>Familie</th><th>Zone</th><th>Warum holen?</th></tr></thead><tbody><tr><td>10</td><td><button class="linklike pet-open" data-pet="ghostfang">Geisterfang</button></td><td>Katze</td><td>Dun Morogh</td><td>Sehr guter früher Main-Pet für deinen Menschen-Jäger. Stylisch, selten und offensiv stark. Danach Bite/Claw separat beibringen.</td></tr><tr><td>10–11</td><td><button class="linklike pet-open" data-pet="moonstalker-runt">Mondpirscherjunges</button></td><td>Katze</td><td>Dunkelküste</td><td>Früher Min-Max-Pick mit schnellem Angriffstempo für Alliance-Leveling.</td></tr><tr><td>17–18</td><td><button class="linklike pet-open" data-pet="moonstalker-sire">Mondpirscher-Sire</button></td><td>Katze</td><td>Dunkelküste</td><td>Stärkere Weiterentwicklung der frühen Dunkelküste-Katzen.</td></tr><tr><td>23–28</td><td><button class="linklike pet-open" data-pet="mountain-lion">Verhungernder / Wilder Berglöwe</button></td><td>Katze</td><td>Vorgebirge des Hügellands</td><td>Sehr schneller Damage-Pet; top für reinen Schaden im Midgame.</td></tr><tr><td>25–26</td><td><button class="linklike pet-open" data-pet="black-ravager-mastiff">Schwarzer Verheerer-Mastiff</button></td><td>Wolf</td><td>Dämmerwald</td><td>Starker Utility-Wolf wegen Furious Howl 2; sehr gut für deinen späteren Melee-Survival-Stil.</td></tr><tr><td>37</td><td><button class="linklike pet-open" data-pet="broken-tooth">Zerbrochener Zahn</button></td><td>Katze</td><td>Ödland</td><td>Wunsch-Main-Pet ab 37. Sehr schnelles Angriffstempo, top Damage und Klassiker für Hunter.</td></tr><tr><td>40–41</td><td><button class="linklike pet-open" data-pet="longtooth-runner">Langzahnrenner</button></td><td>Wolf</td><td>Feralas</td><td>Wolf-Alternative mit Furious Howl 3; guter Stall-Swap für Gruppen oder Utility.</td></tr><tr><td>56–57</td><td><button class="linklike pet-open" data-pet="bloodaxe-worg">Blutaxt-Worg</button></td><td>Wolf</td><td>Blackrockspitze</td><td>Sehr stark als Utility- und Lehrer-Pet: Bite 8 und Furious Howl 4.</td></tr></tbody></table></div>
+</section>
+
+<section id="talents" class="tabpage">
+  <h2>Talentroute 10–60</h2>
+  <div class="filterbar">
+    <button class="active" data-range="10-60">Alle</button>
+    <button data-range="10-19">10–19</button>
+    <button data-range="20-29">20–29</button>
+    <button data-range="30-39">30–39</button>
+    <button data-range="40-49">40–49</button>
+    <button data-range="50-60">50–60</button>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Level</th><th>Talent</th><th>Baum</th></tr></thead>
+      <tbody id="talentBody"><tr data-level="10"><td>10</td><td>Verbessertes Aufspüren 1/5</td><td>Überleben</td></tr><tr data-level="11"><td>11</td><td>Verbessertes Aufspüren 2/5</td><td>Überleben</td></tr><tr data-level="12"><td>12</td><td>Verbessertes Aufspüren 3/5</td><td>Überleben</td></tr><tr data-level="13"><td>13</td><td>Verbessertes Aufspüren 4/5</td><td>Überleben</td></tr><tr data-level="14"><td>14</td><td>Verbessertes Aufspüren 5/5</td><td>Überleben</td></tr><tr data-level="15"><td>15</td><td>Wilde Schläge 1/2</td><td>Überleben</td></tr><tr data-level="16"><td>16</td><td>Wilde Schläge 2/2</td><td>Überleben</td></tr><tr data-level="17"><td>17</td><td>Überlebenskünstler 1/5</td><td>Überleben</td></tr><tr data-level="18"><td>18</td><td>Überlebenskünstler 2/5</td><td>Überleben</td></tr><tr data-level="19"><td>19</td><td>Überlebenskünstler 3/5</td><td>Überleben</td></tr><tr data-level="20"><td>20</td><td>Abschreckung 1/1</td><td>Überleben</td></tr><tr data-level="21"><td>21</td><td>Trittsicher 1/3</td><td>Überleben</td></tr><tr data-level="22"><td>22</td><td>Trittsicher 2/3</td><td>Überleben</td></tr><tr data-level="23"><td>23</td><td>Trittsicher 3/3</td><td>Überleben</td></tr><tr data-level="24"><td>24</td><td>Ausgeklügelte Fallen 1/2</td><td>Überleben</td></tr><tr data-level="25"><td>25</td><td>Gegenangriff 1/1</td><td>Überleben</td></tr><tr data-level="26"><td>26</td><td>Raubtierkante 1/5</td><td>Überleben</td></tr><tr data-level="27"><td>27</td><td>Raubtierkante 2/5</td><td>Überleben</td></tr><tr data-level="28"><td>28</td><td>Raubtierkante 3/5</td><td>Überleben</td></tr><tr data-level="29"><td>29</td><td>Raubtierkante 4/5</td><td>Überleben</td></tr><tr data-level="30"><td>30</td><td>Strider Kick 1/1</td><td>Überleben</td></tr><tr data-level="31"><td>31</td><td>Einfallsreichtum 1/2</td><td>Überleben</td></tr><tr data-level="32"><td>32</td><td>Einfallsreichtum 2/2</td><td>Überleben</td></tr><tr data-level="33"><td>33</td><td>Raubtierkante 5/5</td><td>Überleben</td></tr><tr data-level="34"><td>34</td><td>Beute entlarven 1/2</td><td>Überleben</td></tr><tr data-level="35"><td>35</td><td>Beute entlarven 2/2</td><td>Überleben</td></tr><tr data-level="36"><td>36</td><td>Tödliche Aspekte 1/5</td><td>Tierherrschaft</td></tr><tr data-level="37"><td>37</td><td>Tödliche Aspekte 2/5</td><td>Tierherrschaft</td></tr><tr data-level="38"><td>38</td><td>Tödliche Aspekte 3/5</td><td>Tierherrschaft</td></tr><tr data-level="39"><td>39</td><td>Tödliche Aspekte 4/5</td><td>Tierherrschaft</td></tr><tr data-level="40"><td>40</td><td>Tödliche Aspekte 5/5</td><td>Tierherrschaft</td></tr><tr data-level="41"><td>41</td><td>Fokussiertes Feuer 1/2</td><td>Tierherrschaft</td></tr><tr data-level="42"><td>42</td><td>Fokussiertes Feuer 2/2</td><td>Tierherrschaft</td></tr><tr data-level="43"><td>43</td><td>Ausdauertraining 1/5</td><td>Tierherrschaft</td></tr><tr data-level="44"><td>44</td><td>Ausdauertraining 2/5</td><td>Tierherrschaft</td></tr><tr data-level="45"><td>45</td><td>Ausdauertraining 3/5</td><td>Tierherrschaft</td></tr><tr data-level="46"><td>46</td><td>Tierische Schnelligkeit 1/1</td><td>Tierherrschaft</td></tr><tr data-level="47"><td>47</td><td>Entfesselte Wut 1/5</td><td>Tierherrschaft</td></tr><tr data-level="48"><td>48</td><td>Entfesselte Wut 2/5</td><td>Tierherrschaft</td></tr><tr data-level="49"><td>49</td><td>Entfesselte Wut 3/5</td><td>Tierherrschaft</td></tr><tr data-level="50"><td>50</td><td>Entfesselte Wut 4/5</td><td>Tierherrschaft</td></tr><tr data-level="51"><td>51</td><td>Habicht beschwören 1/1</td><td>Tierherrschaft</td></tr><tr data-level="52"><td>52</td><td>Tödliche Angriffe 1/5</td><td>Treffsicherheit</td></tr><tr data-level="53"><td>53</td><td>Tödliche Angriffe 2/5</td><td>Treffsicherheit</td></tr><tr data-level="54"><td>54</td><td>Tödliche Angriffe 3/5</td><td>Treffsicherheit</td></tr><tr data-level="55"><td>55</td><td>Tödliche Angriffe 4/5</td><td>Treffsicherheit</td></tr><tr data-level="56"><td>56</td><td>Tödliche Angriffe 5/5</td><td>Treffsicherheit</td></tr><tr data-level="57"><td>57</td><td>Sorgfältiges Zielen 1/5</td><td>Treffsicherheit</td></tr><tr data-level="58"><td>58</td><td>Sorgfältiges Zielen 2/5</td><td>Treffsicherheit</td></tr><tr data-level="59"><td>59</td><td>Sorgfältiges Zielen 3/5</td><td>Treffsicherheit</td></tr><tr data-level="60"><td>60</td><td>Sorgfältiges Zielen 4/5</td><td>Treffsicherheit</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="skills" class="tabpage">
+  <h2>Wichtige Skills</h2>
+  <div class="table-wrap "><table><thead><tr><th>Level</th><th>Skill</th><th>Warum wichtig?</th></tr></thead><tbody><tr><td>10</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%234a6a35%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%231d2b14%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%F0%9F%90%BE%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Tier zähmen / Begleiter freischalten</span></td><td>Wichtigster Startpunkt für deine Hunter-Pets.</td></tr><tr><td>10</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%236a4f2f%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%232a1e12%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%F0%9F%A6%85%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Aspekt des Falken</span></td><td>Dein Standard-Aspekt fürs Leveln.</td></tr><tr><td>12</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%232f5a49%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23142620%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%2B%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Tier heilen</span></td><td>Pflicht für entspanntes Solo-Leveln.</td></tr><tr><td>12</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%235c4a2f%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23221a10%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%86%98%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Flügelstutzen</span></td><td>Hilft beim Kiten und Distanzgewinnen.</td></tr><tr><td>16</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%236a3a30%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23251411%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3EM%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Mungobiss</span></td><td>Wichtige Nahkampf-Fähigkeit für Survival.</td></tr><tr><td>16</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%236a2e20%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%2329120b%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%F0%9F%94%A5%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Feuerbrandfalle</span></td><td>Gut für längere Kämpfe und Pulls.</td></tr><tr><td>18</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%232f4664%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23101a29%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%87%B6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Mehrfachschuss</span></td><td>Sehr guter Schuss bei 2+ Zielen.</td></tr><tr><td>20</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23324f6d%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23101a29%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%97%8E%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Gezielter Schuss</span></td><td>Starker gezielter Opener oder harter Ranged-Hit.</td></tr><tr><td>20</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23625223%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23231f0c%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%9A%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Aspekt des Geparden</span></td><td>Schneller zwischen Quests und Camps.</td></tr><tr><td>20</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%232b5b74%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%2311212b%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%9D%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Eisfalle</span></td><td>Starke Kontrolle für Adds und schwierige Pulls.</td></tr><tr><td>26</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%235d3a6a%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23211326%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%C2%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Schnellfeuer</span></td><td>Offensiver Cooldown für stärkere Kämpfe.</td></tr><tr><td>28</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%232b5b74%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%2311212b%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%97%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Frostfalle</span></td><td>Sehr nützlich für Kiten und Kontrolle.</td></tr><tr><td>30</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%235c3030%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23230f0f%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%9C%96%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Totstellen</span></td><td>Top-Tool für Aggro-Reset, Fehler und Dungeons.</td></tr><tr><td>30</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%234f4027%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%231e170d%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%F0%9F%91%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Strider Kick</span></td><td>Kernpunkt deines echten Survival-Weavings.</td></tr><tr><td>34</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%236e3023%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%2326110b%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%9C%B9%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Explosivfalle</span></td><td>Sehr gut gegen Gruppen.</td></tr><tr><td>40</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23364f70%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23111b28%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%98%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Salve</span></td><td>Wichtige AoE-Fähigkeit.</td></tr><tr><td>40</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%2348623b%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%231a2415%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%87%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Aspekt des Rudels</span></td><td>Reise- und Gruppennutzen.</td></tr><tr><td>50</td><td><span class="skill-inline"><img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%234f6e93%22%20offset%3D%220%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23152231%22%20offset%3D%221%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%23caa85b%22%20stroke-width%3D%222%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2220%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-size%3D%2215%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20fill%3D%22%23f4e8bf%22%20font-weight%3D%22700%22%3E%E2%98%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="" class="skill-icon"></span><span>Salve (Upgrade)</span></td><td>Bessere AoE-Leistung.</td></tr></tbody></table></div>
+</section>
+
+<section id="rotation" class="tabpage">
+  <h2>Rotationen nach Levelbereich</h2>
+  <div class="cards">
+    <div class="card"><h3>10–17</h3><p>Mal des Jägers auf stärkere Ziele → Pet schicken → Autoschuss → Schlangenbiss → Arkanschuss. Kommt das Ziel an dich heran: Raptor Strike, Flügelstutzen und wieder Abstand.</p></div><div class="card"><h3>18–24</h3><p>Mal des Jägers → Pet → Schlangenbiss → Mehrfachschuss bei mehreren Zielen → Arkanschuss → Autoschüsse. Nahkampf nur ergänzend.</p></div><div class="card"><h3>25–29</h3><p>Gleicher Fernkampf-Start, aber schon Weaving üben: Schießen → kurz rein für Nahkampftreffer → wieder auf Abstand.</p></div><div class="card"><h3>30–33</h3><p>Mal → Schlangenbiss → Mehrfach-/Arkanschuss → rein mit Raptor Strike → Mungobiss → Falle → Strider Kick → wieder auf Range.</p></div><div class="card"><h3>34–39</h3><p>Beute entlarven macht markierte Ziele wichtiger. Explosivfalle bei Gruppen. Nicht in der Dead Zone stehen bleiben.</p></div><div class="card"><h3>40–50</h3><p>Einzelziel: normal weiterweaven. Mehrere Ziele: Mehrfachschuss + Explosivfalle + Salve.</p></div><div class="card"><h3>51–60</h3><p>Habicht beschwören in längeren Kämpfen nutzen. Danach weiterhin Range-Melee-Weaving spielen.</p></div>
+  </div>
+</section>
+
+<section id="gear" class="tabpage">
+  <h2>Gear aus Quests & Dungeons</h2>
+  <div class="table-wrap "><table><thead><tr><th>Level</th><th>Dungeon / Quelle</th><th>Empfehlung</th></tr></thead><tbody><tr><td>10–16</td><td>Halle der Thanes</td><td>Questbelohnungen und Agi-Teile wie Spiritwraith Drape, Flamefist Grips, Direhammer Leggings.</td></tr><tr><td>16–24</td><td>Todesminen / Höhlen des Wehklagens</td><td>Todesminen für Alliance sehr angenehm; WC bietet ebenfalls starke Beweglichkeits-Teile.</td></tr><tr><td>24–32</td><td>Die Todesminen? / Das Verlies / Gnomeregan</td><td>Vor allem Dungeon-Quests mitnehmen; in Gnomeregan auf Waffen und Agility-Hosen achten.</td></tr><tr><td>30–40</td><td>Gnomeregan / Scharlachrotes Kloster / Kral der Klingenhauer</td><td>Starke Waffenupgrades und viel Agility. Langsame 2H-Waffen lohnen sich für Survival.</td></tr><tr><td>40–50</td><td>Maraudon</td><td>Ab 40 kannst du Mail tragen, aber Werte bleiben wichtiger als der Rüstungstyp.</td></tr><tr><td>50–60</td><td>BRD / Blackrockspitze</td><td>Starke Endgame-Dungeonitems; gute Agility-Teile und Waffen priorisieren.</td></tr></tbody></table></div>
+</section>
+
+<section id="levelplan" class="tabpage">
+  <h2>Levelplan</h2>
+  <div class="table-wrap "><table><thead><tr><th>Levelbereich</th><th>Was du machen solltest</th></tr></thead><tbody><tr><td>10–14</td><td>Pet-Quest erledigen, Geisterfang holen, Bite/Claw beibringen, Verbessertes Aufspüren 5/5 abschließen.</td></tr><tr><td>15–20</td><td>Wilde Schläge + Überlebenskünstler. Frühe Dungeons mit Questbelohnungen. Mehrfachschuss 18, Gezielter Schuss 20.</td></tr><tr><td>20–30</td><td>Pet-Upgrades in Dämmerwald/Hügelland. Auf 30 Totstellen und Strider Kick.</td></tr><tr><td>30–40</td><td>Jetzt aktiv Range-Melee-Weaving lernen. Beute entlarven 34–35. Zerbrochener Zahn ab 37.</td></tr><tr><td>40–50</td><td>Salve, Mail und stärkere Pet-Ränge mitnehmen. Maraudon wird spannend.</td></tr><tr><td>50–60</td><td>Habicht beschwören ab 51. Danach BRD/BRS und Blutaxt-Worg als Utility-/Lehrer-Pet.</td></tr></tbody></table></div>
+</section>
+
+<section id="sources" class="tabpage">
+  <h2>Hinweise</h2>
+  <div class="card">
+    <p>Diese Version ist bewusst auf Deutsch umgestellt, damit du die Skills leichter im deutschen Client wiedererkennst.</p>
+    <p>Die Karten in den Pet-Popups sind <strong>Orientierungskarten</strong> mit Markierungen, damit du nicht nur Text hast. Wenn du willst, kann ich dir in der nächsten Version zusätzlich noch <strong>konkretere Routen, Suchgebiete oder mehrere Marker pro Pet</strong> einbauen.</p>
+    <p class="small">Stand: 1. November 2026 · lokale Offline-HTML-Datei</p>
+  </div>
+</section>
+</main>
+
+
+    <div class="pet-modal" id="modal-ghostfang" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-ghostfang">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Geisterfang</h3>
+            <div class="pet-sub">Ghostfang · Katze · Level 10</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dce7f5%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b8c9df%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%237a94b4%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EDun%20Morogh%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2049%2C%2035%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22374.40000000000003%22%20y1%3D%22176.0%22%20x2%3D%22374.40000000000003%22%20y2%3D%22136.0%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22374.40000000000003%22%20cy%3D%22176.0%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22319.40000000000003%22%20y%3D%2298.0%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22374.40000000000003%22%20y%3D%22118.0%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Geisterfang" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Dun Morogh</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 49, 35</div>
+            <div class="infobox"><strong>Wo genau:</strong> Westlich von Kharanos, in der Nähe der Frostmane-Höhlen und der Bären/Wölfe im Schneebereich.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Sehr guter früher Main-Pet für deinen Menschen-Jäger. Stylisch, selten und offensiv stark. Danach Bite/Claw separat beibringen.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-moonstalker-runt" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-moonstalker-runt">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Mondpirscherjunges</h3>
+            <div class="pet-sub">Moonstalker Runt · Katze · Level 10–11</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d7ead1%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2398bd8e%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%235d8254%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EDunkelk%C3%BCste%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2041%2C%2037%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22270.40000000000003%22%20y1%3D%22153.60000000000002%22%20x2%3D%22270.40000000000003%22%20y2%3D%22113.60000000000002%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22270.40000000000003%22%20cy%3D%22153.60000000000002%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22215.40000000000003%22%20y%3D%2275.60000000000002%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22270.40000000000003%22%20y%3D%2295.60000000000002%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Mondpirscherjunges" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Dunkelküste</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 41, 37</div>
+            <div class="infobox"><strong>Wo genau:</strong> Südlich von Auberdine im Waldgebiet, oft zwischen den Wegen und Bäumen zu finden.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Früher Min-Max-Pick mit schnellem Angriffstempo für Alliance-Leveling.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-moonstalker-sire" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-moonstalker-sire">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Mondpirscher-Sire</h3>
+            <div class="pet-sub">Moonstalker Sire · Katze · Level 17–18</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d7ead1%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2398bd8e%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%235d8254%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EDunkelk%C3%BCste%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2044%2C%2036%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22301.6%22%20y1%3D%22160.0%22%20x2%3D%22301.6%22%20y2%3D%22120.0%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22301.6%22%20cy%3D%22160.0%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22246.60000000000002%22%20y%3D%2282.0%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22301.6%22%20y%3D%22102.0%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Mondpirscher-Sire" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Dunkelküste</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 44, 36</div>
+            <div class="infobox"><strong>Wo genau:</strong> Ebenfalls im südlichen Auberdine-Bereich und tiefer im Wald zu finden.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Stärkere Weiterentwicklung der frühen Dunkelküste-Katzen.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-mountain-lion" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-mountain-lion">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Verhungernder / Wilder Berglöwe</h3>
+            <div class="pet-sub">Starving / Feral Mountain Lion · Katze · Level 23–28</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23eadfc8%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d0be92%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%238f7c4a%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EVorgebirge%20des%20H%C3%BCgellands%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2049%2C%2045%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22291.2%22%20y1%3D%22169.60000000000002%22%20x2%3D%22291.2%22%20y2%3D%22129.60000000000002%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22291.2%22%20cy%3D%22169.60000000000002%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22236.2%22%20y%3D%2291.60000000000002%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22291.2%22%20y%3D%22111.60000000000002%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Verhungernder / Wilder Berglöwe" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Vorgebirge des Hügellands</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 49, 45</div>
+            <div class="infobox"><strong>Wo genau:</strong> Im mittleren und südlichen Bereich der Zone, auf Hängen und offenen Wiesen.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Sehr schneller Damage-Pet; top für reinen Schaden im Midgame.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-black-ravager-mastiff" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-black-ravager-mastiff">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Schwarzer Verheerer-Mastiff</h3>
+            <div class="pet-sub">Black Ravager Mastiff · Wolf · Level 25–26</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d5d5d8%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%239a9aa2%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%23575763%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3ED%C3%A4mmerwald%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2021%2C%2046%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22145.6%22%20y1%3D%22176.0%22%20x2%3D%22145.6%22%20y2%3D%22136.0%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22145.6%22%20cy%3D%22176.0%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2290.6%22%20y%3D%2298.0%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145.6%22%20y%3D%22118.0%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Schwarzer Verheerer-Mastiff" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Dämmerwald</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 21, 46</div>
+            <div class="infobox"><strong>Wo genau:</strong> Im westlichen Dämmerwald rund um Raven Hill / Friedhofsbereich.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Starker Utility-Wolf wegen Furious Howl 2; sehr gut für deinen späteren Melee-Survival-Stil.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-broken-tooth" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-broken-tooth">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Zerbrochener Zahn</h3>
+            <div class="pet-sub">Broken Tooth · Katze · Level 37</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f0d6a7%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d7b06f%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%239b733c%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3E%C3%96dland%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2044%2C%2037%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22260.0%22%20y1%3D%22144.0%22%20x2%3D%22260.0%22%20y2%3D%22104.0%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22260.0%22%20cy%3D%22144.0%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22205.0%22%20y%3D%2266.0%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22260.0%22%20y%3D%2286.0%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Zerbrochener Zahn" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Ödland</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 44, 37</div>
+            <div class="infobox"><strong>Wo genau:</strong> In der Mitte der Zone; läuft durch mehrere Wege im zentralen Badlands-Bereich.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Wunsch-Main-Pet ab 37. Sehr schnelles Angriffstempo, top Damage und Klassiker für Hunter.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-longtooth-runner" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-longtooth-runner">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Langzahnrenner</h3>
+            <div class="pet-sub">Longtooth Runner · Wolf · Level 40–41</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d4e7c8%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238eb07c%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%234f7443%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EFeralas%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20ca.%2053%2C%2056%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22317.2%22%20y1%3D%22188.8%22%20x2%3D%22317.2%22%20y2%3D%22148.8%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22317.2%22%20cy%3D%22188.8%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22262.2%22%20y%3D%22110.80000000000001%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22317.2%22%20y%3D%22130.8%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Langzahnrenner" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Feralas</div>
+            <div class="infobox"><strong>Koordinaten:</strong> ca. 53, 56</div>
+            <div class="infobox"><strong>Wo genau:</strong> Im zentralen bis östlichen Feralas zwischen Wegen und Waldflächen.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Wolf-Alternative mit Furious Howl 3; guter Stall-Swap für Gruppen oder Utility.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pet-modal" id="modal-bloodaxe-worg" aria-hidden="true">
+      <div class="pet-modal-card">
+        <button class="modal-close" data-close="modal-bloodaxe-worg">×</button>
+        <div class="pet-head">
+          <div class="pet-head-left">
+            <h3>Blutaxt-Worg</h3>
+            <div class="pet-sub">Bloodaxe Worg · Wolf · Level 56–57</div>
+          </div>
+        </div>
+        <div class="pet-modal-grid">
+          <div class="pet-map-box">
+            <img src="data:image/svg+xml;utf8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20520%20320%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d8d0c8%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%239b8f83%22/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22520%22%20height%3D%22320%22%20rx%3D%2218%22%20fill%3D%22url%28%23bg%29%22%20stroke%3D%22%235b5048%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%22484%22%20height%3D%22284%22%20rx%3D%2214%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%20250%20C120%20230%2C%20180%20270%2C%20250%20220%20S380%20140%2C%20470%20170%22%20fill%3D%22none%22%20stroke%3D%22%238b6a3e%22%20stroke-width%3D%2210%22%20opacity%3D%220.65%22/%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70%2070%20C120%20115%2C%20165%2090%2C%20220%20120%20S310%20185%2C%20420%20110%22%20fill%3D%22none%22%20stroke%3D%22%236f8fa8%22%20stroke-width%3D%228%22%20opacity%3D%220.55%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22140%22%20rx%3D%2270%22%20ry%3D%2238%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22360%22%20cy%3D%22210%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.14%29%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.12%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2238%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20fill%3D%22%23203020%22%3EBlackrockspitze%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2226%22%20y%3D%2260%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2213%22%20fill%3D%22%23203020%22%3EUngef%C3%A4hre%20Position%3A%20Instanz%3C/text%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22260.0%22%20y1%3D%22160.0%22%20x2%3D%22260.0%22%20y2%3D%22120.0%22%20stroke%3D%22%23962222%22%20stroke-width%3D%223%22/%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22260.0%22%20cy%3D%22160.0%22%20r%3D%2211%22%20fill%3D%22%23d93d3d%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22/%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%22205.0%22%20y%3D%2282.0%22%20width%3D%22110%22%20height%3D%2228%22%20rx%3D%228%22%20fill%3D%22rgba%2832%2C32%2C32%2C0.78%29%22/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22260.0%22%20y%3D%22102.0%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2C%20Arial%22%20font-size%3D%2212%22%20fill%3D%22%23fff%22%3EFundort%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Kartenansicht für Blutaxt-Worg" class="mapimg">
+          </div>
+          <div class="pet-info-box">
+            <div class="infobox"><strong>Zone:</strong> Blackrockspitze</div>
+            <div class="infobox"><strong>Koordinaten:</strong> Instanz</div>
+            <div class="infobox"><strong>Wo genau:</strong> In der Instanz Blackrockspitze. Vorher Gruppe oder klaren Solo-Plan einplanen.</div>
+            <div class="infobox"><strong>Warum holen:</strong> Sehr stark als Utility- und Lehrer-Pet: Bite 8 und Furious Howl 4.</div>
+            <div class="smallnote">Hinweis: Die Kartenansicht ist als schnelle Orientierung gedacht und zeigt eine ungefähre Markierung, nicht eine pixelgenaue Ingame-Minimap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<script>
+(function(){
+  const pages = document.querySelectorAll('.tabpage');
+  const buttons = document.querySelectorAll('.tabbtn');
+
+  window.openTab = function(id){
+    pages.forEach(p => p.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
+
+    const page = document.getElementById(id);
+    const button = document.querySelector('.tabbtn[data-tab="' + id + '"]');
+
+    if(page) page.classList.add('active');
+    if(button) button.classList.add('active');
+
+    try {
+      history.replaceState(null, '', '#' + id);
+    } catch(e) {}
+
+    window.scrollTo(0,0);
+  };
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => openTab(button.dataset.tab));
+  });
+
+  document.querySelectorAll('.filterbar button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filterbar button').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      const parts = button.dataset.range.split('-');
+      const min = Number(parts[0]), max = Number(parts[1]);
+      document.querySelectorAll('#talentBody tr').forEach(row => {
+        const level = Number(row.dataset.level);
+        row.style.display = (level >= min && level <= max) ? '' : 'none';
+      });
+    });
+  });
+
+  function closeAllModals(){
+    document.querySelectorAll('.pet-modal').forEach(m => m.classList.remove('show'));
+  }
+
+  document.querySelectorAll('.pet-open').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.pet;
+      const modal = document.getElementById('modal-' + key);
+      if(modal) modal.classList.add('show');
+    });
+  });
+
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.close;
+      const modal = document.getElementById(id);
+      if(modal) modal.classList.remove('show');
+    });
+  });
+
+  document.querySelectorAll('.pet-modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) modal.classList.remove('show');
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeAllModals();
+  });
+
+  const initial = location.hash ? location.hash.substring(1) : 'overview';
+  if(document.getElementById(initial)) openTab(initial);
+})();
+</script>
+</body>
+</html>
