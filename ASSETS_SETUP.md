@@ -30,3 +30,7 @@ Die Startseite ist `index.html`. Die einzelnen Guides liegen derzeit als `surviv
 
 ## v0.8
 Die Mega-Menüs öffnen auf Desktop ausschließlich per Hover. Neue Guides: Schneiderei, Verzauberkunst, Kürschnerei, Schmiedekunst und Bergbau.
+
+
+## v0.9
+Crafting-/Materialicons wurden in allen Berufsguides ergänzt. Die drei Klassenguides haben nun oberhalb der Talent-Level-Liste eine grafische Übersicht der geskillten Talentbäume und Ränge.

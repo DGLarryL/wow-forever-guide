@@ -104,6 +104,314 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg"
   },
   {
+    "path": "assets/icons/crafting/inv_belt_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_belt_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_belt_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_04.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_belt_24.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_24.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_boots_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_boots_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_07.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_bracer_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_bracer_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_05.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_bracer_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_07.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_bracer_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_08.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_chest_cloth_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_07.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_chest_cloth_17.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_17.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_chest_plate03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_dustdream.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_dustdream.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_dustillusion.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_dustillusion.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_dustsoul.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_dustsoul.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_duststrange.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_duststrange.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_dustvision.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_dustvision.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_enchant_essencemagiclarge.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_essencemagiclarge.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_fabric_linen_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_linen_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_fabric_mageweave_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_mageweave_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_fabric_silk_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_silk_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_fabric_silk_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_silk_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_fabric_wool_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_wool_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_gauntlets_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_04.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_gauntlets_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_05.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_gauntlets_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_09.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_hammer_18.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_18.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ingot_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ingot_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ingot_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ingot_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ingot_bronze.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ingot_bronze.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ingot_iron.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ingot_iron.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ingot_steel.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ingot_steel.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_armorkit_17.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_armorkit_17.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_bag_09_black.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_09_black.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_bag_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_10.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_cape_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_10.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_cape_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_11.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_dust_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_dust_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_05.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_07.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_leatherscrap_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_08.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_misc_pelt_bear_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_bear_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ore_copper_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_copper_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ore_iron_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_iron_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ore_mithril_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_mithril_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ore_thorium_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_thorium_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_ore_tin_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_tin_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_pants_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_pants_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_04.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_pants_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_pants_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_potion_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_potion_100.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_100.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_potion_101.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_101.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_potion_12.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_12.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_shield_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shield_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_shirt_grey_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shirt_grey_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_shoulder_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_shoulder_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_08.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_staff_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_staff_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_staff_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_10.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_staff_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_11.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_staff_13.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_06.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_09.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_12.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_12.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_grindingstone_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_grindingstone_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_grindingstone_02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_grindingstone_02.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_grindingstone_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_grindingstone_03.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_stone_sharpeningstone_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_sharpeningstone_01.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_sword_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_10.jpg"
+  },
+  {
+    "path": "assets/icons/crafting/inv_sword_20.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_20.jpg"
+  },
+  {
     "path": "assets/icons/inv_spear_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
   },
