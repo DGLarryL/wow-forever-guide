@@ -77,6 +77,89 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
   .version-banner{padding:0 12px}
   .version-banner-inner{font-size:.9rem}
 }
+
+/* v0.12 – Gear-Tabs + klickbare Maps */
+.gear-grid,.ore-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+.gear-card,.ore-card{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;
+  width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;
+  background:linear-gradient(180deg,#1e211f,#151816);color:var(--text);cursor:pointer;
+}
+.gear-card:hover,.ore-card:hover{border-color:#8a6940;transform:translateY(-1px)}
+.gear-card img,.ore-card img{
+  width:44px;height:44px;border-radius:8px;border:1px solid #7e6438;
+  object-fit:cover;flex:none;background:#0a0a0a;
+}
+.gear-card b,.ore-card b{color:var(--gold);display:block;margin-bottom:3px}
+.gear-card small,.ore-card small{color:var(--muted);display:block;line-height:1.45}
+.section-note{
+  margin:0 0 14px;padding:12px 14px;border:1px solid #4e614f;border-radius:10px;background:#142019;line-height:1.5
+}
+.section-note b{color:var(--gold)}
+.site-modal[hidden]{display:none!important}
+.site-modal{
+  position:fixed;inset:0;z-index:1000;display:grid;place-items:center;
+}
+.site-modal-backdrop{
+  position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(4px)
+}
+.site-modal-dialog{
+  position:relative;z-index:2;width:min(1040px,calc(100vw - 24px));max-height:calc(100vh - 24px);
+  overflow:auto;border:1px solid #5b4a2c;border-radius:16px;
+  background:linear-gradient(180deg,#171a18,#101210);box-shadow:0 24px 70px rgba(0,0,0,.5);
+}
+.site-modal-close{
+  position:sticky;top:0;float:right;margin:10px 10px 0 0;z-index:3;
+  border:1px solid #6f5833;background:#2d2417;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer
+}
+.site-modal-body{padding:22px}
+.modal-head{
+  display:flex;gap:16px;align-items:center;margin-bottom:16px
+}
+.modal-head img{
+  width:62px;height:62px;border-radius:12px;border:2px solid #856638;background:#0b0c0b
+}
+.modal-head h3{margin:0;font-size:1.55rem}
+.modal-sub{color:#d7c8a3;margin-top:5px}
+.modal-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px
+}
+.modal-box{
+  padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18
+}
+.modal-box h4{margin:0 0 10px;color:#e9b87d}
+.modal-box ul{margin:0;padding-left:18px;line-height:1.55}
+.modal-box li{margin-bottom:5px}
+.recipe-source{
+  display:inline-block;padding:4px 8px;border-radius:999px;
+  background:#2d2514;border:1px solid #735b2c;color:#f1dfad;font-size:.8rem
+}
+.map-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px
+}
+.map-card{
+  border:1px solid var(--line);border-radius:12px;background:#151816;padding:12px
+}
+.map-card h4{margin:0 0 8px;color:#ffd100}
+.map-card p{margin:0 0 10px;color:#c9d2cb;line-height:1.45}
+.zone-svg{
+  width:100%;height:auto;border-radius:10px;border:1px solid #455047;background:#0d1a15;display:block
+}
+.map-legend{
+  margin-top:8px;color:#aeb8b0;font-size:.9rem;line-height:1.4
+}
+.modal-tips{display:grid;gap:10px;margin-top:14px}
+.modal-tip{
+  padding:11px 12px;border-left:3px solid #b9824a;background:#181a18;border-radius:0 9px 9px 0;line-height:1.5
+}
+@media(max-width:860px){
+  .modal-grid{grid-template-columns:1fr}
+  .site-modal-body{padding:18px}
+}
 </style>
 </head>
 <body>
@@ -128,13 +211,8 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
 </div>
 </div>
 </div>
-<div class="version-banner" data-site-version="v0.11.3">
-<div class="version-banner-inner">
-<span class="version-label">v0.11.3</span>
-<span> · </span>
-<span class="change-label">Geändert:</span>
-<span> Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.</span>
-</div>
+<div class="version-banner" data-site-version="v0.12.0">
+<div class="version-banner-inner"><span class="version-label">v0.12.0</span><span class="change-label">Geändert:</span></div>
 </div><main>
 <div class="hero">
 <div class="hero-main">

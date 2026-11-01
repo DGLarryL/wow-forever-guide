@@ -1,3 +1,2 @@
-v0.11.3
-Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.
-Regel für zukünftige Versionen: Versionsleiste auf jeder HTML-Seite aktualisieren.
+v0.12.0
+Neue Reiter für selbst craftbares Gear in Lederverarbeitung, Schmiedekunst und Schneiderei; Bergbau mit klickbaren Erz-Karten und Gebiet-Markierungen; Versionsleiste weiter auf allen Seiten.

@@ -85,3 +85,11 @@ Aktueller Text:
 `v0.11.3 · Geändert: Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.`
 
 Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
+
+
+## v0.12.0
+- Versionsleiste aktualisiert auf allen Seiten.
+- Lederverarbeitung: neuer Reiter `Crafting-Gear` mit Rezept-Freischaltung, Material- und Einsatz-Tipps.
+- Schmiedekunst: neuer Reiter `Crafting-Gear` mit guten Waffen/Rüstungen für Selbstversorgung.
+- Schneiderei: neuer Reiter `Crafting-Gear` mit starken Caster-Crafts und Taschen.
+- Bergbau: neuer Reiter `Erz-Karten` mit klickbaren Modalfenstern und markierten Gebietsrouten für Kupfer, Zinn, Eisen, Mithril und Thorium.

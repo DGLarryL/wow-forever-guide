@@ -300,6 +300,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_thorium_02.jpg"
   },
   {
+    "path": "assets/icons/crafting/inv_ore_tin_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_tin_01.jpg"
+  },
+  {
     "path": "assets/icons/crafting/inv_pants_03.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg"
   },
@@ -394,6 +398,74 @@
   {
     "path": "assets/icons/crafting/inv_sword_20.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_20.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_axe_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_belt_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_03.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_boots_plate_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_plate_03.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_boots_plate_08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_plate_08.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_chest_cloth_24.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_24.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_chest_cloth_39.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_39.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_chest_leather_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_chest_plate06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate06.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_crown_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_crown_01.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_gauntlets_26.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_26.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_helmet_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_09.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_helmet_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_10.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_helmet_20.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_20.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_helmet_25.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_25.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_misc_bag_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_10.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_pants_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_06.jpg"
+  },
+  {
+    "path": "assets/icons/gear/inv_pants_mail_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_mail_05.jpg"
   },
   {
     "path": "assets/icons/inv_spear_07.jpg",
