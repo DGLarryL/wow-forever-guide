@@ -33,12 +33,50 @@ main{padding:28px 18px 70px}.page{display:none}.page.active{display:block}h2{mar
 .prof-source{margin:0 0 15px;padding:12px 14px;border:1px solid #4e614f;border-radius:10px;background:#142019;line-height:1.5}
 .prof-source b{color:var(--gold)}.shopping-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}
 .shop{padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#171a18}.shop b{color:#e8c078}
+
+/* Globale Versionsleiste */
+.version-banner{
+  max-width:1240px;
+  margin:10px auto 0;
+  padding:0 18px;
+}
+.version-banner-inner{
+  padding:13px 15px;
+  border:1px solid #48604d;
+  border-radius:11px;
+  background:#142019;
+  color:#cfe0d3;
+  line-height:1.5;
+  box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.version-banner-inner b{
+  color:#ffd100;
+}
+.version-banner-inner .version-label{
+  font-weight:900;
+  color:#ffd100;
+}
+.version-banner-inner .change-label{
+  color:#9fd7ae;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .version-banner{padding:0 12px}
+  .version-banner-inner{font-size:.9rem}
+}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a><div class="titleline"><img data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg" src="assets/icons/leatherworking/leatherworking.jpg"/><div><h1>Lederverarbeitung 1–300</h1><div class="sub">WoW Forever Berufsguide by LarryL</div></div></div>
 <div class="notice"><b>v0.11:</b> Schnellroute und Materialmengen an WoW-Professions (aktueller Forever-Beta-Stand) angepasst; Mobalytics/Icy Veins für Forever-Systeme und Trainer gegengeprüft.</div></div></header>
-<nav><div class="tabs"><button class="tab active" data-tab="overview">Übersicht</button><button class="tab" data-tab="leveling">Schnellroute 1–300</button><button class="tab" data-tab="materials">Materialien</button><button class="tab" data-tab="trainers">Lehrer</button><button class="tab" data-tab="forever">Forever-Systeme</button><button class="tab" data-tab="specializations">Spezialisierungen</button><button class="tab" data-tab="sources">Quellen</button></div></nav>
+<div class="version-banner" data-site-version="v0.11.3">
+<div class="version-banner-inner">
+<span class="version-label">v0.11.3</span>
+<span> · </span>
+<span class="change-label">Geändert:</span>
+<span> Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.</span>
+</div>
+</div><nav><div class="tabs"><button class="tab active" data-tab="overview">Übersicht</button><button class="tab" data-tab="leveling">Schnellroute 1–300</button><button class="tab" data-tab="materials">Materialien</button><button class="tab" data-tab="trainers">Lehrer</button><button class="tab" data-tab="forever">Forever-Systeme</button><button class="tab" data-tab="specializations">Spezialisierungen</button><button class="tab" data-tab="sources">Quellen</button></div></nav>
 <main>
 <section class="page active" id="overview"><h2>Übersicht</h2><div class="cards">
 <div class="card"><strong>Beste Kombination</strong><p><b>Kürschnerei + Lederverarbeitung</b>. Du sammelst den Großteil deiner Materialien während des normalen Levelns selbst.</p></div>

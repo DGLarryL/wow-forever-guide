@@ -46,12 +46,43 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
 @media(max-width:520px){.megagrid{grid-template-columns:1fr}.catbtn{height:62px}.catbtn img{width:52px;height:52px}}
 
 .quality-note{max-width:1240px;margin:18px auto 0;padding:0 18px}.quality-box{padding:13px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.quality-box b{color:#ffd100}
+
+/* Globale Versionsleiste */
+.version-banner{
+  max-width:1240px;
+  margin:10px auto 0;
+  padding:0 18px;
+}
+.version-banner-inner{
+  padding:13px 15px;
+  border:1px solid #48604d;
+  border-radius:11px;
+  background:#142019;
+  color:#cfe0d3;
+  line-height:1.5;
+  box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.version-banner-inner b{
+  color:#ffd100;
+}
+.version-banner-inner .version-label{
+  font-weight:900;
+  color:#ffd100;
+}
+.version-banner-inner .change-label{
+  color:#9fd7ae;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .version-banner{padding:0 12px}
+  .version-banner-inner{font-size:.9rem}
+}
 </style>
 </head>
 <body>
 <header class="top">
 <div class="brand"><small>World of Warcraft: Forever</small><h1>WoW Forever Guide by LarryL</h1></div>
-</header><div class="quality-note"><div class="quality-box"><b>v0.11 · Quellengeprüft:</b> Klassen primär nach Wowhead Forever; Berufe primär nach WoW-Professions. Icy Veins und Mobalytics dienen als Gegencheck für Trainer, Forever-Systeme und alternative Empfehlungen.</div></div>
+</header>
 <div class="navstrip">
 <div class="navinner">
 <div class="navcat" data-menu="">
@@ -97,7 +128,14 @@ main{max-width:1240px;margin:auto;padding:44px 18px 80px}
 </div>
 </div>
 </div>
-<main>
+<div class="version-banner" data-site-version="v0.11.3">
+<div class="version-banner-inner">
+<span class="version-label">v0.11.3</span>
+<span> · </span>
+<span class="change-label">Geändert:</span>
+<span> Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.</span>
+</div>
+</div><main>
 <div class="hero">
 <div class="hero-main">
 <h2>Dein deutscher WoW-Forever-Guide</h2>

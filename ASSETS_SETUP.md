@@ -77,3 +77,11 @@ Der Stufenregler in allen drei Klassenguides ist jetzt ein echter Drehregler:
 - Stufe 1 startet unten links; Stufe 60 endet unten rechts.
 - 90°-Lücke unten wie bei einem WoW-artigen Drehregler.
 - Der Punkt kann geometrisch nicht mehr vom Ende des Fortschrittsbogens abweichen.
+
+## v0.11.3 – Globale Versionsanzeige
+Auf jeder Seite wird oben dauerhaft die aktuelle Version plus kurze Änderungszusammenfassung angezeigt.
+
+Aktueller Text:
+`v0.11.3 · Geändert: Versionsanzeige jetzt auf jeder Seite fest eingebaut; SVG-Talentregler korrigiert und bleibt enthalten; alle bisherigen Klassen-, Berufs- und Quellen-Updates aus v0.11.2 übernommen.`
+
+Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
