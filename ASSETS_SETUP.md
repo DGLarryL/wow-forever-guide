@@ -36,3 +36,14 @@ Die Mega-Menüs öffnen auf Desktop ausschließlich per Hover. Neue Guides: Schn
 - Alle Klassen-Seiten verlinken mit `./` robust zurück zum Hub.
 - Vollständige Talentbäume zeigen auch ungeskillte Talente mit `0/x`.
 - Im Projekt wird bewusst keine `CNAME`-Datei mitgeliefert. Eine Custom Domain wird ausschließlich in GitHub unter Settings -> Pages verwaltet.
+
+## v0.10.1 – Home-Link-Fix
+Die sichtbaren Zurück-Links in allen Unterguides zeigen vorübergehend bewusst direkt auf:
+`https://dglarryl.github.io/wow-forever-guide/`
+Damit kann ein alter Browser-/DNS-Zustand der entfernten Custom Domain den Rücklink nicht mehr beeinflussen.
+
+## v0.10.2 – Interaktiver Talentplaner
+- Level-Regler 10–60 auf Survival Hunter, Holy Priest und Arms Warrior.
+- Schnellwahl 10 / 25 / 30 / 40 / 60.
+- Vollständige Bäume bleiben sichtbar; Ränge werden live auf den gewählten Levelstand gesetzt.
+- Der auf dem gewählten Level neu gesetzte Punkt wird hervorgehoben.
