@@ -134,6 +134,22 @@ main{padding:28px 20px 70px}.tabpage{display:none}.tabpage.active{display:block}
 .route-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0 18px}
 .route-step{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.13)}
 .route-step b{color:var(--gold)}.source-rank{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+/* v0.11.1 – korrigierter Level-Drehregler 1–60 */
+.level-dial{
+  --progress:1;
+}
+.level-dial::after{
+  content:"";
+  position:absolute;
+  width:4px;height:4px;border-radius:50%;
+  background:#d6a96e;
+  left:calc(50% - 27px);
+  top:calc(50% + 46px);
+  opacity:.65;
+  pointer-events:none;
+  z-index:2;
+}
 </style></head><body>
 <header><div class="wrap"><a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a><h1>Arms Warrior 10–60</h1><div class="subtitle">WoW Forever · Waffen-Krieger Guide by LarryL</div><div class="notice"><b>v0.11 Meta-Update:</b> Arms-Leveling gegen Wowhead Forever (31.10.2026) abgeglichen. Waffenfortschritt, Rage-Pooling und Dungeonquests sind jetzt klar priorisiert.</div></div></header>
 <nav><div class="tabbar"><button class="tabbtn active" data-tab="overview">Übersicht</button><button class="tabbtn" data-tab="talents">Talente</button><button class="tabbtn" data-tab="skills">Skills</button><button class="tabbtn" data-tab="rotation">Rotation</button><button class="tabbtn" data-tab="gear">Gear</button><button class="tabbtn" data-tab="sources">Quellen</button></div></nav>
@@ -160,7 +176,7 @@ main{padding:28px 20px 70px}.tabpage{display:none}.tabpage.active{display:block}
 <div class="talent-planner-top">
 <div class="level-controls">
 <button aria-label="Level verringern" class="level-step" data-level-minus="" type="button">−</button>
-<div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="10" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
+<div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="1" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
 <div class="level-dial-center">
 <small>Stufe</small>
 <strong data-current-level="">60</strong>
@@ -171,14 +187,14 @@ main{padding:28px 20px 70px}.tabpage{display:none}.tabpage.active{display:block}
 </div>
 <div class="planner-main">
 <div class="planner-title">Deine Talente auf Stufe <span data-title-level="">60</span></div>
-<div class="level-presets">
+<div class="level-presets"><button class="level-preset" data-level-preset="1" type="button">1</button>
 <button class="level-preset" data-level-preset="10" type="button">10</button>
 <button class="level-preset" data-level-preset="25" type="button">25</button>
 <button class="level-preset" data-level-preset="30" type="button">30</button>
 <button class="level-preset" data-level-preset="40" type="button">40</button>
 <button class="level-preset active" data-level-preset="60" type="button">60</button>
 </div>
-<input aria-label="Charakterstufe" class="level-range" max="60" min="10" step="1" type="range" value="60"/>
+<input aria-label="Charakterstufe" class="level-range" max="60" min="1" step="1" type="range" value="60"/>
 </div>
 </div>
 <div class="planner-status">
@@ -259,15 +275,27 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
   const knob = planner.querySelector('[data-level-knob]');
 
   function updateDialVisual(level){
-    const progress=(level-10)/50;
+    // Stufe 1 = exakt am Anfang des 300°-Bogens, Stufe 60 = exakt am Ende.
+    const progress=(level-1)/59;
     dial.style.setProperty('--progress',String(progress));
-    const startDeg=210;
+
+    // CSS conic-gradient: 0° ist oben, positive Winkel laufen im Uhrzeigersinn.
+    // Der Bogen beginnt bei 210° und umfasst 300°.
+    const startCssDeg=210;
     const sweepDeg=300;
-    const angle=(startDeg + progress*sweepDeg) * Math.PI/180;
+    const cssDeg=startCssDeg + progress*sweepDeg;
+
+    // In Bildschirmkoordinaten umrechnen: Math-0° liegt rechts.
+    const mathDeg=cssDeg-90;
+    const angle=mathDeg*Math.PI/180;
     const radius=(dial.clientWidth/2)-7;
     const x=Math.cos(angle)*radius;
     const y=Math.sin(angle)*radius;
-    knob.style.transform='translate('+x+'px,'+y+'px) translate(-50%,-50%)';
+
+    // Marker direkt relativ zum Mittelpunkt positionieren.
+    knob.style.left='calc(50% + '+x+'px)';
+    knob.style.top='calc(50% + '+y+'px)';
+    knob.style.transform='translate(-50%,-50%)';
     dial.setAttribute('aria-valuenow',String(level));
   }
 
@@ -275,22 +303,23 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
     const r=dial.getBoundingClientRect();
     const cx=r.left+r.width/2, cy=r.top+r.height/2;
     const dx=ev.clientX-cx, dy=ev.clientY-cy;
-    let deg=Math.atan2(dy,dx)*180/Math.PI;
-    if(deg<0) deg+=360;
 
-    // Dial sweep goes clockwise from 210° to 150° through 360°.
-    let rel;
-    if(deg>=210) rel=deg-210;
-    else rel=deg+150;
+    // Pointerwinkel: Math-0° rechts -> CSS-0° oben.
+    let mathDeg=Math.atan2(dy,dx)*180/Math.PI;
+    if(mathDeg<0) mathDeg+=360;
+    const cssDeg=(mathDeg+90)%360;
 
-    // Bottom 60° is the dead zone; clamp to nearest edge.
-    if(rel<0) rel=0;
-    if(rel>300){
-      const distToStart=Math.abs(deg-210);
-      const distToEnd=Math.abs(deg-150);
-      rel=distToStart<distToEnd?0:300;
+    const startCssDeg=210;
+    const sweepDeg=300;
+    let rel=(cssDeg-startCssDeg+360)%360;
+
+    // Die unteren 60° bilden die Lücke des Kreises.
+    // In dieser Dead-Zone auf das nähere Ende schnappen.
+    if(rel>sweepDeg){
+      rel = rel>330 ? 0 : sweepDeg;
     }
-    const level=Math.round(10+(rel/300)*50);
+
+    const level=Math.round(1+(rel/sweepDeg)*59);
     update(level);
   }
 
@@ -307,7 +336,7 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
   dial.addEventListener('keydown',ev=>{
     if(ev.key==='ArrowRight'||ev.key==='ArrowUp'){ev.preventDefault();update(Number(range.value)+1)}
     if(ev.key==='ArrowLeft'||ev.key==='ArrowDown'){ev.preventDefault();update(Number(range.value)-1)}
-    if(ev.key==='Home'){ev.preventDefault();update(10)}
+    if(ev.key==='Home'){ev.preventDefault();update(1)}
     if(ev.key==='End'){ev.preventDefault();update(60)}
   });
 
@@ -325,7 +354,7 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
   }
 
   function update(level){
-    level=Math.max(10,Math.min(60,Number(level)||60));
+    level=Math.max(1,Math.min(60,Number(level)||60));
     range.value=String(level);
     levelEl.textContent=String(level);
     planner.querySelectorAll('[data-title-level]').forEach(x=>x.textContent=String(level));
@@ -371,13 +400,15 @@ document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagNam
 
     rows.forEach(r=>r.row.classList.toggle('talent-row-current',r.level===level));
 
-    if(currentRows.length){
+    if(level<10){
+      status.innerHTML='<b>Stufe '+level+':</b> Noch keine Talentpunkte verfügbar. Der erste Talentpunkt kommt auf Stufe 10.';
+    } else if(currentRows.length){
       status.innerHTML='<b>Auf Stufe '+level+' skillst du:</b> '+currentRows.map(r=>r.name+' '+r.rank+'/'+r.max).join(' · ');
     } else {
       const prev=[...rows].reverse().find(r=>r.level<level);
       status.innerHTML='<b>Stufe '+level+':</b> Kein zusätzlicher Punkt in der gespeicherten Route. Letzter Pick: '+(prev?prev.name+' '+prev.rank+'/'+prev.max:'—');
     }
-    pointEl.textContent=(level-9)+' / 51 Talentpunkte vergeben';
+    pointEl.textContent=Math.max(0,level-9)+' / 51 Talentpunkte vergeben';
   }
 
   range.addEventListener('input',()=>update(range.value));

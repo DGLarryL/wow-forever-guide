@@ -62,3 +62,11 @@ Der Stufenregler in allen drei Klassenguides ist jetzt ein echter Drehregler:
 - Holy: Solo Shadow/Discipline schneller; Holy primär für Gruppen/Dungeons.
 - Arms: Waffen-DPS, Rage-Pooling und Dungeonquests stärker priorisiert.
 - Leatherworking/Tailoring/Enchanting/Blacksmithing Routen und Einkaufslisten aktualisiert.
+
+## v0.11.1 – Talent-Drehregler korrigiert
+- Levelbereich jetzt 1–60 statt 10–60.
+- Stufe 1 sitzt exakt am Anfang des Kreisbogens.
+- Stufe 60 sitzt exakt am Ende des Kreisbogens.
+- Marker und Ringfüllung nutzen dieselbe Winkelberechnung.
+- Stufe 1–9: 0/51 Talentpunkte; erster Punkt auf Stufe 10.
+- Schnellbutton für Stufe 1 ergänzt.
