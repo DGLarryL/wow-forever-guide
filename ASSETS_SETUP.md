@@ -93,3 +93,12 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Schmiedekunst: neuer Reiter `Crafting-Gear` mit guten Waffen/Rüstungen für Selbstversorgung.
 - Schneiderei: neuer Reiter `Crafting-Gear` mit starken Caster-Crafts und Taschen.
 - Bergbau: neuer Reiter `Erz-Karten` mit klickbaren Modalfenstern und markierten Gebietsrouten für Kupfer, Zinn, Eisen, Mithril und Thorium.
+
+
+## v0.13.0
+- Neues Hover-Menü `Guides` auf der Startseite.
+- Neuer Guide `Allianz Levelroute 1–60`.
+- Startgebiet wählbar: Elwynn Forest, Dun Morogh, Teldrassil, Zephras Isle.
+- Auswahl wird im Browser gespeichert.
+- Zonenroute 1–30 wechselt je Startgebiet; ab 30 gemeinsame optimierte Forever-Route.
+- Dungeon-Abstecher und komplette Zonenübersicht ergänzt.

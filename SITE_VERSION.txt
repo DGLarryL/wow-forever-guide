@@ -1,2 +1,2 @@
-v0.12.0
-Neue Reiter für selbst craftbares Gear in Lederverarbeitung, Schmiedekunst und Schneiderei; Bergbau mit klickbaren Erz-Karten und Gebiet-Markierungen; Versionsleiste weiter auf allen Seiten.
+v0.13.0
+Neues Hauptmenü „Guides“; neuer interaktiver Allianz-Levelguide 1–60 mit Auswahl des Startgebiets (Elwynn, Dun Morogh, Teldrassil oder Zephras Isle), optimierter Zonenroute und Dungeon-Abstechern.

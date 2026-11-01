@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Allianz Levelroute 1–60 – WoW Forever Guide by LarryL</title>
+<style>
+:root{
+ --bg:#0b0d0c;--panel:#171a18;--panel2:#202422;--text:#f1f2f1;--muted:#adb5af;
+ --line:#393e3a;--gold:#ffd100;--blue:#7fc6ff;--green:#77d596;--danger:#e89270;
+}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at 18% -8%,#173221 0,transparent 30%),var(--bg)}
+header{padding:30px 18px 20px;border-bottom:1px solid var(--line)}
+.wrap,main{max-width:1200px;margin:auto}
+.back{display:inline-block;margin-bottom:12px;color:#cfe7ff;text-decoration:none;font-weight:800}
+.titleline{display:flex;gap:15px;align-items:center}.titleline img{width:68px;height:68px;border-radius:12px;border:3px solid #6e623a}
+h1{margin:0;font-size:clamp(2rem,5vw,3.5rem)}.sub{color:var(--gold);font-weight:800;margin-top:5px}
+.notice{margin-top:16px;padding:12px 14px;border:1px solid #47634f;border-radius:10px;background:#142019;color:#d5e7da;line-height:1.5}
+.version-banner{max-width:1240px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:13px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}
+.version-label{font-weight:900;color:#ffd100}.change-label{color:#9fd7ae;font-weight:800}
+nav{position:sticky;top:0;z-index:30;background:#111412f2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.tabs{max-width:1200px;margin:auto;padding:9px 18px;display:flex;gap:7px;overflow:auto}
+.tab{border:1px solid var(--line);background:#181b19;color:white;padding:9px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}.tab.active,.tab:hover{background:#294734;border-color:#4b7658}
+main{padding:28px 18px 70px}.page{display:none}.page.active{display:block}
+h2{margin:0 0 18px;color:#aee6bd}h3{color:var(--gold)}
+.source-note{padding:12px 14px;border:1px solid #4c6352;border-radius:10px;background:#142019;line-height:1.55;margin-bottom:16px}.source-note b{color:var(--gold)}
+.starter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:18px}
+.starter-card{display:flex;align-items:center;gap:12px;text-align:left;padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18;color:white;cursor:pointer}
+.starter-card:hover,.starter-card.active{border-color:#8a7441;background:#20251f}
+.starter-card.active{box-shadow:inset 0 0 0 1px #ffd10055}
+.starter-card img{width:48px;height:48px;border-radius:8px;border:1px solid #786735;object-fit:cover}
+.starter-card b{display:block;color:var(--gold);margin-bottom:3px}.starter-card small{color:var(--muted)}
+.route-summary{padding:15px;border:1px solid #536653;border-radius:12px;background:#142019;margin-bottom:16px;line-height:1.5}
+.route-summary strong{color:#ffd100}
+.route-timeline{display:grid;gap:10px}
+.route-row{display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18}
+.route-level{font-weight:900;color:#ffd100;font-size:1.05rem}
+.route-zone b{color:#e9f4ec}.route-zone p{margin:5px 0 0;color:#c6d0ca;line-height:1.45}
+.route-badge{white-space:nowrap;font-size:.74rem;padding:4px 8px;border-radius:999px;border:1px solid #4d6d57;color:#bce5c7;background:#183020}
+.route-badge.optional{border-color:#735b2c;background:#2d2514;color:#efd79d}
+.tip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tip-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18;line-height:1.5}
+.tip-card b{display:block;color:#ffd100;margin-bottom:5px}
+.dungeon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.dungeon-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18}.dungeon-card h3{margin:0 0 8px}.dungeon-card p{margin:0;color:#c5cec8;line-height:1.45}
+.level-chip{display:inline-block;margin-bottom:8px;padding:4px 8px;border-radius:999px;background:#263a2e;border:1px solid #4b6c55;color:#cbe6d2;font-size:.78rem}
+.zone-table{overflow:auto;border:1px solid var(--line);border-radius:12px}.zone-table table{border-collapse:collapse;width:100%;min-width:720px}.zone-table th,.zone-table td{padding:10px 12px;border-bottom:1px solid #323734;text-align:left}.zone-table th{background:#202420;color:#e7d7a4}
+.sources a{display:block;color:#b9dcff;text-decoration:none;padding:9px 0}.sources a:hover{color:white}
+@media(max-width:700px){header,main,.tabs,.version-banner{padding-left:12px;padding-right:12px}.route-row{grid-template-columns:78px 1fr}.route-badge{grid-column:2;justify-self:start}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a>
+<div class="titleline">
+<img src="assets/icons/guides/alliance-leveling.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg" alt="">
+<div><h1>Allianz Levelroute 1–60</h1><div class="sub">WoW Forever Allgemeiner Guide by LarryL</div></div>
+</div>
+<div class="notice"><b>v0.13.0:</b> Neue interaktive Allianz-Levelroute mit vier auswählbaren Startgebieten und gemeinsamer 30–60-Route.</div>
+</div>
+</header>
+
+<div class="version-banner" data-site-version="v0.13.0">
+<div class="version-banner-inner">
+<span class="version-label">v0.13.0</span><span> · </span>
+<span class="change-label">Geändert:</span><span> Neues Hauptmenü „Guides“; neuer interaktiver Allianz-Levelguide 1–60 mit Auswahl des Startgebiets (Elwynn, Dun Morogh, Teldrassil oder Zephras Isle), optimierter Zonenroute und Dungeon-Abstechern.</span>
+</div></div>
+
+<nav><div class="tabs">
+<button class="tab active" data-tab="route">Levelroute</button>
+<button class="tab" data-tab="dungeons">Dungeon-Abstecher</button>
+<button class="tab" data-tab="zones">Zonenübersicht</button>
+<button class="tab" data-tab="tips">Tipps</button>
+<button class="tab" data-tab="sources">Quellen</button>
+</div></nav>
+
+<main>
+<section class="page active" id="route">
+<h2>Wähle dein Startgebiet</h2>
+<div class="source-note"><b>Forever-Grundlage:</b> Die 1–30-Routen folgen der aktuellen Mobalytics-Zonenempfehlung. Ab 30 ist die Route eine optimierte Kombination der aktuellen Forever-Zonen-Levelbereiche – inklusive der neuen Zone <b>Riverglades (35–45)</b>.</div>
+
+<div class="starter-grid">
+<button class="starter-card active" data-starter="human">
+<img src="assets/icons/guides/human.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/achievement_character_human_male.jpg" alt="">
+<span><b>Wald von Elwynn</b><small>Human · Start 1–10</small></span>
+</button>
+<button class="starter-card" data-starter="dwarf">
+<img src="assets/icons/guides/dwarf.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/achievement_character_dwarf_male.jpg" alt="">
+<span><b>Dun Morogh</b><small>Zwerg / Gnom · Start 1–10</small></span>
+</button>
+<button class="starter-card" data-starter="nightelf">
+<img src="assets/icons/guides/nightelf.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/achievement_character_nightelf_male.jpg" alt="">
+<span><b>Teldrassil</b><small>Nachtelf · Start 1–11</small></span>
+</button>
+<button class="starter-card" data-starter="skyborne">
+<img src="assets/icons/guides/skyborne.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_nature_cyclone.jpg" alt="">
+<span><b>Zephras Isle</b><small>Allianz-Skyborne · Start 1–12</small></span>
+</button>
+</div>
+
+<div class="route-summary">
+<strong id="starter-title">Deine Route: Wald von Elwynn</strong><br>
+<span id="starter-desc">Human-Start. Danach Westfall/Redridge/Duskwood und ab Level 30 die gemeinsame Forever-Route.</span>
+</div>
+
+<div class="route-timeline" id="route-timeline"></div>
+</section>
+
+<section class="page" id="dungeons">
+<h2>Sinnvolle Dungeon-Abstecher</h2>
+<div class="source-note"><b>Regel:</b> In Forever lohnt sich ein Dungeon besonders, wenn du vorher möglichst viele Dungeonquests gesammelt hast. Der aktuelle Beta-/Creator-Guide verschiebt viel Dungeon-XP in diese Quests.</div>
+<div class="dungeon-grid">
+<div class="dungeon-card"><span class="level-chip">14–17</span><h3>Hall of Thanes</h3><p>Früher Forever-Dungeon. Einmal mit Questpaket lohnt sich deutlich mehr als wiederholtes Spammen.</p></div>
+<div class="dungeon-card"><span class="level-chip">17–21</span><h3>Deadmines</h3><p>Für Alliance extrem gut, besonders wenn du Westfall gespielt und alle relevanten Quests eingesammelt hast.</p></div>
+<div class="dungeon-card"><span class="level-chip">24–26</span><h3>Stockades</h3><p>Sehr kurzer Weg für Humans/Eastern Kingdoms. Quest-Bundle vorher vorbereiten.</p></div>
+<div class="dungeon-card"><span class="level-chip">25–28</span><h3>Blackfathom Deeps</h3><p>Optional, besonders gut wenn deine Route ohnehin in Kalimdor liegt.</p></div>
+<div class="dungeon-card"><span class="level-chip">26–30</span><h3>Excavation Site</h3><p>Forever-spezifischer empfohlener Bereich; gute Brücke Richtung Level 30.</p></div>
+<div class="dungeon-card"><span class="level-chip">28–30+</span><h3>Shadowfang Keep / City of Dalaran</h3><p>Optional. Nimm sie vor allem mit, wenn du mehrere Quests gleichzeitig abgeben kannst.</p></div>
+</div>
+</section>
+
+<section class="page" id="zones">
+<h2>Allianz-Zonen nach Level</h2>
+<div class="zone-table"><table>
+<thead><tr><th>Level</th><th>Zonen</th><th>Empfehlung</th></tr></thead>
+<tbody>
+<tr><td>1–10/12</td><td>Elwynn · Dun Morogh · Teldrassil · Zephras Isle</td><td>Startgebiet passend zu Rasse/Charakter</td></tr>
+<tr><td>10–20</td><td>Westfall · Loch Modan · Darkshore</td><td>Auf deinem Kontinent bleiben, um Reisezeit zu sparen</td></tr>
+<tr><td>15–30</td><td>Redridge · Duskwood · Wetlands · Ashenvale · Stonetalon</td><td>Questhubs kombinieren, wenn eine Zone zu orange/leer wird</td></tr>
+<tr><td>30–40</td><td>Arathi · Desolace · Stranglethorn Vale</td><td>STV + Arathi ist meist die dichteste Alliance-Kombi</td></tr>
+<tr><td>35–45</td><td>Riverglades · Dustwallow · Badlands · Swamp of Sorrows</td><td>Riverglades bevorzugen, wenn du die neue Forever-Zone spielen willst</td></tr>
+<tr><td>40–50</td><td>Tanaris · Feralas · Hinterlands</td><td>Tanaris/Hinterlands für kurze Questwege</td></tr>
+<tr><td>43–55</td><td>Searing Gorge · Blasted Lands · Azshara</td><td>Searing Gorge für hohe Questdichte</td></tr>
+<tr><td>48–55</td><td>Un'Goro · Felwood</td><td>Un'Goro ist einer der effizientesten 48+ Hubs</td></tr>
+<tr><td>50–60</td><td>Burning Steppes · WPL · EPL · Winterspring · Silithus</td><td>Plaguelands + Silithus/Winterspring bis 60</td></tr>
+<tr><td>60</td><td>Mount Hyjal</td><td>Neue Forever-Endgame-Zone ab Level 60</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="page" id="tips">
+<h2>Tipps für schnelleres Leveln</h2>
+<div class="tip-grid">
+<div class="tip-card"><b>Questfarbe beachten</b>Gelbe/grüne Quests sind meist effizienter als orange/rote, weil Killzeit und Todesrisiko niedriger sind.</div>
+<div class="tip-card"><b>Kontinentwechsel vermeiden</b>Die Route bietet Alternativen bewusst deshalb, damit du nicht für 2–3 Quests quer durch Azeroth reist.</div>
+<div class="tip-card"><b>Dungeonquests bündeln</b>Erst alle Quests einsammeln, dann einmal sauber durch den Dungeon statt stumpf zu spammen.</div>
+<div class="tip-card"><b>Rested XP nutzen</b>In Gasthäusern oder Hauptstädten ausloggen. Besonders gut, wenn du mehrere Charaktere parallel levelst.</div>
+<div class="tip-card"><b>Berufe nicht übertreiben</b>Sammelberufe unterwegs mitnehmen; Crafting nur dann nachziehen, wenn es echte Upgrades/Legacy-Punkte bringt.</div>
+<div class="tip-card"><b>Neue Forever-Zonen</b>Riverglades ist 35–45, Zephras Isle 1–12 und Mount Hyjal beginnt auf 60.</div>
+</div>
+</section>
+
+<section class="page" id="sources">
+<h2>Quellen</h2>
+<div class="sources">
+<a href="https://mobalytics.gg/wow-forever/guides/zone-map-level-ranges" target="_blank">Mobalytics · Forever-Zonenkarte & Routen nach Rasse ↗</a>
+<a href="https://mobalytics.gg/wow-forever/profile/fierce-shield-0hhlzm/guides/wow-forever-alliance-leveling-guide-the-fastest-way-to-level-alts-and-earn-legacy-points" target="_blank">Mobalytics · Alliance Leveling & Dungeon Quick Reference ↗</a>
+<a href="https://www.wowhead.com/forever/guide/overview-features-zones-raids" target="_blank">Wowhead · Forever neue Zonen / Zephras Isle / Riverglades / Hyjal ↗</a>
+<a href="https://www.icy-veins.com/wow-forever/zones-and-maps/" target="_blank">Icy Veins · Forever Zones & Maps ↗</a>
+</div>
+</section>
+</main>
+
+<script>
+const pages=[...document.querySelectorAll('.page')];
+const tabs=[...document.querySelectorAll('.tab')];
+function openTab(id){
+  pages.forEach(p=>p.classList.toggle('active',p.id===id));
+  tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  window.scrollTo(0,0);
+}
+tabs.forEach(b=>b.addEventListener('click',()=>openTab(b.dataset.tab)));
+
+const starterRoutes={"human":[["1–10","Wald von Elwynn","Komplette Nordhain-/Goldhain-Kette; anschließend nach Westfall oder Loch Modan wechseln.","Kernroute"],["10–15","Westfall oder Loch Modan","Westfall ist für Humans meist die bequemste Fortsetzung; Loch Modan ist eine gute Alternative bei Konkurrenz.","Kernroute"],["15–18","Rotkammgebirge","Quests rund um Lakeshire bündeln. Bei vollen Questspots alternativ Darkshore.","Kernroute"],["18–22","Dämmerwald + Rest Rotkamm","Darkshire-Quests mit letzten Redridge-Ketten kombinieren.","Kernroute"],["22–25","Dämmerwald / Sumpfland","Duskwood fertigziehen; dann nach Wetlands wechseln.","Kernroute"],["25–30","Sumpfland + Dämmerwald-Reste","Optional Ashenvale, falls du ohnehin in Kalimdor bist.","Kernroute"]],"dwarf":[["1–10","Dun Morogh","Coldridge → Kharanos → Gol'Bolar/östliche Quests.","Kernroute"],["10–15","Loch Modan","Thelsamar und die Quests rund um den Loch abarbeiten.","Kernroute"],["15–18","Rotkammgebirge","Nach Lakeshire; Darkshore ist die Fernreise-Alternative.","Kernroute"],["18–22","Dämmerwald + Rotkamm","Lange Questketten bündeln und Reisewege minimieren.","Kernroute"],["22–25","Sumpfland / Dämmerwald","Menethil-Seite lohnt sich besonders, wenn du Loch Modan vorher gemacht hast.","Kernroute"],["25–30","Sumpfland + Dämmerwald-Reste","Ashenvale nur nehmen, wenn deine Route bereits Richtung Kalimdor geht.","Kernroute"]],"nightelf":[["1–11","Teldrassil","Shadowglen → Dolanaar → Darnassus-/Teldrassil-Restquests.","Kernroute"],["11–19","Darkshore","Auberdine als Hub nutzen; sehr lineare Nachtelfen-Route.","Kernroute"],["19–22","Ashenvale","Astranaar und nahe Quests. Alternativ Dämmerwald/Rotkamm bei Reise nach EK.","Kernroute"],["22–25","Stonetalon Mountains","Quests an der Ashenvale-Grenze mitnehmen; alternativ Duskwood/Wetlands.","Kernroute"],["25–30","Ashenvale + Stonetalon","Restquests abschließen; Wetlands/Redridge nur bei Kontinentwechsel.","Kernroute"]],"skyborne":[["1–12","Zephras Isle","Komplette Skyborne-Starterkampagne; die Zone ist speziell für Level 1–12 gebaut.","Kernroute"],["12–17","Westfall oder Loch Modan","Nach dem Startergebiet in die klassischen Allianz-Questhubs wechseln.","Kernroute"],["17–20","Rotkammgebirge","Lakeshire-Ketten bündeln; Darkshore ist Alternative.","Kernroute"],["20–25","Dämmerwald / Sumpfland / Stonetalon","Nimm den Kontinent, auf dem du bereits bist, um Reisezeit zu sparen.","Kernroute"],["25–30","Dämmerwald + Sumpfland oder Ashenvale","Bis 30 die dichten Questhubs abschließen.","Kernroute"]]};
+const commonRoute=[["30–35","Stranglethorn Vale + Arathi Highlands","STV bietet viele gebündelte Kill-/Sammelquests; Arathi ist ideal zum Überbrücken von Lücken.","Kernroute"],["35–40","Riverglades + Dustwallow Marsh / Badlands","Riverglades ist eine neue Forever-Zone für 35–45. Danach den nächstgelegenen 35–45-Hub ergänzen.","Forever-Tipp"],["40–45","Tanaris + The Hinterlands","Gadgetzan und Hinterland haben sehr gute Questdichte. Feralas ist eine starke Alternative.","Kernroute"],["45–48","Searing Gorge + Feralas / Blasted Lands","Searing Gorge bündelt viele Quests auf kleinem Raum; Rest-XP in Feralas oder Blasted Lands.","Kernroute"],["48–52","Un'Goro Crater + Felwood","Un'Goro ist extrem kompakt. Felwood ergänzt die fehlenden Level sehr gut.","Kernroute"],["52–55","Western Plaguelands","Andorhal-/Cauldron-Ketten und kurze Wege nutzen. Optional Burning Steppes.","Kernroute"],["55–58","Eastern Plaguelands + Winterspring","EPL für Quests und Dichte, Winterspring als sehr gute Alternative.","Kernroute"],["58–60","Silithus + EPL/Winterspring-Reste","Silithus ist 55–60; offene Questketten in EPL/Winterspring abschließen. Mount Hyjal beginnt erst auf 60.","Kernroute"]];
+const starterInfo={
+ human:["Wald von Elwynn","Human-Start. Danach Westfall/Redridge/Duskwood und ab Level 30 die gemeinsame Forever-Route."],
+ dwarf:["Dun Morogh","Zwerg-/Gnom-Start. Loch Modan ist deine natürliche Fortsetzung; ab Level 30 folgt die gemeinsame Route."],
+ nightelf:["Teldrassil","Nachtelfen bleiben zunächst in Kalimdor über Darkshore/Ashenvale/Stonetalon und wechseln ab 30 in die gemeinsame Route."],
+ skyborne:["Zephras Isle","Alliance-Skyborne spielen zuerst die komplette 1–12-Starterzone und wechseln anschließend in klassische Allianz-Gebiete."]
+};
+
+function renderRoute(key){
+  const container=document.getElementById('route-timeline');
+  const title=document.getElementById('starter-title');
+  const desc=document.getElementById('starter-desc');
+  title.textContent='Deine Route: '+starterInfo[key][0];
+  desc.textContent=starterInfo[key][1];
+
+  const all=[...starterRoutes[key],...commonRoute];
+  container.innerHTML=all.map(([lvl,zone,text,badge])=>`
+    <div class="route-row">
+      <div class="route-level">${lvl}</div>
+      <div class="route-zone"><b>${zone}</b><p>${text}</p></div>
+      <span class="route-badge ${badge.includes('Optional')?'optional':''}">${badge}</span>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.starter-card').forEach(b=>b.classList.toggle('active',b.dataset.starter===key));
+  localStorage.setItem('larrylAllianceStarter',key);
+}
+document.querySelectorAll('.starter-card').forEach(b=>b.addEventListener('click',()=>renderRoute(b.dataset.starter)));
+renderRoute(localStorage.getItem('larrylAllianceStarter') || 'human');
+
+const initial=location.hash.slice(1);
+if(initial && document.getElementById(initial)) openTab(initial);
+
+document.addEventListener('error',function(e){
+ const el=e.target;
+ if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1) el.src=el.dataset.fallback;
+},true);
+</script>
+</body>
+</html>

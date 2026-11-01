@@ -468,6 +468,34 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_mail_05.jpg"
   },
   {
+    "path": "assets/icons/guides/alliance-leveling.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg"
+  },
+  {
+    "path": "assets/icons/guides/dungeon.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_key_03.jpg"
+  },
+  {
+    "path": "assets/icons/guides/dwarf.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/achievement_character_dwarf_male.jpg"
+  },
+  {
+    "path": "assets/icons/guides/human.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/achievement_character_human_male.jpg"
+  },
+  {
+    "path": "assets/icons/guides/nightelf.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/achievement_character_nightelf_male.jpg"
+  },
+  {
+    "path": "assets/icons/guides/skyborne.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_cyclone.jpg"
+  },
+  {
+    "path": "assets/icons/guides/zone.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg"
+  },
+  {
     "path": "assets/icons/inv_spear_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
   },
@@ -650,6 +678,10 @@
   {
     "path": "assets/icons/nav-classes.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg"
+  },
+  {
+    "path": "assets/icons/nav-guides.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg"
   },
   {
     "path": "assets/icons/nav-professions.jpg",
