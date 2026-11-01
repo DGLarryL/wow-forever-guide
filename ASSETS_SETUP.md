@@ -20,3 +20,5 @@ Die ausgewählten Gear-Items verwenden lokale Original-WoW-Icons unter `assets/i
 
 ## Mehrere Klassenguides
 Die Startseite ist `index.html`. Die einzelnen Guides liegen derzeit als `survival-hunter.html` und `holy-priest.html` im Projektroot. Neue Klassen können später nach demselben Muster ergänzt werden.
+
+- `arms-warrior.html` – Arms Warrior Guide

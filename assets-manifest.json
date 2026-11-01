@@ -108,6 +108,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
   },
   {
+    "path": "assets/icons/items/inv_axe_12.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_12.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_boots_01.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg"
   },
@@ -124,12 +128,24 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg"
   },
   {
+    "path": "assets/icons/items/inv_hammer_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_09.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_helmet_23.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_23.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_jewelry_necklace_06.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg"
   },
   {
     "path": "assets/icons/items/inv_jewelry_ring_03.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_jewelry_ring_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_04.jpg"
   },
   {
     "path": "assets/icons/items/inv_jewelry_ring_05.jpg",
@@ -164,6 +180,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_09.jpg"
   },
   {
+    "path": "assets/icons/items/inv_spear_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_01.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_spear_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
   },
@@ -180,6 +200,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg"
   },
   {
+    "path": "assets/icons/items/inv_throwingaxe_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_throwingaxe_01.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_wand_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_wand_07.jpg"
   },
@@ -190,6 +214,10 @@
   {
     "path": "assets/icons/items/inv_weapon_crossbow_04.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_weapon_halbard_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halbard_01.jpg"
   },
   {
     "path": "assets/icons/items/inv_weapon_halberd_05.jpg",
@@ -368,6 +396,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_wordfortitude.jpg"
   },
   {
+    "path": "assets/icons/spec-arms-warrior.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+  },
+  {
     "path": "assets/icons/spec-holy-priest.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg"
   },
@@ -398,6 +430,170 @@
   {
     "path": "assets/icons/spell_nature_timestop.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_timestop.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_criticalstrike.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_criticalstrike.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_gouge.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_gouge.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_meleedamage.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_meleedamage.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_racial_avatar.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_racial_avatar.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_rogue_sprint.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_sprint.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_shockwave.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_shockwave.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_battleshout.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_battleshout.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_challange.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_challange.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_charge.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_charge.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_cleave.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_cleave.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_decisivestrike.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_decisivestrike.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_devastate.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_devastate.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_disarm.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_disarm.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_innerrage.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_innerrage.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_savageblow.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_shieldwall.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_shieldwall.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_sunder.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_sunder.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_warrior_warcry.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_warcry.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/ability_whirlwind.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/inv_gauntlets_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_04.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/inv_sword_48.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_48.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/spell_nature_thunderclap.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_thunderclap.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_2h.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_anger.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_blessingofstamina.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_bloodthrill.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_01.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_charge.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_charge.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_cruelty.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_eviscerate.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_deep_wounds.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_backstab.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_deflection.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_parry.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_impale.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_searingarrow.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_improved_heroic.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_ambush.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_improved_overpower.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_05.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_improved_rend.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_gouge.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_mortal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_piercing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathscream.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_slam.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_decisivestrike.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_spearing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_01.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_sweeping.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_slicedice.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_tactical.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_enchantarmor.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_unbridled.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_stoneclawtotem.jpg"
+  },
+  {
+    "path": "assets/icons/warrior/talent_weaponmaster.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_05.jpg"
   },
   {
     "path": "assets/maps/daemmerwald.webp",
