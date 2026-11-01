@@ -116,6 +116,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg"
   },
   {
+    "path": "assets/icons/items/inv_chest_cloth_18.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_18.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_chest_leather_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg"
   },
@@ -132,6 +136,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg"
   },
   {
+    "path": "assets/icons/items/inv_jewelry_ring_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_09.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_jewelry_ring_17.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg"
   },
@@ -140,16 +148,40 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg"
   },
   {
+    "path": "assets/icons/items/inv_misc_necklacea8.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_necklacea8.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_pants_08.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_pants_11.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_shoulder_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_09.jpg"
   },
   {
     "path": "assets/icons/items/inv_spear_07.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg"
   },
   {
+    "path": "assets/icons/items/inv_staff_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_07.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_staff_13.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg"
+  },
+  {
     "path": "assets/icons/items/inv_sword_12.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg"
+  },
+  {
+    "path": "assets/icons/items/inv_wand_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_wand_07.jpg"
   },
   {
     "path": "assets/icons/items/inv_weapon_bow_10.jpg",
@@ -166,6 +198,182 @@
   {
     "path": "assets/icons/items/inv_weapon_rifle_05.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_blindingheal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_blindingheal.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_dispelmagic.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_dispelmagic.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_divinespirit.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_divinespirit.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_excorcism.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_excorcism.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_flashheal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_flashheal.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_greaterheal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_greaterheal.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_heal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_heal.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_holynova.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_holynova.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_holysmite.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_holysmite.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_innerfire.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_innerfire.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_layonhands.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_layonhands.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_nullifydisease.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_nullifydisease.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_powerwordshield.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_prayerofhealing02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofhealing02.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_prayerofmendingtga.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofmendingtga.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_renew.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_renew.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_searinglight.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_searinglight.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_summonlightwell.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_summonlightwell.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_holy_wordfortitude.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_wordfortitude.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_magic_lesserinvisibilty.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_magic_lesserinvisibilty.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_nature_nullifydisease.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_shadow_shadowwordpain.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg"
+  },
+  {
+    "path": "assets/icons/priest/spell_shadow_unholyfrenzy.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unholyfrenzy.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_binding_heal.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_blindingheal.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_divine_fury.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_sealofwrath.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_holy_nova.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_holynova.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_holy_reach.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_purify.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_holy_specialization.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_sealofsalvation.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_improved_healing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_heal02.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_improved_renew.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_renew.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_improved_shield.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_inner_focus.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_frost_windwalkon.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_inspiration.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_layonhands.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_litany_light.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_meditation.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_sleep.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_mental_strength.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_enchantarmor.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_prayer_mending.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofmendingtga.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_silent_resolve.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_manaregentotem.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_spirit_redemption.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_enchant_essenceeternallarge.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_spiritual_guidance.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_spiritualguidence.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_spiritual_healing.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_moonglow.jpg"
+  },
+  {
+    "path": "assets/icons/priest/talent_twin_disciplines.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_wordfortitude.jpg"
+  },
+  {
+    "path": "assets/icons/spec-holy-priest.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg"
+  },
+  {
+    "path": "assets/icons/spec-survival-hunter.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_camouflage.jpg"
   },
   {
     "path": "assets/icons/spell_fire_flameshock.jpg",
