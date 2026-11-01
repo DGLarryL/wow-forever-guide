@@ -79,13 +79,22 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 .note-card{padding:14px;border:1px solid #5c4820;background:#2c2413;border-radius:11px;color:#efdba8;margin-bottom:16px}
 @media(max-width:880px){.map-layout{grid-template-columns:1fr} .modal-title{align-items:flex-start;flex-direction:column}}
 @media(max-width:700px){header,main,.tabbar{padding-left:12px;padding-right:12px} .wowicon{width:34px;height:34px} .map-marker{width:20px;height:20px}}
+
+.gear-groups{display:grid;gap:22px}.gear-group-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 10px}.gear-group-title h3{margin:0;font-size:1.25rem}.gear-group-title span{font-size:.85rem;color:var(--muted)}
+.gear-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}.item-card{width:100%;display:flex;gap:12px;align-items:center;text-align:left;padding:12px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#19281e,#111a14);color:var(--text);cursor:pointer}.item-card:hover{border-color:#66836c;background:#1d3023;transform:translateY(-1px)}
+.item-card .item-icon{width:48px;height:48px;border-radius:7px;border:2px solid #2e74a8;object-fit:cover;flex:none;box-shadow:0 3px 12px #0008}.item-card-main{min-width:0}.item-card-name{color:#4aa8ff;font-weight:800;line-height:1.18}.item-card-meta{font-size:.83rem;color:var(--muted);margin-top:3px}.item-card-source{font-size:.82rem;color:#d8dfd9;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item-modal-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:18px}.item-visual{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;border:1px solid var(--line);border-radius:13px;background:#101711}.item-big-icon{width:128px;height:128px;border-radius:12px;border:4px solid #2e74a8;box-shadow:0 10px 30px #0008}.item-id{font-size:.78rem;color:var(--muted)}
+.wow-tooltip{background:#050706;border:1px solid #777;border-radius:9px;padding:15px 16px;box-shadow:0 8px 30px #0009;line-height:1.34}.tooltip-name{color:#0070dd;font-size:1.28rem;font-weight:800;margin-bottom:2px}.tooltip-ilvl{color:#ffd100;margin-bottom:9px}.tooltip-row{display:flex;justify-content:space-between;gap:16px}.tooltip-stat{color:#fff}.tooltip-green{color:#1eff00}.tooltip-req{color:#fff;margin-top:8px}
+.item-source-box{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#142019}.item-source-box b{display:block;color:var(--gold);margin-bottom:4px}.item-why{margin-top:12px;padding:12px;border-left:3px solid var(--green);background:#142019;border-radius:0 9px 9px 0}.item-modal-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.item-modal-actions a{display:inline-block;padding:8px 11px;border:1px solid #466653;background:#1b3023;border-radius:8px;color:#c9e4ff;text-decoration:none}.item-modal-actions a:hover{color:white;background:#284733}
+@media(max-width:680px){.item-modal-layout{grid-template-columns:1fr}.item-big-icon{width:104px;height:104px}.item-visual{padding:14px}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>Human Survival Hunter 10–60</h1>
   <div class="subtitle">WoW Forever · deutscher Leveling Guide</div>
-  <div class="notice"><b>Version 0.3:</b> echte WoW-Forever-Zonenkarten, echte Spawnmarker sowie Original-WoW-Icons für Skills und Talente.</div>
+  <div class="notice"><b>Version 0.4:</b> echte Pet-Karten, Original-Icons für Skills/Talente und klickbare Gear-Empfehlungen mit WoW-artigen Item-Tooltips.</div>
 </div></header>
 
 <nav><div class="tabbar">
@@ -147,10 +156,101 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 </div>
 </section>
 
-<section id="gear" class="tabpage">
-<h2>Gear aus Quests & Dungeons</h2>
-<div class="table-wrap"><table style="min-width:780px"><thead><tr><th>Level</th><th>Quelle</th><th>Worauf achten?</th></tr></thead><tbody><tr><td>10–16</td><td>Halle der Thanen</td><td>Questbelohnungen und Beweglichkeits-Teile; alle Dungeonquests mitnehmen.</td></tr><tr><td>16–24</td><td>Todesminen / Höhlen des Wehklagens</td><td>Todesminen sind für Alliance sehr bequem. Starke Waffenupgrades haben Vorrang.</td></tr><tr><td>24–32</td><td>Das Verlies / Gnomeregan</td><td>Vor allem Dungeonquests mitnehmen; in Gnomeregan auf Waffen und Beweglichkeit achten.</td></tr><tr><td>30–40</td><td>Gnomeregan / Scharlachrotes Kloster / Kral der Klingenhauer</td><td>Langsame, starke Nahkampfwaffen sind für Survival attraktiv; Fernkampfwaffe trotzdem aktuell halten.</td></tr><tr><td>40–50</td><td>Maraudon</td><td>Ab 40 Schwere Rüstung möglich, aber gute Werte sind wichtiger als nur der Rüstungstyp.</td></tr><tr><td>50–60</td><td>Blackrocktiefen / Blackrockspitze</td><td>Starke Endgame-Dungeonitems, Beweglichkeit und Waffen priorisieren.</td></tr></tbody></table></div>
-</section>
+<section id="gear" class="tabpage"><h2>Empfohlenes Gear</h2>
+<div class="note-card"><b>Klick auf ein Item.</b> Dann öffnet sich ein Detailfenster mit Original-Icon, WoW-artigem Tooltip, Stats, benötigter Stufe, Quelle und Survival-Einordnung.</div>
+<div class="gear-groups">
+<div><div class="gear-group-title"><h3>Level 16–24</h3><span>frühe große Upgrades</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="tunika-westfall">
+<img class="item-icon" src="assets/icons/items/inv_chest_leather_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Tunika von Westfall</div>
+<div class="item-card-meta">Brust · Leder · iLvl 24</div>
+<div class="item-card-source">Quest: Die Bruderschaft der Defias · Todesminen / Westfall</div></div></button>
+<button class="item-card gear-link" data-item="giftschlag">
+<img class="item-icon" src="assets/icons/items/inv_weapon_bow_10.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Giftschlag</div>
+<div class="item-card-meta">Distanz · Bogen · iLvl 24</div>
+<div class="item-card-source">Lord Serpentis · Höhlen des Wehklagens</div></div></button>
+<button class="item-card gear-link" data-item="impaling-harpoon">
+<img class="item-icon" src="assets/icons/items/inv_spear_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Impaling Harpoon</div>
+<div class="item-card-meta">Zweihändig · Stangenwaffe · iLvl 22</div>
+<div class="item-card-source">Kapitän Greenskin · Todesminen</div></div></button>
+<button class="item-card gear-link" data-item="seal-wrynn">
+<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Siegel von Wrynn</div>
+<div class="item-card-meta">Finger · iLvl 31</div>
+<div class="item-card-source">Quest: Eine Audienz beim König · Sturmwind · Defias-Questreihe</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 25–35</h3><span>Übergang in echten Survival</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="triprunner">
+<img class="item-icon" src="assets/icons/items/inv_pants_08.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Triprunner Dungarees</div>
+<div class="item-card-meta">Beine · Leder · iLvl 37</div>
+<div class="item-card-source">Quest: Der große Verrat / Rig Wars · Gnomeregan</div></div></button>
+<button class="item-card gear-link" data-item="master-hunter-rifle">
+<img class="item-icon" src="assets/icons/items/inv_weapon_rifle_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Meisterjäger-Gewehr</div>
+<div class="item-card-meta">Distanz · Schusswaffe · iLvl 45</div>
+<div class="item-card-source">Quest: Großwildjagd · Schlingendorntal</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 30–40</h3><span>Stufe-30-Dungeonziele</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="morbid-dawn">
+<img class="item-icon" src="assets/icons/items/inv_sword_12.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Morbide Dämmerung</div>
+<div class="item-card-meta">Zweihändig · Schwert · iLvl 35</div>
+<div class="item-card-source">Gestürzter Held (seltener Boss) · Scharlachrotes Kloster · Friedhof</div></div></button>
+<button class="item-card gear-link" data-item="ghostshard">
+<img class="item-icon" src="assets/icons/items/inv_jewelry_necklace_06.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Ghostshard Talisman</div>
+<div class="item-card-meta">Hals · iLvl 35</div>
+<div class="item-card-source">Azshir der Schlaflose (seltener Boss) · Scharlachrotes Kloster · Friedhof</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 37–45</h3><span>Melee-Waffen-Meilenstein</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="ravager">
+<img class="item-icon" src="assets/icons/items/inv_weapon_halberd_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Ravager</div>
+<div class="item-card-meta">Zweihändig · Axt · iLvl 42</div>
+<div class="item-card-source">Herod · Scharlachrotes Kloster · Waffenkammer</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 40–50</h3><span>starke Quest-/Dungeonwerte</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="masons-ring">
+<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_03.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Masons Fraternity Ring</div>
+<div class="item-card-meta">Finger · iLvl 49</div>
+<div class="item-card-source">Quest: Wünschel-mato-Rute · Zul&#x27;Farrak</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 48–55</h3><span>Maraudon & Blackrocktiefen</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="albino-boots">
+<img class="item-icon" src="assets/icons/items/inv_boots_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Albino Crocscale Boots</div>
+<div class="item-card-meta">Füße · Leder · iLvl 53</div>
+<div class="item-card-source">Rotgrip · Maraudon</div></div></button>
+<button class="item-card gear-link" data-item="blackstone">
+<img class="item-icon" src="assets/icons/items/inv_jewelry_ring_17.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Blackstone Ring</div>
+<div class="item-card-meta">Finger · iLvl 54</div>
+<div class="item-card-source">Prinzessin Theradras · Maraudon</div></div></button>
+<button class="item-card gear-link" data-item="fleetfoot">
+<img class="item-icon" src="assets/icons/items/inv_boots_01.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Fleetfoot Greaves</div>
+<div class="item-card-meta">Füße · Kette · iLvl 53</div>
+<div class="item-card-source">Hundemeister Grebmar · Blackrocktiefen</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 54–60</h3><span>Richtung Endgame</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="blackcrow">
+<img class="item-icon" src="assets/icons/items/inv_weapon_crossbow_04.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Blackcrow</div>
+<div class="item-card-meta">Distanz · Armbrust · iLvl 59</div>
+<div class="item-card-source">Schattenjägerin Vosh&#x27;gajin · Blackrockspitze</div></div></button>
+</div></div>
+<div><div class="gear-group-title"><h3>Level 58–60</h3><span>starkes Level-60-Ziel</span></div><div class="gear-grid">
+<button class="item-card gear-link" data-item="black-baron-cape">
+<img class="item-icon" src="assets/icons/items/inv_misc_cape_20.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" alt="">
+<div class="item-card-main"><div class="item-card-name">Cape of the Black Baron</div>
+<div class="item-card-meta">Rücken · iLvl 63</div>
+<div class="item-card-source">Baron Rivendare · Stratholme</div></div></button>
+</div></div>
+</div></section>
 
 <section id="levelplan" class="tabpage">
 <h2>Levelplan</h2>
@@ -503,6 +603,127 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
     </div>
     
 
+<div class="modal item-modal" id="item-modal-tunika-westfall" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="tunika-westfall" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Tunika von Westfall</h3><p>Tunic of Westfall · Brust · Leder</p></div><span class="status provisional">Forever/Classic-Basis</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_chest_leather_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_07.jpg" loading="lazy" alt="Tunika von Westfall"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Tunika von Westfall</div><div class="tooltip-ilvl">Gegenstandsstufe 24</div><div class="tooltip-row"><span>Brust · Leder</span><span>Selten</span></div><div class="tooltip-stat">92 Rüstung</div><div class="tooltip-stat">+11 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Die Bruderschaft der Defias<br><span class="small">Todesminen / Westfall</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Sehr starke, garantierte Alliance-Questbelohnung mit viel Beweglichkeit.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2041/tunic-of-westfall" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-giftschlag" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="giftschlag" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Giftschlag</h3><p>Venomstrike · Distanz · Bogen</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_bow_10.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg" loading="lazy" alt="Giftschlag"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Giftschlag</div><div class="tooltip-ilvl">Gegenstandsstufe 24</div><div class="tooltip-row"><span>Distanz · Bogen</span><span>Selten</span></div><div class="tooltip-stat">20–38 Schaden</div><div class="tooltip-stat">Tempo 2.40 · 12.08 DPS</div><div class="tooltip-green">Trefferchance: 23–33 Naturschaden</div><div class="tooltip-req">Benötigt Stufe 19</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Lord Serpentis<br><span class="small">Höhlen des Wehklagens</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Eine der besten frühen Fernkampfwaffen für Jäger; kann dich viele Level begleiten.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=6469/venomstrike" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-impaling-harpoon" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="impaling-harpoon" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Impaling Harpoon</h3><p>Impaling Harpoon · Zweihändig · Stangenwaffe</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_spear_07.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg" loading="lazy" alt="Impaling Harpoon"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Impaling Harpoon</div><div class="tooltip-ilvl">Gegenstandsstufe 22</div><div class="tooltip-row"><span>Zweihändig · Stangenwaffe</span><span>Selten</span></div><div class="tooltip-stat">36–55 Schaden</div><div class="tooltip-stat">Tempo 2.40 · 18.96 DPS</div><div class="tooltip-stat">+9 Beweglichkeit</div><div class="tooltip-stat">+5 Intelligenz</div><div class="tooltip-req">Benötigt Stufe 17</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Kapitän Greenskin<br><span class="small">Todesminen</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Für frühen Survival besonders schön: Beweglichkeit + Intelligenz und brauchbarer Nahkampfschaden.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=5200/impaling-harpoon" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-seal-wrynn" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="seal-wrynn" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Siegel von Wrynn</h3><p>Seal of Wrynn · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg" loading="lazy" alt="Siegel von Wrynn"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Siegel von Wrynn</div><div class="tooltip-ilvl">Gegenstandsstufe 31</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+3 Stärke</div><div class="tooltip-stat">+3 Beweglichkeit</div><div class="tooltip-stat">+4 Ausdauer</div><div class="tooltip-stat">+4 Intelligenz</div><div class="tooltip-stat">+3 Willenskraft</div><div class="tooltip-req">Benötigt Stufe 16</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Eine Audienz beim König<br><span class="small">Sturmwind · Defias-Questreihe</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Extrem langlebiger Alliance-Ring; nahezu alle Werte sind beim Leveln nützlich.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=2933/seal-of-wrynn" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-triprunner" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="triprunner" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Triprunner Dungarees</h3><p>Triprunner Dungarees · Beine · Leder</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_pants_08.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_pants_08.jpg" loading="lazy" alt="Triprunner Dungarees"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Triprunner Dungarees</div><div class="tooltip-ilvl">Gegenstandsstufe 37</div><div class="tooltip-row"><span>Beine · Leder</span><span>Selten</span></div><div class="tooltip-stat">101 Rüstung</div><div class="tooltip-stat">+3 Stärke</div><div class="tooltip-stat">+18 Beweglichkeit</div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-req">Benötigt Stufe 25 (Quest)</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Der große Verrat / Rig Wars<br><span class="small">Gnomeregan</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Eines der klarsten Level-30-Hunter-Highlights wegen der enormen Beweglichkeit.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9624/triprunner-dungarees" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-master-hunter-rifle" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="master-hunter-rifle" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Meisterjäger-Gewehr</h3><p>Master Hunter&#x27;s Rifle · Distanz · Schusswaffe</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_rifle_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_05.jpg" loading="lazy" alt="Meisterjäger-Gewehr"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Meisterjäger-Gewehr</div><div class="tooltip-ilvl">Gegenstandsstufe 45</div><div class="tooltip-row"><span>Distanz · Schusswaffe</span><span>Selten</span></div><div class="tooltip-stat">37–70 Schaden</div><div class="tooltip-stat">Tempo 2.60 · 20.58 DPS</div><div class="tooltip-req">Benötigt Stufe ab Questreihe ~28</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Großwildjagd<br><span class="small">Schlingendorntal</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Garantierte, sehr starke Fernkampfwaffe um Level 30; ideal wenn Giftschlag langsam alt wird.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=4111/master-hunters-rifle" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-morbid-dawn" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="morbid-dawn" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Morbide Dämmerung</h3><p>Morbid Dawn · Zweihändig · Schwert</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_sword_12.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_sword_12.jpg" loading="lazy" alt="Morbide Dämmerung"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Morbide Dämmerung</div><div class="tooltip-ilvl">Gegenstandsstufe 35</div><div class="tooltip-row"><span>Zweihändig · Schwert</span><span>Selten</span></div><div class="tooltip-stat">70–105 Schaden</div><div class="tooltip-stat">Tempo 2.90 · 30.17 DPS</div><div class="tooltip-stat">+10 Stärke</div><div class="tooltip-stat">+15 Ausdauer</div><div class="tooltip-req">Benötigt Stufe 30</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Gestürzter Held (seltener Boss)<br><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Sehr harter 2H-Hit um Level 30; laut aktuellem Survival-Guide ein herausragender Dungeon-Drop.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7689/morbid-dawn" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-ghostshard" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="ghostshard" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Ghostshard Talisman</h3><p>Ghostshard Talisman · Hals</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_necklace_06.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_06.jpg" loading="lazy" alt="Ghostshard Talisman"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Ghostshard Talisman</div><div class="tooltip-ilvl">Gegenstandsstufe 35</div><div class="tooltip-row"><span>Hals</span><span>Selten</span></div><div class="tooltip-stat">+9 Ausdauer</div><div class="tooltip-green">+14 Angriffskraft</div><div class="tooltip-green">+12 Angriffskraft gegen Untote</div><div class="tooltip-req">Benötigt Stufe 30</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Azshir der Schlaflose (seltener Boss)<br><span class="small">Scharlachrotes Kloster · Friedhof</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Starker Hals für Hybrid-/Melee-Survival; besonders nett im untotenlastigen Content.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7731/ghostshard-talisman" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-ravager" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="ravager" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Ravager</h3><p>Ravager · Zweihändig · Axt</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_halberd_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halberd_05.jpg" loading="lazy" alt="Ravager"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Ravager</div><div class="tooltip-ilvl">Gegenstandsstufe 42</div><div class="tooltip-row"><span>Zweihändig · Axt</span><span>Selten</span></div><div class="tooltip-stat">104–157 Schaden</div><div class="tooltip-stat">Tempo 3.50 · 37.29 DPS</div><div class="tooltip-green">Proc: 9 Sek. Wirbel-AoE</div><div class="tooltip-req">Benötigt Stufe 37</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Herod<br><span class="small">Scharlachrotes Kloster · Waffenkammer</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Langsame, hart treffende 2H-Axt und ikonischer AoE-Proc. Für Survival-Weaving sehr interessant.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=7717/ravager" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-masons-ring" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="masons-ring" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Masons Fraternity Ring</h3><p>Masons Fraternity Ring · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_03.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" loading="lazy" alt="Masons Fraternity Ring"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Masons Fraternity Ring</div><div class="tooltip-ilvl">Gegenstandsstufe 49</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+14 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div><div class="tooltip-req">Benötigt Stufe Quest ab ~40</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Quest: Wünschel-mato-Rute<br><span class="small">Zul&#x27;Farrak</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Sehr viel Beweglichkeit auf einem Ring; für Hunter ausgesprochen effizient.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=9533/masons-fraternity-ring" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-albino-boots" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="albino-boots" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Albino Crocscale Boots</h3><p>Albino Crocscale Boots · Füße · Leder</p></div><span class="status provisional">Forever-Daten, vor Launch teils vorläufig</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_boots_05.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg" loading="lazy" alt="Albino Crocscale Boots"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Albino Crocscale Boots</div><div class="tooltip-ilvl">Gegenstandsstufe 53</div><div class="tooltip-row"><span>Füße · Leder</span><span>Selten</span></div><div class="tooltip-stat">105 Rüstung</div><div class="tooltip-stat">+20 Beweglichkeit</div><div class="tooltip-stat">+5 Ausdauer</div><div class="tooltip-stat">+6 Naturwiderstand</div><div class="tooltip-req">Benötigt Stufe 48</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Rotgrip<br><span class="small">Maraudon</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>+20 Beweglichkeit ist für diese Stufe enorm. Rüstungstyp ist weniger wichtig als die starken Werte.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17728/albino-crocscale-boots" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-blackstone" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="blackstone" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Blackstone Ring</h3><p>Blackstone Ring · Finger</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_jewelry_ring_17.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg" loading="lazy" alt="Blackstone Ring"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Blackstone Ring</div><div class="tooltip-ilvl">Gegenstandsstufe 54</div><div class="tooltip-row"><span>Finger</span><span>Selten</span></div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-green">+20 Angriffskraft</div><div class="tooltip-green">+10 Trefferwertung / etwa 1% Trefferchance</div><div class="tooltip-req">Benötigt Stufe 49</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Prinzessin Theradras<br><span class="small">Maraudon</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Angriffskraft plus Trefferchance ist für Survival ausgesprochen wertvoll.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=17713/blackstone-ring" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-fleetfoot" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="fleetfoot" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Fleetfoot Greaves</h3><p>Fleetfoot Greaves · Füße · Kette</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_boots_01.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg" loading="lazy" alt="Fleetfoot Greaves"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Fleetfoot Greaves</div><div class="tooltip-ilvl">Gegenstandsstufe 53</div><div class="tooltip-row"><span>Füße · Kette</span><span>Selten</span></div><div class="tooltip-stat">218 Rüstung</div><div class="tooltip-stat">+19 Beweglichkeit</div><div class="tooltip-stat">+6 Ausdauer</div><div class="tooltip-stat">+6 Intelligenz</div><div class="tooltip-req">Benötigt Stufe 48</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Hundemeister Grebmar<br><span class="small">Blackrocktiefen</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Sehr hunterfreundliche Mischung aus Beweglichkeit, Ausdauer und Intelligenz; starke Alternative zu den Maraudon-Boots.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=11627/fleetfoot-greaves" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-blackcrow" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="blackcrow" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Blackcrow</h3><p>Blackcrow · Distanz · Armbrust</p></div><span class="status confirmed">Forever bestätigt</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_weapon_crossbow_04.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg" loading="lazy" alt="Blackcrow"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Blackcrow</div><div class="tooltip-ilvl">Gegenstandsstufe 59</div><div class="tooltip-row"><span>Distanz · Armbrust</span><span>Selten</span></div><div class="tooltip-stat">77–117 Schaden</div><div class="tooltip-stat">Tempo 3.20 · 30.31 DPS</div><div class="tooltip-stat">+3 Beweglichkeit</div><div class="tooltip-green">+0.9% Trefferchance</div><div class="tooltip-req">Benötigt Stufe 54</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Schattenjägerin Vosh&#x27;gajin<br><span class="small">Blackrockspitze</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Langsame Armbrust mit Trefferchance; sehr attraktiv für starke Einzelhits und den Weg Richtung 60.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=12651/blackcrow" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+<div class="modal item-modal" id="item-modal-black-baron-cape" aria-hidden="true">
+<div class="modal-card"><button class="close item-close" data-item-close="black-baron-cape" aria-label="Schließen">×</button>
+<div class="modal-title"><div><h3>Cape of the Black Baron</h3><p>Cape of the Black Baron · Rücken</p></div><span class="status provisional">Forever/Launch-Daten teils vorläufig</span></div>
+<div class="item-modal-layout"><div class="item-visual"><img class="item-big-icon" src="assets/icons/items/inv_misc_cape_20.jpg" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg" loading="lazy" alt="Cape of the Black Baron"><div class="item-id">Original-WoW-Icon</div></div>
+<div><div class="wow-tooltip"><div class="tooltip-name">Cape of the Black Baron</div><div class="tooltip-ilvl">Gegenstandsstufe 63</div><div class="tooltip-row"><span>Rücken</span><span>Selten</span></div><div class="tooltip-stat">45 Rüstung</div><div class="tooltip-stat">+15 Beweglichkeit</div><div class="tooltip-green">+20 Angriffskraft</div><div class="tooltip-req">Benötigt Stufe 58</div></div>
+<div class="item-source-box"><b>Woher bekommst du es?</b>Baron Rivendare<br><span class="small">Stratholme</span></div>
+<div class="item-why"><b>Warum für Survival?</b><br>Sehr starkes Level-60-Ziel mit genau den offensiven Werten, die Survival mag.</div>
+<div class="item-modal-actions"><a href="https://www.wowhead.com/forever/item=13340/cape-of-the-black-baron" target="_blank" rel="noopener">Wowhead / Itemquelle öffnen ↗</a></div></div></div></div></div>
+
 <script>
 (function(){
  const pages=[...document.querySelectorAll('.tabpage')];
@@ -522,6 +743,15 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
    document.querySelectorAll('#talentBody tr').forEach(r=>{
      const lvl=Number(r.dataset.level); r.style.display=(lvl>=min&&lvl<=max)?'':'none';
    });
+ }));
+
+ document.querySelectorAll('.gear-link').forEach(btn=>btn.addEventListener('click',()=>{
+   const m=document.getElementById('item-modal-'+btn.dataset.item);
+   if(m){m.classList.add('show');m.setAttribute('aria-hidden','false')}
+ }));
+ document.querySelectorAll('.item-close').forEach(btn=>btn.addEventListener('click',()=>{
+   const m=document.getElementById('item-modal-'+btn.dataset.itemClose);
+   if(m){m.classList.remove('show');m.setAttribute('aria-hidden','true')}
  }));
 
  document.querySelectorAll('.pet-link').forEach(btn=>btn.addEventListener('click',()=>{
