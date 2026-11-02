@@ -307,15 +307,18 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
   .modal-grid{grid-template-columns:1fr}
   .site-modal-body{padding:18px}
 }
+
+/* v0.15 – Build-Varianten */
+.build-variant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.build-variant{padding:15px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}.build-variant.recommended{border-color:#7c6936;box-shadow:inset 0 0 0 1px #ffd10033}.build-variant h3{margin:0 0 7px;color:#ffd100}.build-variant .split{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:5px}.build-tag{display:inline-block;padding:3px 7px;margin-bottom:8px;border-radius:999px;border:1px solid #476a50;background:#173226;color:#bfe8c9;font-size:.72rem;font-weight:800}.build-tag.alt{border-color:#6b5b38;background:#2d2517;color:#f0d79d}.build-variant ul{margin:8px 0 0;padding-left:18px;color:#cbd3ce}.build-variant li{margin:4px 0}.build-source-note{margin:0 0 15px;padding:12px 14px;border:1px solid #4d6352;border-radius:10px;background:#142019;line-height:1.5}.build-source-note b{color:#ffd100}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a class="back" href="https://dglarryl.github.io/wow-forever-guide/">← WoW Forever Guide</a><h1>Holy Priest 10–60</h1><div class="subtitle">WoW Forever · Heiler-Guide by LarryL</div>
 <div class="notice"><b>v0.12.0:</b> Holy-Guide mit Wowhead Forever (31.10.2026) als Hauptquelle überarbeitet; Solo-Leveling und Dungeon-/Raid-Healing werden jetzt klar getrennt.</div></div></header>
-<div class="version-banner" data-site-version="v0.14.1">
-<div class="version-banner-inner"><span class="version-label">v0.14.1</span><span> · </span><span class="change-label">Geändert:</span><span> Dungeon-Klickfehler behoben; alle Dungeon-Karten öffnen jetzt zuverlässig. Dungeons nach Allianzgebiet, Hordegebiet und umkämpft/neutral kategorisiert; Classic-Bosslisten ergänzt und bestehende Boss-/Loot-/Item-/Kartenansichten beibehalten.</span></div>
+<div class="version-banner" data-site-version="v0.15.0">
+<div class="version-banner-inner"><span class="version-label">v0.15.0</span><span> · </span><span class="change-label">Geändert:</span><span> Dungeon-Browser stark erweitert: deutlich mehr Bossloot für Classic-/Forever-Dungeons, echte WoW-Gebietskarten mit Eingangsmarkern und ausführlichen Gebietsinfos; Klassenguides um mehrere Build-/Leveling-Varianten ergänzt.</span></div>
 </div><nav><div class="tabbar">
-<button class="tabbtn active" data-tab="overview">Übersicht</button><button class="tabbtn" data-tab="talents">Talente</button><button class="tabbtn" data-tab="skills">Skills</button><button class="tabbtn" data-tab="rotation">Rotation</button><button class="tabbtn" data-tab="gear">Gear</button><button class="tabbtn" data-tab="sources">Quellen</button>
+<button class="tabbtn active" data-tab="overview">Übersicht</button><button class="tabbtn" data-tab="talents">Talente</button><button class="tabbtn" data-tab="skills">Skills</button><button class="tabbtn" data-tab="rotation">Rotation</button><button class="tabbtn" data-tab="gear">Gear</button><button class="tabbtn" data-tab="builds">Build-Varianten</button><button class="tabbtn" data-tab="sources">Quellen</button>
 </div></nav>
 <main>
 <section class="tabpage active" id="overview">
@@ -413,7 +416,11 @@ main{padding:28px 20px 70px} .tabpage{display:none} .tabpage.active{display:bloc
 <h3 style="margin-top:28px">Gear ab 30–60</h3>
 <div class="card"><p><b>Priorität:</b> Heilungsmacht → Intelligenz → MP5 → Willenskraft → Zauberkrit. Nimm Dungeon- und Questitems mit diesen Werten; Stoff ist normal, aber die Werte sind wichtiger als „perfekte“ Optik.</p><p class="small">Da die Beta bis Level 30 begrenzt war, behandle konkrete Level-60-BiS-Listen vor dem Launch noch als vorläufig.</p></div>
 </section>
-<section class="tabpage" id="sources">
+<section class="tabpage" id="builds"><h2>Build-Varianten</h2><div class="build-source-note"><b>Quelle:</b> Wowhead Forever: Standard-Raidbuild 18/33/0 und Dungeon-Hybrid 21/30/0. Für Solo-Leveling ist Discipline/Shadow schneller als reines Holy.</div><div class="build-variant-grid">
+<div class="build-variant recommended"><span class="build-tag">Dungeon-Hybrid</span><h3>Discipline / Holy</h3><div class="split">21 / 30 / 0</div><ul><li>Beste Allround-Variante für 5er-Dungeons.</li><li>Penance + Wand Specialization + Holy Nova.</li></ul></div>
+<div class="build-variant"><span class="build-tag">Raid-Heal</span><h3>Standard PvE Raid</h3><div class="split">18 / 33 / 0</div><ul><li>Maximale Heil-Effizienz und Throughput.</li><li>Prayer of Mending + Inspiration + Discipline-Effizienz.</li></ul></div>
+<div class="build-variant"><span class="build-tag alt">Ohne Respec</span><h3>Pure-Holy Leveling</h3><div class="split">2 Wand-Punkte → Holy → Discipline</div><ul><li>Für Spieler, die Holy von Anfang bis 60 behalten wollen.</li><li>Wand Specialization hilft beim Soloquesten enorm.</li></ul></div>
+<div class="build-variant"><span class="build-tag alt">Solo-Fokus</span><h3>Shadow/Discipline → später Holy</h3><div class="split">Schneller questen, später respeccen</div><ul><li>Empfehlung bei überwiegend Solo-Content.</li><li>Auf Holy wechseln, sobald Dungeon-Healing Hauptjob wird.</li></ul></div></div></section><section class="tabpage" id="sources">
 <h2>Quellen &amp; Datenstand</h2>
 <div class="source-grid">
 <a class="source-card" href="https://www.wowhead.com/forever/guide/classes/priest/holy/healer-leveling-tips" target="_blank">Wowhead · Holy Leveling <span>Primärquelle ↗</span></a>

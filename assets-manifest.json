@@ -408,6 +408,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_04.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_axe_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_axe_12.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_12.jpg"
   },
@@ -432,12 +436,28 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_chest_chain_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_05.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_chest_cloth_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_04.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_chest_cloth_09.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_09.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_chest_leather_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_04.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_chest_leather_08.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_08.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_chest_plate04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate04.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_gauntlets_15.jpg",
@@ -452,12 +472,44 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_09.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_helmet_30.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_30.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_jewelry_necklace_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_07.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_jewelry_ring_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_04.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_jewelry_ring_09.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_09.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_jewelry_ring_15.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_15.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_jewelry_talisman_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_05.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_mace_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_mace_01.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_mace_11.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_mace_11.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_mace_14.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_mace_14.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_misc_cape_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_06.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_misc_cape_10.jpg",
@@ -476,6 +528,10 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_necklacea8.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_misc_orb_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_orb_01.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_misc_questionmark.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg"
   },
@@ -486,6 +542,10 @@
   {
     "path": "assets/icons/dungeon-items/inv_pants_11.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_shield_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shield_04.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_shirt_08.jpg",
@@ -504,8 +564,16 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_staff_15.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_15.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_sword_04.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_04.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_sword_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_10.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_sword_12.jpg",
@@ -518,6 +586,22 @@
   {
     "path": "assets/icons/dungeon-items/inv_throwingaxe_01.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_throwingaxe_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_wand_04.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_wand_04.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_bow_10.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_10.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_halbard_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_halbard_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_rifle_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_rifle_03.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_weapon_shortblade_05.jpg",
@@ -1350,6 +1434,98 @@
   {
     "path": "assets/maps/dun-morogh.webp",
     "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp"
+  },
+  {
+    "path": "assets/maps/dungeons/alterac.jpg",
+    "url": "https://static1-us.millenium.gg/articles/9/96/69/%40/113250-alterac-mountains-full-1.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/ashenvale.png",
+    "url": "https://static1-us.millenium.gg/articles/6/53/46/%40/59079-location-of-blackfathom-deeps-full-1.png"
+  },
+  {
+    "path": "assets/maps/dungeons/azshara.jpg",
+    "url": "https://media-hearth.cursecdn.com/attachments/6/644/azshara-old.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/badlands.jpg",
+    "url": "https://libwowcdn.com/wow/images/classic/maps/large/3.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/barrens.png",
+    "url": "https://www.classic-pets.com/img/maps/map_Silithid_Creeper.png"
+  },
+  {
+    "path": "assets/maps/dungeons/blackrock.jpg",
+    "url": "https://staticg.sportskeeda.com/editor/2024/04/195cc-17123997627247-1920.jpg?w=1600"
+  },
+  {
+    "path": "assets/maps/dungeons/desolace.png",
+    "url": "https://static1.millenium.org/articles/0/33/63/60/%40/1044936-desolace-full-1.PNG"
+  },
+  {
+    "path": "assets/maps/dungeons/dun-morogh.jpg",
+    "url": "https://img2.wikia.nocookie.net/__cb20130414194637/wow/pl/images/a/a6/WorldMap-DunMorogh.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/dustwallow.png",
+    "url": "https://static1-us.millenium.gg/articles/8/62/58/%40/65568-onyxia-loc-full-1.png"
+  },
+  {
+    "path": "assets/maps/dungeons/epl.jpg",
+    "url": "https://wowquesting.weebly.com/uploads/8/0/8/2/80828608/eastern-plaguelands_1_orig.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/feralas.jpg",
+    "url": "https://cdn.wowclassicdb.com/maps/357.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/orgrimmar.png",
+    "url": "https://static1.millenium.org/articles/0/33/63/60/%40/1044927-orgrimmar-full-1.PNG"
+  },
+  {
+    "path": "assets/maps/dungeons/riverglades.webp",
+    "url": "https://wowhandbook.com/maps/art/riverglades.webp"
+  },
+  {
+    "path": "assets/maps/dungeons/silverpine.jpg",
+    "url": "https://wowclassic.judgehype.com/screenshots/judgehype/2019/1557770033/06.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/stormwind.jpg",
+    "url": "https://wowclassicdatabase.com/images/maps/zoom/1519.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/stranglethorn.png",
+    "url": "https://main.judgehype.com/images/froala/2018/10/1540940583_116162.png"
+  },
+  {
+    "path": "assets/maps/dungeons/swamp.jpg",
+    "url": "https://i.pinimg.com/originals/4a/e3/85/4ae3852dc51082ad0e566b4f63510435.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/tanaris.jpg",
+    "url": "https://wowclassic.judgehype.com/screenshots/judgehype/2019/1557770932/21.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/tirisfal.png",
+    "url": "https://beastmaster.io/__l5e/assets-v1/e9750295-ea34-404f-b27f-e809d7a2c63f/tirisfal-glades.png?v=v1.39.254"
+  },
+  {
+    "path": "assets/maps/dungeons/ungoro.jpg",
+    "url": "https://www.gamingcfg.com/img/7934/Un-goro-Crater-map.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/westfall.jpg",
+    "url": "https://static1.millenium.org/articles/0/33/57/60/%40/1036257-marche-de-louest-full-1.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/wetlands.jpg",
+    "url": "https://worldofwarcraft.judgehype.com/screenshots/databases/cartes/bc/wetlands.jpg"
+  },
+  {
+    "path": "assets/maps/dungeons/wpl.jpg",
+    "url": "https://wowclassicdatabase.com/images/maps/zoom/28.jpg"
   },
   {
     "path": "assets/maps/dunkelkueste.webp",

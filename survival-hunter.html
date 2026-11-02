@@ -368,6 +368,9 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
   .modal-grid{grid-template-columns:1fr}
   .site-modal-body{padding:18px}
 }
+
+/* v0.15 – Build-Varianten */
+.build-variant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.build-variant{padding:15px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}.build-variant.recommended{border-color:#7c6936;box-shadow:inset 0 0 0 1px #ffd10033}.build-variant h3{margin:0 0 7px;color:#ffd100}.build-variant .split{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:5px}.build-tag{display:inline-block;padding:3px 7px;margin-bottom:8px;border-radius:999px;border:1px solid #476a50;background:#173226;color:#bfe8c9;font-size:.72rem;font-weight:800}.build-tag.alt{border-color:#6b5b38;background:#2d2517;color:#f0d79d}.build-variant ul{margin:8px 0 0;padding-left:18px;color:#cbd3ce}.build-variant li{margin:4px 0}.build-source-note{margin:0 0 15px;padding:12px 14px;border:1px solid #4d6352;border-radius:10px;background:#142019;line-height:1.5}.build-source-note b{color:#ffd100}
 </style>
 </head>
 <body>
@@ -376,8 +379,8 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <div class="subtitle">WoW Forever · Survival Hunter Guide by LarryL</div>
 <div class="notice"><b>v0.12.0:</b> Inhalt gegen Wowhead (30.10.2026), Icy Veins und Mobalytics abgeglichen. Wo Quellen sich unterscheiden, ist die effizienteste Leveling-Empfehlung klar markiert.</div>
 </div></header>
-<div class="version-banner" data-site-version="v0.14.1">
-<div class="version-banner-inner"><span class="version-label">v0.14.1</span><span> · </span><span class="change-label">Geändert:</span><span> Dungeon-Klickfehler behoben; alle Dungeon-Karten öffnen jetzt zuverlässig. Dungeons nach Allianzgebiet, Hordegebiet und umkämpft/neutral kategorisiert; Classic-Bosslisten ergänzt und bestehende Boss-/Loot-/Item-/Kartenansichten beibehalten.</span></div>
+<div class="version-banner" data-site-version="v0.15.0">
+<div class="version-banner-inner"><span class="version-label">v0.15.0</span><span> · </span><span class="change-label">Geändert:</span><span> Dungeon-Browser stark erweitert: deutlich mehr Bossloot für Classic-/Forever-Dungeons, echte WoW-Gebietskarten mit Eingangsmarkern und ausführlichen Gebietsinfos; Klassenguides um mehrere Build-/Leveling-Varianten ergänzt.</span></div>
 </div><nav><div class="tabbar">
 <button class="tabbtn active" data-tab="overview">Übersicht</button>
 <button class="tabbtn" data-tab="pets">Pets</button>
@@ -386,7 +389,7 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <button class="tabbtn" data-tab="rotation">Rotation</button>
 <button class="tabbtn" data-tab="gear">Gear</button>
 <button class="tabbtn" data-tab="levelplan">Levelplan</button>
-<button class="tabbtn" data-tab="sources">Quellen</button>
+<button class="tabbtn" data-tab="builds">Build-Varianten</button><button class="tabbtn" data-tab="sources">Quellen</button>
 </div></nav>
 <main>
 <section class="tabpage active" id="overview">
@@ -576,7 +579,11 @@ th{background:#203326;position:sticky;top:0;z-index:2} tbody tr:nth-child(even){
 <h2>Levelplan</h2>
 <div class="table-wrap"><table style="min-width:720px"><thead><tr><th>Levelbereich</th><th>Dein Plan</th></tr></thead><tbody><tr><td>10–14</td><td>Pet-Quest → Geisterfang → Biss/Klaue nachlernen → Verbessertes Fährtenlesen 5/5.</td></tr><tr><td>15–20</td><td>Wilde Schläge + Überlebenskünstler. Frühe Dungeons mit Quests. Mehrfachschuss 18; Gepard + Gezielter Schuss 20.</td></tr><tr><td>20–30</td><td>Pet-Upgrades in Dämmerwald/Hügelland. Auf 30 Totstellen + Streichertritt.</td></tr><tr><td>30–40</td><td>Aktiv Range/Melee weaven. Beute aufspüren 34–35. Zerbrochener Zahn ab 37 versuchen.</td></tr><tr><td>40–50</td><td>Salve, Schwere Rüstung und stärkere Pet-Ränge. Maraudon wird interessant.</td></tr><tr><td>50–60</td><td>Falke beschwören in dieser Route auf 51. BRD/BRS; Blutaxtworg als Utility-/Lehrer-Pet.</td></tr></tbody></table></div>
 </section>
-<section class="tabpage" id="sources">
+<section class="tabpage" id="builds"><h2>Build-Varianten</h2><div class="build-source-note"><b>Quelle:</b> Wowhead Forever Talent Builds (30.10.2026). Die bisherige Talentroute bleibt erhalten; zusätzlich kannst du jetzt je nach Ziel zwischen Leveltempo, Melee-PvE, Deep Survival und Ranged-Hybrid wählen.</div><div class="build-variant-grid">
+<div class="build-variant recommended"><span class="build-tag">Schnellstes Leveling</span><h3>BM → Survival Respec</h3><div class="split">10–31 Beast Mastery → ab 32 Survival</div><ul><li>Beste Wahl für Solo-Leveltempo.</li><li>Pet trägt die frühen Level; Survival wird mit Expose Prey/Strider Kick deutlich stärker.</li></ul></div>
+<div class="build-variant"><span class="build-tag">PvE Melee</span><h3>Melee Survival</h3><div class="split">16 / 8 / 27</div><ul><li>Aktueller Wowhead-Standard für Melee-Dungeon/Raid.</li><li>Deadly Aspects, Focused Fire und Summon Hawk.</li></ul></div>
+<div class="build-variant"><span class="build-tag alt">Deep Survival</span><h3>Defensiv / Utility</h3><div class="split">16 / 0 / 35</div><ul><li>Mehr Survival-Tiefe, Deterrence/Counterattack und Utility.</li><li>Gut für Solo, Elites und Nahkampf-Fokus.</li></ul></div>
+<div class="build-variant"><span class="build-tag alt">Ranged-Hybrid</span><h3>Survival + Marksmanship</h3><div class="split">0 / 16 / 35</div><ul><li>Mehr Distanzschaden mit Lethal Attacks, Careful Aim und Trueshot Aura.</li><li>Für Survival-Spieler, die öfter ranged bleiben.</li></ul></div></div></section><section class="tabpage" id="sources">
 <h2>Quellen &amp; Datenstand</h2>
 <div class="source-grid">
 <a class="source-card" href="https://www.wowhead.com/forever/guide/classes/hunter/survival/dps-leveling-tips" target="_blank">Wowhead · Survival Leveling <span>Primärquelle ↗</span></a>

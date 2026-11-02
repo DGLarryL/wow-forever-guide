@@ -123,3 +123,10 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Bosslisten für fast alle Classic-Dungeons ergänzt.
 - Verifizierte Loot-/Dropchance-Daten aus v0.14.0 bleiben erhalten.
 - Bei unverifizierten Lootdaten wird weiterhin nichts erfunden.
+
+
+## v0.15.0
+- Dungeon-Loot stark erweitert (Wailing Caverns, BFD, SFK, Stockade, Gnomeregan, RFK/RFD, Scarlet Monastery).
+- Populäre Items mit aktuellen Forever-Stats/Dropwerten ergänzt.
+- Schematische Karten durch echte WoW-Gebietskarten mit Marker ersetzt.
+- Survival Hunter, Holy Priest und Arms Warrior: neuer Reiter Build-Varianten.

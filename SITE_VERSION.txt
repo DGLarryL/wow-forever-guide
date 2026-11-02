@@ -1,2 +1,2 @@
-v0.14.1
-Dungeon-Klickfehler behoben; alle Dungeon-Karten öffnen jetzt zuverlässig. Dungeons nach Allianzgebiet, Hordegebiet und umkämpft/neutral kategorisiert; Classic-Bosslisten ergänzt und bestehende Boss-/Loot-/Item-/Kartenansichten beibehalten.
+v0.15.0
+Dungeon-Browser stark erweitert: deutlich mehr Bossloot für Classic-/Forever-Dungeons, echte WoW-Gebietskarten mit Eingangsmarkern und ausführlichen Gebietsinfos; Klassenguides um mehrere Build-/Leveling-Varianten ergänzt.
