@@ -160,3 +160,16 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Die zwölf bestehenden Build-Varianten-Seiten aus v0.16 bleiben erhalten.
 - Patchnotes vom 03.11.2026 für die neuen Builds berücksichtigt; unbestätigte exakte Punkte-Splits bewusst nicht erfunden.
 - Bei jedem Update Versionsleiste auf allen Seiten aktualisieren.
+
+
+## v0.19.0 — Vollständiger Klassen- und Berufs-Ausbau
+- Sechs fehlende Klassen im selben visuellen Tab-Layout wie Hunter/Priest/Warrior (8 Reiter).
+- Drei Talentbäume, sichtbare ungeskillte Talente und derselbe SVG-Levelregler (1–60).
+- Skills mit Icons, Solo-/Dungeon-Rotation, Gear-Karten mit Klickdetails, Levelplan und Build-Varianten.
+- Sechs neue vollwertige Berufe: Alchemie, Ingenieurskunst, Kräuterkunde, Kochkunst, Erste Hilfe, Angeln.
+- Crafting: Craftzahlen, Materiallisten, Lehrer nach Fraktion, Rezeptquelle und Forever-Änderungen.
+- Sammelberufe: Farmgebiete mit Kartendarstellung und Link zur ausführlichen Forever-Farmroute.
+- Alle Berufskarten und Top-Navigation entgraut und verlinkt.
+- Die Talent-Zuteilungen sind Levelingvorschläge und müssen bei weiteren November-Hotfixes gegen den Live-Talentrechner geprüft werden.
+
+- 11 Gear-Tooltips in den neuen Klassenguides um konkrete Werte aus dem vorhandenen Dungeon-Datensatz ergänzt.

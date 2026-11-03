@@ -1,36 +1,522 @@
 <!DOCTYPE html>
+
 <html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="dark" name="color-scheme"/><title>Gebrechen-Hexenmeister 1–60 – WoW Forever Guide by LarryL</title><style>
-:root{--bg:#0c0d0c;--panel:#171a18;--panel2:#202520;--text:#f1f2f1;--muted:#adb5af;--line:#3b423b;--gold:#ffd100;--green:#87dfa3}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}body{min-height:100vh;background:radial-gradient(circle at 12% -8%,#223925 0,transparent 35%),var(--bg)}
-header{padding:28px 18px 18px;border-bottom:1px solid var(--line)}.wrap,main{max-width:1200px;margin:auto}.back{display:inline-block;color:#cae4fa;text-decoration:none;font-weight:800;margin-bottom:15px}.hero{display:flex;gap:17px;align-items:center}.hero img{width:76px;height:76px;border:2px solid #9e8547;border-radius:15px;background:#0c0c0c}.hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:0}.subtitle{color:var(--gold);font-weight:800;margin-top:5px}.notice{margin-top:17px;padding:12px 14px;background:#17251b;border:1px solid #47614c;border-radius:11px;color:#d8eadd;line-height:1.55}
-.version-banner{max-width:1235px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:12px 14px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.version-label{color:#ffd100;font-weight:900}.change-label{color:#9fd7ae;font-weight:800}
-nav{position:sticky;top:0;z-index:20;background:#121613ef;border-bottom:1px solid #404840;backdrop-filter:blur(12px)}.tabs{max-width:1200px;margin:auto;display:flex;gap:7px;padding:9px 18px;overflow:auto}.tab{border:1px solid #444b44;border-radius:9px;background:#1b201c;color:white;padding:9px 13px;cursor:pointer;white-space:nowrap}.tab.active,.tab:hover{background:#5d4825;border-color:#977340}
-main{padding:29px 18px 70px}.page{display:none}.page.active{display:block}h2{color:#e7bc80;margin:0 0 16px}h3{color:var(--gold)}p{line-height:1.6}.intro{color:#d1dbd3;font-size:1.08rem;line-height:1.65}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.tile{padding:16px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#1e231f,#141814)}.tile b{display:block;color:#ffd100;margin-bottom:7px}.tile p{color:#c5d1c8;margin:0;line-height:1.5}.reco{border-color:#76653c;background:linear-gradient(180deg,#2d291b,#161912);padding:18px}.tag{display:inline-block;font-size:.74rem;font-weight:900;padding:5px 9px;border-radius:999px;border:1px solid #68836b;color:#c6ebce;background:#203924;margin-bottom:7px}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.pill{border:1px solid #4b5b4c;border-radius:999px;padding:5px 9px;color:#cbe7d2;font-size:.8rem;background:#1a2c20}.steps{display:grid;gap:10px}.step{display:grid;grid-template-columns:95px 1fr;gap:12px;padding:14px;border:1px solid var(--line);border-radius:11px;background:#171a18}.step strong{color:#ffd100}.step h3{margin:0 0 6px}.step p{margin:0;color:#cbd3ce}.step.focus{border-color:#e3b960;background:#28291d}
-.slidebox{padding:16px;border:1px solid #5c705e;border-radius:12px;background:#17231a;margin:14px 0 17px}.slidehead{display:flex;justify-content:space-between;align-items:center;gap:12px}.slidehead b{color:#ffd100}.slidebox input{width:100%;accent-color:#d9b367;margin:15px 0 6px;cursor:pointer}.slideinfo{color:#dce9df;line-height:1.6}.slideinfo b{color:#e5c78c}.helper{color:#a8bbac;font-size:.85rem}
-.listrows{display:grid;gap:9px}.listrow{display:flex;gap:11px;align-items:flex-start;background:#181d19;border-radius:9px;border-left:3px solid #b3894f;padding:12px 14px;line-height:1.5}.num{display:inline-grid;place-items:center;width:24px;height:24px;flex:none;background:#3f3420;border-radius:50%;color:#ffd100;font-size:.82rem;font-weight:900}.note{padding:12px 14px;border:1px solid #4b614e;border-radius:10px;background:#142019;line-height:1.55;margin:15px 0}.note b{color:#ffd100}.links{display:grid;gap:9px}.links a{color:#acd6ff;text-decoration:none;border-bottom:1px solid #29362e;padding:9px 0}.links a:hover{color:white}.alt{border:1px solid #505550;background:#1b1e1b;padding:14px;border-radius:11px}.alt strong{color:#e6bc7d}.alt p{margin:6px 0 0}.buttonlink{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:#ffdf8d;border:1px solid #836737;padding:10px 13px;border-radius:9px;margin-top:10px;background:#312816;font-weight:800}
-@media(max-width:700px){header,main,.tabs,.version-banner{padding-left:12px;padding-right:12px}.hero img{width:59px;height:59px}.step{grid-template-columns:74px 1fr}}
-</style></head><body>
-<header><div class="wrap"><a class="back" href="index.html">← WoW Forever Guide</a><div class="hero"><img alt="Hexenmeister-Icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" src="assets/icons/classes/classicon_warlock.jpg"/><div><h1>Gebrechen-Hexenmeister 1–60</h1><div class="subtitle">WoW Forever · Gebrechen (Affliction) by LarryL</div></div></div><div class="notice"><b>Launch-Patch vom 03.11.2026:</b> Levelingempfehlung und Talentprioritäten an die neuesten Blizzard-Entwicklernotes angepasst. Wo der finale 60er-Split noch nicht belastbar bestätigt ist, zeige ich einen sinnvollen Talentpfad statt erfundener Punktzahlen.</div></div></header>
-<div class="version-banner" data-site-version="v0.18.0"><div class="version-banner-inner"><span class="version-label">v0.18.0</span> · <span class="change-label">Geändert:</span> <span>Alle 9 Klassen mit Level-Builds: Feral-Druide, Frost-Magier, Vergeltungs-Paladin, Kampf-Schurke, Verstärkungs-Schamane und Gebrechen-Hexenmeister ergänzt; separate Best-Build-Seiten entfernt; Launch-Patch vom 03.11.2026 berücksichtigt.</span></div></div>
-<nav><div class="tabs"><button class="tab active" data-tab="overview">Übersicht</button><button class="tab" data-tab="build">Empfohlener Build</button><button class="tab" data-tab="talents">Talente 1–60</button><button class="tab" data-tab="rotation">Rotation</button><button class="tab" data-tab="gear">Gear &amp; Stats</button><button class="tab" data-tab="alternatives">Weitere Spielweisen</button><button class="tab" data-tab="sources">Quellen</button></div></nav>
-<main>
-<section class="page active" id="overview"><h2>Gebrechen (Affliction) – Übersicht</h2><p class="intro">Affliction/ Gebrechen ist einer der angenehmsten Solo-Builds, weil dein Dämon tankt und DoTs Schaden verursachen, während du dich bewegst. Aderlass und Lebensentzug gleichen Mana und Leben aus.</p><div class="grid"><div class="tile"><b>Rolle</b><p>Fernkampf-DoT · Dämon · Kontrollzauber</p></div><div class="tile"><b>Stärken</b><p>Wenig Pausen durch Aderlass und Lebensentzug</p></div><div class="tile"><b>Wichtiger Fokus</b><p>Kaum Downtime mit DoTs, Dämon und Lebensentzug</p></div><div class="tile"><b>Berufskombination</b><p>Schneiderei + Verzauberkunst; Kräuterkunde als Alternative für Gold.</p></div></div><h3>Das spricht für diesen Build</h3><div class="listrows"><div class="listrow"><span class="num">1</span><span>Wenig Pausen durch Aderlass und Lebensentzug</span></div><div class="listrow"><span class="num">2</span><span>Dämon kann Gegner binden und Pulls stabilisieren</span></div><div class="listrow"><span class="num">3</span><span>DoTs ermöglichen zwei Gegner parallel mit Furcht zu kontrollieren</span></div></div><h3>Darauf achten</h3><div class="listrows"><div class="listrow"><span class="num">1</span><span>Fear kann weitere Gruppen anziehen</span></div><div class="listrow"><span class="num">2</span><span>Zu viele DoTs auf schwachen Mobs kosten Zeit/Mana</span></div><div class="listrow"><span class="num">3</span><span>Dämonenmanagement erfordert Aufmerksamkeit</span></div></div></section>
-<section class="page" id="build"><h2>Empfohlener Leveling-Build</h2><div class="tile reco"><span class="tag">Unsere Leveling-Empfehlung · 1–60</span><h3>Gebrechen (Affliction)</h3><p>Improved Corruption früh, dämonische Synergien ab 20 und ab 30 stärker auf Drain-Life-Spielweise setzen. Für Raid-DPS ist später ein Shadow-Mastery/Ruin-Build zu prüfen.</p><div class="pills"><span class="pill">Fernkampf-DoT · Dämon · Kontrollzauber</span><span class="pill">Stoff · Schattenschaden</span><span class="pill">Stand: 03.11.2026</span></div></div><h3>Talent-Prioritäten</h3><div class="listrows"><div class="listrow"><span class="num">1</span><span>Improved Corruption: Verderbnis möglichst sofort wirkend machen</span></div><div class="listrow"><span class="num">2</span><span>Unholy Power/Pet-Synergien für stärkere Begleiter</span></div><div class="listrow"><span class="num">3</span><span>Improved Drains und Soul Siphon für Drain-Life-Phasen</span></div><div class="listrow"><span class="num">4</span><span>Shadow Mastery für DoT- und Schattenzauberschaden</span></div><div class="listrow"><span class="num">5</span><span>Nightfall/Shadow Bolt als spätere Ergänzung; Raidbuild nicht mit Leveling verwechseln</span></div></div><div class="note"><b>Wichtig:</b> Der aktuelle Patch hat viele Talentbäume verändert. Deshalb sind hier bewusst die verlässlichen Kern-Talente und Levelabschnitte erklärt. Ein exakter 51-Punkte-Split wird erst als „bestätigt“ bezeichnet, wenn er im neuen Live-Talentrechner geprüft ist.</div><a class="buttonlink" data-open="talents" href="#talents">Talentroute im Guide anzeigen →</a></section>
-<section class="page" id="talents"><h2>Dein Talentpfad von 1 bis 60</h2><div class="slidebox"><div class="slidehead"><b>Aktuelles Level: <span id="level-value">1</span></b><span id="points">0 / 51 Talentpunkte</span></div><input aria-label="Charakterstufe einstellen" id="level-slider" max="60" min="1" type="range" value="1"/><div class="slideinfo" id="level-tip">Schattenblitz und Verderbnis auf stärkeren Zielen, Dämon und Zauberstab sinnvoll nutzen.</div><div class="helper">Ziehe den Regler oder nutze Pfeiltasten. Der Plan zeigt Prioritäten; du kannst damit keine Talente im Spiel verteilen.</div></div><div class="steps"><div class="step" data-end="9" data-start="1"><strong>Stufe 1–9</strong><div><h3>DoT + Schattenblitz</h3><p>Schattenblitz und Verderbnis auf stärkeren Zielen, Dämon und Zauberstab sinnvoll nutzen.</p></div></div><div class="step" data-end="19" data-start="10"><strong>Stufe 10–19</strong><div><h3>Verderbnis + Leerwandler</h3><p>Improved Corruption und Pet-Synergien; Voidwalker zum Tanken nutzen.</p></div></div><div class="step" data-end="29" data-start="20"><strong>Stufe 20–29</strong><div><h3>Sayaad und Drain vorbereiten</h3><p>Neuen Dämon einsetzen; Synergien für dessen Schaden, Improved Drains und Lebensentzug vor Stufe 30.</p></div></div><div class="step" data-end="39" data-start="30"><strong>Stufe 30–39</strong><div><h3>Drain-Tanking</h3><p>Lebensentzug höheren Ranges für dauerhafte Pulls; Aderlass gleicht Mana aus, dabei Lebenspunkte kontrollieren.</p></div></div><div class="step" data-end="49" data-start="40"><strong>Stufe 40–49</strong><div><h3>Shadow Mastery</h3><p>Gebrechen-/Schatten-Damage und DoT-Effizienz ausbauen; Fear nur mit freiem Raum nutzen.</p></div></div><div class="step" data-end="60" data-start="50"><strong>Stufe 50–60</strong><div><h3>Affliction abschließen</h3><p>Ranghöhere DoTs, Nightfall-/Shadow-Bolt-Synergien ergänzen; für Raids Shadow Mastery/Ruin prüfen.</p></div></div></div><div class="note"><b>Legacy-Hinweis:</b> Ohne den Legacy-Bonus „Talented“ bekommst du den ersten Talentpunkt mit Stufe 10, insgesamt 51 bis Level 60. Zusätzliche Legacy-Effekte können die Freischaltungsstufe beeinflussen.</div></section>
-<section class="page" id="rotation"><h2>Solo-Rotation</h2><div class="listrows"><div class="listrow"><span class="num">1</span><span>Dämon auf das erste Ziel schicken; Verderbnis und Fluch/DoT auftragen.</span></div><div class="listrow"><span class="num">2</span><span>Bei sicherer Position zweites Ziel dotten und mit Furcht auf Abstand halten.</span></div><div class="listrow"><span class="num">3</span><span>Aderlass bei Manabedarf, Lebensentzug für Gesundheit; Seelensteine und Verbrauchsmaterial nutzen.</span></div></div><h2 style="margin-top:25px">Im Dungeon</h2><div class="listrows"><div class="listrow"><span class="num">1</span><span>DoTs auf Ziele mit ausreichender Lebensdauer; Schattenblitz als Filler.</span></div><div class="listrow"><span class="num">2</span><span>Furcht nur bei abgesprochenem CC nutzen, damit Gegner keine Packs ziehen.</span></div><div class="listrow"><span class="num">3</span><span>Gesundheitssteine/Seelensteine für die Gruppe vorbereiten.</span></div></div><div class="note"><b>Tipp:</b> Die genauen verfügbaren Skills hängen vom Level und den gewählten Talenten ab. Nutze nur bereits freigeschaltete Fähigkeiten.</div></section>
-<section class="page" id="gear"><h2>Wertepriorität beim Leveln</h2><div class="listrows"><div class="listrow"><span class="num">1</span><span>Zauberschaden / Schattenschaden</span></div><div class="listrow"><span class="num">2</span><span>Trefferwertung für Endgame</span></div><div class="listrow"><span class="num">3</span><span>Intelligenz und Ausdauer</span></div><div class="listrow"><span class="num">4</span><span>Zauberkrit bei Schattenblitz-lastigem Raidbuild</span></div></div><h2 style="margin-top:25px">Ausrüstung und Berufe</h2><div class="listrows"><div class="listrow"><span class="num">1</span><span>Stoff mit Schattenzauberschaden, Intelligenz und passender Ausdauer.</span></div><div class="listrow"><span class="num">2</span><span>Zauberstäbe helfen früh für Low-Mana-Pulls.</span></div><div class="listrow"><span class="num">3</span><span>Schneiderei + Verzauberkunst für Stoffgear und Entzaubern.</span></div></div><div class="note"><b>Berufe:</b> Schneiderei + Verzauberkunst; Kräuterkunde als Alternative für Gold.</div><a class="buttonlink" href="tailoring.html">Passenden Berufsguide öffnen →</a> <a class="buttonlink" href="dungeons.html">Dungeon-Loot durchsuchen →</a></section>
-<section class="page" id="alternatives"><h2>Weitere Spezialisierungen</h2><div class="grid"><div class="alt"><strong>Dämonologie</strong><p>Dämonenstärke, Komfort und Defensive.</p></div><div class="alt"><strong>Zerstörung</strong><p>Mehr direkter Burst durch Feuer-/Schattenzauber.</p></div></div><h2 style="margin-top:25px">Patchänderungen, die du kennen solltest</h2><div class="listrows"><div class="listrow"><span class="num">1</span><span>Dämonen erhalten weniger Gesundheit pro Ausdauerpunkt des Besitzers; Pet-Tanking nicht überbewerten.</span></div><div class="listrow"><span class="num">2</span><span>Seelenentzug erzeugt laut Entwicklernotes seltener zusätzliche Seelensplitter.</span></div><div class="listrow"><span class="num">3</span><span>Aderlass-/Pet-Synergien wurden im Launch-Build überarbeitet; aktuelle Ränge auf der Live-Version prüfen.</span></div></div><div class="note">Diese Seite empfiehlt den Build fürs <b>Leveln</b>; reine Raid-, Tank-, Heal- und PvP-Builds können deutlich anders aussehen.</div></section>
-<section class="page" id="sources"><h2>Quellen und Patchstand</h2><div class="links"><a href="https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696" rel="noopener" target="_blank">Blizzard · offizielle Forever-Entwicklernotes vom 03.11.2026 ↗</a><a href="https://www.wowhead.com/forever/guide/classes/warlock/affliction/dps-leveling-tips" rel="noopener" target="_blank">Wowhead Forever · Leveling-Guide ↗</a><a href="https://www.wowhead.com/forever/guide/classes/warlock/affliction/talent-builds-pve-dps" rel="noopener" target="_blank">Wowhead Forever · Talente / Builds ↗</a><a href="https://www.wowhead.com/forever/talent-calc/warlock/affliction" rel="noopener" target="_blank">Wowhead Forever · Talente / Builds ↗</a><a href="https://www.icy-veins.com/wow-forever/class-guides" rel="noopener" target="_blank">Icy Veins · weitere Klassen-Guides ↗</a></div><div class="note">Die Wowhead-Levelingartikel enthalten teils Daten aus der Beta Ende Oktober. Klassenänderungen aus dem Patch vom 3. November haben bei Widersprüchen Vorrang.</div></section>
-</main>
-<script>
-const tabs=[...document.querySelectorAll('[data-tab]')],pages=[...document.querySelectorAll('main .page')];
-function openTab(id,doScroll=true){pages.forEach(p=>p.classList.toggle('active',p.id===id));tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===id));if(doScroll)window.scrollTo(0,0);if(location.hash!=='#'+id)history.replaceState(null,'','#'+id);}
-tabs.forEach(t=>t.addEventListener('click',()=>openTab(t.dataset.tab)));
-document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openTab(a.dataset.open);}));
-const phases=[[1, 9, "DoT + Schattenblitz", "Schattenblitz und Verderbnis auf stärkeren Zielen, Dämon und Zauberstab sinnvoll nutzen."], [10, 19, "Verderbnis + Leerwandler", "Improved Corruption und Pet-Synergien; Voidwalker zum Tanken nutzen."], [20, 29, "Sayaad und Drain vorbereiten", "Neuen Dämon einsetzen; Synergien für dessen Schaden, Improved Drains und Lebensentzug vor Stufe 30."], [30, 39, "Drain-Tanking", "Lebensentzug höheren Ranges für dauerhafte Pulls; Aderlass gleicht Mana aus, dabei Lebenspunkte kontrollieren."], [40, 49, "Shadow Mastery", "Gebrechen-/Schatten-Damage und DoT-Effizienz ausbauen; Fear nur mit freiem Raum nutzen."], [50, 60, "Affliction abschließen", "Ranghöhere DoTs, Nightfall-/Shadow-Bolt-Synergien ergänzen; für Raids Shadow Mastery/Ruin prüfen."]],slider=document.getElementById('level-slider'),levelValue=document.getElementById('level-value'),points=document.getElementById('points'),tip=document.getElementById('level-tip');
-function changeLevel(level){level=Math.max(1,Math.min(60,Number(level)));slider.value=level;levelValue.textContent=level;points.textContent=Math.max(0,level-9)+' / 51 Talentpunkte';const current=phases.find(p=>level>=p[0]&&level<=p[1]);tip.textContent=current?current[2]+' — '+current[3]:'';document.querySelectorAll('.step').forEach(row=>row.classList.toggle('focus',level>=Number(row.dataset.start)&&level<=Number(row.dataset.end)));}
-slider.addEventListener('input',()=>changeLevel(slider.value));changeLevel(1);
-const firstTab=location.hash.slice(1);if(pages.some(p=>p.id===firstTab))openTab(firstTab,false);
-document.addEventListener('error',e=>{let img=e.target;if(img?.tagName==='IMG'&&img.dataset.fallback&&img.src!==img.dataset.fallback)img.src=img.dataset.fallback;},true);
+:root{--bg:#090e0b;--panel:#121c16;--panel2:#1b251a;--text:#edf4ef;--muted:#acb9ad;--gold:#e2b65b;--line:#3f3c31}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}body{min-height:100vh;background:radial-gradient(circle at 15% -5%,#50331e 0,transparent 30%),var(--bg)}
+header{padding:32px 20px 22px;border-bottom:1px solid var(--line)}.wrap,main{max-width:1200px;margin:auto}.back{display:inline-block;margin-bottom:13px;color:#d9e5f2;text-decoration:none;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.03;margin:0}.subtitle{color:var(--gold);font-weight:700;margin-top:8px}.notice{margin-top:18px;padding:12px 15px;background:#2d2416;border:1px solid #765f31;border-radius:11px;color:#f2deb0}
+nav{position:sticky;top:0;z-index:40;background:rgba(9,14,11,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.tabbar{max-width:1200px;margin:auto;padding:10px 20px;display:flex;gap:8px;overflow:auto}
+.tabbtn{white-space:nowrap;border:1px solid var(--line);background:#201a14;color:var(--text);padding:9px 13px;border-radius:9px;cursor:pointer}.tabbtn:hover,.tabbtn.active{background:#5a3924;border-color:#8c5b37}
+main{padding:28px 20px 70px}.tabpage{display:none}.tabpage.active{display:block}h2{margin:0 0 20px;font-size:1.9rem;color:#efb77d}h3{color:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:14px}.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:16px}.card strong{color:var(--gold)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}table{border-collapse:collapse;width:100%;min-width:720px}th,td{padding:11px 12px;text-align:left;vertical-align:middle;border-bottom:1px solid var(--line)}th{background:#32271d}tbody tr:nth-child(even){background:#1a1713}
+.ability{display:flex;align-items:center;gap:10px;min-width:220px}.wowicon{width:38px;height:38px;border-radius:7px;border:2px solid #796337;background:#050505;object-fit:cover;box-shadow:0 2px 8px #0007;flex:none}.talenticon{width:42px;height:42px}.tree{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.82rem;background:#30241b}.tree-waffen{color:#ffc88c}.tree-furor{color:#ff9d88}
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.filterbar button{border:1px solid var(--line);background:#211b15;color:white;padding:8px 11px;border-radius:8px;cursor:pointer}.filterbar button.active{background:#5a3924}.note-card{padding:14px;border:1px solid #6c5228;background:#2d2415;border-radius:11px;color:#efdba8;margin-bottom:16px}.small{font-size:.9rem;color:var(--muted)}
+.priority{display:grid;gap:8px}.prio{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:10px 12px;background:#181712;border:1px solid var(--line);border-radius:10px}.prio-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#5a3924;color:white;font-weight:800}
+.gear-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:11px}.item-card{display:flex;gap:12px;align-items:center;text-align:left;padding:12px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#242018,#15130f);color:var(--text);cursor:pointer}.item-card:hover{border-color:#816244;background:#2b2218}.item-icon{width:48px;height:48px;border-radius:7px;border:2px solid #2e74a8;object-fit:cover;flex:none}.item-card-name{color:#4aa8ff;font-weight:800}.item-card-meta,.item-card-source{font-size:.82rem;color:var(--muted);margin-top:3px}
+.modal{display:none;position:fixed;inset:0;z-index:100;background:#030403df;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modal-card{position:relative;width:min(900px,100%);max-height:94vh;overflow:auto;background:linear-gradient(180deg,#231d16,#11100d);border:1px solid #60482f;border-radius:17px;padding:18px;box-shadow:0 20px 80px #000b}.close{position:absolute;right:13px;top:13px;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:#3a2a1d;color:white;font-size:26px;cursor:pointer}
+.modal-title{display:flex;justify-content:space-between;gap:16px;align-items:center;padding-right:50px;margin-bottom:14px}.modal-title h3{font-size:1.5rem;margin:0}.modal-title p{margin:3px 0 0;color:var(--muted)}.status{display:inline-block;border-radius:999px;padding:4px 8px;font-size:.78rem;border:1px solid}.status.confirmed{border-color:#39694a;background:#173526;color:#bdebc8}.status.provisional{border-color:#765c29;background:#3a2d16;color:#f6d790}
+.item-modal-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:18px}.item-visual{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;border:1px solid var(--line);border-radius:13px;background:#11100d}.item-big-icon{width:128px;height:128px;border-radius:12px;border:4px solid #2e74a8}.wow-tooltip{background:#050505;border:1px solid #777;border-radius:9px;padding:15px 16px;line-height:1.34}.tooltip-name{color:#0070dd;font-size:1.28rem;font-weight:800}.tooltip-ilvl{color:#ffd100;margin-bottom:9px}.tooltip-row{display:flex;justify-content:space-between;gap:16px}.tooltip-green{color:#1eff00}.tooltip-stat{color:white}.tooltip-req{margin-top:8px}.item-source-box{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#181712}.item-source-box b{display:block;color:var(--gold)}.item-why{margin-top:12px;padding:12px;border-left:3px solid #d98a4f;background:#181712;border-radius:0 9px 9px 0}.item-actions{margin-top:12px}.item-actions a{display:inline-block;padding:8px 11px;border:1px solid #6a5139;background:#2b2117;border-radius:8px;color:#c9e4ff;text-decoration:none}
+.source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.source-card{display:flex;justify-content:space-between;gap:10px;padding:13px;border:1px solid var(--line);border-radius:10px;background:#181712;color:#b9dcff;text-decoration:none}
+@media(max-width:700px){header,main,.tabbar{padding-left:12px;padding-right:12px}.item-modal-layout{grid-template-columns:1fr}}
+
+.full-tree-wrap{margin:0 0 24px}.full-tree-header{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:12px}
+.full-tree-header h3{margin:0}.full-tree-header .build-total{color:var(--muted);font-size:.86rem}
+.full-tree-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.full-tree{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel2),var(--panel));overflow:hidden}
+.full-tree-title{display:flex;justify-content:space-between;align-items:center;padding:12px 13px;border-bottom:1px solid var(--line);font-weight:850}
+.full-tree-title .pts{font-size:.75rem;padding:4px 8px;border-radius:999px;background:#294333;color:#d5efdb}
+.tier-row{display:grid;grid-template-columns:48px 1fr;border-bottom:1px solid rgba(255,255,255,.05);min-height:62px}
+.tier-row:last-child{border-bottom:0}.tier-label{display:grid;place-items:center;color:#89948d;font-size:.7rem;border-right:1px solid rgba(255,255,255,.05);background:rgba(0,0,0,.12);text-align:center}
+.tier-talents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:7px}
+.tree-talent{position:relative;display:flex;gap:7px;align-items:center;padding:6px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(0,0,0,.16);min-width:0}
+.tree-talent.unspent{opacity:.42;filter:grayscale(.82)}.tree-talent.spent{border-color:#6f6130;background:rgba(74,62,22,.22)}
+.tree-talent img{width:34px;height:34px;border-radius:6px;border:1px solid #6f633d;object-fit:cover;flex:none}
+.tree-talent-name{font-size:.74rem;line-height:1.15;overflow:hidden}.tree-rank{position:absolute;right:3px;bottom:2px;background:#060706;color:#ffd100;border:1px solid #766227;border-radius:5px;padding:1px 4px;font-size:.65rem;font-weight:850}
+.tree-source{margin-top:8px;color:var(--muted);font-size:.8rem}
+@media(max-width:900px){.full-tree-columns{grid-template-columns:1fr}.tier-talents{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.tier-talents{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.talent-level-planner{
+  margin:0 0 18px;padding:16px;border:1px solid var(--line);border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+}
+.talent-planner-top{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.level-controls{display:flex;align-items:center;gap:10px}
+.level-step{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(0,0,0,.18);color:var(--text);font-size:1.35rem;cursor:pointer
+}
+.level-step:hover{background:rgba(255,255,255,.08)}
+.level-orb{
+  width:90px;height:90px;border-radius:50%;border:7px solid #d9ad74;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:#1b1b1a;box-shadow:inset 0 0 0 3px rgba(255,255,255,.05),0 4px 18px #0007;
+}
+.level-orb small{font-size:.62rem;letter-spacing:.12em;font-weight:900;color:#bbb;text-transform:uppercase}
+.level-orb strong{font-size:2rem;line-height:1.05;margin-top:2px}
+.planner-main{flex:1;min-width:280px}
+.planner-title{font-size:1.15rem;font-weight:900;letter-spacing:.025em;text-transform:uppercase;margin-bottom:10px}
+.level-presets{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:11px}
+.level-preset{
+  min-width:48px;padding:9px 11px;border:1px solid var(--line);border-radius:7px;
+  background:rgba(0,0,0,.18);color:var(--text);cursor:pointer;font-weight:800
+}
+.level-preset.active,.level-preset:hover{border-color:#b88d56;background:#4a3522;color:#fff}
+.level-range{width:100%;accent-color:#d6a96e;cursor:pointer}
+.planner-status{
+  margin-top:12px;padding:10px 12px;border-radius:9px;background:rgba(0,0,0,.17);
+  border:1px solid rgba(255,255,255,.06);display:flex;gap:10px;flex-wrap:wrap;align-items:center
+}
+.planner-status b{color:var(--gold)}
+.planner-points{margin-left:auto;color:var(--muted);font-size:.86rem}
+.tree-talent.just-learned{outline:2px solid #d6a96e;box-shadow:0 0 18px rgba(214,169,110,.35)}
+.talent-row-current{background:rgba(214,169,110,.14)!important;box-shadow:inset 3px 0 #d6a96e}
+@media(max-width:650px){
+  .talent-planner-top{align-items:flex-start}.planner-main{min-width:100%}
+  .level-orb{width:78px;height:78px}.level-orb strong{font-size:1.7rem}
+}
+
+/* v0.10.3 – radialer Level-Drehregler */
+.level-controls{display:flex;align-items:center;gap:10px}
+.level-dial{
+  --progress:1;
+  position:relative;
+  width:104px;height:104px;border-radius:50%;
+  display:grid;place-items:center;
+  cursor:grab;touch-action:none;user-select:none;
+  background:
+    radial-gradient(circle at center,#1b1b1a 0 60%,transparent 61%),
+    conic-gradient(
+      from 210deg,
+      #d6a96e 0deg calc(var(--progress) * 300deg),
+      #3a3f3c calc(var(--progress) * 300deg) 300deg,
+      transparent 300deg 360deg
+    );
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.04),0 5px 20px #0008;
+}
+.level-dial:active,.level-dial.dragging{cursor:grabbing}
+.level-dial::before{
+  content:"";position:absolute;inset:8px;border-radius:50%;
+  background:#1a1a19;border:1px solid rgba(255,255,255,.07);z-index:1;
+}
+.level-dial-center{
+  position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none
+}
+.level-dial-center small{font-size:.58rem;letter-spacing:.13em;font-weight:900;color:#aaa;text-transform:uppercase}
+.level-dial-center strong{font-size:1.95rem;line-height:1;margin-top:3px}
+.level-knob{
+  position:absolute;z-index:4;left:50%;top:50%;
+  width:13px;height:13px;border-radius:50%;
+  background:#fff;border:2px solid #d6a96e;box-shadow:0 0 0 3px rgba(214,169,110,.15),0 2px 8px #000a;
+  transform-origin:0 0;pointer-events:none
+}
+.level-dial:focus-visible{outline:2px solid #d6a96e;outline-offset:4px}
+.level-step{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(0,0,0,.18);color:var(--text);font-size:1.35rem;cursor:pointer
+}
+.level-step:hover{background:rgba(255,255,255,.08)}
+/* hide the old horizontal slider but keep it as the state source for backwards compatibility */
+.level-range{display:none}
+@media(max-width:650px){
+  .level-dial{width:92px;height:92px}
+  .level-dial-center strong{font-size:1.7rem}
+}
+
+.source-standard{margin:0 0 18px;padding:13px 14px;border:1px solid #4e614f;border-radius:11px;background:#142019;line-height:1.5}
+.source-standard b{color:var(--gold)}.source-standard .verified{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:999px;background:#173526;color:#bdebc8;border:1px solid #39694a;font-size:.72rem}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:18px}
+.meta-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}
+.meta-card b{display:block;color:var(--gold);margin-bottom:4px}.meta-card .big{font-size:1.05rem;font-weight:800;color:var(--text)}
+.route-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0 18px}
+.route-step{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.13)}
+.route-step b{color:var(--gold)}.source-rank{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+/* v0.11.1 – korrigierter Level-Drehregler 1–60 */
+.level-dial{
+  --progress:1;
+}
+.level-dial::after{
+  content:"";
+  position:absolute;
+  width:4px;height:4px;border-radius:50%;
+  background:#d6a96e;
+  left:calc(50% - 27px);
+  top:calc(50% + 46px);
+  opacity:.65;
+  pointer-events:none;
+  z-index:2;
+}
+
+/* v0.11.2 – SVG-Drehregler: Ring, Fortschritt und Marker liegen exakt auf derselben Bahn */
+.level-dial{
+  position:relative;
+  width:104px;height:104px;border-radius:50%;
+  display:grid;place-items:center;
+  cursor:grab;touch-action:none;user-select:none;
+  background:#1a1a19;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.04),0 5px 20px #0008;
+}
+.level-dial:active,.level-dial.dragging{cursor:grabbing}
+.level-dial::before,.level-dial::after{display:none!important}
+.level-dial-svg{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;z-index:1;
+}
+.dial-track,.dial-progress{
+  fill:none;stroke-width:7;stroke-linecap:round;
+}
+.dial-track{stroke:#3a3f3c}
+.dial-progress{stroke:#d6a96e}
+.dial-knob{
+  fill:#fff;stroke:#d6a96e;stroke-width:2;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.8));
+}
+.level-dial-center{
+  position:relative;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;pointer-events:none;
+}
+.level-dial-center small{font-size:.58rem;letter-spacing:.13em;font-weight:900;color:#aaa;text-transform:uppercase}
+.level-dial-center strong{font-size:1.95rem;line-height:1;margin-top:3px}
+.level-dial:focus-visible{outline:2px solid #d6a96e;outline-offset:4px}
+@media(max-width:650px){
+  .level-dial{width:92px;height:92px}
+  .level-dial-center strong{font-size:1.7rem}
+}
+
+/* Globale Versionsleiste */
+.version-banner{
+  max-width:1240px;
+  margin:10px auto 0;
+  padding:0 18px;
+}
+.version-banner-inner{
+  padding:13px 15px;
+  border:1px solid #48604d;
+  border-radius:11px;
+  background:#142019;
+  color:#cfe0d3;
+  line-height:1.5;
+  box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.version-banner-inner b{
+  color:#ffd100;
+}
+.version-banner-inner .version-label{
+  font-weight:900;
+  color:#ffd100;
+}
+.version-banner-inner .change-label{
+  color:#9fd7ae;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .version-banner{padding:0 12px}
+  .version-banner-inner{font-size:.9rem}
+}
+
+/* v0.12 – Gear-Tabs + klickbare Maps */
+.gear-grid,.ore-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+.gear-card,.ore-card{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;
+  width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;
+  background:linear-gradient(180deg,#1e211f,#151816);color:var(--text);cursor:pointer;
+}
+.gear-card:hover,.ore-card:hover{border-color:#8a6940;transform:translateY(-1px)}
+.gear-card img,.ore-card img{
+  width:44px;height:44px;border-radius:8px;border:1px solid #7e6438;
+  object-fit:cover;flex:none;background:#0a0a0a;
+}
+.gear-card b,.ore-card b{color:var(--gold);display:block;margin-bottom:3px}
+.gear-card small,.ore-card small{color:var(--muted);display:block;line-height:1.45}
+.section-note{
+  margin:0 0 14px;padding:12px 14px;border:1px solid #4e614f;border-radius:10px;background:#142019;line-height:1.5
+}
+.section-note b{color:var(--gold)}
+.site-modal[hidden]{display:none!important}
+.site-modal{
+  position:fixed;inset:0;z-index:1000;display:grid;place-items:center;
+}
+.site-modal-backdrop{
+  position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(4px)
+}
+.site-modal-dialog{
+  position:relative;z-index:2;width:min(1040px,calc(100vw - 24px));max-height:calc(100vh - 24px);
+  overflow:auto;border:1px solid #5b4a2c;border-radius:16px;
+  background:linear-gradient(180deg,#171a18,#101210);box-shadow:0 24px 70px rgba(0,0,0,.5);
+}
+.site-modal-close{
+  position:sticky;top:0;float:right;margin:10px 10px 0 0;z-index:3;
+  border:1px solid #6f5833;background:#2d2417;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer
+}
+.site-modal-body{padding:22px}
+.modal-head{
+  display:flex;gap:16px;align-items:center;margin-bottom:16px
+}
+.modal-head img{
+  width:62px;height:62px;border-radius:12px;border:2px solid #856638;background:#0b0c0b
+}
+.modal-head h3{margin:0;font-size:1.55rem}
+.modal-sub{color:#d7c8a3;margin-top:5px}
+.modal-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px
+}
+.modal-box{
+  padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18
+}
+.modal-box h4{margin:0 0 10px;color:#e9b87d}
+.modal-box ul{margin:0;padding-left:18px;line-height:1.55}
+.modal-box li{margin-bottom:5px}
+.recipe-source{
+  display:inline-block;padding:4px 8px;border-radius:999px;
+  background:#2d2514;border:1px solid #735b2c;color:#f1dfad;font-size:.8rem
+}
+.map-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px
+}
+.map-card{
+  border:1px solid var(--line);border-radius:12px;background:#151816;padding:12px
+}
+.map-card h4{margin:0 0 8px;color:#ffd100}
+.map-card p{margin:0 0 10px;color:#c9d2cb;line-height:1.45}
+.zone-svg{
+  width:100%;height:auto;border-radius:10px;border:1px solid #455047;background:#0d1a15;display:block
+}
+.map-legend{
+  margin-top:8px;color:#aeb8b0;font-size:.9rem;line-height:1.4
+}
+.modal-tips{display:grid;gap:10px;margin-top:14px}
+.modal-tip{
+  padding:11px 12px;border-left:3px solid #b9824a;background:#181a18;border-radius:0 9px 9px 0;line-height:1.5
+}
+@media(max-width:860px){
+  .modal-grid{grid-template-columns:1fr}
+  .site-modal-body{padding:18px}
+}
+
+/* v0.15 – Build-Varianten */
+.build-variant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.build-variant{padding:15px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,var(--panel2),var(--panel));line-height:1.5}.build-variant.recommended{border-color:#7c6936;box-shadow:inset 0 0 0 1px #ffd10033}.build-variant h3{margin:0 0 7px;color:#ffd100}.build-variant .split{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:5px}.build-tag{display:inline-block;padding:3px 7px;margin-bottom:8px;border-radius:999px;border:1px solid #476a50;background:#173226;color:#bfe8c9;font-size:.72rem;font-weight:800}.build-tag.alt{border-color:#6b5b38;background:#2d2517;color:#f0d79d}.build-variant ul{margin:8px 0 0;padding-left:18px;color:#cbd3ce}.build-variant li{margin:4px 0}.build-source-note{margin:0 0 15px;padding:12px 14px;border:1px solid #4d6352;border-radius:10px;background:#142019;line-height:1.5}.build-source-note b{color:#ffd100}
+.build-link{display:block;text-decoration:none;color:inherit}.build-link:hover{border-color:#ffd100;transform:translateY(-2px)}.build-link:after{content:'Build öffnen →';display:block;margin-top:10px;color:#ffd100;font-weight:800}
+/* v0.17.0 Changelog auf allen Seiten */
+.version-banner{max-width:1280px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:12px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.version-label{color:#ffd100;font-weight:900}.change-label{color:#9fd7ae;font-weight:800}
+
+
+
+
+.class-guide-hero{display:flex;align-items:center;gap:17px}.class-guide-hero img{width:74px;height:74px;border-radius:13px;border:2px solid #7d6537}
+.class-guide-hero h1{margin:0}.skill-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.skill-card{display:flex;align-items:start;gap:11px;padding:12px;background:#171d18;border:1px solid var(--line);border-radius:11px}
+.skill-card img{width:42px;height:42px;border:1px solid #826c3f;border-radius:7px;flex:none}.skill-card b{display:block;color:var(--gold);margin-bottom:3px}.skill-card small{color:var(--muted)}
+.gear-grid-v19,.build-grid-v19{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}
+.gear-v19{display:flex;align-items:start;gap:11px;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:inherit;cursor:pointer;text-align:left}
+.gear-v19 img{width:47px;height:47px;border-radius:7px;border:2px solid #3e80c1;flex:none}.gear-v19 b{display:block;color:#70baff}.gear-v19 small{display:block;margin-top:3px;color:var(--muted)}
+.build-v19{display:block;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:13px;padding:15px;color:inherit;text-decoration:none}.build-v19:hover,.gear-v19:hover{border-color:#b78c47}.build-v19 h3{margin:0 0 7px;color:var(--gold)}.build-v19 p{color:var(--muted);line-height:1.5}
+.item-detail-v19{display:none;position:fixed;inset:0;z-index:120;background:#000b;align-items:center;justify-content:center;padding:18px}.item-detail-v19.show{display:flex}.item-detail-card{position:relative;max-width:650px;width:100%;background:#0c1010;border:1px solid #537192;border-radius:13px;padding:22px;line-height:1.55;box-shadow:0 20px 80px #000a}.item-detail-card .title{color:#4aa8ff;font-size:1.2rem;font-weight:800}.item-detail-card a{color:#b9dcff}.item-detail-card button{float:right;background:#392b1b;color:#fff;border:1px solid #806036;padding:6px 12px;border-radius:8px;cursor:pointer}
+@media(max-width:700px){.class-guide-hero img{width:58px;height:58px}.full-tree-columns{grid-template-columns:1fr}}
+.build-v19-link{display:block;text-decoration:none;color:inherit}.build-v19-link:hover{border-color:#ffd100;transform:translateY(-2px)}</style></head><body>
+<header><div class="wrap"><a class="back" href="index.html">← WoW Forever Guide</a><div class="class-guide-hero"><img alt="Hexenmeister" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" src="assets/icons/classes/classicon_warlock.jpg"/><div><h1>Gebrechen-Hexenmeister 1–60</h1><div class="subtitle">WoW Forever · Gebrechen (Affliction) · Klassenguide by LarryL</div></div></div>
+<div class="notice"><b>v0.19.0:</b> Vollständiger Klassenguide im gewohnten Design: Talentbäume, runder Levelregler, Levelplan, Skills, Rotationen und Gear. Die Level-60-Talentroute ist eine Empfehlung und nach dem Launch am Live-Talentrechner abzugleichen.</div></div></header>
+<div class="version-banner" data-site-version="v0.19.0"><div class="version-banner-inner"><span class="version-label">v0.19.0</span><span> · </span><span class="change-label">Geändert:</span><span> Sechs Klassenguides jetzt im vollständigen Layout der bisherigen Guides: Talentbäume, runder Levelregler, Skills, Rotationen, Gear und Build-Varianten. Sechs neue Berufe ergänzt: Alchemie, Ingenieurskunst, Kräuterkunde, Kochkunst, Erste Hilfe und Angeln. Alle 12 Berufe und 9 Klassen verlinkt.</span></div></div>
+<nav><div class="tabbar"><button class="tabbtn active" data-tab="overview" type="button">Übersicht</button><button class="tabbtn" data-tab="talents" type="button">Talente</button><button class="tabbtn" data-tab="skills" type="button">Skills</button><button class="tabbtn" data-tab="rotation" type="button">Rotation</button><button class="tabbtn" data-tab="gear" type="button">Gear</button><button class="tabbtn" data-tab="levelplan" type="button">Levelplan</button><button class="tabbtn" data-tab="builds" type="button">Build-Varianten</button><button class="tabbtn" data-tab="sources" type="button">Quellen</button></div></nav><main><section class="tabpage active" id="overview"><h2>Übersicht</h2><div class="source-standard"><b>Datengrundlage:</b> Wowhead Forever und die letzten Forever-Klassenänderungen. <span class="verified">Stand: 03.11.2026</span></div><p>Affliction/ Gebrechen ist einer der angenehmsten Solo-Builds, weil dein Dämon tankt und DoTs Schaden verursachen, während du dich bewegst. Aderlass und Lebensentzug gleichen Mana und Leben aus.</p><div class="meta-grid"><div class="meta-card"><b>Spielweise</b><span class="big">Fernkampf-DoT · Dämon · Kontrollzauber</span><br/>Kaum Downtime mit DoTs, Dämon und Lebensentzug</div><div class="meta-card"><b>Beste Kombi</b><span class="big">Schneiderei + Verzauberkunst; Kräuterkunde als Alternative für Gold.</span></div><div class="meta-card"><b>Talentroute</b><span class="big">Gebrechen → Zerstörung</span><br/>1 Punkt ab Stufe 10, 51 auf 60.</div></div><h3>Stärken</h3><div class="cards"><div class="card"><strong>1. Vorteil</strong><p>Wenig Pausen durch Aderlass und Lebensentzug</p></div><div class="card"><strong>2. Vorteil</strong><p>Dämon kann Gegner binden und Pulls stabilisieren</p></div><div class="card"><strong>3. Vorteil</strong><p>DoTs ermöglichen zwei Gegner parallel mit Furcht zu kontrollieren</p></div></div><h3>Worauf du achten solltest</h3><div class="cards"><div class="card">Fear kann weitere Gruppen anziehen</div><div class="card">Zu viele DoTs auf schwachen Mobs kosten Zeit/Mana</div><div class="card">Dämonenmanagement erfordert Aufmerksamkeit</div></div></section><section class="tabpage" id="talents"><h2>Talentroute 1–60</h2><div class="note-card"><b>Empfohlener Leveling-Pfad:</b> Improved Corruption früh, dämonische Synergien ab 20 und ab 30 stärker auf Drain-Life-Spielweise setzen. Für Raid-DPS ist später ein Shadow-Mastery/Ruin-Build zu prüfen.<br/><small>Der Plan zeigt deine Punkte pro Stufe. Zum finalen Nachskillen gelten immer die aktuellen Talente im Live-Client.</small></div><div class="talent-level-planner"><div class="talent-planner-top"><div class="level-controls">
+<button aria-label="Stufe verringern" class="level-step" data-level-minus="" type="button">−</button>
+<div aria-label="Charakterstufe" aria-valuemax="60" aria-valuemin="1" aria-valuenow="60" class="level-dial" data-level-dial="" role="slider" tabindex="0">
+<svg aria-hidden="true" class="level-dial-svg" viewbox="0 0 100 100"><path class="dial-track" d="M 20.302 79.698 A 42 42 0 1 1 79.698 79.698" pathlength="100"></path><path class="dial-progress" d="M 20.302 79.698 A 42 42 0 1 1 79.698 79.698" pathlength="100" stroke-dasharray="100 100"></path><circle class="dial-knob" cx="79.698" cy="79.698" data-level-knob="" r="5"></circle></svg>
+<div class="level-dial-center"><small>Stufe</small><strong data-current-level="">60</strong></div></div>
+<button aria-label="Stufe erhöhen" class="level-step" data-level-plus="" type="button">+</button></div><div class="planner-main"><div class="planner-title">Deine Talente auf Stufe <span data-title-level="">60</span></div><div class="level-presets"><button class="level-preset" data-level-preset="1" type="button">1</button><button class="level-preset" data-level-preset="10" type="button">10</button><button class="level-preset" data-level-preset="20" type="button">20</button><button class="level-preset" data-level-preset="25" type="button">25</button><button class="level-preset" data-level-preset="30" type="button">30</button><button class="level-preset" data-level-preset="40" type="button">40</button><button class="level-preset" data-level-preset="50" type="button">50</button><button class="level-preset" data-level-preset="60" type="button">60</button></div><input aria-label="Charakterstufe" class="level-range" max="60" min="1" step="1" type="range" value="60"/></div></div><div class="planner-status"><span data-level-status=""></span><span class="planner-points" data-point-status="">51 / 51 Talentpunkte vergeben</span></div></div>
+<div class="full-tree-wrap"><div class="full-tree-header"><h3>Alle drei Talentbäume – ungeskillte Talente sichtbar</h3><div class="build-total"></div></div><div class="full-tree-columns"><div class="full-tree" data-tree="Gebrechen"><div class="full-tree-title"><span>Gebrechen</span><span class="pts">0 Punkte</span></div><div class="tier-row"><div class="tier-label">0 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="5" data-talent="Verbesserte Verderbnis" data-tree="Gebrechen" title="Verbesserte Verderbnis"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_abominationexplosion.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_abominationexplosion.jpg"/><div class="tree-talent-name">Verbesserte Verderbnis</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Unterdrückung" data-tree="Gebrechen" title="Unterdrückung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unsummonbuilding.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_unsummonbuilding.jpg"/><div class="tree-talent-name">Unterdrückung</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="2" data-talent="Verbesserter Aderlass" data-tree="Gebrechen" title="Verbesserter Aderlass"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_burningspirit.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_burningspirit.jpg"/><div class="tree-talent-name">Verbesserter Aderlass</div><span class="tree-rank">0/2</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="2" data-talent="Verbesserte Pein" data-tree="Gebrechen" title="Verbesserte Pein"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofsargeras.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_curseofsargeras.jpg"/><div class="tree-talent-name">Verbesserte Pein</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Fluch verstärken" data-tree="Gebrechen" title="Fluch verstärken"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_contagion.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_contagion.jpg"/><div class="tree-talent-name">Fluch verstärken</div><span class="tree-rank">0/1</span></div><div class="tree-talent unspent" data-max-rank="2" data-talent="Einbruch der Nacht" data-tree="Gebrechen" title="Einbruch der Nacht"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_twilight.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_twilight.jpg"/><div class="tree-talent-name">Einbruch der Nacht</div><span class="tree-rank">0/2</span></div></div></div><div class="tier-row"><div class="tier-label">10 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="3" data-talent="Teufelskonzentration" data-tree="Gebrechen" title="Teufelskonzentration"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_fingerofdeath.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_fingerofdeath.jpg"/><div class="tree-talent-name">Teufelskonzentration</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Schattenumschlingung" data-tree="Gebrechen" title="Schattenumschlingung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowembrace.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_shadowembrace.jpg"/><div class="tree-talent-name">Schattenumschlingung</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Schattenbeherrschung" data-tree="Gebrechen" title="Schattenbeherrschung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadetruesight.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_shadetruesight.jpg"/><div class="tree-talent-name">Schattenbeherrschung</div><span class="tree-rank">0/5</span></div></div></div><div class="tier-row"><div class="tier-label">15 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="3" data-talent="Pandemie" data-tree="Gebrechen" title="Pandemie"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_painfulafflictions.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_painfulafflictions.jpg"/><div class="tree-talent-name">Pandemie</div><span class="tree-rank">0/3</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Zermürben" data-tree="Gebrechen" title="Zermürben"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_siphonmana.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_siphonmana.jpg"/><div class="tree-talent-name">Zermürben</div><span class="tree-rank">0/1</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Lebensentzug" data-tree="Gebrechen" title="Lebensentzug"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_requiem.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_requiem.jpg"/><div class="tree-talent-name">Lebensentzug</div><span class="tree-rank">0/1</span></div></div></div></div><div class="full-tree" data-tree="Dämonologie"><div class="full-tree-title"><span>Dämonologie</span><span class="pts">0 Punkte</span></div><div class="tier-row"><div class="tier-label">0 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="2" data-talent="Verbesserter Gesundheitsstein" data-tree="Dämonologie" title="Verbesserter Gesundheitsstein"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_impphaseshift.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_impphaseshift.jpg"/><div class="tree-talent-name">Verbesserter Gesundheitsstein</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Dämonische Umarmung" data-tree="Dämonologie" title="Dämonische Umarmung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_metamorphosis.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_metamorphosis.jpg"/><div class="tree-talent-name">Dämonische Umarmung</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="3" data-talent="Teufelsintelligenz" data-tree="Dämonologie" title="Teufelsintelligenz"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_magicalsentry.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_holy_magicalsentry.jpg"/><div class="tree-talent-name">Teufelsintelligenz</div><span class="tree-rank">0/3</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="2" data-talent="Meisterbeschwörer" data-tree="Dämonologie" title="Meisterbeschwörer"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_impphaseshift.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_impphaseshift.jpg"/><div class="tree-talent-name">Meisterbeschwörer</div><span class="tree-rank">0/2</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Dämonische Opferung" data-tree="Dämonologie" title="Dämonische Opferung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_psychicscream.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_psychicscream.jpg"/><div class="tree-talent-name">Dämonische Opferung</div><span class="tree-rank">0/1</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Seelenverbindung" data-tree="Dämonologie" title="Seelenverbindung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_gathershadows.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_gathershadows.jpg"/><div class="tree-talent-name">Seelenverbindung</div><span class="tree-rank">0/1</span></div></div></div></div><div class="full-tree" data-tree="Zerstörung"><div class="full-tree-title"><span>Zerstörung</span><span class="pts">0 Punkte</span></div><div class="tier-row"><div class="tier-label">0 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="5" data-talent="Verderben" data-tree="Zerstörung" title="Verderben"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathpact.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_deathpact.jpg"/><div class="tree-talent-name">Verderben</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Verbesserter Schattenblitz" data-tree="Zerstörung" title="Verbesserter Schattenblitz"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowbolt.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_shadowbolt.jpg"/><div class="tree-talent-name">Verbesserter Schattenblitz</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="3" data-talent="Katastrophe" data-tree="Zerstörung" title="Katastrophe"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_windsofwoe.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_fire_windsofwoe.jpg"/><div class="tree-talent-name">Katastrophe</div><span class="tree-rank">0/3</span></div></div></div><div class="tier-row"><div class="tier-label">5 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="5" data-talent="Verwüstung" data-tree="Zerstörung" title="Verwüstung"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_flameshock.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_fire_flameshock.jpg"/><div class="tree-talent-name">Verwüstung</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="5" data-talent="Ruin" data-tree="Zerstörung" title="Ruin"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_shadow_shadowwordpain.jpg"/><div class="tree-talent-name">Ruin</div><span class="tree-rank">0/5</span></div><div class="tree-talent unspent" data-max-rank="1" data-talent="Schattenbrand" data-tree="Zerstörung" title="Schattenbrand"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_soulburn.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_fire_soulburn.jpg"/><div class="tree-talent-name">Schattenbrand</div><span class="tree-rank">0/1</span></div></div></div><div class="tier-row"><div class="tier-label">10 P.</div><div class="tier-talents"><div class="tree-talent unspent" data-max-rank="1" data-talent="Feuersbrunst" data-tree="Zerstörung" title="Feuersbrunst"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_fireball.jpg" loading="lazy" src="assets/icons/talent-expanded/spell_fire_fireball.jpg"/><div class="tree-talent-name">Feuersbrunst</div><span class="tree-rank">0/1</span></div></div></div></div></div></div><h3>Talentpunkte pro Stufe</h3><div class="filterbar"><button class="active" data-range="10-60" type="button">Alle</button><button data-range="10-20" type="button">10–20</button><button data-range="21-40" type="button">21–40</button><button data-range="41-60" type="button">41–60</button></div><div class="table-wrap"><table><thead><tr><th>Stufe</th><th>Talent</th><th>Baum</th></tr></thead><tbody id="talentBody"><tr data-level="10"><td><b>10</b></td><td><strong>Verbesserte Verderbnis 1/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="11"><td><b>11</b></td><td><strong>Verbesserte Verderbnis 2/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="12"><td><b>12</b></td><td><strong>Verbesserte Verderbnis 3/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="13"><td><b>13</b></td><td><strong>Verbesserte Verderbnis 4/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="14"><td><b>14</b></td><td><strong>Verbesserte Verderbnis 5/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="15"><td><b>15</b></td><td><strong>Unterdrückung 1/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="16"><td><b>16</b></td><td><strong>Unterdrückung 2/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="17"><td><b>17</b></td><td><strong>Unterdrückung 3/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="18"><td><b>18</b></td><td><strong>Unterdrückung 4/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="19"><td><b>19</b></td><td><strong>Verbesserter Aderlass 1/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="20"><td><b>20</b></td><td><strong>Verbesserter Aderlass 2/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="21"><td><b>21</b></td><td><strong>Verbesserte Pein 1/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="22"><td><b>22</b></td><td><strong>Verbesserte Pein 2/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="23"><td><b>23</b></td><td><strong>Fluch verstärken 1/1</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="24"><td><b>24</b></td><td><strong>Einbruch der Nacht 1/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="25"><td><b>25</b></td><td><strong>Einbruch der Nacht 2/2</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="26"><td><b>26</b></td><td><strong>Teufelskonzentration 1/3</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="27"><td><b>27</b></td><td><strong>Teufelskonzentration 2/3</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="28"><td><b>28</b></td><td><strong>Teufelskonzentration 3/3</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="29"><td><b>29</b></td><td><strong>Schattenumschlingung 1/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="30"><td><b>30</b></td><td><strong>Schattenumschlingung 2/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="31"><td><b>31</b></td><td><strong>Schattenumschlingung 3/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="32"><td><b>32</b></td><td><strong>Schattenumschlingung 4/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="33"><td><b>33</b></td><td><strong>Schattenumschlingung 5/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="34"><td><b>34</b></td><td><strong>Schattenbeherrschung 1/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="35"><td><b>35</b></td><td><strong>Schattenbeherrschung 2/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="36"><td><b>36</b></td><td><strong>Schattenbeherrschung 3/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="37"><td><b>37</b></td><td><strong>Schattenbeherrschung 4/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="38"><td><b>38</b></td><td><strong>Schattenbeherrschung 5/5</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="39"><td><b>39</b></td><td><strong>Pandemie 1/3</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="40"><td><b>40</b></td><td><strong>Pandemie 2/3</strong></td><td><span class="tree">Gebrechen</span></td></tr><tr data-level="41"><td><b>41</b></td><td><strong>Verderben 1/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="42"><td><b>42</b></td><td><strong>Verderben 2/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="43"><td><b>43</b></td><td><strong>Verderben 3/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="44"><td><b>44</b></td><td><strong>Verderben 4/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="45"><td><b>45</b></td><td><strong>Verderben 5/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="46"><td><b>46</b></td><td><strong>Verbesserter Schattenblitz 1/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="47"><td><b>47</b></td><td><strong>Verbesserter Schattenblitz 2/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="48"><td><b>48</b></td><td><strong>Verbesserter Schattenblitz 3/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="49"><td><b>49</b></td><td><strong>Verbesserter Schattenblitz 4/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="50"><td><b>50</b></td><td><strong>Verbesserter Schattenblitz 5/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="51"><td><b>51</b></td><td><strong>Katastrophe 1/3</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="52"><td><b>52</b></td><td><strong>Katastrophe 2/3</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="53"><td><b>53</b></td><td><strong>Katastrophe 3/3</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="54"><td><b>54</b></td><td><strong>Verwüstung 1/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="55"><td><b>55</b></td><td><strong>Verwüstung 2/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="56"><td><b>56</b></td><td><strong>Verwüstung 3/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="57"><td><b>57</b></td><td><strong>Verwüstung 4/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="58"><td><b>58</b></td><td><strong>Verwüstung 5/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="59"><td><b>59</b></td><td><strong>Ruin 1/5</strong></td><td><span class="tree">Zerstörung</span></td></tr><tr data-level="60"><td><b>60</b></td><td><strong>Ruin 2/5</strong></td><td><span class="tree">Zerstörung</span></td></tr></tbody></table></div></section><section class="tabpage" id="skills"><h2>Wichtige Skills</h2><div class="skill-cards"><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_fire_immolation.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_fire_immolation.jpg"/><div><b>Feuerbrand</b><small>Ab ca. Stufe 1 · DoT früh nutzen</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_abominationexplosion.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_abominationexplosion.jpg"/><div><b>Verderbnis</b><small>Ab ca. Stufe 4 · Wichtigster Gebrechen-DoT</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_burningspirit.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_burningspirit.jpg"/><div><b>Aderlass</b><small>Ab ca. Stufe 6 · Leben gegen Mana tauschen</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_possession.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_possession.jpg"/><div><b>Furcht</b><small>Ab ca. Stufe 8 · Kontrolle</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonvoidwalker.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_summonvoidwalker.jpg"/><div><b>Leerenwandler beschwören</b><small>Ab ca. Stufe 10 · Solo-Tankpet</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofsargeras.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_curseofsargeras.jpg"/><div><b>Omen der Pein</b><small>Ab ca. Stufe 10 · Zweiter Schadensfluch/Bane</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_lifedrain02.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_lifedrain02.jpg"/><div><b>Lebensentzug</b><small>Ab ca. Stufe 30 · Sustain, falls verfügbar</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowbolt.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_shadowbolt.jpg"/><div><b>Schattenblitz</b><small>Ab ca. Stufe 1 · Füllzauber für SM/Ruin</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_soulgem.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_soulgem.jpg"/><div><b>Seelenstein</b><small>Ab ca. Stufe 18 · Wiederbelebungsutility</small></div></div><div class="skill-card"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_siphonmana.jpg" loading="lazy" src="assets/icons/skills-expanded/spell_shadow_siphonmana.jpg"/><div><b>Zermürben</b><small>Ab ca. Stufe 40 · Gebrechen-Talentkanal, falls gewählt</small></div></div></div><h3>Talentprioritäten</h3><div class="cards"><div class="card">Improved Corruption: Verderbnis möglichst sofort wirkend machen</div><div class="card">Unholy Power/Pet-Synergien für stärkere Begleiter</div><div class="card">Improved Drains und Soul Siphon für Drain-Life-Phasen</div><div class="card">Shadow Mastery für DoT- und Schattenzauberschaden</div><div class="card">Nightfall/Shadow Bolt als spätere Ergänzung; Raidbuild nicht mit Leveling verwechseln</div></div></section><section class="tabpage" id="rotation"><h2>Solo-Rotation</h2><div class="cards"><div class="card"><strong>Schritt 1</strong><p>Dämon auf das erste Ziel schicken; Verderbnis und Fluch/DoT auftragen.</p></div><div class="card"><strong>Schritt 2</strong><p>Bei sicherer Position zweites Ziel dotten und mit Furcht auf Abstand halten.</p></div><div class="card"><strong>Schritt 3</strong><p>Aderlass bei Manabedarf, Lebensentzug für Gesundheit; Seelensteine und Verbrauchsmaterial nutzen.</p></div></div><h2>Im Dungeon</h2><div class="cards"><div class="card">DoTs auf Ziele mit ausreichender Lebensdauer; Schattenblitz als Filler.</div><div class="card">Furcht nur bei abgesprochenem CC nutzen, damit Gegner keine Packs ziehen.</div><div class="card">Gesundheitssteine/Seelensteine für die Gruppe vorbereiten.</div></div><p class="note-card">Nur bereits erlernte Skills verwenden; einzelne Talentfähigkeiten setzen den entsprechenden Build voraus.</p></section><section class="tabpage" id="gear"><h2>Gear &amp; Werte</h2><div class="meta-grid"><div class="meta-card"><b>Priorität 1</b>Zauberschaden / Schattenschaden</div><div class="meta-card"><b>Priorität 2</b>Trefferwertung für Endgame</div><div class="meta-card"><b>Priorität 3</b>Intelligenz und Ausdauer</div><div class="meta-card"><b>Priorität 4</b>Zauberkrit bei Schattenblitz-lastigem Raidbuild</div></div><h3>Interessante Quest-, Dungeon- &amp; Craft-Items</h3><div class="gear-grid-v19"><button class="gear-v19" data-item="0" type="button"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg" loading="lazy" src="assets/icons/gear-expanded/inv_staff_13.jpg"/><span><b>Glutsteinstab</b><small>Frühes Zauberschadensupgrade<br/>Die Todesminen · anklicken</small></span></button><button class="gear-v19" data-item="1" type="button"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_staff_10.jpg" loading="lazy" src="assets/icons/gear-expanded/inv_staff_10.jpg"/><span><b>Illusionary Rod</b><small>Stab fürs Midgame<br/>Scharlachrotes Kloster · anklicken</small></span></button><button class="gear-v19" data-item="2" type="button"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_24.jpg" loading="lazy" src="assets/icons/gear-expanded/inv_chest_cloth_24.jpg"/><span><b>Robe of Power</b><small>Stoff-Castercraft<br/>Schneiderei · anklicken</small></span></button><button class="gear-v19" data-item="3" type="button"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_39.jpg" loading="lazy" src="assets/icons/gear-expanded/inv_chest_cloth_39.jpg"/><span><b>Dreamweave Vest</b><small>Späterer Stoff-Craft<br/>Schneiderei · anklicken</small></span></button></div><h3>Allgemeine Gear-Regeln</h3><div class="cards"><div class="card">Stoff mit Schattenzauberschaden, Intelligenz und passender Ausdauer.</div><div class="card">Zauberstäbe helfen früh für Low-Mana-Pulls.</div><div class="card">Schneiderei + Verzauberkunst für Stoffgear und Entzaubern.</div></div><p class="note-card"><b>Berufe:</b> Schneiderei + Verzauberkunst; Kräuterkunde als Alternative für Gold. <a href="tailoring.html">Passenden Berufsguide öffnen</a> · <a href="dungeons.html">Dungeon-Loot durchsuchen</a></p></section><section class="tabpage" id="levelplan"><h2>Levelplan 1–60</h2><div class="table-wrap"><table><thead><tr><th>Level</th><th>Phase</th><th>Was zu tun ist</th></tr></thead><tbody><tr><td>1–9</td><td><strong>DoT + Schattenblitz</strong></td><td>Schattenblitz und Verderbnis auf stärkeren Zielen, Dämon und Zauberstab sinnvoll nutzen.</td></tr><tr><td>10–19</td><td><strong>Verderbnis + Leerwandler</strong></td><td>Improved Corruption und Pet-Synergien; Voidwalker zum Tanken nutzen.</td></tr><tr><td>20–29</td><td><strong>Sayaad und Drain vorbereiten</strong></td><td>Neuen Dämon einsetzen; Synergien für dessen Schaden, Improved Drains und Lebensentzug vor Stufe 30.</td></tr><tr><td>30–39</td><td><strong>Drain-Tanking</strong></td><td>Lebensentzug höheren Ranges für dauerhafte Pulls; Aderlass gleicht Mana aus, dabei Lebenspunkte kontrollieren.</td></tr><tr><td>40–49</td><td><strong>Shadow Mastery</strong></td><td>Gebrechen-/Schatten-Damage und DoT-Effizienz ausbauen; Fear nur mit freiem Raum nutzen.</td></tr><tr><td>50–60</td><td><strong>Affliction abschließen</strong></td><td>Ranghöhere DoTs, Nightfall-/Shadow-Bolt-Synergien ergänzen; für Raids Shadow Mastery/Ruin prüfen.</td></tr></tbody></table></div><p class="note-card"><b>Tipp:</b> Unter <a href="alliance-leveling.html">Guides → Allianz Levelroute</a> findest du zusätzlich passende Zonen für jeden Levelbereich.</p></section><section class="tabpage" id="builds"><h2>Build-Varianten</h2><div class="build-grid-v19"><a class="build-v19 build-v19-link" href="builds/warlock-variante-1.html"><h3>Gebrechen – Leveling</h3><p>Verderbnis, Bane, Pet und Aderlass</p><small>Talentbaum und Spielweise oben im Reiter „Talente“ ansehen.</small><div style="color:#ffd100;font-weight:800;margin-top:10px">Variante öffnen →</div></a><a class="build-v19 build-v19-link" href="builds/warlock-variante-2.html"><h3>SM/Ruin – Raid</h3><p>Gebrechen-DOTs und Schattenblitz-Filler</p><small>Talentbaum und Spielweise oben im Reiter „Talente“ ansehen.</small><div style="color:#ffd100;font-weight:800;margin-top:10px">Variante öffnen →</div></a><a class="build-v19 build-v19-link" href="builds/warlock-variante-3.html"><h3>Dämonologie – Solo</h3><p>Petüberleben und sichere Elitequests</p><small>Talentbaum und Spielweise oben im Reiter „Talente“ ansehen.</small><div style="color:#ffd100;font-weight:800;margin-top:10px">Variante öffnen →</div></a></div><h3>Weitere Spezialisierungen</h3><div class="cards"><div class="card"><strong>Dämonologie</strong><p>Dämonenstärke, Komfort und Defensive.</p></div><div class="card"><strong>Zerstörung</strong><p>Mehr direkter Burst durch Feuer-/Schattenzauber.</p></div></div><h3>Patchänderungen</h3><div class="cards"><div class="card">Dämonen erhalten weniger Gesundheit pro Ausdauerpunkt des Besitzers; Pet-Tanking nicht überbewerten.</div><div class="card">Seelenentzug erzeugt laut Entwicklernotes seltener zusätzliche Seelensplitter.</div><div class="card">Aderlass-/Pet-Synergien wurden im Launch-Build überarbeitet; aktuelle Ränge auf der Live-Version prüfen.</div></div></section><section class="tabpage" id="sources"><h2>Quellen</h2><div class="sources"><a href="https://www.wowhead.com/forever/guide/classes/warlock/affliction/dps-leveling-tips" rel="noopener" target="_blank">Wowhead Forever · Leveling ↗</a><a href="https://www.wowhead.com/forever/guide/classes/warlock/affliction/talent-builds-pve-dps" rel="noopener" target="_blank">Wowhead Forever · Talente ↗</a><a href="https://www.wowhead.com/forever/talent-calc/warlock/affliction" rel="noopener" target="_blank">Wowhead Forever · Talente ↗</a><a href="https://www.wowhead.com/forever/talent-calc/warlock" rel="noopener" target="_blank">Offizieller WoW-Forever-Talentrechner auf Wowhead ↗</a><a href="https://www.wowhead.com/news/massive-talent-tree-changes-to-druids-and-paladins-class-tuning-for-wow-forever-383670" rel="noopener" target="_blank">Wowhead: Neueste Talentbaumänderungen ↗</a></div><p class="note-card">Einige Forever-Builddaten sind noch im Wandel. Talentplatzierungen und Erlernstufen im Spiel haben Vorrang, wenn ein November-Hotfix den Baum verändert.</p></section></main><div class="item-detail-v19" id="item-modal-0"><div class="item-detail-card"><button data-close-item="0" type="button">Schließen ×</button><div class="title">Glutsteinstab</div><p>Frühes Zauberschadensupgrade</p><p><b>Quelle:</b> Die Todesminen</p><p><b>Werte aus dem lokalen Forever-Dungeon-Datensatz:</b></p><ul><li>34–51 Damage · 3.00</li><li>+8 Stamina</li><li>+8 Fire Resistance</li><li>+24 Spell Damage/Healing</li></ul><a href="https://www.wowhead.com/forever/item=5201" rel="noopener" target="_blank">Aktuelle Stats &amp; Itemquelle auf Wowhead ansehen ↗</a></div></div><div class="item-detail-v19" id="item-modal-1"><div class="item-detail-card"><button data-close-item="1" type="button">Schließen ×</button><div class="title">Illusionary Rod</div><p>Stab fürs Midgame</p><p><b>Quelle:</b> Scharlachrotes Kloster</p><p><b>Werte aus dem lokalen Forever-Dungeon-Datensatz:</b></p><ul><li>70–105 Schaden · 3.40</li><li>+10 Ausdauer</li><li>+6 Intelligenz</li><li>+7 Willenskraft</li><li>+1% Spell Crit</li><li>+44 Zauberschaden/Heilung</li></ul><a href="https://www.wowhead.com/forever/item=7713" rel="noopener" target="_blank">Aktuelle Stats &amp; Itemquelle auf Wowhead ansehen ↗</a></div></div><div class="item-detail-v19" id="item-modal-2"><div class="item-detail-card"><button data-close-item="2" type="button">Schließen ×</button><div class="title">Robe of Power</div><p>Stoff-Castercraft</p><p><b>Quelle:</b> Schneiderei</p><p>Exakte Gegenstandswerte sind lokal noch nicht verifiziert. Über den Wowhead-Link findest du den aktuellen Forever-Tooltip, bevor du das Item craftest oder farmst.</p><a href="https://www.wowhead.com/forever/search?q=Robe+of+Power" rel="noopener" target="_blank">Aktuelle Stats &amp; Itemquelle auf Wowhead ansehen ↗</a></div></div><div class="item-detail-v19" id="item-modal-3"><div class="item-detail-card"><button data-close-item="3" type="button">Schließen ×</button><div class="title">Dreamweave Vest</div><p>Späterer Stoff-Craft</p><p><b>Quelle:</b> Schneiderei</p><p>Exakte Gegenstandswerte sind lokal noch nicht verifiziert. Über den Wowhead-Link findest du den aktuellen Forever-Tooltip, bevor du das Item craftest oder farmst.</p><a href="https://www.wowhead.com/forever/search?q=Dreamweave+Vest" rel="noopener" target="_blank">Aktuelle Stats &amp; Itemquelle auf Wowhead ansehen ↗</a></div></div><script>(function(){
+ const pages=[...document.querySelectorAll('.tabpage')],tabs=[...document.querySelectorAll('.tabbtn')];
+ window.openTab=function(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));try{history.replaceState(null,'','#'+id)}catch(e){}window.scrollTo(0,0)};
+ tabs.forEach(b=>b.addEventListener('click',()=>openTab(b.dataset.tab)));
+ document.querySelectorAll('.filterbar button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filterbar button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const [min,max]=btn.dataset.range.split('-').map(Number);document.querySelectorAll('#talentBody tr').forEach(r=>{const l=Number(r.dataset.level);r.style.display=(l>=min&&l<=max)?'':'none'})}));
+ document.querySelectorAll('.gear-v19').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#item-modal-'+b.dataset.item)?.classList.add('show')}));
+ document.querySelectorAll('[data-close-item]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#item-modal-'+b.dataset.closeItem)?.classList.remove('show')}));
+ document.querySelectorAll('.item-detail-v19').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')}));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.item-detail-v19.show').forEach(m=>m.classList.remove('show'))});
+ const initial=location.hash.slice(1);if(initial&&document.getElementById(initial))openTab(initial);
+})();
+document.addEventListener('error',function(e){const el=e.target;if(el&&el.tagName==='IMG'&&el.dataset.fallback&&el.src.indexOf(el.dataset.fallback)===-1)el.src=el.dataset.fallback},true);
+</script><script>
+(function(){
+  const planner = document.querySelector('.talent-level-planner');
+  const treeWrap = document.querySelector('.full-tree-wrap');
+  const talentBody = document.querySelector('#talentBody');
+  if(!planner || !treeWrap || !talentBody) return;
+
+  const aliases = {};
+  const rows = [...talentBody.querySelectorAll('tr[data-level]')].map(row => {
+    const level = Number(row.dataset.level);
+    const strong = row.querySelector('strong');
+    const tree = row.querySelector('span.tree')?.textContent.trim() || '';
+    const raw = strong?.textContent.trim() || '';
+    const m = raw.match(/^(.*?)\s+(\d+)\/(\d+)$/);
+    if(!m) return null;
+    let name = m[1];
+    if(aliases[name]) name = aliases[name];
+    return {level, tree, name, rank:Number(m[2]), max:Number(m[3]), row};
+  }).filter(Boolean);
+
+  const talentEls = [...treeWrap.querySelectorAll('.tree-talent')];
+  const treeCards = [...treeWrap.querySelectorAll('.full-tree')];
+  const levelEl = planner.querySelector('[data-current-level]');
+  const range = planner.querySelector('input[type="range"]');
+  const status = planner.querySelector('[data-level-status]');
+  const pointEl = planner.querySelector('[data-point-status]');
+  const presetBtns = [...planner.querySelectorAll('[data-level-preset]')];
+
+  const dial = planner.querySelector('[data-level-dial]');
+  const knob = planner.querySelector('[data-level-knob]');
+
+  function dialPointForLevel(level){
+    const progress=(level-1)/59;
+    const startDeg=225;
+    const sweepDeg=270;
+    const deg=startDeg + progress*sweepDeg;
+    const rad=deg*Math.PI/180;
+
+    // CSS-/WoW-Winkelkonvention: 0° oben, im Uhrzeigersinn.
+    const x=50 + 42*Math.sin(rad);
+    const y=50 - 42*Math.cos(rad);
+    return {x,y,progress};
+  }
+
+  function updateDialVisual(level){
+    const p=dialPointForLevel(level);
+
+    // Der Fortschrittsbogen und der Marker enden mathematisch am selben Punkt.
+    const progressPath=dial.querySelector('.dial-progress');
+    progressPath.style.strokeDasharray=(p.progress*100)+' 100';
+
+    knob.setAttribute('cx',p.x.toFixed(3));
+    knob.setAttribute('cy',p.y.toFixed(3));
+    dial.setAttribute('aria-valuenow',String(level));
+  }
+
+  function levelFromPointer(ev){
+    const r=dial.getBoundingClientRect();
+    const cx=r.left+r.width/2;
+    const cy=r.top+r.height/2;
+    const dx=ev.clientX-cx;
+    const dy=ev.clientY-cy;
+
+    // Pointer in dieselbe Winkelkonvention umrechnen:
+    // 0° oben, im Uhrzeigersinn.
+    let deg=Math.atan2(dx,-dy)*180/Math.PI;
+    if(deg<0) deg+=360;
+
+    const startDeg=225;
+    const sweepDeg=270;
+    let rel=(deg-startDeg+360)%360;
+
+    // Die untere 90°-Lücke ist eine Dead-Zone.
+    // Dort auf das nähere Ende des Reglers springen.
+    if(rel>sweepDeg){
+      const toStart=360-rel;
+      const toEnd=rel-sweepDeg;
+      rel=(toStart<toEnd)?0:sweepDeg;
+    }
+
+    const level=Math.round(1+(rel/sweepDeg)*59);
+    update(level);
+  }
+
+  let dragging=false;
+  dial.addEventListener('pointerdown',ev=>{
+    dragging=true;dial.classList.add('dragging');dial.setPointerCapture(ev.pointerId);levelFromPointer(ev);
+  });
+  dial.addEventListener('pointermove',ev=>{if(dragging) levelFromPointer(ev)});
+  dial.addEventListener('pointerup',ev=>{
+    dragging=false;dial.classList.remove('dragging');
+    try{dial.releasePointerCapture(ev.pointerId)}catch(e){}
+  });
+  dial.addEventListener('pointercancel',()=>{dragging=false;dial.classList.remove('dragging')});
+  dial.addEventListener('keydown',ev=>{
+    if(ev.key==='ArrowRight'||ev.key==='ArrowUp'){ev.preventDefault();update(Number(range.value)+1)}
+    if(ev.key==='ArrowLeft'||ev.key==='ArrowDown'){ev.preventDefault();update(Number(range.value)-1)}
+    if(ev.key==='Home'){ev.preventDefault();update(1)}
+    if(ev.key==='End'){ev.preventDefault();update(60)}
+  });
+
+
+  const key = (tree,name) => tree + '||' + name;
+
+  function buildState(level){
+    const state = new Map();
+    rows.filter(r=>r.level<=level).forEach(r=>{
+      const k=key(r.tree,r.name);
+      const prev=state.get(k) || 0;
+      if(r.rank>prev) state.set(k,r.rank);
+    });
+    return state;
+  }
+
+  function update(level){
+    level=Math.max(1,Math.min(60,Number(level)||60));
+    range.value=String(level);
+    levelEl.textContent=String(level);
+    planner.querySelectorAll('[data-title-level]').forEach(x=>x.textContent=String(level));
+    updateDialVisual(level);
+
+    presetBtns.forEach(b=>b.classList.toggle('active',Number(b.dataset.levelPreset)===level));
+
+    const state=buildState(level);
+    const currentRows=rows.filter(r=>r.level===level);
+    const currentKeys=new Set(currentRows.map(r=>key(r.tree,r.name)));
+
+    talentEls.forEach(el=>{
+      const tree=el.dataset.tree || '';
+      const name=el.dataset.talent || '';
+      const max=Number(el.dataset.maxRank)||1;
+      const rank=state.get(key(tree,name)) || 0;
+      const rankEl=el.querySelector('.tree-rank');
+      if(rankEl) rankEl.textContent=rank+'/'+max;
+      el.classList.toggle('spent',rank>0);
+      el.classList.toggle('unspent',rank===0);
+      el.classList.toggle('just-learned',currentKeys.has(key(tree,name)));
+    });
+
+    const totals={};
+    state.forEach((rank,k)=>{
+      const tree=k.split('||')[0];
+      totals[tree]=(totals[tree]||0)+rank;
+    });
+    treeCards.forEach(card=>{
+      const tree=card.dataset.tree || card.querySelector('.full-tree-title > span:first-child')?.textContent.trim() || '';
+      const pts=totals[tree]||0;
+      const el=card.querySelector('.full-tree-title .pts');
+      if(el) el.textContent=pts+' Punkte';
+    });
+
+    const buildTotal=treeWrap.querySelector('.build-total');
+    if(buildTotal){
+      buildTotal.textContent=treeCards.map(card=>{
+        const tree=card.dataset.tree || card.querySelector('.full-tree-title > span:first-child')?.textContent.trim() || '';
+        return (totals[tree]||0)+' '+tree;
+      }).join(' · ');
+    }
+
+    rows.forEach(r=>r.row.classList.toggle('talent-row-current',r.level===level));
+
+    if(level<10){
+      status.innerHTML='<b>Stufe '+level+':</b> Noch keine Talentpunkte verfügbar. Der erste Talentpunkt kommt auf Stufe 10.';
+    } else if(currentRows.length){
+      status.innerHTML='<b>Auf Stufe '+level+' skillst du:</b> '+currentRows.map(r=>r.name+' '+r.rank+'/'+r.max).join(' · ');
+    } else {
+      const prev=[...rows].reverse().find(r=>r.level<level);
+      status.innerHTML='<b>Stufe '+level+':</b> Kein zusätzlicher Punkt in der gespeicherten Route. Letzter Pick: '+(prev?prev.name+' '+prev.rank+'/'+prev.max:'—');
+    }
+    pointEl.textContent=Math.max(0,level-9)+' / 51 Talentpunkte vergeben';
+  }
+
+  range.addEventListener('input',()=>update(range.value));
+  planner.querySelector('[data-level-minus]').addEventListener('click',()=>update(Number(range.value)-1));
+  planner.querySelector('[data-level-plus]').addEventListener('click',()=>update(Number(range.value)+1));
+  presetBtns.forEach(b=>b.addEventListener('click',()=>update(Number(b.dataset.levelPreset))));
+
+  update(60);
+})();
 </script></body></html>

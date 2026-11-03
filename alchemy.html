@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="dark" name="color-scheme"/><title>Alchemie 1–300 – WoW Forever Guide by LarryL</title><style>
+:root{--bg:#0c0d0c;--panel:#171a18;--panel2:#20231f;--text:#f1f2f1;--muted:#adb5af;--line:#393e3a;--gold:#ffd100;--green:#6ed08c;--brown:#b9824a}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}body{min-height:100vh;background:radial-gradient(circle at 15% -8%,#4a321e 0,transparent 31%),var(--bg)}
+header{padding:30px 18px 20px;border-bottom:1px solid var(--line)}.wrap,main{max-width:1200px;margin:auto}.back{display:inline-block;margin-bottom:12px;color:#cfe7ff;text-decoration:none;font-weight:800}
+.titleline{display:flex;align-items:center;gap:15px}.titleline img{width:66px;height:66px;border-radius:12px;border:3px solid #8e6e35}h1{margin:0;font-size:clamp(2rem,5vw,3.5rem)}.sub{color:var(--gold);font-weight:800;margin-top:5px}
+.notice{margin-top:16px;padding:12px 14px;border:1px solid #735b2c;border-radius:10px;background:#2d2514;color:#f1dfad;line-height:1.5}
+nav{position:sticky;top:0;z-index:30;background:#111412f2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tabs{max-width:1200px;margin:auto;padding:9px 18px;display:flex;gap:7px;overflow:auto}
+.tab{border:1px solid var(--line);background:#181b19;color:white;padding:9px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}.tab.active,.tab:hover{background:#594026;border-color:#84603b;color:#fff}
+main{padding:28px 18px 70px}.page{display:none}.page.active{display:block}h2{margin:0 0 18px;color:#e9b87d}h3{color:var(--gold)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.card{padding:15px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#1f231f,#151815)}.card strong{color:var(--gold)}.card p{color:#c8cfca;line-height:1.55}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:11px;background:#151816}table{border-collapse:collapse;width:100%;min-width:930px}th,td{padding:10px 11px;text-align:left;vertical-align:top;border-bottom:1px solid #333936}th{background:#29251f;color:#f5e6bf}tbody tr:nth-child(even){background:#1a1d1b}
+.tested,.prelim{display:inline-block;padding:3px 7px;border-radius:999px;font-size:.72rem;white-space:nowrap}.tested{background:#173827;color:#bdebc8;border:1px solid #39694a}.prelim{background:#3b2e17;color:#f4d38e;border:1px solid #735b2c}
+.matgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}.mat{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#171a18}.mat b{color:#e8c078}
+.trainerfilter{display:flex;gap:8px;margin-bottom:13px}.trainerfilter button{border:1px solid var(--line);background:#191c1a;color:white;padding:8px 11px;border-radius:8px;cursor:pointer}.trainerfilter button.active{background:#594026}.trainergrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.trainer{display:flex;justify-content:space-between;gap:12px;padding:13px;border:1px solid var(--line);border-radius:11px;background:#171a18}.trainer h3{margin:5px 0 2px;color:#fff}.trainer p{margin:0 0 8px;color:var(--muted);font-size:.88rem}.rank{font-size:.73rem;color:#e8c078;text-transform:uppercase;font-weight:800}code{color:#b9dcff}
+.copy{align-self:center;border:1px solid #6a5636;background:#2d2519;color:#fff;padding:7px 9px;border-radius:7px;cursor:pointer;white-space:nowrap}.copy:hover{background:#473721}
+.tiplist{display:grid;gap:9px}.tip{padding:12px 14px;border-left:3px solid #b9824a;background:#181a18;border-radius:0 9px 9px 0;line-height:1.5}.tip b{color:var(--gold)}
+.specials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}.special{padding:14px;border:1px solid var(--line);border-radius:11px;background:#171a18}.special h3{margin-top:0}
+.sources a{display:block;color:#b9dcff;text-decoration:none;padding:8px 0}.sources a:hover{color:white}
+@media(max-width:700px){header,main,.tabs{padding-left:12px;padding-right:12px}.titleline img{width:54px;height:54px}.trainer{flex-direction:column}.copy{align-self:flex-start}}
+
+.craft-cell{display:inline-flex;align-items:center;gap:8px;min-height:34px}
+.craft-icon{width:32px;height:32px;border-radius:6px;border:1px solid #766237;object-fit:cover;flex:none;background:#080908;box-shadow:0 2px 7px #0007}
+.material-icons{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin:14px 0 18px}
+.material-icon-card{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:9px;background:#171a18}
+.material-icon-card .craft-icon{width:38px;height:38px}.material-icon-card b{color:#e7bd77}.material-icon-card small{display:block;color:var(--muted);margin-top:2px}
+
+.prof-source{margin:0 0 15px;padding:12px 14px;border:1px solid #4e614f;border-radius:10px;background:#142019;line-height:1.5}
+.prof-source b{color:var(--gold)}.shopping-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}
+.shop{padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#171a18}.shop b{color:#e8c078}
+
+/* Globale Versionsleiste */
+.version-banner{
+  max-width:1240px;
+  margin:10px auto 0;
+  padding:0 18px;
+}
+.version-banner-inner{
+  padding:13px 15px;
+  border:1px solid #48604d;
+  border-radius:11px;
+  background:#142019;
+  color:#cfe0d3;
+  line-height:1.5;
+  box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.version-banner-inner b{
+  color:#ffd100;
+}
+.version-banner-inner .version-label{
+  font-weight:900;
+  color:#ffd100;
+}
+.version-banner-inner .change-label{
+  color:#9fd7ae;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .version-banner{padding:0 12px}
+  .version-banner-inner{font-size:.9rem}
+}
+
+/* v0.12 – Gear-Tabs + klickbare Maps */
+.gear-grid,.ore-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+.gear-card,.ore-card{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;
+  width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;
+  background:linear-gradient(180deg,#1e211f,#151816);color:var(--text);cursor:pointer;
+}
+.gear-card:hover,.ore-card:hover{border-color:#8a6940;transform:translateY(-1px)}
+.gear-card img,.ore-card img{
+  width:44px;height:44px;border-radius:8px;border:1px solid #7e6438;
+  object-fit:cover;flex:none;background:#0a0a0a;
+}
+.gear-card b,.ore-card b{color:var(--gold);display:block;margin-bottom:3px}
+.gear-card small,.ore-card small{color:var(--muted);display:block;line-height:1.45}
+.section-note{
+  margin:0 0 14px;padding:12px 14px;border:1px solid #4e614f;border-radius:10px;background:#142019;line-height:1.5
+}
+.section-note b{color:var(--gold)}
+.site-modal[hidden]{display:none!important}
+.site-modal{
+  position:fixed;inset:0;z-index:1000;display:grid;place-items:center;
+}
+.site-modal-backdrop{
+  position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(4px)
+}
+.site-modal-dialog{
+  position:relative;z-index:2;width:min(1040px,calc(100vw - 24px));max-height:calc(100vh - 24px);
+  overflow:auto;border:1px solid #5b4a2c;border-radius:16px;
+  background:linear-gradient(180deg,#171a18,#101210);box-shadow:0 24px 70px rgba(0,0,0,.5);
+}
+.site-modal-close{
+  position:sticky;top:0;float:right;margin:10px 10px 0 0;z-index:3;
+  border:1px solid #6f5833;background:#2d2417;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer
+}
+.site-modal-body{padding:22px}
+.modal-head{
+  display:flex;gap:16px;align-items:center;margin-bottom:16px
+}
+.modal-head img{
+  width:62px;height:62px;border-radius:12px;border:2px solid #856638;background:#0b0c0b
+}
+.modal-head h3{margin:0;font-size:1.55rem}
+.modal-sub{color:#d7c8a3;margin-top:5px}
+.modal-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px
+}
+.modal-box{
+  padding:14px;border:1px solid var(--line);border-radius:12px;background:#171a18
+}
+.modal-box h4{margin:0 0 10px;color:#e9b87d}
+.modal-box ul{margin:0;padding-left:18px;line-height:1.55}
+.modal-box li{margin-bottom:5px}
+.recipe-source{
+  display:inline-block;padding:4px 8px;border-radius:999px;
+  background:#2d2514;border:1px solid #735b2c;color:#f1dfad;font-size:.8rem
+}
+.map-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px
+}
+.map-card{
+  border:1px solid var(--line);border-radius:12px;background:#151816;padding:12px
+}
+.map-card h4{margin:0 0 8px;color:#ffd100}
+.map-card p{margin:0 0 10px;color:#c9d2cb;line-height:1.45}
+.zone-svg{
+  width:100%;height:auto;border-radius:10px;border:1px solid #455047;background:#0d1a15;display:block
+}
+.map-legend{
+  margin-top:8px;color:#aeb8b0;font-size:.9rem;line-height:1.4
+}
+.modal-tips{display:grid;gap:10px;margin-top:14px}
+.modal-tip{
+  padding:11px 12px;border-left:3px solid #b9824a;background:#181a18;border-radius:0 9px 9px 0;line-height:1.5
+}
+@media(max-width:860px){
+  .modal-grid{grid-template-columns:1fr}
+  .site-modal-body{padding:18px}
+}
+
+/* v0.17.0 Changelog auf allen Seiten */
+.version-banner{max-width:1280px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:12px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.version-label{color:#ffd100;font-weight:900}.change-label{color:#9fd7ae;font-weight:800}
+
+
+/* v0.19 – Profession details */
+.prof-intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}
+.prof-craft{display:flex;align-items:center;gap:10px;min-height:38px}.prof-craft img{width:37px;height:37px;border-radius:6px;border:1px solid #82683c;object-fit:cover}
+.prof-recipe{background:#1d231e;color:#e5c17b;border:1px solid #665536;padding:6px 9px;border-radius:7px;cursor:pointer;text-align:left}
+.prof-recipe:hover{border-color:#c4a266;background:#302719}
+.material-grid-v19{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px}
+.material-card-v19{display:flex;align-items:center;gap:9px;padding:11px 12px;border:1px solid var(--line);background:var(--panel);border-radius:9px}
+.material-card-v19 img{width:34px;height:34px;border-radius:7px;flex:none;border:1px solid #816439}
+.material-card-v19 b{color:#e7c489}.materials-note{margin:12px 0;padding:11px 13px;border:1px solid #54664d;background:#15221a;border-radius:10px;line-height:1.45}
+.trainerfilter{display:flex;gap:8px;margin-bottom:13px;flex-wrap:wrap}.trainerfilter button{border:1px solid var(--line);background:#191c1a;color:white;padding:8px 11px;border-radius:8px;cursor:pointer}.trainerfilter button.active{background:#594026}
+.trainers-v19{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.trainer-v19{border:1px solid var(--line);background:var(--panel);border-radius:11px;padding:13px}
+.trainer-v19 small{color:#b6bea9}.trainer-v19 b{color:#f2d090;display:block}
+.zones-v19{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:12px}
+.zone-btn{border:1px solid var(--line);background:var(--panel);padding:14px;border-radius:11px;color:#fff;text-align:left;cursor:pointer}
+.zone-btn b{color:#ffd100;display:block}.zone-btn small{display:block;color:#b5beb8;margin:6px 0}.zone-btn:hover{border-color:#d2ae54}
+.prof-modal[hidden]{display:none!important}.prof-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center}
+.prof-modal-shade{position:absolute;inset:0;background:#000b;backdrop-filter:blur(4px)}
+.prof-modal-content{position:relative;z-index:2;width:min(930px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;border:1px solid #927347;border-radius:15px;background:#111713;padding:18px;box-shadow:0 20px 70px #000d}
+.prof-modal-close{float:right;border:1px solid #826844;background:#372717;color:white;border-radius:8px;padding:7px 11px;cursor:pointer}
+.prof-modal-body{line-height:1.6}.prof-modal-body h3{color:#ffd100;margin-top:0}
+.prof-modal-body img.zone-map-image{display:block;width:100%;max-height:560px;object-fit:contain;background:#070b09;border:1px solid #415547;border-radius:10px}
+.prof-map-panel{position:relative;max-width:850px;margin:auto}
+.zone-links a{color:#b9dcff;text-decoration:none;margin-right:15px;display:inline-block;margin-top:8px}
+.prof-specials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:11px}.prof-special{background:#171b18;border:1px solid var(--line);border-radius:12px;padding:15px}.prof-special strong{color:#eec57a}.prof-special p{line-height:1.55;color:#cbd4cc}
+.prof-badges{display:flex;gap:8px;flex-wrap:wrap}.prof-badge{font-size:.76rem;border:1px solid #5e663f;padding:4px 8px;border-radius:999px;background:#26311b;color:#dce4c3}
+@media(max-width:700px){.prof-modal-content{padding:12px}}
+</style></head><body>
+<header><div class="wrap"><a class="back" href="index.html">← WoW Forever Guide</a><div class="titleline"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_alchemy.jpg" loading="lazy" src="assets/icons/professions/trade_alchemy.jpg"/><div><h1>Alchemie 1–300</h1><div class="sub">WoW Forever Berufsguide by LarryL</div></div></div>
+<div class="notice"><b>v0.19.0:</b> Neuer vollständiger Berufsguide mit Materialliste, Rezept-Freischaltung, Lehrern, Skillroute und Forever-Systemen. Angaben über 225 werden bis zum Live-Nachtest als vorläufig angezeigt.</div></div></header>
+<div class="version-banner" data-site-version="v0.19.0"><div class="version-banner-inner"><span class="version-label">v0.19.0</span><span> · </span><span class="change-label">Geändert:</span><span> Sechs Klassenguides jetzt im vollständigen Layout der bisherigen Guides: Talentbäume, runder Levelregler, Skills, Rotationen, Gear und Build-Varianten. Sechs neue Berufe ergänzt: Alchemie, Ingenieurskunst, Kräuterkunde, Kochkunst, Erste Hilfe und Angeln. Alle 12 Berufe und 9 Klassen verlinkt.</span></div></div>
+<nav><div class="tabs"><button class="tab active" data-tab="overview" type="button">Übersicht</button><button class="tab" data-tab="leveling" type="button">Schnellroute 1–300</button><button class="tab" data-tab="materials" type="button">Materialien</button><button class="tab" data-tab="trainers" type="button">Lehrer</button><button class="tab" data-tab="forever" type="button">Forever-Systeme</button><button class="tab" data-tab="gear" type="button">Nützliche Crafts</button><button class="tab" data-tab="sources" type="button">Quellen</button></div></nav><main><section class="page active" id="overview"><h2>Übersicht</h2><div class="prof-source"><b>Quellenstandard:</b> WoW-Professions Forever für die 1–300-Skillroute, Wowhead und Icy Veins für Forever-Systeme. Angaben über 225 sind ggf. noch vorläufig.</div><div class="prof-intro-grid"><div class="card"><strong>Beruf</strong><p>Alchemie · Herstellung</p></div><div class="card"><strong>Beste Kombination</strong><p>Kräuterkunde</p></div><div class="card"><strong>Spielnutzen</strong><p>Manatränke, Elixiere, Schutztränke und Fläschchen. Heiltränke werden in Forever über Erste Hilfe hergestellt.</p></div><div class="card"><strong>Darum lohnend</strong><p>Mit Kräuterkunde fast alle Pflanzen selbst sammeln; Tränke und Elixiere für jede Klasse nützlich.</p></div></div><h3>Berufsränge</h3><div class="tablewrap"><table><thead><tr><th>Rang</th><th>Skillcap</th><th>Vorbedingung</th><th>Hinweis</th></tr></thead><tbody><tr><td><b>Lehrling</b></td><td>75</td><td>—</td><td>Ab Charakterstart</td></tr><tr><td><b>Geselle</b></td><td>150</td><td>ab Skill 50</td><td>Charakterlevel 10</td></tr><tr><td><b>Experte</b></td><td>225</td><td>ab Skill 125</td><td>Teilweise Buch/Speziallehrer</td></tr><tr><td><b>Fachmann</b></td><td>300</td><td>ab Skill 200</td><td>Teils Quest oder Speziallehrer</td></tr></tbody></table></div></section><section class="page" id="leveling"><h2>Schnellroute 1–300</h2><div class="prof-source"><b>Praxis:</b> Mengen sind Richtwerte, keine garantierten Skill-ups. Orange/gelb/grün und Forever-Rezeptverschiebungen können zusätzliche Crafts erfordern.</div><div class="tablewrap"><table style="min-width:950px"><thead><tr><th>Skill</th><th>Craft / Material</th><th>Crafts</th><th>Materialien oder Farmgebiete</th><th>Rezeptquelle / Hinweis</th><th>Details</th></tr></thead><tbody><tr><td><b>1–10</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_03.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_03.jpg"/><b>Geringes Arkanes Elixier</b></span></td><td>9</td><td>9× Friedensblume, 9× Leere Phiole</td><td>Lehrer; alternativ Elixier der geringen Kraft mit Silberblatt</td><td><button class="prof-recipe" data-recipe="0" type="button">Details anzeigen</button></td></tr><tr><td><b>10–55</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_06.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_06.jpg"/><b>Elixier der schwachen Verteidigung</b></span></td><td>45</td><td>45× Silberblatt, 45× Friedensblume, 45× Leere Phiole</td><td>Lehrer</td><td><button class="prof-recipe" data-recipe="1" type="button">Details anzeigen</button></td></tr><tr><td><b>55–65</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_01.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_01.jpg"/><b>Schwacher Manatrank</b></span></td><td>10</td><td>10× Maguskönigskraut, 10× Friedensblume, 10× Leere Phiole</td><td>Lehrer / Geselle</td><td><button class="prof-recipe" data-recipe="2" type="button">Details anzeigen</button></td></tr><tr><td><b>65–90</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_10.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_10.jpg"/><b>Elixier der geringen Seelenstärke</b></span></td><td>27</td><td>54× Erdwurzel, 27× Friedensblume, 27× Leere Phiole</td><td>Lehrer / Geselle</td><td><button class="prof-recipe" data-recipe="3" type="button">Details anzeigen</button></td></tr><tr><td><b>90–120</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_14.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_14.jpg"/><b>Elixier der Weisheit</b></span></td><td>30</td><td>30× Maguskönigskraut, 60× Wilddornrose, 30× Leere Phiole</td><td>Lehrer</td><td><button class="prof-recipe" data-recipe="4" type="button">Details anzeigen</button></td></tr><tr><td><b>120–130</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_02.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_02.jpg"/><b>Geringer Manatrank</b></span></td><td>10</td><td>10× Maguskönigskraut, 10× Würgetang, 10× Leere Phiole</td><td>Lehrer</td><td><button class="prof-recipe" data-recipe="5" type="button">Details anzeigen</button></td></tr><tr><td><b>130–150</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_11.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_11.jpg"/><b>Feueröl</b></span></td><td>20</td><td>40× Feuerflossenschnapper, 20× Leere Phiole</td><td>Lehrer; 2 Öl pro Herstellung</td><td><button class="prof-recipe" data-recipe="6" type="button">Details anzeigen</button></td></tr><tr><td><b>150–165</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_19.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_19.jpg"/><b>Elixier der Feuermacht</b></span></td><td>15</td><td>30× Feueröl, 15× Königsblut, 15× Bleierne Phiole</td><td>Experte; Feueröl aus vorherigem Schritt behalten</td><td><button class="prof-recipe" data-recipe="7" type="button">Details anzeigen</button></td></tr><tr><td><b>165–195</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_41.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_41.jpg"/><b>Manatrank</b></span></td><td>36</td><td>36× Würgetang, 36× Königsblut, 36× Bleierne Phiole</td><td>Expertenlehrer</td><td><button class="prof-recipe" data-recipe="8" type="button">Details anzeigen</button></td></tr><tr><td><b>195–225</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_22.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_22.jpg"/><b>Naturschutztrank</b></span></td><td>36</td><td>36× Lebenswurz, 36× Würgetang, 36× Bleierne Phiole</td><td>Rezept beim Händler: u. a. Feralas, Stranglethorn oder Tanaris</td><td><button class="prof-recipe" data-recipe="9" type="button">Details anzeigen</button></td></tr><tr><td><b>225–230</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_22.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_22.jpg"/><b>Naturschutztrank</b></span></td><td>12</td><td>12× Lebenswurz, 12× Würgetang, 12× Bleierne Phiole</td><td>Rezept aus vorheriger Phase</td><td><button class="prof-recipe" data-recipe="10" type="button">Details anzeigen</button></td></tr><tr><td><b>230–265</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_53.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_53.jpg"/><b>Trank: Untote entdecken</b></span></td><td>45</td><td>45× Arthas’ Tränen, 45× Kristallphiole</td><td>Lehrer / Artisan; oberhalb Beta-Cap nicht fertig getestet</td><td><button class="prof-recipe" data-recipe="11" type="button">Details anzeigen</button></td></tr><tr><td><b>265–275</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_76.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_76.jpg"/><b>Erheblicher Manatrank</b></span></td><td>10</td><td>20× Sonnengras, 20× Blindkraut, 10× Kristallphiole</td><td>Rezept vom Händler (Undercity/Darnassus)</td><td><button class="prof-recipe" data-recipe="12" type="button">Details anzeigen</button></td></tr><tr><td><b>275–300</b></td><td><span class="prof-craft"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_76.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_76.jpg"/><b>Manatränke &amp; Hochstufen-Rezepte</b></span></td><td>Farmen</td><td>Sonnengras, Blindkraut und weitere 275+-Kräuter; Mengen abhängig vom Rezept</td><td>Route über 290 in der Hauptquelle noch offen; keine fiktive Einkaufsliste</td><td><button class="prof-recipe" data-recipe="13" type="button">Details anzeigen</button></td></tr></tbody></table></div></section><section class="page" id="materials"><h2>Materialien / Einkaufsliste</h2><p class="materials-note">Diese Materialmengen orientieren sich an der Schnellroute. Alternativrezepte ersetzen die jeweiligen Schritte – nie beide Alternativen gleichzeitig einkaufen.</p><div class="material-grid-v19"><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_03.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_03.jpg"/><b>Friedensblume ×91</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_06.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_06.jpg"/><b>Silberblatt ×45</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_01.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_01.jpg"/><b>Maguskönigskraut ×50</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_10.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_10.jpg"/><b>Erdwurzel ×54</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_14.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_14.jpg"/><b>Wilddornrose ×60</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_02.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_02.jpg"/><b>Würgetang ×82</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_11.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_11.jpg"/><b>Königsblut ×51+</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_19.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_19.jpg"/><b>Lebenswurz ×48</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_41.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_41.jpg"/><b>Arthas’ Tränen ×45</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_22.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_22.jpg"/><b>Sonnengras ×20+</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_22.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_22.jpg"/><b>Blindkraut ×20+</b></div><div class="material-card-v19"><img alt="" class="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_potion_53.jpg" loading="lazy" src="assets/icons/profession-recipes/inv_potion_53.jpg"/><b>Phiole / Vendor</b></div></div></section><section class="page" id="trainers"><h2>Berufslehrer &amp; Freischaltung</h2><div class="trainerfilter"><button class="active" data-faction="all" type="button">Alle</button><button data-faction="alliance" type="button">Allianz</button><button data-faction="horde" type="button">Horde</button><button data-faction="neutral" type="button">Neutral</button></div><div class="trainers-v19"><div class="trainer-v19" data-faction="alliance"><b>Lilyssia Nightbreeze</b><small>Sturmwind · Geselle · Allianz</small></div><div class="trainer-v19" data-faction="alliance"><b>Tally Berryfizz / Vosur Brakthel</b><small>Eisenschmiede · Geselle · Allianz</small></div><div class="trainer-v19" data-faction="alliance"><b>Ainethil</b><small>Darnassus · Experte · Allianz</small></div><div class="trainer-v19" data-faction="alliance"><b>Kylanna Windwhisper</b><small>Feralas, Feathermoon · Fachmann (200+) · Allianz</small></div><div class="trainer-v19" data-faction="horde"><b>Yelmak / Whuut</b><small>Orgrimmar · Geselle · Horde</small></div><div class="trainer-v19" data-faction="horde"><b>Doctor Herbert Halsey</b><small>Unterstadt · Experte · Horde</small></div><div class="trainer-v19" data-faction="horde"><b>Rogvar</b><small>Sümpfe des Elends, Stonard · Fachmann (200+) · Horde</small></div></div><div class="materials-note"><b>Rang über 150/225:</b> Beachte Buchkäufe, Fachmann-Trainer und besondere Quests im jeweiligen Beruf. Bei 200 nicht erst bis 225 warten, wenn du den nächsten Rang bereits freischalten kannst.</div></section><section class="page" id="forever"><h2>Forever-Systeme &amp; Besonderheiten</h2><div class="tiplist"><div class="tip"><b>1.</b> Heiltränke gehören in Forever zu Erste Hilfe, nicht zu Alchemie.</div><div class="tip"><b>2.</b> Neue Camping-Gegenstände: Mana Well (20), Fermenter (140), Alchemy Laboratory (300), je nach Rezept/Blueprint.</div><div class="tip"><b>3.</b> WoW-Professions kennzeichnet die Route oberhalb 225 noch als ungetestet.</div></div><h3>Wichtige Synergien</h3><div class="cards"><div class="card"><strong>Berufspaarung</strong><p>Kräuterkunde</p></div><div class="card"><strong>Legacy / Camping</strong><p>Neue Rezepte und Lagerfeuer-Gegenstände können nützlich sein. Nicht alle Neben- und Sammelberufe geben dieselben Legacy-Punkte wie Herstellungsberufe.</p></div></div></section><section class="page" id="gear"><h2>Praktische eigene Crafts und Freischaltung</h2><p class="materials-note">Bei diesem Beruf sind nützliche Tränke, Geräte, Nahrung oder Verbände wichtiger als reine Rüstung. Klick auf ein Rezept in der Schnellroute für Materialdetails.</p><div class="prof-specials"><div class="prof-special"><strong>Mana- und Schutztränke</strong><p>Für eigene Dungeon-/Raid-Vorbereitung priorisieren</p><p><b>Freischalten:</b> Lehrer und Rezeptsammler</p><p><b>Material:</b> Maguskönigskraut, Würgetang, Königsblut</p></div><div class="prof-special"><strong>Alchemielabor</strong><p>Camping-Produktionsstation</p><p><b>Freischalten:</b> Blueprint / hohes Berufsskill</p><p><b>Material:</b> Pflanzen und Craft-Zusätze</p></div><div class="prof-special"><strong>Fläschchen und Elixiere</strong><p>Endgame-Crafts nach Live-Verfügbarkeit</p><p><b>Freischalten:</b> Händler, Drop oder Rezept aus Endgame</p><p><b>Material:</b> hochwertige Kräuter und Kristallphiolen</p></div></div></section><section class="page" id="sources"><h2>Quellen &amp; Datenstand</h2><div class="sources"><a href="https://www.wow-professions.com/forever/alchemy-leveling-guide" rel="noopener" target="_blank">WoW-Professions · Forever 1–300 Skillroute ↗</a><a href="https://www.wowhead.com/forever/guide/professions/overview" rel="noopener" target="_blank">Wowhead Forever · Berufe und neue Rezepte ↗</a><a href="https://www.60.tools/guides/professions" rel="noopener" target="_blank">60.tools · Rezepte nach aktuellem Client-Build ↗</a></div><p class="materials-note">Alle Materialmengen sind Planungshilfen. Welche Rezepte bereits im Live-Client freigeschaltet sind, kann sich gegenüber den Beta-Daten ändern.</p></section></main><div class="prof-modal" hidden="" id="prof-modal"><div class="prof-modal-shade" data-close=""></div><div class="prof-modal-content"><button class="prof-modal-close" data-close="" type="button">Schließen ×</button><div class="prof-modal-body"></div></div></div><script>const recipes=[{"skill": "1–10", "name": "Geringes Arkanes Elixier", "amount": 9, "materials": "9× Friedensblume, 9× Leere Phiole", "unlock": "Lehrer; alternativ Elixier der geringen Kraft mit Silberblatt", "icon": "inv_potion_03"}, {"skill": "10–55", "name": "Elixier der schwachen Verteidigung", "amount": 45, "materials": "45× Silberblatt, 45× Friedensblume, 45× Leere Phiole", "unlock": "Lehrer", "icon": "inv_potion_06"}, {"skill": "55–65", "name": "Schwacher Manatrank", "amount": 10, "materials": "10× Maguskönigskraut, 10× Friedensblume, 10× Leere Phiole", "unlock": "Lehrer / Geselle", "icon": "inv_potion_01"}, {"skill": "65–90", "name": "Elixier der geringen Seelenstärke", "amount": 27, "materials": "54× Erdwurzel, 27× Friedensblume, 27× Leere Phiole", "unlock": "Lehrer / Geselle", "icon": "inv_potion_10"}, {"skill": "90–120", "name": "Elixier der Weisheit", "amount": 30, "materials": "30× Maguskönigskraut, 60× Wilddornrose, 30× Leere Phiole", "unlock": "Lehrer", "icon": "inv_potion_14"}, {"skill": "120–130", "name": "Geringer Manatrank", "amount": 10, "materials": "10× Maguskönigskraut, 10× Würgetang, 10× Leere Phiole", "unlock": "Lehrer", "icon": "inv_potion_02"}, {"skill": "130–150", "name": "Feueröl", "amount": 20, "materials": "40× Feuerflossenschnapper, 20× Leere Phiole", "unlock": "Lehrer; 2 Öl pro Herstellung", "icon": "inv_potion_11"}, {"skill": "150–165", "name": "Elixier der Feuermacht", "amount": 15, "materials": "30× Feueröl, 15× Königsblut, 15× Bleierne Phiole", "unlock": "Experte; Feueröl aus vorherigem Schritt behalten", "icon": "inv_potion_19"}, {"skill": "165–195", "name": "Manatrank", "amount": 36, "materials": "36× Würgetang, 36× Königsblut, 36× Bleierne Phiole", "unlock": "Expertenlehrer", "icon": "inv_potion_41"}, {"skill": "195–225", "name": "Naturschutztrank", "amount": 36, "materials": "36× Lebenswurz, 36× Würgetang, 36× Bleierne Phiole", "unlock": "Rezept beim Händler: u. a. Feralas, Stranglethorn oder Tanaris", "icon": "inv_potion_22"}, {"skill": "225–230", "name": "Naturschutztrank", "amount": 12, "materials": "12× Lebenswurz, 12× Würgetang, 12× Bleierne Phiole", "unlock": "Rezept aus vorheriger Phase", "icon": "inv_potion_22"}, {"skill": "230–265", "name": "Trank: Untote entdecken", "amount": 45, "materials": "45× Arthas’ Tränen, 45× Kristallphiole", "unlock": "Lehrer / Artisan; oberhalb Beta-Cap nicht fertig getestet", "icon": "inv_potion_53"}, {"skill": "265–275", "name": "Erheblicher Manatrank", "amount": 10, "materials": "20× Sonnengras, 20× Blindkraut, 10× Kristallphiole", "unlock": "Rezept vom Händler (Undercity/Darnassus)", "icon": "inv_potion_76"}, {"skill": "275–300", "name": "Manatränke & Hochstufen-Rezepte", "amount": null, "materials": "Sonnengras, Blindkraut und weitere 275+-Kräuter; Mengen abhängig vom Rezept", "unlock": "Route über 290 in der Hauptquelle noch offen; keine fiktive Einkaufsliste", "icon": "inv_potion_76"}]; const zones=[];
+
+const tabs=[...document.querySelectorAll('nav [data-tab]')],pages=[...document.querySelectorAll('main .page')];
+function openTab(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));history.replaceState(null,'','#id='.replace('id=',id));window.scrollTo(0,0)}
+tabs.forEach(b=>b.addEventListener('click',()=>openTab(b.dataset.tab)));
+const initial=location.hash.slice(1);if(pages.some(p=>p.id===initial))openTab(initial);
+document.querySelectorAll('.trainerfilter button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.trainerfilter button').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.faction;document.querySelectorAll('.trainer-v19').forEach(x=>x.style.display=f==='all'||x.dataset.faction===f?'':'none')}));
+const modal=document.getElementById('prof-modal'),body=modal.querySelector('.prof-modal-body');
+function el(tag,contents,parent){const n=document.createElement(tag);if(contents!==undefined)n.textContent=contents;parent?.append(n);return n}
+function showRecipe(i){const r=recipes[i];if(!r)return;body.replaceChildren();el('h3',r.name,body);el('p','Skill: '+r.skill+' · '+(r.amount??'Sammelberuf')+' Herstellungs-/Farm-Schritte',body);el('h4','Materialien / Gebiet',body);el('p',r.materials,body);el('h4','Rezept / Freischaltung',body);el('p',r.unlock,body);modal.hidden=false;document.body.style.overflow='hidden'}
+function showZone(i){const z=zones[i];if(!z)return;body.replaceChildren();el('h3',z.name,body);el('p',z.herbs+' · '+z.note,body);const wrap=el('div','',body);wrap.className='prof-map-panel';const img=el('img',undefined,wrap);img.className='zone-map-image';img.src=z.map;img.dataset.fallback=z.fallback;img.alt='Gebietskarte '+z.name;const note=el('p','Gebietskarte zur Orientierung – kein behaupteter punktgenauer Erz-/Kräuterspawn.',body);const links=el('div','',body);links.className='zone-links';const a=el('a','Geprüfte Farmroute bei WoW-Professions öffnen ↗',links);a.href=z.link;a.target='_blank';a.rel='noopener';modal.hidden=false;document.body.style.overflow='hidden'}
+document.addEventListener('click',e=>{const r=e.target.closest('[data-recipe]');if(r){showRecipe(Number(r.dataset.recipe));return}const z=e.target.closest('[data-zone]');if(z){showZone(Number(z.dataset.zone));return}if(e.target.closest('[data-close]')){modal.hidden=true;body.replaceChildren();document.body.style.overflow=''}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.hidden=true;document.body.style.overflow=''}});
+document.addEventListener('error',e=>{const im=e.target;if(im?.tagName==='IMG'&&im.dataset.fallback&&im.src!==im.dataset.fallback)im.src=im.dataset.fallback},true);
+</script></body></html>
