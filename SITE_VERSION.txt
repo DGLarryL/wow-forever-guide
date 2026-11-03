@@ -1,3 +1,2 @@
-v0.17.0
-Best-Build-Guides für Survival-Jäger, Heilig-Priester und Waffen-Krieger; Anpassungen an die offiziellen Forever-Patchnotes vom 03.11.2026; Talentränge/Heilfähigkeiten aktualisiert; Build-Varianten und Versionsleiste überarbeitet.
-Stand der verwendeten Quellen: Blizzard-Patchnotes 03.11.2026; Wowhead-Guides 30.–31.10.2026. Stufe-60-Builds vorläufig.
+v0.18.0
+Alle 9 Klassen mit Level-Builds: Feral-Druide, Frost-Magier, Vergeltungs-Paladin, Kampf-Schurke, Verstärkungs-Schamane und Gebrechen-Hexenmeister ergänzt; separate Best-Build-Seiten entfernt; Launch-Patch vom 03.11.2026 berücksichtigt.

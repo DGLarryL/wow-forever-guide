@@ -150,3 +150,13 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Die WoW-Forever-Wowhead-Guides sind noch Beta-basiert; Stufe-60-Statpriorität/BiS nicht als endgültig ausgeben.
 
 - Weitere Fury-Änderungen aufgenommen: Enrage jetzt Reihe 3, Reckless Swings und Improved Whirlwind ergänzt. Für Gore Drinker fehlt in den Patchnotes eine verifizierte maximale Rangzahl; kein erfundener Talentrang.
+
+
+## v0.18.0 – Alle neun Klassen
+- Neue Klassenguides: Feral-Druide, Frost-Magier, Vergeltungs-Paladin, Kampf-Schurke, Verstärkungs-Schamane, Gebrechen-Hexenmeister.
+- Jede neue Klasse: Übersicht, Build, Level-1–60-Slider, Talente, Rotation, Gear/Stats, Alternativen, Quellen.
+- Klassenmenü und Startseitenkarten auf neun Klassen erweitert.
+- Die drei separaten Seiten im Ordner `best-builds` entfernt; Empfehlungen stehen wieder direkt in bestehenden Klassenguides.
+- Die zwölf bestehenden Build-Varianten-Seiten aus v0.16 bleiben erhalten.
+- Patchnotes vom 03.11.2026 für die neuen Builds berücksichtigt; unbestätigte exakte Punkte-Splits bewusst nicht erfunden.
+- Bei jedem Update Versionsleiste auf allen Seiten aktualisieren.

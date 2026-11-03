@@ -104,6 +104,66 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/ability_whirlwind.jpg"
   },
   {
+    "path": "assets/icons/classes/ability_druid_catform.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_druid_catform.jpg"
+  },
+  {
+    "path": "assets/icons/classes/ability_hunter_swiftstrike.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg"
+  },
+  {
+    "path": "assets/icons/classes/ability_rogue_sinistercalling.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_rogue_sinistercalling.jpg"
+  },
+  {
+    "path": "assets/icons/classes/ability_warrior_savageblow.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_druid.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_mage.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_paladin.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_paladin.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_rogue.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_shaman.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg"
+  },
+  {
+    "path": "assets/icons/classes/classicon_warlock.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg"
+  },
+  {
+    "path": "assets/icons/classes/spell_frost_frostbolt02.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostbolt02.jpg"
+  },
+  {
+    "path": "assets/icons/classes/spell_holy_auraoflight.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg"
+  },
+  {
+    "path": "assets/icons/classes/spell_holy_guardianspirit.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg"
+  },
+  {
+    "path": "assets/icons/classes/spell_nature_lightning.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightning.jpg"
+  },
+  {
+    "path": "assets/icons/classes/spell_shadow_abominationexplosion.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_abominationexplosion.jpg"
+  },
+  {
     "path": "assets/icons/crafting/inv_belt_02.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_02.jpg"
   },
