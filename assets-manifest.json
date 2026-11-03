@@ -416,6 +416,18 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_12.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_axe_17.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_17.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_axe_23.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_23.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_belt_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_03.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_belt_04.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_04.jpg"
   },
@@ -424,8 +436,20 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_06.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_belt_30.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_belt_30.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_boots_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_05.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_boots_chain_05.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_boots_chain_05.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_bracer_07.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_07.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_bracer_11.jpg",
@@ -460,8 +484,20 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate04.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_chest_plate08.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate08.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_gauntlets_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_05.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_gauntlets_15.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_15.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_gauntlets_19.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_19.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_gauntlets_25.jpg",
@@ -470,6 +506,14 @@
   {
     "path": "assets/icons/dungeon-items/inv_hammer_09.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_09.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_helmet_09.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_09.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_helmet_25.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_25.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_helmet_30.jpg",
@@ -540,6 +584,14 @@
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_02.jpg"
   },
   {
+    "path": "assets/icons/dungeon-items/inv_pants_03.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_pants_06.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_06.jpg"
+  },
+  {
     "path": "assets/icons/dungeon-items/inv_pants_11.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_11.jpg"
   },
@@ -550,6 +602,14 @@
   {
     "path": "assets/icons/dungeon-items/inv_shirt_08.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shirt_08.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_shoulder_01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_01.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_shoulder_05.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_05.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_spear_07.jpg",
@@ -566,6 +626,10 @@
   {
     "path": "assets/icons/dungeon-items/inv_staff_15.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_15.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_staff_25.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_25.jpg"
   },
   {
     "path": "assets/icons/dungeon-items/inv_sword_04.jpg",
@@ -610,6 +674,14 @@
   {
     "path": "assets/icons/dungeon-items/inv_weapon_shortblade_14.jpg",
     "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_shortblade_14.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/inv_weapon_shortblade_18.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_shortblade_18.jpg"
+  },
+  {
+    "path": "assets/icons/dungeon-items/spell_lightning_lightningbolt01.jpg",
+    "url": "https://wow.zamimg.com/images/wow/icons/large/spell_lightning_lightningbolt01.jpg"
   },
   {
     "path": "assets/icons/dungeons/boss-abom.jpg",
@@ -1434,6 +1506,94 @@
   {
     "path": "assets/maps/dun-morogh.webp",
     "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1413.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1413.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1416.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1416.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1418.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1418.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1420.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1420.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1421.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1421.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1422.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1422.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1423.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1423.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1426.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1428.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1428.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1434.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1434.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1435.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1435.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1436.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1436.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1437.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1437.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1440.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1440.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1443.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1443.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1444.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1444.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1445.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1445.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1446.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1446.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1447.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1447.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1449.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1449.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1453.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1453.webp"
+  },
+  {
+    "path": "assets/maps/dungeon-zones/1454.webp",
+    "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1454.webp"
   },
   {
     "path": "assets/maps/dungeons/alterac.jpg",

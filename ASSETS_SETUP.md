@@ -130,3 +130,23 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Populäre Items mit aktuellen Forever-Stats/Dropwerten ergänzt.
 - Schematische Karten durch echte WoW-Gebietskarten mit Marker ersetzt.
 - Survival Hunter, Holy Priest und Arms Warrior: neuer Reiter Build-Varianten.
+
+## v0.16.0
+- Jeder Dungeon hat eine eigene Seite unter `dungeons/<slug>.html`.
+- Eigene Reiter: Übersicht, Bosse & Loot, Dungeonquests, Gebietskarte.
+- Dungeonquests in Allianz / Horde / Neutral-Klasse getrennt.
+- Große echte Forever-Gebietskarten statt Popup-Schema.
+- Itemicons: bekannte Wowhead-IDs + Originalicons; sichere Slot-Fallbacks für noch nicht zugeordnete Items.
+- Buildkarten sind klickbar und öffnen eigene Seiten unter `builds/`.
+
+## v0.17.0 – Best Builds nach dem Launch-Patch
+- Neue komplette Best-Build-Guides: `best-builds/survival-hunter.html`, `best-builds/holy-priest.html`, `best-builds/arms-warrior.html`.
+- In jeder der 3 Klassenseiten zusätzlicher Reiter „Bester Build“ und Direktlink in der Übersicht.
+- Homepage zeigt die drei Best-Build-Guides als Karten.
+- Warrior: interaktiver Talentplan auf neue Maximalränge (Tactical Mastery 3/3, Bloodthrill 2/2) umgebaut.
+- Priest: Binding Heal → Holy Binding (passiver Effekt) in Talentbaum und Rotation.
+- Hunter: Lightning Reflexes bis 15 % Beweglichkeit; Oktober-PvE-Splits neu einordnen.
+- Bestehende 12 Build-Varianten mit Launch-Patch-Hinweisen versehen; Versionbanner auch auf diesen Unterseiten.
+- Die WoW-Forever-Wowhead-Guides sind noch Beta-basiert; Stufe-60-Statpriorität/BiS nicht als endgültig ausgeben.
+
+- Weitere Fury-Änderungen aufgenommen: Enrage jetzt Reihe 3, Reckless Swings und Improved Whirlwind ergänzt. Für Gore Drinker fehlt in den Patchnotes eine verifizierte maximale Rangzahl; kein erfundener Talentrang.

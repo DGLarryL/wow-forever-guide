@@ -1,2 +1,3 @@
-v0.15.0
-Dungeon-Browser stark erweitert: deutlich mehr Bossloot für Classic-/Forever-Dungeons, echte WoW-Gebietskarten mit Eingangsmarkern und ausführlichen Gebietsinfos; Klassenguides um mehrere Build-/Leveling-Varianten ergänzt.
+v0.17.0
+Best-Build-Guides für Survival-Jäger, Heilig-Priester und Waffen-Krieger; Anpassungen an die offiziellen Forever-Patchnotes vom 03.11.2026; Talentränge/Heilfähigkeiten aktualisiert; Build-Varianten und Versionsleiste überarbeitet.
+Stand der verwendeten Quellen: Blizzard-Patchnotes 03.11.2026; Wowhead-Guides 30.–31.10.2026. Stufe-60-Builds vorläufig.
