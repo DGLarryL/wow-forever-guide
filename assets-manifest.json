@@ -1,5 +1,9 @@
 [
   {
+    "path": "assets/data/forever-talents.json",
+    "url": "https://wow-forever.gg/developers/talents.json"
+  },
+  {
     "path": "assets/icons/132120.webp",
     "url": "https://raiddex.com/assets/img/wf/icons/132120.webp"
   },

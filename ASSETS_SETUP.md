@@ -173,3 +173,24 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Die Talent-Zuteilungen sind Levelingvorschläge und müssen bei weiteren November-Hotfixes gegen den Live-Talentrechner geprüft werden.
 
 - 11 Gear-Tooltips in den neuen Klassenguides um konkrete Werte aus dem vorhandenen Dungeon-Datensatz ergänzt.
+
+
+## v0.19.1
+- Neuer Reiter „Rassen“ für alle neun Klassenguides (Allianz/Horde).
+- Jede Empfehlung erklärt die spezifischen Forever-Volksfähigkeiten und ihre Vorteile beim Leveln, im PvE oder PvP.
+- Eine kurze Top-Empfehlung ist auch auf der Übersichtsseite jeder Klasse verlinkt.
+- Spielbare Rassen pro Klasse auf Basis der Forever-Kombinationen vom 03./04.11.2026 geprüft.
+- Quellen: Wowhead Forever, Mobalytics (03.11.2026), Icy Veins (02.11.2026).
+- Kein neuer Bilddownload erforderlich: Icons, Talente, Berufe, Dungeonseiten und alle sonstigen v0.19.0-Inhalte unverändert.
+
+
+## v0.19.2 – Talent-Tooltips
+
+- Alle 9 Klassenseiten: Tooltip für jedes sichtbare Talent (auch 0/X).
+- Maus-Hover, Tastaturfokus und Touch-Tipp funktionieren; Klick hält den Tooltip offen.
+- Zeigt Name, aktueller Rang, genaue Originalwirkung (EN) und den nächsten Rang.
+- Nutzt Client-Talentbeschreibungen von https://wow-forever.gg/developers/talents.json (Build 1.60.1.70755).
+- Für nicht eindeutig zugeordnete Talente wird KEIN Wert erfunden; stattdessen Quellenlink angezeigt.
+- Nach dem Datei-Update einmal GitHub Actions → Fetch website assets → Run workflow ausführen,
+  damit das JSON lokal unter `assets/data/forever-talents.json` verfügbar ist.
+- Quelle/Attribution: Talent trees and statistics from WoW Forever, https://wow-forever.gg (CC BY 4.0).

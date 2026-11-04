@@ -13,7 +13,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Download maps and WoW icons
+      - name: Download maps, WoW icons and talent descriptions
         run: python3 scripts/fetch_assets.py
 
       - name: Commit downloaded assets

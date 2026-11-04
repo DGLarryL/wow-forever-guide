@@ -6,7 +6,7 @@ manifest = json.loads((ROOT / "assets-manifest.json").read_text(encoding="utf-8"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (compatible; wow-forever-guide asset fetcher/1.0)",
-    "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "Accept": "application/json,image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
 }
 
 failures = []
@@ -14,14 +14,27 @@ for item in manifest:
     dest = ROOT / item["path"]
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists() and dest.stat().st_size > 100:
-        print(f"exists: {item['path']}")
-        continue
+        if not str(dest).endswith('.json'):
+            print(f"exists: {item['path']}")
+            continue
+        try:
+            existing = json.loads(dest.read_text(encoding='utf-8'))
+            if (len(existing.get('classes', [])) == 9
+                and existing.get('build') == '1.60.1.70755'):
+                print(f"exists: {item['path']}")
+                continue
+        except (OSError, ValueError, TypeError):
+            pass
     req = urllib.request.Request(item["url"], headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = resp.read()
         if len(data) < 100:
             raise RuntimeError(f"file too small ({len(data)} bytes)")
+        if str(dest).endswith('.json'):
+            payload = json.loads(data.decode('utf-8'))
+            if len(payload.get('classes', [])) != 9 or not payload.get('build'):
+                raise RuntimeError('not a valid nine-class Forever talent dataset')
         dest.write_bytes(data)
         print(f"saved: {item['path']} ({len(data)} bytes)")
         time.sleep(0.15)
