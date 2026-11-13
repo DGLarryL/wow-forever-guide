@@ -194,3 +194,12 @@ Für zukünftige Releases muss diese Leiste immer mit aktualisiert werden.
 - Nach dem Datei-Update einmal GitHub Actions → Fetch website assets → Run workflow ausführen,
   damit das JSON lokal unter `assets/data/forever-talents.json` verfügbar ist.
 - Quelle/Attribution: Talent trees and statistics from WoW Forever, https://wow-forever.gg (CC BY 4.0).
+
+
+## v0.19.3
+- Einheitliche Kopfzeile auf allen 89 HTML-Seiten, einschließlich 35 Dungeon- und 30 Build-Detailseiten.
+- Hauptnavigation mit Klassen, Berufen, Dungeons, Guides; aktive Kategorie markiert.
+- Unterordner-Links korrekt mit ../ aufgelöst.
+- Desktop: Hover/Klick, mobil: Antippen; Tastatur: Pfeil nach unten und Escape.
+- Dungeons-Browser wertet jetzt #alliance/#horde/#forever/#classic aus.
+- Neue Styles/JS: assets/css/site-navigation.css und assets/js/site-navigation.js.

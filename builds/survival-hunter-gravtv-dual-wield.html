@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Deutscher WoW-Forever-Survival-Hunter-Dual-Wield-Guide nach GravTV mit Talenten 1–60, Rotation, Pets und Gear.">
+<title>GravTV Survival Hunter 1–60 (Dual Wield) | WoW Forever Guide by LarryL</title>
+<link rel="stylesheet" href="../assets/css/site-navigation.css">
+<style>
+:root{--bg:#080d0a;--panel:#151e18;--panel2:#1b2a20;--line:#344838;--text:#edf5ec;--muted:#acbcad;--green:#98d8a3;--gold:#f3ca6b;--blue:#b4d8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 0%,#173723 0%,transparent 28%),var(--bg);color:var(--text);font:16px/1.68 Inter,'Segoe UI',Arial,sans-serif}
+a{color:#addbff}a:hover{color:#fff}.container{max-width:1230px;margin:auto;padding:0 18px}
+.hero{padding:34px 0 25px;background:linear-gradient(120deg,rgba(23,58,37,.86),rgba(10,18,12,.65));border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2rem,4.6vw,3.45rem);max-width:900px;line-height:1.12;margin:15px 0}.hero p{max-width:830px;color:#c7d7c8}
+.breadcrumb{font-size:.9rem;color:var(--muted)}.eyebrow{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:#b0d7b5;font-weight:800}
+.hero .tag,.compare .tag{display:inline-block;border:1px solid #a18848;background:#342916;color:#ffe6a2;border-radius:99px;padding:3px 10px;font-size:.79rem;font-weight:800}
+.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.action,.inline-action{display:inline-block;border-radius:10px;padding:9px 15px;background:#294e32;border:1px solid #5f8962;color:#f5fff3;text-decoration:none;font-weight:800}.action:hover,.inline-action:hover{background:#366943}.action.secondary{background:#1b2320;border-color:#506457}
+.quickintro{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:22px 0}.quickintro>div{padding:15px;border:1px solid #4a5844;border-radius:14px;background:#19261d}.quickintro strong,.quickintro small,.quickintro .eyebrow{display:block}.quickintro strong{font-size:1.25rem;color:#ffe09a}.quickintro small{color:var(--muted)}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:26px;align-items:start;padding-bottom:65px}
+aside{position:sticky;top:100px;max-height:calc(100vh - 120px);overflow-y:auto;padding:15px;border:1px solid var(--line);border-radius:14px;background:#121b15}
+aside strong{display:block;margin-bottom:9px;color:var(--gold)}aside a{display:block;text-decoration:none;padding:8px 6px;border-radius:6px;color:#c7dbc8;font-size:.91rem;line-height:1.4}aside a:hover{background:#273a2a}main{min-width:0}
+.guide-card{border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,30px);background:linear-gradient(180deg,#18251b,#101811);}
+.guide-card h1{display:none}.guide-card h2,.compare h2{font-size:1.65rem;color:var(--green);margin:35px 0 13px;scroll-margin-top:120px}.guide-card h2:first-child{margin-top:4px}.guide-card h3{color:var(--gold);scroll-margin-top:120px;margin-top:26px}.guide-card p,.guide-card li{color:#d5e0d6}.guide-card strong{color:#fff0bd}.guide-card blockquote{border-left:4px solid var(--gold);background:#2d2719;padding:12px 18px;margin:18px 0;border-radius:0 10px 10px 0}.guide-card blockquote p{margin:0}
+.guide-card table{width:100%;border-collapse:collapse;min-width:550px}.guide-card table th,.guide-card table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.guide-card th{color:#f6dfaf;background:#27402b}.guide-card tr:nth-child(even) td{background:#19251c}.guide-card table{display:block;max-width:100%;overflow-x:auto}.guide-card code{background:#28372e;padding:2px 5px;border-radius:4px}.guide-card hr{border:0;border-top:1px solid var(--line)}
+.milestones{border:1px solid #4e6f4c;border-radius:15px;background:linear-gradient(90deg,#203826,#18231b);padding:20px;margin-bottom:25px}
+.milestones h2{color:var(--gold);font-size:1.35rem;margin:0 0 9px}.milestones label{font-weight:800}.milestones input{width:100%;accent-color:#a8d996;cursor:pointer;margin-top:12px}.milestone-output{font-size:1.12rem;font-weight:900;color:#e8fff0}.milestone-hint{color:#bdd4bf}
+.compare{background:#101b13;border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:22px}.compare h2{margin-top:4px}.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.comparison-card{background:#18241b;border:1px solid #455744;padding:16px;border-radius:12px}.comparison-card.selected{border-color:#ae8c4b}.comparison-card h3{margin:8px 0;color:#e8d8a5}.comparison-card p{color:#cfdfce}.compare .tag.secondary{background:#1c2b34;border-color:#557484;color:#d4eaff}
+.version-banner{max-width:1230px;margin:10px auto 0;padding:0 18px}.version-banner-inner{padding:12px 15px;border:1px solid #48604d;border-radius:11px;background:#142019;color:#cfe0d3;line-height:1.5}.version-label{color:#ffd100;font-weight:900}.change-label{color:#9fd7ae;font-weight:800}
+@media(max-width:850px){.layout{grid-template-columns:1fr}aside{position:static;max-height:none}aside .aside-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.quickintro{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.quickintro{grid-template-columns:repeat(2,minmax(0,1fr))}.comparison-grid{grid-template-columns:1fr}aside .aside-links{grid-template-columns:1fr}.hero{padding:24px 0}}
+@media print{#site-universal-brand,#site-universal-nav,aside,.buttons,.version-banner,.milestones{display:none!important}.layout{display:block}body{color:#111;background:#fff}.guide-card{border:0;background:#fff}.guide-card p,.guide-card li,.guide-card h2,.guide-card h3,.guide-card strong{color:#111!important}.guide-card table th,.guide-card table td{color:#111}}
+</style></head><body>
+<div id="site-universal-brand"><div class="site-brand-inner"><a class="site-brand-link" href="../index.html"><img alt="" class="site-brand-icon" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg" src="../assets/icons/nav-guides.jpg"/><span><span class="site-brand-small">World of Warcraft: Forever</span><span class="site-brand-name">WoW Forever Guide by LarryL</span></span></a></div></div><div id="site-universal-nav"><nav aria-label="Hauptnavigation" class="site-nav-shell"><div class="site-nav-section" data-active="true" data-open="false"><button aria-controls="site-nav-menu-klassen" aria-expanded="false" aria-haspopup="true" class="site-nav-trigger" type="button"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg" src="../assets/icons/nav-classes.jpg"/><span class="site-nav-label">Klassen</span><span aria-hidden="true" class="site-chevron">▾</span></button><div class="site-dropdown" id="site-nav-menu-klassen"><div class="site-dropdown-grid"><div class="site-dropdown-col"><h3>Druide · Jäger · Magier</h3><a class="site-dropdown-link" href="../druid.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" loading="lazy" src="../assets/icons/classes/classicon_druid.jpg"/><span>Druide · Feral</span></a><a class="site-dropdown-link" href="../survival-hunter.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_hunter_swiftstrike.jpg" loading="lazy" src="../assets/icons/classes/ability_hunter_swiftstrike.jpg"/><span>Jäger · Survival</span></a><a class="site-dropdown-link" href="../mage.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" loading="lazy" src="../assets/icons/classes/classicon_mage.jpg"/><span>Magier · Frost</span></a></div><div class="site-dropdown-col"><h3>Paladin · Priester · Schurke</h3><a class="site-dropdown-link" href="../paladin.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_paladin.jpg" loading="lazy" src="../assets/icons/classes/classicon_paladin.jpg"/><span>Paladin · Vergeltung</span></a><a class="site-dropdown-link" href="../holy-priest.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg" loading="lazy" src="../assets/icons/classes/spell_holy_guardianspirit.jpg"/><span>Priester · Heilig</span></a><a class="site-dropdown-link" href="../rogue.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" loading="lazy" src="../assets/icons/classes/classicon_rogue.jpg"/><span>Schurke · Kampf</span></a></div><div class="site-dropdown-col"><h3>Schamane · Hexenmeister · Krieger</h3><a class="site-dropdown-link" href="../shaman.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" loading="lazy" src="../assets/icons/classes/classicon_shaman.jpg"/><span>Schamane · Verstärkung</span></a><a class="site-dropdown-link" href="../warlock.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" loading="lazy" src="../assets/icons/classes/classicon_warlock.jpg"/><span>Hexenmeister · Gebrechen</span></a><a class="site-dropdown-link" href="../arms-warrior.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg" loading="lazy" src="../assets/icons/classes/ability_warrior_savageblow.jpg"/><span>Krieger · Waffen</span></a></div></div></div></div><div class="site-nav-section" data-active="false" data-open="false"><button aria-controls="site-nav-menu-berufe" aria-expanded="false" aria-haspopup="true" class="site-nav-trigger" type="button"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_05.jpg" src="../assets/icons/nav-professions.jpg"/><span class="site-nav-label">Berufe</span><span aria-hidden="true" class="site-chevron">▾</span></button><div class="site-dropdown" id="site-nav-menu-berufe"><div class="site-dropdown-grid"><div class="site-dropdown-col"><h3>Herstellungsberufe</h3><a class="site-dropdown-link" href="../alchemy.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/alchemy.jpg"/><span>Alchemie</span></a><a class="site-dropdown-link" href="../blacksmithing.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/blacksmithing.jpg"/><span>Schmiedekunst</span></a><a class="site-dropdown-link" href="../engineering.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/engineering.jpg"/><span>Ingenieurskunst</span></a><a class="site-dropdown-link" href="../leatherworking.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg" loading="lazy" src="../assets/icons/professions/leatherworking.jpg"/><span>Lederverarbeitung</span></a><a class="site-dropdown-link" href="../enchanting.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/enchanting.jpg"/><span>Verzauberkunst</span></a><a class="site-dropdown-link" href="../tailoring.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/tailoring.jpg"/><span>Schneiderei</span></a></div><div class="site-dropdown-col"><h3>Sammelberufe</h3><a class="site-dropdown-link" href="../herbalism.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/herbalism.jpg"/><span>Kräuterkunde</span></a><a class="site-dropdown-link" href="../mining.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/mining.jpg"/><span>Bergbau</span></a><a class="site-dropdown-link" href="../skinning.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/skinning.jpg"/><span>Kürschnerei</span></a></div><div class="site-dropdown-col"><h3>Nebenberufe</h3><a class="site-dropdown-link" href="../cooking.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/cooking.jpg"/><span>Kochkunst</span></a><a class="site-dropdown-link" href="../fishing.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/fishing.jpg"/><span>Angeln</span></a><a class="site-dropdown-link" href="../firstaid.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/professions/firstaid.jpg"/><span>Erste Hilfe</span></a></div></div></div></div><div class="site-nav-section" data-active="false" data-open="false"><button aria-controls="site-nav-menu-dungeons" aria-expanded="false" aria-haspopup="true" class="site-nav-trigger" type="button"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_key_03.jpg" src="../assets/icons/nav-dungeons.jpg"/><span class="site-nav-label">Dungeons</span><span aria-hidden="true" class="site-chevron">▾</span></button><div class="site-dropdown" id="site-nav-menu-dungeons"><div class="site-dropdown-grid"><div class="site-dropdown-col"><h3>Dungeon-Browser</h3><a class="site-dropdown-link" href="../dungeons.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/dungeons/dungeon.jpg"/><span>Alle Dungeons (13–60)</span></a><a class="site-dropdown-link" href="../dungeons.html#alliance"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/nav-classes.jpg"/><span>Allianzgebiete</span></a><a class="site-dropdown-link" href="../dungeons.html#horde"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/nav-dungeons.jpg"/><span>Hordegebiete</span></a></div><div class="site-dropdown-col"><h3>Dungeon-Typ</h3><a class="site-dropdown-link" href="../dungeons.html#forever"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/dungeons/dungeon.jpg"/><span>Neue Forever-Dungeons</span></a><a class="site-dropdown-link" href="../dungeons.html#classic"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/dungeons/dungeon.jpg"/><span>Classic-Dungeons</span></a></div><div class="site-dropdown-col"><h3>Quest- und Lootdaten</h3><a class="site-dropdown-link" href="../dungeons.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/dungeons/dungeon.jpg"/><span>Bosse · Loot · Dungeonquests</span></a></div></div></div></div><div class="site-nav-section" data-active="false" data-open="false"><button aria-controls="site-nav-menu-guides" aria-expanded="false" aria-haspopup="true" class="site-nav-trigger" type="button"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_map_01.jpg" src="../assets/icons/nav-guides.jpg"/><span class="site-nav-label">Guides</span><span aria-hidden="true" class="site-chevron">▾</span></button><div class="site-dropdown" id="site-nav-menu-guides"><div class="site-dropdown-grid"><div class="site-dropdown-col"><h3>Leveln</h3><a class="site-dropdown-link" href="../alliance-leveling.html"><img alt="" data-fallback="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" loading="lazy" src="../assets/icons/guides/alliance-leveling.jpg"/><span>Allianz Levelroute 1–60</span></a></div></div></div></div></nav></div>
+<div class="version-banner" data-site-version="v0.19.4"><div class="version-banner-inner"><span class="version-label">v0.19.4</span> · <span class="change-label">Neu:</span> GravTV Survival Hunter: Dual-Wield-Guide, Talentweg, Level-Schieberegler und Vergleich zu LudiDeos Melee Weaving.</div></div>
+<header class="hero"><div class="container"><div class="breadcrumb"><a href="../index.html">Startseite</a> / <a href="../survival-hunter.html">Survival Hunter</a> / GravTV Dual Wield</div>
+<div style="margin-top:12px"><span class="tag">NEU · GravTV-Guide</span> &nbsp; <span class="eyebrow">WoW Forever · Level 1–60</span></div>
+<h1>Survival Hunter: <span style="color:#f3ca6b">Dual Wield & Full Melee</span></h1>
+<p>Deutschsprachiger Guide aus GravTVs 16:40-Minuten-Audio. Mit allen im Video erklärten Kerntalenten, einer <strong>rekonstruierten</strong> 1–60-Talentroute, Rotationen, Pets und einer Einordnung gegenüber LudiDeos 2H-Weaving.</p>
+<div class="buttons"><a class="action" href="../survival-hunter.html#gravtv">← Zum Hunter-Guide</a><a class="action secondary" href="../survival-hunter.html#talents">Interaktiver Talentbaum</a><a class="action secondary" href="../survival-hunter.html#pets">Pet-Karten & Fähigkeiten</a></div>
+</div></header>
+<div class="container">
+<section class="quickintro" aria-label="Build Kurzüberblick">
+  <div><span class="eyebrow">Spielstil</span><strong>Full Melee</strong><small>Mit gelegentlichem Melee Weaving</small></div>
+  <div><span class="eyebrow">Waffen</span><strong>Dual Wield</strong><small>2× Einhandwaffe</small></div>
+  <div><span class="eyebrow">Start</span><strong>Level 30</strong><small>Survival-Respec</small></div>
+  <div><span class="eyebrow">Ziel-Build</span><strong>5 / 11 / 35</strong><small>BM / MM / Survival</small></div>
+</section>
+<div class="layout"><aside aria-label="Kapitel"><strong>In diesem Guide</strong><div class="aside-links"><a href="#levelcheck">Level-Check</a><a href="#vergleich">Build-Vergleich</a><a href="#sektion-1">1. Übersicht: So spielt sich GravTVs Survival-Hunter</a><a href="#sektion-2">2. Talentbuild und Leveling-Pfad</a><a href="#sektion-3">3. Warum gerade diese Talente?</a><a href="#sektion-4">4. Rotation und Spielweise</a><a href="#sektion-5">5. Waffen, Ausrüstung und Werte</a><a href="#sektion-6">6. Pet oder Lone Wolf?</a><a href="#sektion-7">7. Alternativen: Open World und PvP</a><a href="#sektion-8">8. Meilensteine von 30 bis 60</a><a href="#sektion-9">9. Was du direkt auf Level 30 tun solltest</a><a href="#sektion-10">10. Einordnung und Quellen</a></div></aside><main>
+<section class="milestones" id="levelcheck"><h2>Dein nächster Talentpunkt</h2><label for="levelRange">Aktuelles Level: <output id="levelnum">30</output></label><input id="levelRange" type="range" min="30" max="60" step="1" value="30" aria-describedby="milestoneNote"><div class="milestone-output" id="milestoneTitle">Level 30 · Respec: Survival 0/0/21</div><p class="milestone-hint" id="milestoneNote">Zwei Einhandwaffen, Aspekt des Wildtiers, Schreitertritt und Mal des Jägers aktiv nutzen.</p><small style="color:#b6c5b8">Die Tabelle wurde aus GravTVs Worten rekonstruiert; zusätzliche Vermächtnispunkte können die Level verschieben.</small></section>
+
+<section class="compare" id="vergleich">
+  <h2>Welcher Survival-Guide passt zu dir?</h2>
+  <p>Deine LarryL-Seite enthält bereits einen klassischen <strong>2H-Melee-Weaving-Weg</strong>. Diese GravTV-Variante ist eine <strong>eigenständige Alternative</strong>, kein Ersatz dafür.</p>
+  <div class="comparison-grid">
+    <div class="comparison-card selected"><span class="tag">Neu · GravTV</span><h3>Dual Wield / Full Melee</h3>
+      <p>Zwei Einhandwaffen, häufige Nahkampfangriffe, Mungobiss-Procs. Gelegentlich im Kampf auf Abstand gehen.</p>
+      <p><b>Stärken:</b> Direkte Melee-Spielweise, Fokus auf Resourcefulness und Expose Prey.</p>
+      <p><b>Trade-off:</b> Mehr Nahkampfgefahr; Hit und passende Waffen wichtig.</p></div>
+    <div class="comparison-card"><span class="tag secondary">Bestehender Guide · LudiDeo/Weaving</span><h3>2H Melee Weaving</h3>
+      <p>Langsame Zweihandwaffe, Bogen und Nahkampftreffer zeitlich aufeinander abstimmen.</p>
+      <p><b>Stärken:</b> Aktive Nutzung von Auto Shot und starken Waffentreffern.</p>
+      <p><b>Trade-off:</b> Anspruchsvolle Bewegung und Swing-Timer-Kontrolle.</p></div>
+  </div>
+  <p><a class="inline-action" href="../survival-hunter.html#builds">Alle bisherigen Hunter-Builds ansehen →</a></p>
+</section>
+
+<article class="guide-card" id="start-guide"><h1>Survival Hunter 1–60 – GravTV-Guide auf Deutsch</h1>
+<p><strong>WoW Forever · Leveling · Dual Wield / Melee-Survival · Stand: 13. November 2026</strong><br/>
+<em>Eine eigenständig formulierte, deutschsprachige Aufbereitung der vom Nutzer bereitgestellten 16:40-minütigen MP3 „Survival Hunter is INSANE! The Ultimate Leveling Guide“ von GravTV. Struktur nach dem Vorbild eines großen Klassenguides, nicht als wörtliche Übersetzung.</em></p>
+<blockquote>
+<p><strong>Die Kernaussage des Videos:</strong> Bis etwa Level 30 erst mit Treffsicherheit (Marksmanship) leveln, dann auf Überleben (Survival) umskillen. Ab Level 30 bevorzugt GravTV <strong>zwei Einhandwaffen</strong> statt einer Zweihandwaffe. Der Build setzt auf viele Nahkampftreffer, kritische Treffer, <strong>Mungobiss-Procs</strong> und sehr gute Manaregeneration.</p>
+</blockquote>
+<h2 id="sektion-1">1. Übersicht: So spielt sich GravTVs Survival-Hunter</h2>
+<p>Der Schwerpunkt liegt auf <strong>Full Melee mit situativem Melee Weaving</strong>: Du kämpfst die meiste Zeit direkt am Gegner, kannst aber mit <strong>Schreitertritt (Strider Kick)</strong> wieder auf Abstand gehen und einige Schüsse einbauen. Anders als der 2H-Weaving-Build von LudiDeo legt GravTV besonderen Wert auf <strong>Dual Wield</strong>. Zwei Waffen erzeugen viele automatische Nahkampfangriffe. Mit den passenden Talenten können dadurch wichtige Effekte häufiger aktiviert werden.</p>
+<p><strong>Stärken:</strong> Hoher potenzieller Einzelziel-Schaden, aktive Spielweise, viele Mungobiss-Gelegenheiten, gute Manaausdauer mit <em>Resourcefulness</em>, starke Kontrolle durch Fallen und Schreitertritt.</p>
+<p><strong>Schwächen:</strong> Abhängigkeit von Trefferchance und guten Einhandwaffen, relativ viel Manaverbrauch vor <em>Resourcefulness</em>, Nahkampfgefahren, anspruchsvollere Positionierung beim Wechsel zwischen Nah- und Fernkampf.</p>
+<h3>Die vier wichtigsten Entscheidungen</h3>
+<table>
+<thead>
+<tr>
+<th>Frage</th>
+<th>GravTVs Empfehlung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wann Survival?</td>
+<td><strong>Ab Level 30</strong>, vorher bevorzugt Treffsicherheit</td>
+</tr>
+<tr>
+<td>Welche Waffen?</td>
+<td><strong>Dual Wield: zwei Einhandwaffen</strong></td>
+</tr>
+<tr>
+<td>Welche Spielweise?</td>
+<td><strong>Überwiegend Nahkampf</strong>, gelegentlich Schüsse und Kiting</td>
+</tr>
+<tr>
+<td>Welcher spätere Endbuild?</td>
+<td><strong>5/11/35</strong> – Tierherrschaft / Treffsicherheit / Überleben (rekonstruiert)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sektion-2">2. Talentbuild und Leveling-Pfad</h2>
+<h3>Level 10–30: Bis zum Survival-Respec mit Treffsicherheit</h3>
+<p>GravTV bezeichnet es als seinen ersten Fehler, bereits früh direkt in Survival gegangen zu sein. Bis zum Umskillen auf Level 30 empfiehlt er zuerst den Treffsicherheits-Baum. Die im gesprochenen Guide genannte Talentfolge lässt sich folgendermaßen rekonstruieren:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Talent</th>
+<th style="text-align:right">Punkte</th>
+<th>Warum?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10–14</td>
+<td><strong>Lethal Attacks</strong> (Tödliche Schüsse/Angriffe)</td>
+<td style="text-align:right">5/5</td>
+<td>Mehr kritische Treffer</td>
+</tr>
+<tr>
+<td>15–19</td>
+<td><strong>Careful Aim</strong> (Sorgfältiges Zielen)</td>
+<td style="text-align:right">5/5</td>
+<td>Intelligenz wird über das Talent zu Angriffskraft</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Lone Wolf</strong> (Einsamer Wolf)</td>
+<td style="text-align:right">1/1</td>
+<td>Mehr eigener Schaden, <strong>solange kein Pet aktiv ist</strong></td>
+</tr>
+<tr>
+<td>21–25</td>
+<td><strong>Improved Tracking</strong> (Verbessertes Fährtenlesen)</td>
+<td style="text-align:right">5/5</td>
+<td>Mehr Schaden gegen aufgespürte Gegnertypen</td>
+</tr>
+<tr>
+<td>26–27</td>
+<td><strong>Savage Strikes</strong> (Wilde Schläge)</td>
+<td style="text-align:right">2/2</td>
+<td>Mehr kritische Treffer mit Nahkampffähigkeiten</td>
+</tr>
+<tr>
+<td>28–30</td>
+<td><strong>Survivalist</strong> (Überlebenskünstler)</td>
+<td style="text-align:right">3/5</td>
+<td>Zusätzliche Überlebensfähigkeit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Die MP3 enthält keine sichtbare Talentbaum-Einblendung. Die obige Einteilung ist aus der gesprochenen Talentfolge <strong>rekonstruiert</strong>, nicht als vom Video ausgelesener Talent-Export zu verstehen. Falls du mit Pet levelst, erhältst du den <strong>Lone-Wolf-Bonus nicht</strong>, solange das Pet aktiv ist.</p>
+<h3>Level 30: Umskillen auf Survival</h3>
+<p>Auf Level 30 gibt es ohne zusätzliche Legacy-/Vermächtnisvorteile <strong>21 Talentpunkte</strong>. Das ist die passende Survival-Verteilung für GravTVs ersten großen Power Spike:</p>
+<table>
+<thead>
+<tr>
+<th>Talent im Survival-Baum</th>
+<th style="text-align:right">Punkte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Improved Tracking</strong></td>
+<td style="text-align:right">5/5</td>
+</tr>
+<tr>
+<td><strong>Savage Strikes</strong></td>
+<td style="text-align:right">2/2</td>
+</tr>
+<tr>
+<td><strong>Survivalist</strong></td>
+<td style="text-align:right">3/5</td>
+</tr>
+<tr>
+<td><strong>Surefooted</strong></td>
+<td style="text-align:right">3/3</td>
+</tr>
+<tr>
+<td><strong>Clever Traps</strong></td>
+<td style="text-align:right">2/2</td>
+</tr>
+<tr>
+<td><strong>Predator's Edge</strong></td>
+<td style="text-align:right">5/5</td>
+</tr>
+<tr>
+<td><strong>Strider Kick</strong></td>
+<td style="text-align:right">1/1</td>
+</tr>
+<tr>
+<td><strong>Gesamt</strong></td>
+<td style="text-align:right"><strong>21/21</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sofort erledigen:</strong> Umskillen, Dual Wield ausrüsten, <strong>Aspekt des Wildtiers (Aspect of the Beast)</strong> beim Lehrer lernen, <strong>Mal des Jägers (Hunter's Mark)</strong> auf deine Ziele setzen und <strong>Schreitertritt</strong> in die Aktionsleiste ziehen. Pet für die nächsten Level mitnehmen – GravTV betont das ausdrücklich nach dem Respec.</p>
+<h3>Level 31–60: Weiterer Talentweg</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Talent</th>
+<th style="text-align:right">Punkte nach Abschluss</th>
+<th>Grund</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31–32</td>
+<td><strong>Resourcefulness</strong></td>
+<td style="text-align:right">2/2</td>
+<td>Enorme Manaentlastung beim Nahkampf und bei Fallen</td>
+</tr>
+<tr>
+<td>33–34</td>
+<td><strong>Expose Prey</strong></td>
+<td style="text-align:right">2/2</td>
+<td>Angriffe auf markierte Ziele schalten Mungobiss frei</td>
+</tr>
+<tr>
+<td>35–39</td>
+<td><strong>Lightning Reflexes</strong></td>
+<td style="text-align:right">5/5</td>
+<td>Mehr Beweglichkeit, dadurch Schaden und Krit</td>
+</tr>
+<tr>
+<td>40</td>
+<td><strong>Lacerating Strikes</strong></td>
+<td style="text-align:right">1/1</td>
+<td>Mungobiss verursacht zusätzlich Blutung</td>
+</tr>
+<tr>
+<td>41–45</td>
+<td><strong>Deadly Aspects</strong> (BM)</td>
+<td style="text-align:right">5/5</td>
+<td>Angriffstempo-Procs mit Aspekt des Wildtiers</td>
+</tr>
+<tr>
+<td>46–50</td>
+<td><strong>Lethal Attacks</strong> (MM)</td>
+<td style="text-align:right">5/5</td>
+<td>Kritische Trefferchance</td>
+</tr>
+<tr>
+<td>51–55</td>
+<td><strong>Careful Aim</strong> (MM)</td>
+<td style="text-align:right">5/5</td>
+<td>Angriffskraft durch Intelligenz</td>
+</tr>
+<tr>
+<td>56</td>
+<td><strong>Lone Wolf</strong> (MM)</td>
+<td style="text-align:right">1/1</td>
+<td>+20 % eigener Angriffsschaden <strong>ohne aktives Pet</strong></td>
+</tr>
+<tr>
+<td>57–58</td>
+<td><strong>Survivalist's Discipline</strong></td>
+<td style="text-align:right">2/2</td>
+<td>Kürzere Fallencooldowns</td>
+</tr>
+<tr>
+<td>59–60</td>
+<td><strong>Survivalist</strong></td>
+<td style="text-align:right">5/5</td>
+<td>Zusätzliche Überlebensfähigkeit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Finale Verteilung: 5 Tierherrschaft / 11 Treffsicherheit / 35 Überleben = 51 Punkte.</strong> Diese Level-Reihenfolge stellt die im Audio begründeten Prioritäten als <strong>spielbaren 51-Punkte-Plan</strong> dar. Die exakte spätere Reihenfolge ist im Audio nicht für jede einzelne Stufe ausgesprochen. Zusätzliche Talentpunkte aus Vermächtnisvorteilen können den Zeitplan ändern.</p>
+<h2 id="sektion-3">3. Warum gerade diese Talente?</h2>
+<h3>Resourcefulness – die Lösung für Manaprobleme</h3>
+<p>Bei <strong>2/2</strong> kosten Nahkampffähigkeiten und Fallen <strong>60 % weniger Mana</strong>. Kritische Treffer mit Fähigkeiten erlauben außerdem, dass <strong>50 % deiner normalen Manaregeneration während des Zauberwirkens</strong> für 30 Sekunden weiterlaufen. Das ist <strong>keine sofortige Rückerstattung von 50 % deines Manavorrats</strong>. GravTV empfiehlt Resourcefulness <strong>vor Expose Prey</strong>, weil es die Zeit ohne Trinkpause deutlich verlängern kann. Besonders häufiges Weaving und viele Schüsse können weiterhin Mana kosten.</p>
+<h3>Expose Prey – Mungobiss offensiv nutzen</h3>
+<p>Normalerweise ist Mungobiss reaktiv. Mit <strong>Expose Prey 2/2</strong> haben Angriffe auf ein Ziel mit <strong>Mal des Jägers</strong> eine Chance, <strong>Mungobiss für 10 Sekunden nutzbar</strong> zu machen. Deshalb: Auf <strong>jedem neuen Hauptziel</strong> Hunter's Mark neu setzen. Ohne Markierung fehlt dir diese wichtige Proc-Quelle.</p>
+<h3>Predator's Edge – Dual Wield wird attraktiv</h3>
+<p>Bei <strong>5/5</strong> verstärkt das Talent den <strong>Schaden deiner Nebenhand um 50 %</strong> und den kritischen Schaden deiner Nahkampffähigkeiten. Eine Zweihandwaffe bekommt den Bonus auf die Nebenhand nicht. GravTV sieht hierin zusammen mit den zusätzlichen automatischen Angriffen einen wesentlichen Grund für <strong>zwei Einhandwaffen</strong>.</p>
+<h3>Deadly Aspects + Aspect of the Beast</h3>
+<p>Mit <strong>Aspekt des Wildtiers</strong> können deine automatischen Nahkampfangriffe über <strong>Deadly Aspects 5/5</strong> einen Bonus von <strong>30 % Nahkampf-Angriffstempo für 12 Sekunden</strong> auslösen. Mehr Treffer bieten mehr Möglichkeiten für solche Procs und für <em>Expose Prey</em>. Wichtig: <strong>Aspekt des Wildtiers erhöht Nahkampf-Angriffskraft</strong>; die 30 % betreffen den ausgelösten <strong>Angriffstempo-Buff</strong>, nicht pauschal jeden Nahkampfschaden.</p>
+<h3>Lacerating Strikes – weiterer Schadensschub ab 40</h3>
+<p>Dieses Talent lässt deinen <strong>Mungobiss</strong> zusätzlich eine <strong>Blutung</strong> verursachen. Das lohnt besonders bei Gegnern, die lange genug überleben, damit der Effekt Schaden macht.</p>
+<h2 id="sektion-4">4. Rotation und Spielweise</h2>
+<h3>Solo-Leveln: Full Melee als Grundstil</h3>
+<ol>
+<li><strong>Aspekt des Wildtiers</strong> aktivieren und den passenden Gegnertyp aufspüren.</li>
+<li><strong>Mal des Jägers</strong> auf das Ziel setzen.</li>
+<li>Bis zum späten <em>Lone-Wolf</em>-Build: Wolf/Katze angreifen lassen. Optional aus der Distanz eröffnen.</li>
+<li>In den Nahkampf gehen und <strong>Raptorstoß</strong> für den nächsten Nahkampfschwung vormerken.</li>
+<li><strong>Mungobiss</strong> nutzen, sobald es durch einen Ausweich-Effekt oder später <strong>Expose Prey</strong> verfügbar ist.</li>
+<li><strong>Schreitertritt</strong> für zusätzlichen Nahkampfschaden und zum Positionieren verwenden.</li>
+<li><strong>Feuerbrandfalle</strong> bei langlebigen Gegnern oder <strong>Sprengfalle ab Level 34</strong> bei Gruppen sinnvoll einsetzen.</li>
+<li>Gegnerwechsel: <strong>Mal des Jägers neu setzen</strong>; bei Bedarf mit <strong>Zurechtstutzen (Wing Clip)</strong> und einer Frostfalle Distanz gewinnen.</li>
+</ol>
+<p><strong>Keine starre Tastenfolge:</strong> Mungobiss hängt an einer Aktivierung. Raptorstoß löst mit dem <strong>nächsten Nahkampfschwung</strong> aus und sollte nicht wie ein sofortiger Treffer behandelt werden.</p>
+<h3>Situatives Melee Weaving</h3>
+<p>Wenn du Distanz brauchst oder Schüsse geschickt einbauen kannst: <strong>Automatischer Schuss → in Nahkampfreichweite → Raptorstoß / Mungobiss → Schreitertritt → wieder auf Distanz → automatischer Schuss oder Mehrfachschuss/Arkaner Schuss</strong>. Achte auf deinen Swing Timer. Wer zu spät aus dem Nahkampf zurückgeht, verzögert den nächsten Schuss. GravTV betont aber, dass er <strong>überwiegend im Nahkampf</strong> bleibt.</p>
+<h3>Mehrere Gegner und Dungeons</h3>
+<ul>
+<li><strong>Ab Level 34:</strong> Sprengfalle für AoE-Schaden, wenn du sie sicher platzieren kannst.</li>
+<li><strong>Frostfalle:</strong> Gegner verlangsamen und kontrollieren; Breakable CC nicht durch Blutungen zerstören.</li>
+<li><strong>Ab Level 40:</strong> Salve ist Fernkampf-AoE, keine Nahkampf-Cleave-Fähigkeit.</li>
+<li><strong>Im Dungeon:</strong> Hinter dem Gegner stehen, auf die Aggro achten und nicht absichtlich Treffer kassieren, um Mungobiss zu aktivieren: <em>Expose Prey</em> ermöglicht ihn auch ohne gegnerische Angriffe auf dich.</li>
+</ul>
+<h2 id="sektion-5">5. Waffen, Ausrüstung und Werte</h2>
+<h3>Waffenwahl</h3>
+<p><strong>GravTV bevorzugt Dual Wield</strong>, weil die Nebenhand durch <em>Predator's Edge</em> profitiert und mehr automatische Treffer weitere Procs ermöglichen. Er berichtet, dass sein persönlicher Zweihand-Build damit spürbar zurücklag. <strong>Die genauen DPS-Diagramme sind in der Audioaufnahme nicht sichtbar</strong>; deshalb lässt sich daraus keine allgemein gültige Prozentdifferenz ableiten. Eine sehr gute Zweihandwaffe kann vorübergehend besser sein als zwei schlechte Einhandwaffen.</p>
+<ul>
+<li><strong>Haupthand:</strong> Hoher relevanter Waffenschaden für Raptorstoß, Mungobiss und Schreitertritt.</li>
+<li><strong>Nebenhand:</strong> Starke Einhandwaffe; ihre zusätzlichen Treffer und <em>Predator's Edge</em> sind der Kern des Video-Builds.</li>
+<li><strong>Bogen/Gewehr:</strong> Nicht wegwerfen. Auch dieser Build nutzt situativ Fernkampfangriffe.</li>
+<li><strong>Waffenfertigkeit:</strong> Bei einem Wechsel auf neue Waffentypen erst die Waffenfertigkeit steigern, bevor du den Schaden beurteilst.</li>
+</ul>
+<h3>Stat-Priorität nach dem Video</h3>
+<p><strong>Trefferchance (Hit) → Beweglichkeit (Agility) → kritische Trefferchance (Crit)</strong>, wobei sich die genaue Reihenfolge je nach Ausrüstung, Zielstufe und erreichten Treffergrenzen verschiebt. Danach sind die Angriffskraft und weiteren Werte zu beurteilen.</p>
+<p>Bei <strong>Grundattributen</strong> nennt GravTV: <strong>Beweglichkeit → Intelligenz → Stärke → Willenskraft</strong>. Intelligenz wird besonders wertvoll, <strong>sobald du Careful Aim hast</strong>, weil es Angriffskraft daraus macht; davor ist diese Gewichtung nicht automatisch sinnvoll. Beweglichkeit liefert offensive Werte und skaliert später zusätzlich mit <em>Lightning Reflexes</em>.</p>
+<p><strong>Warum Hit?</strong> Zwei Einhandwaffen haben bei normalen automatischen Angriffen eine erhöhte Fehlchance. <em>Surefooted 3/3</em> hilft dir dabei, häufiger zu treffen. Trefferchance und Krit zusammen verbessern die Zuverlässigkeit des Builds, aber mehr Hit ist nicht unbegrenzt sinnvoll.</p>
+<h2 id="sektion-6">6. Pet oder Lone Wolf?</h2>
+<p>GravTV unterscheidet indirekt zwischen mehreren Phasen:</p>
+<ul>
+<li><strong>Vor Level 30:</strong> Sein Marksmanship-Plan nimmt <em>Lone Wolf</em>, wodurch ein aktives Pet den Talentbonus ausschaltet. Das ist eine persönliche Levelvariante, nicht zwingend die sicherste Solo-Option.</li>
+<li><strong>Level 30 bis zum späteren Lone-Wolf-Punkt:</strong> Er erinnert ausdrücklich daran, <strong>wieder ein Pet zu nutzen</strong>. Dein <strong>Geisterpfotenalpha</strong> mit <em>Wütendem Heulen</em> passt dafür gut zu Nahkampf-Survival.</li>
+<li><strong>Spät im Build:</strong> <em>Lone Wolf</em> gibt dir <strong>20 % mehr eigenen Angriffsschaden ohne aktives Pet</strong>. Für optimierten Eigenschaden kannst du das Pet dann weglassen. Beim Questen kann ein Pet als Tank und für Kontrolle trotzdem wertvoller sein.</li>
+</ul>
+<p><strong>Wichtig:</strong> Der Bonus von <em>Lone Wolf</em> funktioniert nicht, wenn dein normales Jäger-Pet aktiv ist. Diese Wahl steht also teilweise im Gegensatz zum Pet-orientierten Ansatz deines bisherigen LudiDeo-Guides.</p>
+<h2 id="sektion-7">7. Alternativen: Open World und PvP</h2>
+<p>GravTV nennt <strong>Deflection, Deterrence und Counterattack</strong> als Alternativen, wenn du viel <strong>solo oder PvP</strong> spielst. <em>Counterattack</em> wird nach <strong>Parieren</strong> verfügbar und kann Gegner festsetzen. Das ist nützlich, wenn du von einem Schurken angegriffen wirst oder aus einer gefährlichen Situation heraus musst. Für reinen Dungeon- oder Raid-DPS bevorzugt er mehr konstante offensive Talente, weil du idealerweise nicht selbst angegriffen wirst.</p>
+<p>Die Entscheidung ist also nicht nur „höchste DPS“, sondern auch <strong>Sicherheit, Kontrolle und persönliche Spielweise</strong>.</p>
+<h2 id="sektion-8">8. Meilensteine von 30 bis 60</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Worauf du dich freuen kannst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>30</strong></td>
+<td>Survival-Respec, Schreitertritt, Aspekt des Wildtiers, Dual Wield</td>
+</tr>
+<tr>
+<td><strong>31–32</strong></td>
+<td>Resourcefulness 2/2 – weniger Mana-Verbrauch</td>
+</tr>
+<tr>
+<td><strong>33–34</strong></td>
+<td>Expose Prey 2/2; ab 34 Sprengfalle</td>
+</tr>
+<tr>
+<td><strong>35–39</strong></td>
+<td>Lightning Reflexes für zusätzliche Beweglichkeit</td>
+</tr>
+<tr>
+<td><strong>40</strong></td>
+<td>Lacerating Strikes, Kettenrüstung, Salve</td>
+</tr>
+<tr>
+<td><strong>41–45</strong></td>
+<td>Deadly Aspects: Angriffstempo-Procs mit Aspekt des Wildtiers</td>
+</tr>
+<tr>
+<td><strong>46–55</strong></td>
+<td>Mehr Krit und Angriffskraft über Treffsicherheit</td>
+</tr>
+<tr>
+<td><strong>56</strong></td>
+<td>Lone Wolf: Wechsel zum Spielstil ohne aktives Pet möglich</td>
+</tr>
+<tr>
+<td><strong>57–60</strong></td>
+<td>Restpunkte in Fallen-Cooldowns und Überlebensfähigkeit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sektion-9">9. Was du direkt auf Level 30 tun solltest</h2>
+<ul>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Überleben 0/0/21</strong> wie oben skillen.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Dual Wield</strong> ausrüsten und beide Waffenfertigkeiten prüfen.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Aspekt des Wildtiers</strong>, <strong>Schreitertritt</strong>, <strong>Raptorstoß</strong> und <strong>Mungobiss</strong> auf erreichbare Tasten legen.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Mal des Jägers</strong> auf jedes wichtige Ziel setzen.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Deinen <strong>Geisterpfotenalpha</strong> vorerst mitnehmen; später Lone Wolf bewusst entscheiden.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Im Addon <strong>Forever Leveling BiS → Survival Nahkampf</strong> wählen.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Als Nächstes <strong>Resourcefulness 2/2</strong> lernen, wenn du weiterhin Manaprobleme hast.</li>
+</ul>
+<h2 id="sektion-10">10. Einordnung und Quellen</h2>
+<p><strong>Was kommt direkt aus GravTVs MP3?</strong> Seine zwei persönlichen Korrekturen (erst Marksmanship, später Dual Wield), das Argument mit Trefferchance und Crit, die Erklärung von Resourcefulness und Expose Prey, seine Talentprioritäten, die Hauptrolle von Aspect of the Beast und der Lone-Wolf-Gedanke sowie die defensiven Alternativen.</p>
+<p><strong>Was habe ich ergänzt?</strong> Die lesbare Level-für-Level-Tabelle, eine strukturierte Rotationspriorität, konkrete Einordnung für dein aktuelles Level 30 und einzelne Klarstellungen zu Talenttexten. Weil in einer MP3 keine Videoeinblendungen enthalten sind, ist der Pfad <strong>eine nachvollziehbare Rekonstruktion und kein abgeschriebener Talentcode aus dem Video</strong>. Die eingeblendeten Schadensdiagramme und Itembilder lassen sich daraus nicht prüfen.</p>
+<p>Weitere Referenzen zur Überprüfung von Talenttexten und Alternativen:</p>
+<ul>
+<li><a href="https://mobalytics.gg/wow-forever/classes/survival-hunter-guide-1-60-ludideo" rel="noopener noreferrer" target="_blank">LudiDeos Survival-Guide auf Mobalytics</a></li>
+<li><a href="https://talentsforever.com/hunter/builds/survival" rel="noopener noreferrer" target="_blank">Survival-Builds und 5/11/35 auf Talents Forever</a></li>
+<li><a href="https://wowcalc.net/en/forever/talents/hunter" rel="noopener noreferrer" target="_blank">WoW-Forever-Talentrechner</a></li>
+<li><a href="https://classicwow.gg/forever/guides/hunter/survival" rel="noopener noreferrer" target="_blank">Survival-Talente und Fähigkeiten auf ClassicWoW.gg</a></li>
+</ul>
+<p><em>Hinweis: WoW-Forever-Hotfixes können einzelne Werte und Empfehlungen verändern.</em></p>
+</article>
+<p style="margin:20px 0;color:#9eb49f">Quelle: vom Nutzer hochgeladene GravTV-MP3, 13.11.2026. Grafiken und eingeblendete DPS-Tabellen aus dem Originalvideo sind nicht Teil der Audioquelle.</p>
+</main></div></div>
+<script>const gravMilestones={"30": {"title": "Respec: Survival 0/0/21", "hint": "Zwei Einhandwaffen, Aspekt des Wildtiers, Schreitertritt und Mal des Jägers aktiv nutzen."}, "31": {"title": "Resourcefulness 1/2", "hint": "Geringere Manakosten, länger kämpfen."}, "32": {"title": "Resourcefulness 2/2", "hint": "Manakosten deiner Melee-/Fallenfähigkeiten weiter reduzieren."}, "33": {"title": "Expose Prey 1/2", "hint": "Erste Mungobiss-Procs auf markierten Gegnern."}, "34": {"title": "Expose Prey 2/2", "hint": "Mehr Mungobiss-Aktivierungen; Sprengfalle erlernen."}, "35": {"title": "Lightning Reflexes 1/5", "hint": "Beweglichkeit weiter ausbauen."}, "36": {"title": "Lightning Reflexes 2/5", "hint": "Beweglichkeit weiter ausbauen."}, "37": {"title": "Lightning Reflexes 3/5", "hint": "Beweglichkeit; optional Broken Tooth als Katzenalternative."}, "38": {"title": "Lightning Reflexes 4/5", "hint": "Beweglichkeit weiter ausbauen."}, "39": {"title": "Lightning Reflexes 5/5", "hint": "Maximale Agi-Skalierung des Talents."}, "40": {"title": "Lacerating Strikes 1/1", "hint": "Mungobiss-Blutung, Kettenrüstung und Salve."}, "41": {"title": "Deadly Aspects 1/5 (BM)", "hint": "Beginn der Angriffstempo-Procs mit Aspekt des Wildtiers."}, "42": {"title": "Deadly Aspects 2/5 (BM)", "hint": "Angriffstempo-Procs ausbauen."}, "43": {"title": "Deadly Aspects 3/5 (BM)", "hint": "Angriffstempo-Procs ausbauen."}, "44": {"title": "Deadly Aspects 4/5 (BM)", "hint": "Angriffstempo-Procs ausbauen."}, "45": {"title": "Deadly Aspects 5/5 (BM)", "hint": "Voller Effekt von Deadly Aspects."}, "46": {"title": "Lethal Attacks 1/5 (MM)", "hint": "Kritische Trefferchance ausbauen."}, "47": {"title": "Lethal Attacks 2/5 (MM)", "hint": "Kritische Trefferchance ausbauen."}, "48": {"title": "Lethal Attacks 3/5 (MM)", "hint": "Kritische Trefferchance ausbauen."}, "49": {"title": "Lethal Attacks 4/5 (MM)", "hint": "Kritische Trefferchance ausbauen."}, "50": {"title": "Lethal Attacks 5/5 (MM)", "hint": "Volle Krit-Boni."}, "51": {"title": "Careful Aim 1/5 (MM)", "hint": "Intelligenz erhöht zusätzlich Angriffskraft."}, "52": {"title": "Careful Aim 2/5 (MM)", "hint": "AP-Skalierung durch Intelligenz ausbauen."}, "53": {"title": "Careful Aim 3/5 (MM)", "hint": "AP-Skalierung durch Intelligenz ausbauen."}, "54": {"title": "Careful Aim 4/5 (MM)", "hint": "AP-Skalierung durch Intelligenz ausbauen."}, "55": {"title": "Careful Aim 5/5 (MM)", "hint": "Volle AP-Skalierung durch Intelligenz."}, "56": {"title": "Lone Wolf 1/1 (MM)", "hint": "Ohne Pet mehr Eigenschaden; Pet kann fürs Solo-Leveln dennoch sinnvoll sein."}, "57": {"title": "Survivalist's Discipline 1/2", "hint": "Fallencooldowns verkürzen."}, "58": {"title": "Survivalist's Discipline 2/2", "hint": "Fallencooldowns verkürzen."}, "59": {"title": "Survivalist 4/5", "hint": "Mehr Überlebensfähigkeit."}, "60": {"title": "Survivalist 5/5", "hint": "Finale Verteilung 5/11/35 erreicht."}};
+(function(){const input=document.querySelector('#levelRange'),out=document.querySelector('#levelnum'),title=document.querySelector('#milestoneTitle'),note=document.querySelector('#milestoneNote');function show(){const k=String(input.value);const item=gravMilestones[k];if(item){out.textContent=k;title.textContent='Level '+k+' · '+item.title;note.textContent=item.hint}}input.addEventListener('input',show);show()})();</script>
+<script src="../assets/js/site-navigation.js"></script>
+</body></html>

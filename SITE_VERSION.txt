@@ -1,2 +1,2 @@
-v0.19.2
-Talent-Tooltips bei allen 9 Klassen: Hover/Tippen/Tastatur, Wirkung nach aktuellem Rang, nächster Rang und geprüfte Forever-Client-Daten (Build 1.60.1.70755).
+v0.19.4
+GravTV Survival Hunter: Dual-Wield-Guide mit Level-Slider und Talentroute 30–60; Verlinkung im Hunter-Klassenguide und bei den Build-Varianten.
